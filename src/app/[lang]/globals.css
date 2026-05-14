@@ -1,0 +1,428 @@
+/* Barlow font utility for Tailwind font-barlow */
+.font-barlow {
+  font-family: Barlow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+/* Markdown global styles migrated from markdown-styles.module.css */
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+.markdown p,
+.markdown ul,
+.markdown ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.markdown blockquote {
+  @apply my-6 pl-5 border-l-4 font-semibold text-xl leading-relaxed;
+  border-left-color: var(--md-border-blockquote);
+}
+.markdown strong {
+  font-weight: 600;
+}
+.markdown blockquote p {
+  @apply my-0;
+}
+.markdown blockquote strong {
+  @apply font-semibold;
+}
+.markdown ul {
+  @apply list-disc pl-6;
+}
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+.markdown li {
+  @apply my-1;
+}
+.markdown h1 {
+  @apply text-4xl mt-12 mb-4 leading-snug font-semibold;
+}
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug font-semibold;
+}
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug font-semibold;
+}
+.markdown h4 {
+  @apply text-xl mt-6 mb-3 leading-snug font-semibold;
+}
+.markdown h5 {
+  @apply text-lg mt-4 mb-2 leading-snug font-semibold;
+}
+.markdown h6 {
+  @apply text-base mt-4 mb-2 leading-snug font-semibold;
+}
+.markdown img {
+  @apply block w-full rounded-lg cursor-zoom-in;
+}
+.markdown img[style*="width"] {
+  width: auto;
+}
+.markdown figure {
+  @apply my-6;
+}
+.markdown figure figcaption {
+  @apply text-sm text-neutral-400 mt-2;
+}
+.markdown a {
+  color: #EE9933;
+  @apply underline;
+}
+.markdown table {
+  @apply w-full my-6 border-collapse;
+  border: 1px solid var(--md-border);
+}
+.markdown th:first-child,
+.markdown td:first-child {
+  @apply whitespace-nowrap w-0;
+}
+.markdown th,
+.markdown td {
+  @apply px-4 py-2 text-left;
+  border: 1px solid var(--md-border);
+}
+.markdown th {
+  @apply font-semibold;
+  background-color: var(--md-bg-th);
+}
+.markdown a:hover {
+  color: #cc7a1a;
+}
+.markdown hr {
+  @apply my-12 border-0 border-t;
+  border-top-color: var(--md-border);
+}
+.markdown aside {
+  @apply my-6 px-5 py-4 rounded-lg text-lg leading-relaxed;
+  background-color: var(--md-bg-aside);
+  border: 1px solid var(--md-border);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-items: start;
+}
+.markdown .aside-icon {
+  @apply text-lg leading-relaxed;
+  display: flex;
+  align-items: center;
+  height: 1.8em;
+}
+.markdown .aside-icon img {
+  @apply inline w-5 h-5 rounded-none;
+}
+.markdown .aside-content {
+  @apply flex flex-col gap-3;
+}
+.markdown .aside-content p {
+  @apply my-0;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --md-border: theme('colors.neutral.200');
+    --md-border-blockquote: theme('colors.neutral.800');
+    --md-bg-th: theme('colors.neutral.50');
+    --md-bg-aside: theme('colors.neutral.50');
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @apply text-base;
+}
+
+main {
+  animation: main-fade-in 250ms ease-in-out both;
+}
+
+@keyframes main-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes letter-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+  80% {
+    transform: translateY(-1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-letter-bounce {
+  animation: letter-bounce 0.5s ease-out both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out both;
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-img {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-lightbox-in {
+  animation: lightbox-in 0.2s ease-out both;
+}
+
+.animate-lightbox-img {
+  animation: lightbox-img 0.25s ease-out both;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-page-fade-in {
+  animation: page-fade-in 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Markdown grid layout */
+.md-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .md-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.md-grid-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.md-grid-col > p {
+  margin: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+.md-grid-col figure {
+  margin: 0;
+}
+
+/* Markdown columns layout (legacy) */
+.md-columns-1 {
+  @apply grid grid-cols-1 gap-4 my-6;
+}
+
+.md-columns-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 my-6;
+}
+
+.md-columns-3 {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4 my-6;
+}
+
+.md-columns-4 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-6;
+}
+
+.md-columns-1 > p,
+.md-columns-2 > p,
+.md-columns-3 > p,
+.md-columns-4 > p {
+  @apply my-0;
+}
+
+.md-columns-1 figure,
+.md-columns-2 figure,
+.md-columns-3 figure,
+.md-columns-4 figure {
+  @apply my-0;
+}
+
+/* Typing dots animation for chat */
+@keyframes typing-dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+.animate-typing-dots {
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.animate-typing-dots::after {
+  content: '';
+  animation: typing-dots 1.2s infinite steps(1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(8px); }
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms ease-out both;
+}
+
+.animate-fade-out {
+  animation: fade-out 250ms ease-in both;
+}
+
+/* Media skeleton loading state */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.media-skeleton-wrapper {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  min-height: 120px;
+  background: linear-gradient(
+    90deg,
+    theme('colors.neutral.200') 25%,
+    theme('colors.neutral.100') 50%,
+    theme('colors.neutral.200') 75%
+  );
+  background-size: 800px 100%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+}
+
+.media-skeleton-wrapper img,
+.media-skeleton-wrapper iframe {
+  transition: opacity 0.3s ease;
+}
+
+.media-skeleton-wrapper.media-skeleton-loaded {
+  background: none;
+  animation: none;
+  min-height: auto;
+}
+
+/* Cover image skeleton for cards */
+.cover-skeleton {
+  background: linear-gradient(
+    90deg,
+    theme('colors.neutral.200') 25%,
+    theme('colors.neutral.100') 50%,
+    theme('colors.neutral.200') 75%
+  );
+  background-size: 800px 100%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+}
+
+.cover-skeleton.cover-loaded {
+  background: none;
+  animation: none;
+}
+
+/* Side-by-side layout: sticky preview + scrollable text (desktop only) */
+.side-by-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .side-by-side {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .side-by-side .side-preview {
+    position: sticky;
+    top: 5rem;
+    flex-shrink: 0;
+  }
+  .side-by-side .side-content {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Resume styles imported from resume/ folder */
+@import "../../../resume/resume.css";
+
+/* Experience scroll grid: 5 cols on mobile (Name visible), 4 cols on desktop (Name in pinned column) */
+.exp-scroll-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto 1fr;
+}
+
+@media (min-width: 768px) {
+  .exp-scroll-grid {
+    grid-template-columns: auto auto auto 1fr;
+  }
+  .exp-scroll-grid > .md\:hidden {
+    display: none;
+  }
+}

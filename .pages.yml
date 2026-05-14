@@ -1,0 +1,208 @@
+media:
+  input: public/assets/images
+  output: /assets/images
+
+content:
+  - name: experience-en
+    label: Experience (English)
+    type: collection
+    path: content/en/experience
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: dateRange
+        label: Date Range
+        type: string
+      - name: intro
+        label: Intro
+        type: text
+      - name: location
+        label: Location
+        type: string
+      - name: type
+        label: Type
+        type: string
+      - name: sorting
+        label: Sorting
+        type: number
+      - name: area
+        label: Area
+        type: string
+        list: true
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: experience-zh
+    label: Experience (Chinese)
+    type: collection
+    path: content/zh/experience
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: dateRange
+        label: Date Range
+        type: string
+      - name: intro
+        label: Intro
+        type: text
+      - name: location
+        label: Location
+        type: string
+      - name: type
+        label: Type
+        type: string
+      - name: sorting
+        label: Sorting
+        type: number
+      - name: area
+        label: Area
+        type: string
+        list: true
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: project-en
+    label: Project (English)
+    type: collection
+    path: content/en/project
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: intro
+        label: Intro
+        type: text
+      - name: sorting
+        label: Sorting
+        type: number
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: project-zh
+    label: Project (Chinese)
+    type: collection
+    path: content/zh/project
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: intro
+        label: Intro
+        type: text
+      - name: sorting
+        label: Sorting
+        type: number
+      - name: favicon
+        label: Favicon
+        type: image
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: writing-en
+    label: Writing (English)
+    type: collection
+    path: content/en/writing
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: type
+        label: Type
+        type: string
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: writing-zh
+    label: Writing (Chinese)
+    type: collection
+    path: content/zh/writing
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: type
+        label: Type
+        type: string
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: creation
+    label: Creation
+    type: collection
+    path: content/creation
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: skill
+        label: Skill
+        type: string
+        list: true
+      - name: coverImage
+        label: Cover Image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
