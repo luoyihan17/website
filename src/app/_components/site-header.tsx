@@ -68,7 +68,6 @@ export function SiteHeader({ lang }: Props) {
             </>
           ) : (
             <>
-              <img src="/favicon/favicon.svg" alt="" className="w-5 h-5" />
               雒艺涵 Luo Yihan
             </>
           )}

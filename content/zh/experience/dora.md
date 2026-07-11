@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "Dora"
 dateRange: "2022.05 - 2022.10"
 intro: "参与 AI 产品早期与中期阶段设计，负责官网与核心产品体验优化"

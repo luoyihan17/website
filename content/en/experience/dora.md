@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "Dora"
 dateRange: "2022.05 - 2022.10"
 intro: "Designed the company website and contributed to early-stage AI product research"

@@ -85,43 +85,32 @@ export function ResumeViewer({ variants, lang, allVariants }: ResumeViewerProps)
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [dropdownOpen]);
 
+  const getResumeFilename = () => {
+    const now = new Date();
+    const dateStr = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}`;
+    const name = isEn ? "LuoYihan" : "雒艺涵";
+    const roleMap: Record<string, string> = {
+      'personal': isEn ? 'AIProductDesigner' : 'AI产品设计师',
+    };
+    const role = roleMap[current.variant] || current.label;
+    return `${name}_${role}_${dateStr}`;
+  };
+
   const handleDownloadPDF = async () => {
     if (downloading) return;
     setDownloading(true);
-    const variant = current.variant;
-    const url = `/api/resume-pdf?lang=${currentLang}&variant=${variant}`;
-    
+
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 30000);
-      
-      const res = await fetch(url, { signal: controller.signal });
-      clearTimeout(timeout);
-      
-      if (!res.ok) throw new Error("PDF generation failed");
-      
-      const blob = await res.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = blobUrl;
-      const now = new Date();
-      const dateStr = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}`;
-      const name = isEn ? "LuoYihan" : "雒艺涵";
-      const roleMap: Record<string, string> = {
-        'product-designer': isEn ? 'FullStackDesigner' : '全栈设计师',
-        'product-manager': isEn ? 'ProductManager' : '产品经理',
-        'personal': isEn ? 'AIProductDesigner' : 'AI产品设计师',
-      };
-      const role = roleMap[current.variant] || current.label;
-      a.download = `${name}_${role}_${dateStr}.pdf`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(blobUrl);
+      const originalTitle = document.title;
+      document.title = getResumeFilename();
+      window.print();
+      setTimeout(() => {
+        document.title = originalTitle;
+        setDownloading(false);
+      }, 800);
     } catch (err) {
-      console.error("PDF download failed:", err);
-      alert(isEn ? "PDF generation failed. Please try again." : "PDF 生成失败，请重试。");
-    } finally {
+      console.error("PDF export failed:", err);
+      alert(isEn ? "Please use the browser print dialog to save as PDF." : "请在浏览器打印面板中选择“保存为 PDF”。");
       setDownloading(false);
     }
   };
@@ -195,7 +184,7 @@ export function ResumeViewer({ variants, lang, allVariants }: ResumeViewerProps)
 
           <div className="resume-toolbar-actions">
             <span className="resume-download-hint">
-              {isEn ? "PDF generation may take ~10s" : "PDF生成约需10秒"}
+              {isEn ? "Print and save as PDF" : "打印并保存为 PDF"}
             </span>
             {/* Download Button */}
             <button onClick={handleDownloadPDF} className="resume-download-btn" disabled={downloading}>

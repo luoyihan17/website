@@ -2,7 +2,7 @@
 personalSite: true
 title: "AI 协作式设计方法"
 date: "2025-01-01"
-type: "方法"
+type: "工作流"
 ---
 
 在 AI 产品设计工作中，我持续探索 Vibe Coding 与 AI Coding 等 AI 协作式设计工具，将 AI 生成能力应用于 H5 活动页面、音乐播放器皮肤、IP 玩法和游戏化播放器。

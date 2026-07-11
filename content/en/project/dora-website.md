@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "DORA Website & Product Experience"
 date: "2022-05-01"
 intro: "Led DORA's website interaction and interface design while contributing to AI product research"

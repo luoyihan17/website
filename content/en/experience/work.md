@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "USC World Building Media Lab"
 dateRange: "2023.02 - 2024.05"
 intro: "Led VR interaction flows and UI design for the World In A Cell VR educational game"

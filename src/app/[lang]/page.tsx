@@ -9,6 +9,10 @@ import { WritingSection } from "@/app/_components/writing-section";
 import { CoverImage } from "@/app/_components/cover-image";
 import { PiBriefcaseBold } from "react-icons/pi";
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "zh" }];
+}
+
 export default function Index({ params }: { params: { lang: string } }) {
   const experiences = getAllItems("experience", params.lang)
     .sort((a, b) => (b.sorting || 0) - (a.sorting || 0));
@@ -42,11 +46,11 @@ export default function Index({ params }: { params: { lang: string } }) {
           <h2 className="mb-8 text-4xl md:text-5xl font-bold tracking-tighter leading-tight">
              {isEn ? "Project" : "项目"}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((post) => {
               const href = `/${params.lang}/project/${post.slug}`;
               return (
-                <Link key={post.slug} href={href} className="group block">
+                <Link key={post.slug} href={href} className="group block rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-4">
                   {post.coverImage ? (
                     <CoverImage src={post.coverImage} alt={post.title} />
                   ) : (

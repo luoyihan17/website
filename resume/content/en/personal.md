@@ -1,19 +1,19 @@
 ---
 personalSite: true
-title: "Luo Yihan – AI Product Designer"
+title: "Luo Yihan – AI Full-stack Designer"
 variant: "personal"
-label: "AI Product Designer"
+label: "AI Full-stack Designer"
 ---
 
 # Luo Yihan
 
-**AI Product Designer, Cultural Curator** <span class="resume-contact">Email: <a href="mailto:luoyihan17@gmail.com">luoyihan17@gmail.com</a> · WeChat: sakuraluo</span>
+**AI Full-stack Designer, Cultural Curator** <span class="resume-contact">Email: <a href="mailto:luoyihan17@gmail.com">luoyihan17@gmail.com</a> · WeChat: sakuraluo</span>
 
 ---
 
 ## Education
 
-### University of Southern California - M.A. in Interactive Media <span class="resume-meta">2022.08 - 2024.05</span>
+### University of Southern California - M.A. in Interactive Games and Media <span class="resume-meta">2022.08 - 2024.05</span>
 
 - GPA 3.94. Participated in multiple interdisciplinary interactive media research and application projects. Graduated with honors.
 - Advisor: Marientina Gotsis, Director of USC Creative Media & Behavioral Health Center.

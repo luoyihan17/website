@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "DORA 官网与产品体验"
 date: "2022-05-01"
 intro: "主导 DORA 官网交互流程与界面设计，并参与早期 AI 产品调研"

@@ -1,20 +1,44 @@
 ---
 personalSite: true
-title: "策展"
+title: "独立策展人"
 dateRange: "2021.03 - 2025.09"
 intro: "发起与策划机器人、艺术、设计与高校作品相关展览"
-type: "策展"
-area: ["*策展", "艺术设计", "机器人", "跨领域协作"]
-location: "北京 / 上海"
+type: "独立策展人"
+area: ["*策展", "艺术高校", "展览组织", "跨校协作"]
+location: "上海"
 sorting: 1
 ---
 
-除产品设计外，我也持续参与文化策展与艺术设计项目。
+## OMNI ART EXPO
 
-## 国际机器人与艺术设计双年展
+2021 年在疫情期间，很多留学生在美国无法完成线下毕业设计展。于是我联合国内校友，发起并组织了覆盖全美 10 所学校学生会的艺术高校联展。
 
-策展人 & 设计师，亦庄政府支持项目，2025.05 - 2025.09。负责策展定位、主题方向、展览结构、作品甄选、国际化交流平台搭建、场地规划、布展动线与观众体验设计。
+项目共收集了 1000 多份投稿，最终选择 200 余份作品，完成了一场面向公众开放的艺术高校联展。这个项目不仅是一次展览组织，也是在特殊时期为海外艺术与设计学生补上一场线下毕业展示的尝试。
 
-## OMNI Art Expo 全球艺术高校作品联展
+我和校友共同努力，最终将展览选址在上海百年建筑新泰仓库。开幕活动得到了上海市政府的支持与参观，也让这场由学生和校友发起的展览获得了更广泛的公共关注。
 
-策展人 & 发起人，上海政府支持项目，2021.03 - 2021.06。组织 11 所美国、英国高校学生参展，征集 500 余份作品并评选 100 余份参展作品，邀请 50+ 位业内校友、100 位在场学生交流，日均参观 500 人次。
+<div class="omni-gallery">
+  <figure class="omni-gallery-main">
+    <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO 开幕现场" />
+    <figcaption>OMNI ART EXPO 开幕现场</figcaption>
+  </figure>
+  <div class="omni-gallery-row">
+    <figure>
+      <img src="/assets/images/omni-art-expo/image%2015.png" alt="新泰仓库展览场地" />
+      <figcaption>新泰仓库展览场地</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO 展览入口与参展名单" />
+      <figcaption>OMNI ART EXPO 展览入口与参展名单</figcaption>
+    </figure>
+  </div>
+  <figure class="omni-gallery-main">
+    <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO 展览现场" />
+    <figcaption>OMNI ART EXPO 展览现场</figcaption>
+  </figure>
+</div>
+
+<video controls playsinline preload="metadata" style="width:100%;border-radius:8px;margin:24px 0;">
+  <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
+  你的浏览器暂不支持视频播放。
+</video>

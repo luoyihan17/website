@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "南加大世界建构媒体实验室"
 dateRange: "2023.02 - 2024.05"
 intro: "主导 World In A Cell VR 教育游戏的 VR 交互流程与用户界面"

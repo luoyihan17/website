@@ -9,11 +9,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${CMS_NAME} – AI Product Designer`,
+    default: `${CMS_NAME} – AI & Interactive Experience Designer`,
     template: `%s | ${CMS_NAME}`,
   },
   description: SITE_DESCRIPTION_EN,
-  keywords: ["Luo Yihan", "雒艺涵", "AI Product Designer", "AI 产品设计师", "Interaction Design", "VR UX", "Curator"],
+  keywords: ["Luo Yihan", "雒艺涵", "AI Designer", "Full-stack Designer", "Interactive Entertainment", "Game Design", "Creative Technology", "Interaction Design", "VR UX", "Curator"],
   authors: [{ name: CMS_NAME, url: SITE_URL }],
   creator: CMS_NAME,
   openGraph: {
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     alternateLocale: "zh_CN",
     url: SITE_URL,
     siteName: CMS_NAME,
-    title: `${CMS_NAME} – AI Product Designer`,
+    title: `${CMS_NAME} – AI & Interactive Experience Designer`,
     description: SITE_DESCRIPTION_EN,
     images: HOME_OG_IMAGE_URL ? [HOME_OG_IMAGE_URL] : [],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${CMS_NAME} – AI Product Designer`,
+    title: `${CMS_NAME} – AI & Interactive Experience Designer`,
     description: SITE_DESCRIPTION_EN,
   },
   robots: {
@@ -59,13 +59,6 @@ export default function RootLayout({
           rel="icon"
           type="image/svg+xml"
           href="/favicon/favicon.svg"
-        />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="msapplication-config"
-          content="/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />

@@ -1,6 +1,6 @@
-# xujiazhao.com
+# Luo Yihan Portfolio
 
-Personal portfolio site for Jiazhao Xu (许嘉昭) — designer at Microsoft.
+Personal portfolio site for Luo Yihan, an AI full-stack designer working across AI music, interactive entertainment, games, and creative technology.
 
 ## Tech Stack
 
@@ -10,8 +10,7 @@ Personal portfolio site for Jiazhao Xu (许嘉昭) — designer at Microsoft.
 - **CMS**: [Pages CMS](https://pagescms.org) for content management
 - **Fonts**: Barlow (English), system default (Chinese)
 - **i18n**: English (`/en`) and Chinese (`/zh`)
-- **Chat**: OpenAI-powered chatbot (`/api/chat`)
-- **Resume PDF**: Server-side PDF generation via Puppeteer (`/api/resume-pdf`)
+- **Resume**: Browser print flow for PDF export
 
 ## Structure
 
@@ -27,7 +26,7 @@ public/
     images/       # All media assets (organized by project)
 resume/
   content/
-    en/           # English resumes (product-manager.md, product-designer.md)
+    en/           # English resumes
     zh/           # Chinese resumes
   components/     # Resume viewer component
   lib/            # Resume data API
@@ -35,8 +34,6 @@ resume/
 src/
   app/
     [lang]/        # Language-routed pages
-    api/chat/      # AI chatbot endpoint
-    api/resume-pdf/  # PDF generation endpoint
   lib/             # Content API, markdown processing, constants
   interfaces/      # TypeScript type definitions
 ```
@@ -50,7 +47,7 @@ npm run build   # Production build
 npm run start   # Start production server
 ```
 
-Requires a `.env.local` file with API keys (e.g., OpenAI key for the chat feature).
+No API keys are required for the static portfolio experience.
 
 ## Content Management
 
@@ -61,7 +58,6 @@ Content is managed via Markdown files with frontmatter. Use [Pages CMS](https://
 1. **Projects, Writings, Experiences, Creations** — Edit or create `.md` files in `content/en/` and `content/zh/`. Each file needs frontmatter with `title`, `date`, `intro`, `coverImage`, `favicon`, and optionally `sorting` (higher = displayed first for projects/experiences).
 2. **Resumes** — Edit `resume/content/en/*.md` and `resume/content/zh/*.md`. Resumes use HTML within markdown for precise layout control (icons, meta spans, etc.).
 3. **Images** — Place images in `public/assets/images/{project-name}/`. Use `.webp` format for optimized loading. Convert from PNG if needed: `cwebp input.png -o output.webp -q 85`.
-4. **Chatbot prompt** — Update the `SYSTEM_PROMPT` in `src/app/api/chat/route.ts` when project info changes.
 
 ### Content Ordering
 
@@ -78,4 +74,4 @@ Push to `main` branch to trigger automatic deployment.
 
 ## License
 
-All rights reserved. © Jiazhao Xu
+All rights reserved. © Luo Yihan

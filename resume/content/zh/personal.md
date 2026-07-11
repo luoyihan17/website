@@ -1,19 +1,19 @@
 ---
 personalSite: true
-title: "雒艺涵 – AI 产品设计师"
+title: "雒艺涵 – AI 全栈设计师"
 variant: "personal"
-label: "AI 产品设计师"
+label: "AI 全栈设计师"
 ---
 
 # 雒艺涵 Luo Yihan
 
-**AI 产品设计师，文化策展** <span class="resume-contact">邮箱: <a href="mailto:luoyihan17@gmail.com">luoyihan17@gmail.com</a> · 微信: sakuraluo</span>
+**AI 全栈设计师，文化策展** <span class="resume-contact">邮箱: <a href="mailto:luoyihan17@gmail.com">luoyihan17@gmail.com</a> · 微信: sakuraluo</span>
 
 ---
 
 ## 教育经历
 
-### University of Southern California（南加州大学）- 交互媒体研究 硕士 <span class="resume-meta">2022.08 - 2024.05</span>
+### University of Southern California（南加州大学）- 交互游戏研究 硕士 <span class="resume-meta">2022.08 - 2024.05</span>
 
 - GPA 3.94，参与多个跨专业交互媒体研究与应用项目，以荣誉毕业生身份毕业。
 - 导师：Marientina Gotsis，南加州大学创意媒体与行为健康实验室主任。
@@ -28,12 +28,10 @@ label: "AI 产品设计师"
 
 ### 腾讯音乐娱乐公司 - AI 产品设计师 <span class="resume-meta">2024.09 - 至今</span>
 
-- 负责 QQ 音乐 AI 音乐创作板块的产品定位与核心交互设计，深度参与 AI 作歌与 AI 唱功能从 0 到 1 及持续迭代优化。
-- 通过系统化用户调研与数据分析，识别用户在 AI 创作流程中的认知负担与操作断点，构建更清晰的创作路径与反馈机制。
-- 负责 AI 对话作歌流程、用户引导和操作界面设计，简化创作步骤，AI 作歌板块收入上涨约 200%，并获得设计专利。
-- 从 0 到 1 搭建 AI 唱作独立 App「Vemus 未音」，预计 2025 年底上线，目标突破 10w+ DAU。
-- 探索 Vibe Coding 与 AI Coding，将 AI 生成能力应用于 H5 活动页面、音乐播放器皮肤、IP 玩法与音乐游戏播放器。
-- 利用 AI 整理设计规范和组件库，将设计规范整理时间缩短约 50%；负责车机、Web 端、华为等多端核心功能设计交付。
+- AI音乐创作：负责 QQ 音乐 AI 音乐创作板块的产品定位与核心交互设计，深度参与 AI 作歌与 AI 唱功能从 0 到 1 及持续迭代优化，AI 作歌板块收入上涨约 200%，并获得AI对话作歌设计专利。
+- Vemus未音APP：从 0 到 1 搭建 AI 唱作独立 App「Vemus 未音」于2025 年底上线，目标突破 10w+ DAU。
+- AI Coding艺粉小游戏：探索艺粉+游戏，从0-1发起并主导，推动设计AI coding小游戏并推动上线，与S级艺人合作：张艺兴, aespa等，外网，艺人得到一致好评。
+- 利用 AI 整理设计规范和组件库，将设计规范整理时间缩短约 50%。
 
 ### 南加大世界建构媒体实验室 - VR 用户体验设计师 <span class="resume-meta">2023.02 - 2024.05</span>
 
@@ -61,8 +59,8 @@ label: "AI 产品设计师"
 ### NeonCity VR 游戏 - UI/UX 首席设计师 <span class="resume-meta">2022.09 - 2023.05</span>
 
 - 南加州大学高阶游戏项目，玩家通过 VR 沙盒建造学习社区规划与建造方法。
-- 主导 VR 游戏 UI/UX 设计，带领 3 名交互设计同事设计 VR 界面。
-- 项目已在 Steam 平台上线，游戏预告片：<a href="https://www.youtube.com/watch?v=VLthQ00BcaY">YouTube</a>。
+- 主导 VR 游戏 UI/UX 设计，带领 3 名交互设计同事设计 VR游戏里的界面，手势交互等。
+- 该项目已在 Steam 平台上线，游戏预告片：<a href="https://www.youtube.com/watch?v=VLthQ00BcaY">YouTube</a>。
 
 ---
 

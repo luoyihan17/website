@@ -5,8 +5,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Luo Yihan's resume – AI Product Designer",
+  description: "Luo Yihan's resume – AI and interactive experience designer",
 };
+
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "zh" }];
+}
 
 async function getProcessedResumes(lang: string) {
   const resumes = getAllResumes(lang);

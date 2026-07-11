@@ -101,6 +101,13 @@ export default async function markdownToHtml(markdown: string) {
   const result = await remark().use(remarkGfm).use(html, { sanitize: false }).process(processed);
   let htmlStr = result.toString();
 
+  const figurePlaceholders: string[] = [];
+  htmlStr = htmlStr.replace(/<figure\b[\s\S]*?<\/figure>/g, (figure) => {
+    const placeholder = `@@FIGURE_PLACEHOLDER_${figurePlaceholders.length}@@`;
+    figurePlaceholders.push(figure);
+    return placeholder;
+  });
+
   // Wrap <img> with non-empty alt text in <figure> with <figcaption>
   htmlStr = htmlStr.replace(
     /<img\s+src="([^"]+)"\s+alt="([^"]+)"\s*\/?>/g,
@@ -117,6 +124,11 @@ export default async function markdownToHtml(markdown: string) {
       if (!alt || alt === 'undefined') return match;
       return `<figure><img src="${src}" alt="${alt}" /><figcaption>${alt}</figcaption></figure>`;
     }
+  );
+
+  htmlStr = htmlStr.replace(
+    /@@FIGURE_PLACEHOLDER_(\d+)@@/g,
+    (_, index) => figurePlaceholders[Number(index)] || ''
   );
 
   // Open external links in a new tab

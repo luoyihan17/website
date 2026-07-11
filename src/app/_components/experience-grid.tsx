@@ -52,7 +52,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
 
   return (
     <div
-      className="flex text-base whitespace-nowrap"
+      className="flex text-sm md:text-base whitespace-nowrap"
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
@@ -84,16 +84,16 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
       <div className="overflow-x-auto flex-1 min-w-0">
         <div className="exp-scroll-grid">
           {/* Header */}
-          <div className={`${HEADER_H} flex items-center pr-5 font-semibold text-neutral-500 border-b md:hidden`}>
+          <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b md:hidden`}>
             {isEn ? "Name" : "名称"}
           </div>
-          <div className={`${HEADER_H} flex items-center pr-5 font-semibold text-neutral-500 border-b`}>
+          <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b`}>
             {isEn ? "Time Range" : "时间"}
           </div>
-          <div className={`${HEADER_H} flex items-center pr-5 font-semibold text-neutral-500 border-b`}>
+          <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b`}>
             {isEn ? "Location" : "地点"}
           </div>
-          <div className={`${HEADER_H} flex items-center pr-5 font-semibold text-neutral-500 border-b`}>
+          <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b`}>
             {isEn ? "Type" : "类型"}
           </div>
           <div className={`${HEADER_H} flex items-center pr-2 font-semibold text-neutral-500 border-b`}>
@@ -108,7 +108,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                 key={`${exp.slug}-name`}
                 data-href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-5 font-semibold border-b border-neutral-100 cursor-pointer transition-colors duration-300 md:hidden`}
+                className={`${ROW_H} flex items-center pr-4 font-semibold border-b border-neutral-100 cursor-pointer transition-colors duration-300 md:hidden`}
               >
                 {exp.title}
               </div>,
@@ -116,7 +116,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                 key={`${exp.slug}-date`}
                 data-href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-5 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
               >
                 {exp.dateRange || exp.date}
               </div>,
@@ -124,7 +124,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                 key={`${exp.slug}-loc`}
                 data-href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-5 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
               >
                 {exp.location}
               </div>,
@@ -132,7 +132,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                 key={`${exp.slug}-type`}
                 data-href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-5 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
               >
                 {exp.type}
               </div>,
@@ -150,7 +150,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                       return (
                         <span
                           key={tag}
-                          className={`inline-block text-sm font-medium px-2 py-0.5 rounded-lg ${
+                          className={`inline-block text-xs md:text-sm font-medium px-1.5 md:px-2 py-0.5 rounded-md md:rounded-lg ${
                             isHighlighted
                               ? "bg-neutral-800 text-white"
                               : "bg-neutral-200 text-neutral-600"

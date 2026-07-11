@@ -1,10 +1,10 @@
 ---
 personalSite: true
-title: "Vemus"
+title: "Vemus Independent App"
 date: "2025-12-01"
-intro: "An independent AI singing and music creation app built from 0 to 1"
+intro: "Built an independent AI singing and songwriting app from 0 to 1, exploring original AI music experiences"
 sorting: 2
-coverImage: "/assets/personal/project-dashboard.svg"
+coverImage: "/assets/images/Vemus.jpg"
 ---
 
 Vemus is an independent AI singing and music creation app exploring user-facing AI-generated music experiences.

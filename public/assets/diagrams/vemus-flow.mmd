@@ -1,0 +1,26 @@
+flowchart LR
+  entry["01 入口体验<br/>沉浸式播放页起播<br/>先听到结果 → 建立创作期待"]
+
+  subgraph song["02A AI 作歌 / Songwriting"]
+    song1["对话作歌"] --> song2["灵感输入"] --> song3["歌词作歌"] --> song4["图片作歌"] --> song5["音乐配方"] --> song6["多版本结果"] --> song7["沉淀资产"]
+  end
+
+  subgraph sing["02B AI 唱 / Singing"]
+    sing1["录制音色"] --> sing2["音色选择"] --> sing3["选择歌曲"] --> sing4["试听效果"] --> sing5["完整生成"] --> sing6["沉淀资产"]
+  end
+
+  entry --> song
+  entry --> sing
+  song --> enhance["03 创作增强<br/>制作同款 / AI 改编 / 模版作歌 / AIMV"]
+  sing --> enhance
+  enhance --> assets["04 作品沉淀<br/>我的作品 / 发行作品 / 歌单"]
+  assets --> growth["05 增长与转化<br/>金币购买 / 发行激励 / 付费全曲"]
+
+  classDef entryNode fill:#111111,stroke:#111111,color:#ffffff
+  classDef songPath fill:#ecfdf5,stroke:#10b981,color:#064e3b
+  classDef singPath fill:#fffbeb,stroke:#f59e0b,color:#78350f
+  classDef stage fill:#ffffff,stroke:#d6d3d1,color:#111111
+  class entry entryNode
+  class song1,song2,song3,song4,song5,song6,song7 songPath
+  class sing1,sing2,sing3,sing4,sing5,sing6 singPath
+  class enhance,assets,growth stage

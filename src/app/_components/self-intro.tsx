@@ -45,10 +45,12 @@ export function SelfIntro({ lang }: Props) {
   }, []);
 
   const rotatingTitles: { en: string; zh: string }[] = [
-    { en: "AI Product Designer", zh: "AI 产品设计师" },
     { en: "Interaction Designer", zh: "交互设计师" },
     { en: "VR UX Designer", zh: "VR 体验设计师" },
     { en: "Cultural Curator", zh: "文化策展人" },
+    { en: "Vibe Coding", zh: "Vibe Coding" },
+    { en: "Event Planner", zh: "活动策划者" },
+    { en: "Mom of Two Cats & a Bird", zh: "两只可爱小猫&鸟的妈妈" },
   ];
 
   const [titleIndex, setTitleIndex] = useState(0);
@@ -63,7 +65,6 @@ export function SelfIntro({ lang }: Props) {
   }, [rotatingTitles.length]);
 
   const currentTitle = isEn ? rotatingTitles[titleIndex].en : rotatingTitles[titleIndex].zh;
-  const prefixText = isEn ? "AI Product Designer & " : "AI 产品设计师 & ";
 
   const handleWeChat = () => {
     if (window.innerWidth < 768) {
@@ -87,7 +88,6 @@ export function SelfIntro({ lang }: Props) {
           {isEn ? "Luo Yihan" : "雒艺涵"}
         </h1>
         <p className="text-2xl md:text-3xl tracking-tight mb-8" style={{ color: '#EE9933' }}>
-          {prefixText}
           <span className="inline-block" key={animKey}>
             {currentTitle.split("").map((char, i) => (
               <span
@@ -104,24 +104,24 @@ export function SelfIntro({ lang }: Props) {
           {isEn ? (
             <>
               <p className="mb-4">
-                I am Luo Yihan, an AI product designer. My work spans AI creation, interaction design, and user research.
+                I am a full-stack designer exploring the intersection of AI, interactive entertainment, games, and creative technology. I care not only about functionality, but also about connecting platforms and content to create experiences with emotion, memory, and imagination.
               </p>
               <p className="mb-4">
-                I earned my B.S. in Interaction Design from <Link href="/en/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">ArtCenter College of Design</Link> and my M.A. in Interactive Media from the University of Southern California. I currently work at Tencent Music.
+                I earned my B.S. in Interaction Design from <Link href="/en/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">ArtCenter College of Design</Link> and my M.A. in <a href="https://cinema.usc.edu/interactive/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">Interactive Games and Media</a> from the University of Southern California. I currently work at Tencent Music.
               </p>
             </>
           ) : (
             <>
               <p className="mb-4">
-                我是雒艺涵，AI 产品设计师。我的工作横跨 AI 创作、交互设计与用户研究。
+                一名探索 AI、互动娱乐与创意技术交叉领域的全栈设计师。我关注的不只是功能本身，也希望连接平台和内容去创造更有情绪、更有记忆点、更具想象力的体验。
               </p>
               <p className="mb-4">
-                我本科毕业于<Link href="/zh/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">艺术中心设计学院</Link>交互设计专业，研究生毕业于南加州大学交互媒体研究硕士，目前在腾讯音乐工作。
+                我本科毕业于<Link href="/zh/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">艺术中心设计学院</Link>交互设计专业，研究生毕业于<a href="https://cinema.usc.edu/interactive/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">南加州大学交互游戏研究硕士</a>，目前在腾讯音乐工作。
               </p>
             </>
           )}
         </div>
-        <div className="grid grid-cols-4 md:inline-flex md:flex-nowrap gap-3 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:inline-flex md:flex-nowrap gap-3 text-sm">
           <Link href={`/${lang}/resume`} className="whitespace-nowrap inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-100 text-neutral-900 transition-colors duration-300">
             {isEn ? "Resume" : "简历"}
           </Link>
