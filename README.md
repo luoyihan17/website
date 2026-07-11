@@ -72,6 +72,10 @@ All content must be maintained in both `en/` and `zh/` directories. Keep frontma
 
 Push to `main` branch to trigger automatic deployment.
 
+For Vercel, keep the default build command as `npm run build` so the Next.js
+middleware can handle the language redirect from `/`. For static-only hosts,
+use `npm run build:static` and deploy the generated `out/` directory.
+
 ## License
 
 All rights reserved. © Luo Yihan
