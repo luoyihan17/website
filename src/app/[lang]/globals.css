@@ -75,6 +75,75 @@ body {
   object-fit: contain;
   background: #000;
 }
+.markdown video.fit-screen-video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 7rem);
+  margin: 24px auto;
+  border-radius: 8px;
+}
+.markdown .ai-game-result-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.46025fr) minmax(0, 1.4402fr);
+  gap: 1rem;
+  align-items: start;
+  justify-content: start;
+  margin: 24px 0;
+}
+.markdown .ai-game-result-layout video.fit-screen-video {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  justify-self: start;
+}
+.markdown .ai-game-result-image {
+  min-width: 0;
+  margin: 0;
+}
+.markdown .ai-game-result-image > .media-skeleton-wrapper {
+  width: 100%;
+  border-radius: 8px;
+}
+.markdown .ai-game-result-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  object-position: left top;
+  border-radius: 8px;
+}
+@media (max-width: 560px) {
+  .markdown .ai-game-result-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .markdown .ai-game-result-layout video.fit-screen-video {
+    width: 100%;
+    margin: 0;
+    justify-self: start;
+  }
+
+  .markdown .ai-game-result-image {
+    width: 100%;
+  }
+
+  .markdown .ai-game-result-image > .media-skeleton-wrapper {
+    height: auto;
+    min-height: 120px;
+  }
+
+  .markdown .ai-game-result-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+}
 .markdown figure {
   @apply my-6;
 }
