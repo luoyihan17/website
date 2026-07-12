@@ -1,6 +1,6 @@
 ---
 personalSite: true
-title: "OMNI Art Expo 全球艺术高校作品联展"
+title: "OMNI Art Expo 全球高校作品联展"
 date: "2021-03-01"
 skill: ["Curator", "Founder", "Exhibition"]
 coverImage: "/assets/images/omni-art-expo/image%2014.png"

@@ -42,3 +42,6 @@ Notion Version/
 
 # Resume PDF cache
 resume/cache/
+
+# Keep the original local 4K robot exhibition video out of Git.
+public/assets/images/robotexhibition/robot.mp4

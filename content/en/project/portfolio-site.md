@@ -4,7 +4,7 @@ title: "QQ Music AI Music Creation"
 date: "2024-09-01"
 intro: "Product positioning and core interaction design for AI song generation and AI singing"
 sorting: 3
-coverImage: "/assets/images/AIMusic/optimized/QQ%20MUSIC.webp"
+coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
 ---
 
 At Tencent Music Entertainment, I design QQ Music's AI music creation experiences, including AI song generation and AI singing features.

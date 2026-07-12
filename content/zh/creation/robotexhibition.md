@@ -1,0 +1,32 @@
+---
+personalSite: true
+title: "国际机器人与艺术设计双年展"
+date: "2025-05-01"
+skill: ["Curator", "Robotics", "Art"]
+coverImage: "/assets/images/robotexhibition/robotcover.jpg"
+---
+<figure class="robot-hero-video">
+  <video controls playsinline preload="metadata" poster="/assets/images/robotexhibition/robotcover.jpg">
+    <source src="/assets/images/robotexhibition/robot-web.mp4" type="video/mp4" />
+    你的浏览器暂不支持视频播放。
+  </video>
+</figure>
+
+## International Robot Art Exhibition
+
+作为2025世界机器人大会的配套艺术与设计展览，本届国际机器人与艺术设计双年展以“未来共生体：机器人、艺术与人”为主题，探索机器人技术如何从工业生产工具，逐渐转变为文化、情感与艺术表达的媒介。
+
+我参与了项目从策展定位到展览落地的完整过程，包括策展主题定义、展览结构规划、国际作品征集、作品评审、空间内容组织、观众动线设计以及合作机构协调。项目面向国内头部艺术院校、海外艺术与设计高校、青年艺术家、机器人设计师及跨学科研究团队，共征集全球作品200余件，最终精选40余件进行展出。
+
+展览涵盖机器人产品设计、AI艺术、智能交互装置、仿生机械、3D打印、未来家居与概念设计等方向，并通过室内科技艺术展览与室外场景化体验相结合的方式，将复杂的机器人技术转化为公众可以观看、理解和参与的文化体验。
+
+这个项目让我从单一作品的设计者，转变为一个跨学科内容系统的构建者：不仅需要判断每件作品的价值，也需要定义作品之间的关系，协调艺术家、院校、产业机构、空间和公众体验，最终搭建起机器人、艺术、设计与社会之间的交流平台。
+
+<div class="robot-gallery" aria-label="国际机器人与艺术设计双年展现场照片">
+  <img src="/assets/images/robotexhibition/robot1.jpg" alt="国际机器人与艺术设计双年展现场照片 1" />
+  <img src="/assets/images/robotexhibition/robot2.jpg" alt="国际机器人与艺术设计双年展现场照片 2" />
+  <img src="/assets/images/robotexhibition/robot3.jpg" alt="国际机器人与艺术设计双年展现场照片 3" />
+  <img src="/assets/images/robotexhibition/robot4.jpg" alt="国际机器人与艺术设计双年展现场照片 4" />
+  <img src="/assets/images/robotexhibition/robot5.jpg" alt="国际机器人与艺术设计双年展现场照片 5" />
+  <img src="/assets/images/robotexhibition/robot6.jpg" alt="国际机器人与艺术设计双年展现场照片 6" />
+</div>

@@ -5,6 +5,12 @@ date: "2021-03-01"
 skill: ["Curator", "Founder", "Exhibition"]
 coverImage: "/assets/images/omni-art-expo/image%2014.png"
 ---
+<figure class="robot-hero-video">
+  <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.png">
+    <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+</figure>
 
 ## OMNI ART EXPO
 
@@ -14,30 +20,9 @@ The project collected more than 1,000 submissions and ultimately selected over 2
 
 Together with alumni, we chose Xintai Warehouse, a century-old building in Shanghai, as the exhibition venue. The opening received support and visits from the Shanghai municipal government, helping this student- and alumni-led exhibition gain broader public attention.
 
-<div class="omni-showcase">
-  <figure class="omni-media-tile omni-video-panel">
-    <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.png">
-      <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
-      Your browser does not support video playback.
-    </video>
-    <figcaption>OMNI ART EXPO exhibition video</figcaption>
-  </figure>
-  <div class="omni-still-grid">
-  <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO opening" />
-    <figcaption>OMNI ART EXPO opening</figcaption>
-  </figure>
-  <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2015.png" alt="Xintai Warehouse exhibition venue" />
-    <figcaption>Xintai Warehouse exhibition venue</figcaption>
-  </figure>
-  <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO entrance and participant list" />
-    <figcaption>OMNI ART EXPO entrance and participant list</figcaption>
-  </figure>
-  <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO exhibition view" />
-    <figcaption>OMNI ART EXPO exhibition view</figcaption>
-  </figure>
-  </div>
+<div class="robot-gallery" aria-label="OMNI ART EXPO exhibition photos">
+  <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO opening" />
+  <img src="/assets/images/omni-art-expo/image%2015.png" alt="Xintai Warehouse exhibition venue" />
+  <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO entrance and participant list" />
+  <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO exhibition view" />
 </div>

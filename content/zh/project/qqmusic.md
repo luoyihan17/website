@@ -4,7 +4,7 @@ title: "QQ 音乐 AI 创作"
 date: "2024-09-01"
 intro: "负责 AI 唱作功能的产品定位、核心交互与持续迭代"
 sorting: 3
-coverImage: "/assets/images/AIMusic/optimized/QQ%20MUSIC.webp"
+coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
 ---
 
 ## 项目背景
@@ -13,7 +13,7 @@ AI 创作是我在 QQ 音乐参与设计的核心 AI 音乐创作项目，指用
 
 随着 AIGC 进入音乐场景，QQ 音乐不再只是用户听歌、收藏和分享音乐的平台，也逐渐成为普通用户表达情绪、记录生活、生成作品和参与音乐创作的入口。AI 作歌的目标不是服务专业音乐制作流程，而是让没有作词、作曲和编曲经验的普通用户，也能低门槛地完成一首属于自己的歌曲。
 
-![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/optimized/QQMusicAI.webp)
+![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/QQMusicAI.webp)
 
 ## AI 音乐创作项目中的产品体验思考
 
@@ -47,25 +47,25 @@ Suno 更偏向专业或半专业创作者，用户往往带着明确的创作目
 
 在这一部分，我的重点是先帮用户找到清晰的作歌理由。关系、节日、粉丝应援等场景能更快触发创作动机，只有当“为什么要作歌”成立后，后续的输入方式、风格选择和生成体验才有明确的方向。
 
-![QQ Music AI Music Scenario-Based Creation](/assets/images/AIMusic/optimized/Scenario-Based%20Creation.webp)
+![QQ Music AI Music Scenario-Based Creation](/assets/images/AIMusic/Scenario-Based%20Creation.webp)
 
 ### 2. 创作鼓励机制
 
 为了提升用户的持续创作意愿，我和产品经理共同构思了作品发行、播放数据、榜单排名和荣誉证书等机制。播放量与排名主要强化用户的竞争意识，让作品不只是生成后被保存在本地，而是进入一个可被比较、可被看见的公共创作场域；荣誉证书与作品展示则强化用户的成就感，让用户感知到自己的 AI 歌曲是一个正式发布的作品，而不是一次临时生成结果。
 
-![QQ Music AI Music Ranking List and Rewards](/assets/images/AIMusic/optimized/Ranking%20List%20%26%20Rewards.webp)
+![QQ Music AI Music Ranking List and Rewards](/assets/images/AIMusic/Ranking%20List%20%26%20Rewards.webp)
 
 ### 3. 业务转化与商业激励
 
 在商业化设计上，我关注如何把用户从基础生成引导到更高价值的功能与服务，例如高质量生成、重新生成、风格优化、作品发布、曝光提升和激励金获取。不同于创作鼓励机制主要解决“为什么继续做”，商业激励更关注“用户为什么愿意投入更多”。其中，激励金机制让用户意识到 AI 歌曲不仅可以被听见，也可能产生收益反馈，从而为后续付费转化、创作者留存和内容生态建设提供支撑。
 
-![QQ Music AI Music Business Conversion](/assets/images/AIMusic/optimized/Business%20Conversion.webp)
+![QQ Music AI Music Business Conversion](/assets/images/AIMusic/Business%20Conversion.webp)
 
 ### 4. 娱乐化体验设计
 
 为了提升用户持续探索的动力，我参与设计了 AIMV、图片解析和 AI 改编等体验，将 AI 作歌从单一生成工具延展为更具过程感、视觉感和互动感的娱乐玩法。AIMV 强化生成结果的观看与分享价值，让一首歌可以进一步变成可传播的音乐视频；图片解析降低灵感输入成本，让用户可以从照片、场景和情绪中快速获得创作方向；AI 改编则让用户在已有结果基础上继续尝试不同风格、情绪和表达方式，增强反复创作的动力。通过这些设计，用户不只是完成一次歌曲生成，而是愿意不断尝试不同素材、风格和结果，从而实现从“敢开始”到“玩下去”的体验转化。
 
-![QQ Music AI Music Playful Experience](/assets/images/AIMusic/optimized/playful.webp)
+![QQ Music AI Music Playful Experience](/assets/images/AIMusic/playful.webp)
 
 ## 项目总结
 
