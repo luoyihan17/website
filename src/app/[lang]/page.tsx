@@ -2,7 +2,6 @@ import Container from "@/app/_components/container";
 import { getAllItems } from "@/lib/api";
 import { SelfIntro } from "@/app/_components/self-intro";
 import Link from "next/link";
-import DateFormatter from "@/app/_components/date-formatter";
 import { ExperienceGrid } from "@/app/_components/experience-grid";
 import { CreationSection } from "@/app/_components/creation-section";
 import { WritingSection } from "@/app/_components/writing-section";

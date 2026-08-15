@@ -1,8 +1,9 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, SITE_URL, SITE_DESCRIPTION_EN, SITE_DESCRIPTION_ZH, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { CMS_NAME, SITE_URL, SITE_DESCRIPTION_EN, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/app/_components/site-header";
 import { ScrollReset } from "@/app/_components/scroll-reset";
+import { ChatWidget } from "@/app/_components/chat-widget";
 
 import "./globals.css";
 
@@ -68,6 +69,7 @@ export default function RootLayout({
           <ScrollReset />
           {children}
           <Footer lang={params.lang} />
+          <ChatWidget lang={params.lang} />
       </body>
     </html>
   );

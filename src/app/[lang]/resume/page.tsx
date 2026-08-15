@@ -32,12 +32,9 @@ export default async function ResumePage({
     getProcessedResumes("zh"),
   ]);
 
-  const currentResumes = params.lang === "en" ? enResumes : zhResumes;
-
   return (
     <main className="resume-page">
       <ResumeViewer
-        variants={currentResumes}
         lang={params.lang}
         allVariants={{ en: enResumes, zh: zhResumes }}
       />

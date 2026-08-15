@@ -17,6 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  for (const lang of langs) {
+    entries.push({
+      url: `${SITE_URL}/${lang}/paper/artistic-tales`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+
   // Collection pages
   for (const lang of langs) {
     for (const collection of collections) {
@@ -24,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       for (const item of items) {
         entries.push({
           url: `${SITE_URL}/${lang}/${collection}/${item.slug}`,
-          lastModified: item.date ? new Date(item.date) : new Date(),
+          lastModified: new Date(item.lastModified || item.date),
           changeFrequency: "monthly",
           priority: 0.8,
         });
@@ -38,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const item of creations) {
       entries.push({
         url: `${SITE_URL}/${lang}/creation/${item.slug}`,
-        lastModified: item.date ? new Date(item.date) : new Date(),
+        lastModified: new Date(item.lastModified || item.date),
         changeFrequency: "monthly",
         priority: 0.6,
       });

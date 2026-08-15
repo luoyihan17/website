@@ -1,12 +1,23 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-let locales = ['en', 'zh']
-let defaultLocale = 'en'
+const locales = ['en', 'zh'] as const
+const defaultLocale = 'en'
+const CHROME_DEVTOOLS_CONFIG_PATH = '/.well-known/appspecific/com.chrome.devtools.json'
 
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl
+
+  if (
+    pathname === CHROME_DEVTOOLS_CONFIG_PATH ||
+    locales.some(
+      (locale) => pathname === `/${locale}${CHROME_DEVTOOLS_CONFIG_PATH}`
+    )
+  ) {
+    return new NextResponse(null, { status: 404 })
+  }
+
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
@@ -36,6 +47,6 @@ export const config = {
      * - assets (public folder)
      * - favicon (public folder)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|assets|favicon).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|assets|favicon).*)',
   ],
 }

@@ -82,7 +82,7 @@ export function SelfIntro({ lang }: Props) {
   };
 
   return (
-    <section className="flex-col md:flex-row flex items-start md:justify-between mt-16 mb-16 md:mb-12">
+    <section className="relative flex-col md:flex-row flex items-start md:justify-between mt-16 mb-16 md:mb-12">
       <div className="w-full">
         <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 mb-2">
           {isEn ? "Luo Yihan" : "雒艺涵"}
@@ -138,6 +138,15 @@ export function SelfIntro({ lang }: Props) {
             {isEn ? "WeChat" : "微信"}
           </button>
         </div>
+      </div>
+
+      <div className="pointer-events-none absolute right-0 top-0 hidden md:block">
+        <img
+          src="/assets/functional-images/idea-animation.gif"
+          alt=""
+          aria-hidden="true"
+          className="w-40 lg:w-48 h-auto"
+        />
       </div>
 
       {/* WeChat QR Code Modal (Desktop/Tablet) */}

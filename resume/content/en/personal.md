@@ -15,12 +15,12 @@ label: "AI Full-stack Designer"
 
 ### University of Southern California - M.A. in Interactive Games and Media <span class="resume-meta">2022.08 - 2024.05</span>
 
-- GPA 3.94. Participated in multiple interdisciplinary interactive media research and application projects. Graduated with honors.
+- GPA 3.94. Participated in multiple interdisciplinary interactive media research and application projects and graduated with honors.
 - Advisor: Marientina Gotsis, Director of USC Creative Media & Behavioral Health Center.
 
 ### ArtCenter College of Design - B.S. in Interaction Design <span class="resume-meta">2019.01 - 2022.04</span>
 
-- Dean's List, long-term scholarship recipient, and honors graduate.
+- Dean's List (GPA > 3.8/4.0), long-term scholarship recipient, and honors graduate.
 
 ---
 
@@ -28,16 +28,14 @@ label: "AI Full-stack Designer"
 
 ### Tencent Music Entertainment - AI Product Designer <span class="resume-meta">2024.09 - Present</span>
 
-- Responsible for product positioning and core interaction design for QQ Music's AI music creation features, including AI song generation and AI singing.
-- Used user research and data analysis to identify cognitive load and friction in AI creation workflows and build clearer creation paths and feedback mechanisms.
-- Designed conversational AI song creation flows, user guidance, and operation interfaces; AI song creation revenue increased by roughly 200%, and the design earned a patent.
-- Participated in building the independent AI singing app Vemus from 0 to 1, planned for launch in late 2025 with a target of 100k+ DAU.
-- Explored Vibe Coding and AI Coding workflows for H5 campaign pages, music player skins, IP experiences, and game-like music players.
-- Used AI to organize design guidelines and component libraries, reducing documentation time by roughly 50%; delivered core design work across car, web, Huawei, and other platforms.
+- AI music creation: Owned product positioning and core interaction design for QQ Music's AI music creation features, deeply participating in the 0-to-1 launch and continuous iteration of AI song creation and AI singing. AI song creation revenue increased by roughly 200%, and the conversational AI song creation design received a patent.
+- Vemus App: Built the independent AI singing and songwriting app "Vemus" from 0 to 1. The app launched in late 2025 with a target of 100k+ DAU.
+- AI Coding fan mini-games: Explored artist-fan engagement through games, initiated and led AI Coding mini-games from 0 to 1, and drove design through launch. Collaborated with S-tier artists including Lay Zhang and aespa, receiving positive feedback from both overseas audiences and artists.
+- Used AI to organize design guidelines and component libraries, reducing design guideline documentation time by roughly 50%.
 
 ### USC World Building Media Lab - VR UX Designer <span class="resume-meta">2023.02 - 2024.05</span>
 
-- Led VR interaction flow and UI design for World In A Cell, a VR educational game for cell biology.
+- Led VR interaction flows and UI design for World In A Cell, a VR educational game, improving user immersion and learning efficiency.
 - Led 30+ usability and scenario tests, produced detailed reports, and implemented key design optimizations.
 - Collaborated with USC biological scientists to develop a VR interactive learning tool that was introduced into USC biology courses in Fall 2023.
 
@@ -49,10 +47,10 @@ label: "AI Full-stack Designer"
 
 ### Tsinghua Future Laboratory - Interaction Design & Research Intern <span class="resume-meta">2021.05 - 2022.01</span>
 
-- Designed interfaces for an autonomous smart vehicle management system supporting seven testing and supervision scenarios on Tsinghua's campus.
+- Participated in interaction interface design for Tsinghua University's autonomous smart vehicle management system, supporting the testing and supervision of seven autonomous vehicles on campus.
 - Collaborated with Alibaba on a virtual shopping mall, contributing interaction flows, UI, and motion design.
 - Participated in research on older adults' use of smart products, EEG sleep research, and interactive art creation.
-- Assisted in writing three academic papers and organizing design models for integrated traffic management systems.
+- Assisted researchers in writing three academic papers and organizing design models and methodologies for traffic management systems.
 
 ---
 
@@ -61,7 +59,7 @@ label: "AI Full-stack Designer"
 ### NeonCity VR Game - Lead UI/UX Designer <span class="resume-meta">2022.09 - 2023.05</span>
 
 - USC Advanced Game Project where players learn community planning and construction through VR sandbox building.
-- Led VR UI/UX design and guided three interaction designers on VR interface work.
+- Led VR UI/UX design and guided three interaction designers in creating in-game interfaces and gesture interactions.
 - Launched on Steam. Trailer: <a href="https://www.youtube.com/watch?v=VLthQ00BcaY">YouTube</a>.
 
 ---

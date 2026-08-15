@@ -5,9 +5,6 @@ const nextConfig = {
     remotePatterns: [],
     unoptimized: process.env.STATIC_EXPORT === "1",
   },
-  experimental: {
-    serverComponentsExternalPackages: ["puppeteer-core", "@sparticuz/chromium"],
-  },
 };
 
 module.exports = nextConfig;

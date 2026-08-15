@@ -13,6 +13,9 @@
 /.next/
 /out/
 .next-dev.pid
+.next-dev.log
+.next-start.pid
+.next-start.log
 
 # production
 /build
@@ -45,3 +48,7 @@ resume/cache/
 
 # Keep the original local 4K robot exhibition video out of Git.
 public/assets/images/robotexhibition/robot.mp4
+
+# Keep local source media out of Git; commit web-optimized copies instead.
+/USC/
+public/assets/images/USC/ARtistic Tales.mp4

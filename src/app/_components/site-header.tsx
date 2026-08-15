@@ -13,7 +13,6 @@ export function SiteHeader({ lang }: Props) {
   const router = useRouter();
   const isEn = lang === "en";
   const targetLang = isEn ? "zh" : "en";
-  const langLabel = isEn ? "中文" : "EN";
 
   // Build the target path for language toggle
   const targetPath = pathname.replace(`/${lang}`, `/${targetLang}`) || `/${targetLang}`;
@@ -23,7 +22,6 @@ export function SiteHeader({ lang }: Props) {
   const isDetailPage = segments.length > 2;
   const isResumePage = segments.includes('resume');
 
-  const [headerFade, setHeaderFade] = useState(true);
   const [slideTo, setSlideTo] = useState<string | null>(null);
 
   const handleLangSwitch = (e: React.MouseEvent) => {
@@ -76,7 +74,7 @@ export function SiteHeader({ lang }: Props) {
           className="flex items-center"
           style={{
             transition: "opacity 300ms cubic-bezier(0.4,0,0.2,1)",
-            opacity: (isDetailPage) ? 0 : (headerFade ? 1 : 0),
+            opacity: isDetailPage ? 0 : 1,
             pointerEvents: (isDetailPage) ? "none" : "auto",
           }}
         >

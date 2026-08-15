@@ -65,7 +65,7 @@ export function CreationSection({ creations, lang, isEn }: Props) {
   return (
     <section className="mb-32">
       <h2 className="mb-8 text-4xl md:text-5xl font-bold tracking-tighter leading-tight">
-        {isEn ? "Creation" : "创作"}
+        {isEn ? "Curation" : "策展"}
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {nonArchive.map(renderCard)}

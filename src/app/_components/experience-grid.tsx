@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useCallback } from "react";
+import Link from "next/link";
+import { useState } from "react";
 
 type Experience = {
   slug: string;
@@ -25,37 +25,16 @@ const ROW_H = "h-10"; // fixed row height to sync pinned & scrollable columns
 const HEADER_H = "h-8";
 
 export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
-  const router = useRouter();
-
-  const handleClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const cell = (e.target as HTMLElement).closest<HTMLElement>("[data-href]");
-    if (cell) router.push(cell.dataset.href!);
-  }, [router]);
-
-  const handleMouseOver = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const cell = (e.target as HTMLElement).closest<HTMLElement>("[data-row]");
-    if (cell) {
-      document.querySelectorAll(`[data-row="${cell.dataset.row}"]`).forEach(el => {
-        el.classList.add("!bg-neutral-100");
-      });
-    }
-  }, []);
-
-  const handleMouseOut = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const cell = (e.target as HTMLElement).closest<HTMLElement>("[data-row]");
-    if (cell) {
-      document.querySelectorAll(`[data-row="${cell.dataset.row}"]`).forEach(el => {
-        el.classList.remove("!bg-neutral-100");
-      });
-    }
-  }, []);
+  const [hoveredRow, setHoveredRow] = useState<string | null>(null);
 
   return (
     <div
       className="flex text-sm md:text-base whitespace-nowrap"
-      onClick={handleClick}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
+      onMouseOver={(event) => {
+        const cell = (event.target as HTMLElement).closest<HTMLElement>("[data-row]");
+        if (cell?.dataset.row) setHoveredRow(cell.dataset.row);
+      }}
+      onMouseLeave={() => setHoveredRow(null)}
     >
       {/* ===== Pinned left column (outside scroll container) ===== */}
       <div className="flex-shrink-0 bg-white z-10">
@@ -66,17 +45,19 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
         </div>
         {/* Rows */}
         {experiences.map((exp) => (
-          <div
+          <Link
             key={exp.slug}
-            data-href={`/${lang}/experience/${exp.slug}`}
+            href={`/${lang}/experience/${exp.slug}`}
             data-row={exp.slug}
-            className={`${ROW_H} flex items-center pr-2 font-semibold border-b border-neutral-100 bg-white cursor-pointer transition-colors duration-300`}
+            className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-2 font-semibold transition-colors duration-300 ${
+              hoveredRow === exp.slug ? "bg-neutral-100" : "bg-white"
+            }`}
           >
             {exp.favicon && (
               <img src={exp.favicon} alt="" className="w-4 h-4 flex-shrink-0" />
             )}
             <span className="hidden md:inline ml-1.5">{exp.title}</span>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -104,43 +85,53 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
           {experiences.map((exp) => {
             const href = `/${lang}/experience/${exp.slug}`;
             return [
-              <div
+              <Link
                 key={`${exp.slug}-name`}
-                data-href={href}
+                href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-4 font-semibold border-b border-neutral-100 cursor-pointer transition-colors duration-300 md:hidden`}
+                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-4 font-semibold transition-colors duration-300 md:hidden ${
+                  hoveredRow === exp.slug ? "bg-neutral-100" : ""
+                }`}
               >
                 {exp.title}
-              </div>,
-              <div
+              </Link>,
+              <Link
                 key={`${exp.slug}-date`}
-                data-href={href}
+                href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-4 text-neutral-600 transition-colors duration-300 ${
+                  hoveredRow === exp.slug ? "bg-neutral-100" : ""
+                }`}
               >
                 {exp.dateRange || exp.date}
-              </div>,
-              <div
+              </Link>,
+              <Link
                 key={`${exp.slug}-loc`}
-                data-href={href}
+                href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-4 text-neutral-600 transition-colors duration-300 ${
+                  hoveredRow === exp.slug ? "bg-neutral-100" : ""
+                }`}
               >
                 {exp.location}
-              </div>,
-              <div
+              </Link>,
+              <Link
                 key={`${exp.slug}-type`}
-                data-href={href}
+                href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-4 text-neutral-600 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-4 text-neutral-600 transition-colors duration-300 ${
+                  hoveredRow === exp.slug ? "bg-neutral-100" : ""
+                }`}
               >
                 {exp.type}
-              </div>,
-              <div
+              </Link>,
+              <Link
                 key={`${exp.slug}-area`}
-                data-href={href}
+                href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex items-center pr-2 border-b border-neutral-100 cursor-pointer transition-colors duration-300`}
+                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-2 transition-colors duration-300 ${
+                  hoveredRow === exp.slug ? "bg-neutral-100" : ""
+                }`}
               >
                 {exp.area && exp.area.length > 0 && (
                   <div className="flex gap-1">
@@ -162,7 +153,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                     })}
                   </div>
                 )}
-              </div>,
+              </Link>,
             ];
           })}
         </div>

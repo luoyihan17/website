@@ -166,7 +166,7 @@ body:has(.resume-page) > footer {
   & .resume-contact { float: right; font-size: 9pt; font-weight: 400; color: #737373; }
   & .resume-contact a { color: #2563eb; text-decoration: underline; }
   & p { font-size: 9.5pt; line-height: 1.3; margin-top: 0; margin-bottom: 4pt; color: #171717; }
-  & h1 + p { font-size: 10.5pt; }
+  & h1 + p { font-size: 10.5pt; margin-bottom: 0; padding-bottom: 18pt; }
   & strong { font-weight: 600; }
   & hr { display: none; }
   & ul { padding-left: 18pt; margin-top: 0pt; margin-bottom: 0pt; list-style-type: disc; }
@@ -208,6 +208,17 @@ body:has(.resume-page) > footer {
 /* Print styles */
 @media print {
   @page {
+    size: letter;
+    margin: 0;
+  }
+
+  @page resume-letter {
+    size: letter;
+    margin: 0;
+  }
+
+  @page resume-a4 {
+    size: A4;
     margin: 0;
   }
 
@@ -222,6 +233,12 @@ body:has(.resume-page) > footer {
   body:has(.resume-page) {
     overflow: visible !important;
     height: auto !important;
+  }
+
+  body:has(.resume-page) > div {
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    animation: none !important;
   }
 
   body:has(.resume-page) > header,
@@ -258,5 +275,128 @@ body:has(.resume-page) > footer {
     border-radius: 0 !important;
     transform: none !important;
     margin: 0 auto !important;
+  }
+
+  .resume-paper-letter {
+    page: resume-letter;
+    width: 8.5in !important;
+    min-height: 11in !important;
+    padding: 0.43in 0.45in !important;
+  }
+
+  .resume-paper-a4 {
+    page: resume-a4;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 12mm 11.5mm !important;
+  }
+
+  .resume-content h1 {
+    font-size: 20.5pt !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1.2pt !important;
+  }
+
+  .resume-content h2 {
+    font-size: 9.2pt !important;
+    line-height: 1.1 !important;
+    margin-top: 5.5pt !important;
+    margin-bottom: 2.4pt !important;
+  }
+
+  .resume-content h3 {
+    font-size: 9pt !important;
+    line-height: 1.12 !important;
+    margin-top: 4.3pt !important;
+    margin-bottom: 1.8pt !important;
+    gap: 3pt !important;
+  }
+
+  .resume-content .resume-meta,
+  .resume-content .resume-contact {
+    font-size: 8pt !important;
+  }
+
+  .resume-content p {
+    font-size: 8.55pt !important;
+    line-height: 1.13 !important;
+    margin-bottom: 2pt !important;
+  }
+
+  .resume-content h1 + p {
+    font-size: 9pt !important;
+    line-height: 1.12 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 14pt !important;
+  }
+
+  .resume-content ul {
+    padding-left: 14.5pt !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .resume-content li {
+    font-size: 8.55pt !important;
+    line-height: 1.13 !important;
+    margin-bottom: 1.7pt !important;
+    margin-left: -3pt !important;
+    padding-left: 3pt !important;
+  }
+
+  .resume-content li::marker {
+    font-size: 6.2pt !important;
+  }
+
+  .resume-paper-a4 .resume-content h1 {
+    font-size: 22pt !important;
+    line-height: 1.12 !important;
+    margin-bottom: 1.5pt !important;
+  }
+
+  .resume-paper-a4 .resume-content h2 {
+    font-size: 10pt !important;
+    line-height: 1.14 !important;
+    margin-top: 7pt !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .resume-paper-a4 .resume-content h3 {
+    font-size: 9.8pt !important;
+    line-height: 1.16 !important;
+    margin-top: 5.5pt !important;
+    margin-bottom: 2.2pt !important;
+  }
+
+  .resume-paper-a4 .resume-content .resume-meta,
+  .resume-paper-a4 .resume-content .resume-contact {
+    font-size: 8.7pt !important;
+  }
+
+  .resume-paper-a4 .resume-content p {
+    font-size: 9.2pt !important;
+    line-height: 1.18 !important;
+    margin-bottom: 2.8pt !important;
+  }
+
+  .resume-paper-a4 .resume-content h1 + p {
+    font-size: 9.8pt !important;
+    line-height: 1.16 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 24pt !important;
+  }
+
+  .resume-paper-a4 .resume-content ul {
+    padding-left: 15pt !important;
+  }
+
+  .resume-paper-a4 .resume-content li {
+    font-size: 9.2pt !important;
+    line-height: 1.18 !important;
+    margin-bottom: 2.1pt !important;
+  }
+
+  .resume-paper-a4 .resume-content li::marker {
+    font-size: 6.5pt !important;
   }
 }

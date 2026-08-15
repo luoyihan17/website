@@ -10,7 +10,6 @@ interface ResumeVariant {
 }
 
 interface ResumeViewerProps {
-  variants: ResumeVariant[];
   lang: string;
   allVariants: {
     en: ResumeVariant[];
@@ -18,9 +17,7 @@ interface ResumeViewerProps {
   };
 }
 
-export function ResumeViewer({ variants, lang, allVariants }: ResumeViewerProps) {
-  const [currentLang, setCurrentLang] = useState(lang);
-
+export function ResumeViewer({ lang, allVariants }: ResumeViewerProps) {
   // Restore variant selection from localStorage
   const initialVariantIndex = useMemo(() => {
     if (typeof window === 'undefined') return 0;
@@ -39,10 +36,10 @@ export function ResumeViewer({ variants, lang, allVariants }: ResumeViewerProps)
   const resumeRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentVariants = currentLang === "en" ? allVariants.en : allVariants.zh;
+  const currentVariants = lang === "en" ? allVariants.en : allVariants.zh;
   const current = currentVariants[activeVariant] || currentVariants[0];
 
-  const isEn = currentLang === "en";
+  const isEn = lang === "en";
   const paperClass = isEn ? "resume-paper-letter" : "resume-paper-a4";
 
   // Calculate scale for mobile to fit paper in viewport

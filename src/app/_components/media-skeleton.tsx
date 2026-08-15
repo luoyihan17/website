@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 
 // Domains that are blocked in mainland China
-const BLOCKED_DOMAINS = ["youtube.com", "youtu.be", "github.io", "github.com"];
+const BLOCKED_DOMAINS = ["youtube.com", "youtu.be", "vimeo.com", "github.io", "github.com"];
+const BLOCKED_IFRAME_TIMEOUT_MS = 15000;
 
 function isBlockedSrc(src: string): boolean {
   try {
@@ -31,12 +32,12 @@ export function MediaSkeleton({ children }: { children: React.ReactNode }) {
       const src = iframe.src || iframe.getAttribute("data-src") || "";
       if (!isBlockedSrc(src)) return;
 
-      // Set a timeout: if the iframe hasn't loaded within 8s, show fallback
+      // Set a timeout: if the iframe hasn't loaded within 15s, show fallback
       const timer = setTimeout(() => {
         if (!iframe.dataset.loaded) {
           showBlockedOverlay(iframe);
         }
-      }, 8000);
+      }, BLOCKED_IFRAME_TIMEOUT_MS);
 
       iframe.addEventListener("load", () => {
         iframe.dataset.loaded = "1";
