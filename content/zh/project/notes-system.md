@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "World In A Cell"
 date: "2023-02-01"
 intro: "南加大 VR 细胞生物学教育游戏，主导 VR 交互流程与用户界面设计"

@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "World In A Cell"
 date: "2023-02-01"
 intro: "A USC VR cell biology educational game, with VR interaction and UI design led by me"

@@ -56,11 +56,7 @@ export default function RootLayout({
     <html lang={params.lang}>
       <head>
 
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="/favicon/favicon.svg"
-        />
+        <link rel="icon" href="data:," />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
