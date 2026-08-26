@@ -81,12 +81,9 @@ export function SelfIntro({ lang }: Props) {
   };
 
   return (
-    <section className="relative flex-col md:flex-row flex items-start md:justify-between mt-16 mb-16 md:mb-12">
+    <section className="relative flex-col md:flex-row flex items-start md:justify-between mt-6 mb-16 md:mb-12">
       <div className="w-full">
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 mb-2">
-          {isEn ? "Luo Yihan" : "雒艺涵"}
-        </h1>
-        <div className="text-2xl md:text-3xl tracking-tight mb-8" style={{ color: '#EE9933' }}>
+        <div className="mb-8 flex justify-center text-center text-2xl md:text-3xl tracking-tight" style={{ color: '#EE9933' }}>
           <TextType
             text={rotatingTitles}
             typingSpeed={75}

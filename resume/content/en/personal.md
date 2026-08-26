@@ -7,66 +7,7 @@ label: "AI Full-stack Designer"
 
 # Luo Yihan
 
-<style>
-<!--
-Initial (kept for reference):
-html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #111; }
-body { font-size: 11px; line-height: 1.03; }
-h1 { font-size: 20px; margin: 6px 0; line-height: 1.06; }
-h2 { font-size: 14px; margin: 6px 0; line-height: 1.04; }
-h3,h4,h5,h6 { margin: 4px 0; line-height: 1.03; }
-p, ul, ol, li { margin: 2px 0; }
-hr { margin: 0.4em 0; border: none; border-top: 1px solid #ddd; }
-.resume-meta { font-size: 0.95em; }
-
-@media print {
-	@page { margin: 6mm; size: A4; }
-	html, body { margin: 0; padding: 0; }
-	body { -webkit-print-color-adjust: exact; font-size: 10px; line-height: 1.02; }
-	h1 { font-size: 18px; margin: 6px 0; }
-	h2 { font-size: 14px; margin: 6px 0; }
-	h3,h4,h5,h6 { margin: 4px 0; }
-	p, ul, ol, li { margin: 1px 0; }
-	h1,h2,h3,h4,h5,h6,p,ul,ol,li,div,section { page-break-inside: avoid; }
-	hr { page-break-after: avoid; page-break-before: avoid; margin:0.3em 0; }
-	img { max-width: 100%; max-height: 120px; object-fit: contain; }
-	pre, code { font-size: 9px; }
-	header, footer, .no-print { display: none !important; }
-	body { -webkit-transform: scale(0.94); transform: scale(0.94); transform-origin: top left; }
-}
--->
-
-/* Optimized (tighter) - active */
-html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #111; }
-body { font-size: 10px; line-height: 0.98; }
-h1 { font-size: 18px; margin: 4px 0; line-height: 1.02; }
-h2 { font-size: 13px; margin: 4px 0; line-height: 1.02; }
-h3,h4,h5,h6 { margin: 3px 0; line-height: 1.01; }
-p, ul, ol, li { margin: 1px 0; }
-hr { margin: 0.2em 0; border: none; border-top: 1px solid #ddd; }
-.resume-meta { font-size: 0.92em; }
-
-@media print {
-	@page { margin: 4mm; size: A4; }
-	html, body { margin: 0; padding: 0; }
-	/* limit printed page to one physical A4 page and hide overflow (cuts off anything beyond page 1) */
-	html, body { height: 297mm; overflow: hidden; }
-	body { -webkit-print-color-adjust: exact; font-size: 9px; line-height: 0.98; }
-	h1 { font-size: 17px; margin: 4px 0; }
-	h2 { font-size: 13px; margin: 4px 0; }
-	h3,h4,h5,h6 { margin: 3px 0; }
-	p, ul, ol, li { margin: 1px 0; }
-	h1,h2,h3,h4,h5,h6,p,ul,ol,li,div,section { page-break-inside: avoid; }
-	hr { page-break-after: avoid; page-break-before: avoid; margin:0.2em 0; }
-	img { max-width: 100%; max-height: 100px; object-fit: contain; }
-	pre, code { font-size: 8px; }
-	header, footer, .no-print { display: none !important; }
-	/* subtle print-scale fallback */
-	body { -webkit-transform: scale(0.96); transform: scale(0.96); transform-origin: top left; }
-}
-</style>
-
-**AI Full-stack Designer, Cultural Curation** <span class="resume-contact">Email: <a href="mailto:luoyihan17@gmail.com">luoyihan17@gmail.com</a> · WeChat: sakuraluo</span>
+**AI Full-stack Designer, Cultural Curation** <span class="resume-contact">Email: <a href="mailto:luoyihan17@gmail.com">luoyihan17<span>@</span>gmail.com</a> · WeChat: sakuraluo</span>
 
 <hr style="page-break-after:avoid; page-break-before:avoid; margin:0.6em 0;" />
 
@@ -74,12 +15,12 @@ hr { margin: 0.2em 0; border: none; border-top: 1px solid #ddd; }
 
 ### University of Southern California - M.A. in Interactive Games and Media <span class="resume-meta">2022.08 - 2024.05</span>
 
-- GPA 3.94. Participated in multiple interdisciplinary interactive media research and application projects and graduated with honors.
-- Advisor: Marientina Gotsis, Director of the USC Creative Media & Behavioral Health Center.
+- GPA 3.94; honors graduate. Focused on interdisciplinary interactive media, games, and applied research.
+- Advisor: Marientina Gotsis, Director, USC Creative Media & Behavioral Health Center.
 
 ### ArtCenter College of Design - B.S. in Interaction Design <span class="resume-meta">2019.01 - 2022.04</span>
 
-- Dean's List (GPA > 3.8/4.0), long-term scholarship recipient, and honors graduate.
+- Dean's List (GPA > 3.8/4.0), long-term scholarship recipient, honors graduate.
 
 <hr style="page-break-after:avoid; page-break-before:avoid; margin:0.6em 0;" />
 
@@ -88,39 +29,32 @@ hr { margin: 0.2em 0; border: none; border-top: 1px solid #ddd; }
 ### Tencent Music Entertainment - AI Product Designer <span class="resume-meta">2024.09 - Present</span>
 **AI Music Creation Projects**
 
-For generative AI music creation scenarios, I helped push QQ Music from "music consumption" toward "AI-assisted creation." Around low-barrier creation for everyday users, AI human-machine co-creation, and commercialization conversion, I continuously helped build the AI music creation product system.
-
-- QQ Music AI Music Creation: Responsible for product positioning and core interaction design for consumer-facing AI music creation in QQ Music. Deeply participated in the 0-to-1 build and continuous iteration of AI song creation and AI singing, covering innovative scenarios such as conversational song creation, image-to-song, and AI adaptation. Drove user experience and user growth. The AI conversational song creation solution received a national design patent.
-- Vemus Weiyin App: Deeply participated in building the independent AI singing and songwriting app Vemus Weiyin from 0 to 1. Responsible for core product architecture and creation experience design. Since its official launch in late 2025, it has reached million-level DAU and over 100 million in cumulative revenue.
-- AI x Design System: Introduced AI into the design guideline and component library workflow, assisting with page pattern recognition, component classification, and guideline consolidation, improving design guideline organization efficiency by about 50%.
+- Built AI music creation experiences that extend QQ Music from listening into low-barrier, AI-assisted creation and creator monetization.
+- QQ Music AI Creation: Owned product positioning and core interaction design for AI songwriting, AI singing, conversational song creation, image-to-song, and AI adaptation; the conversational song creation flow received a national design patent.
+- Vemus Weiyin: Co-built the independent AI singing/songwriting app from 0 to 1, defining core product architecture and creation flows; launched in late 2025 and reached million-level DAU and RMB100M+ cumulative revenue.
+- AI x Design System: Applied AI to page pattern recognition, component taxonomy, and guideline consolidation, improving design documentation efficiency by about 50%.
 
 **AI Gamified Innovation**
 
-For artist promotion and event operation scenarios, I explored a new content operation model combining AI Coding and gamified interaction. Lightweight games replaced parts of traditional campaign page experiences, reducing interactive product development costs while improving user participation and shareability. I led business, engineering, and operations partners to push AI Coding forward, and tracked core data and user feedback after launch.
-
-- AI Coding Artist-fan Mini-games: Initiated and led the "artist IP x music x game" innovation direction from 0 to 1. Responsible for gameplay definition, interaction experience, AI Coding prototypes, and launch delivery, transforming songs and artist content into playable interactive experiences. The model has landed collaborations with S-tier artists including Lay Zhang, aespa, and BigBang, receiving positive feedback from artists and users.
-- AI Coding Operation Scenarios: Expanded AI Coding capability into daily in-app operations, designing lightweight gamified activities around Children's Day, Qixi Festival, back-to-school season, and other moments. Explored a reusable, low-cost interactive operation model, pushing traditional content operations from "browse and participate" toward "playable interaction."
-
-
+- Created AI Coding x gamified campaign models for artist promotion and in-app operations, replacing static campaign pages with lightweight playable experiences.
+- Artist-fan Mini-games: Initiated the "artist IP x music x game" direction, leading gameplay definition, interaction design, AI Coding prototypes, and launch delivery; shipped collaborations with Lay Zhang, aespa, BigBang, and other S-tier artists.
+- Operation Scenarios: Expanded AI Coding into daily events including Children's Day, Qixi Festival, and back-to-school campaigns, creating a reusable low-cost model for playable content operations.
 
 ### USC World Building Media Lab - VR UX Designer & Researcher <span class="resume-meta">2023.02 - 2024.05</span>
 
-- Led VR interaction flow and user interface design for the World In A Cell VR educational game, improving user immersion and learning efficiency.
-- Led more than 30 usability tests and scenario tests, producing analysis reports and driving key optimizations.
-- Collaborated with USC biological scientists to develop a VR interactive cell biology learning tool, which was introduced into USC biology courses in Fall 2023.
+- Led VR interaction flows and UI for World In A Cell, an educational cell biology game introduced into USC biology courses in Fall 2023.
+- Ran 30+ usability and scenario tests, translating findings into experience optimizations with scientists and developers.
 
 ### DORA - AI Product Design <span class="resume-meta">2022.05 - 2022.10</span>
 
-- Participated in the company's website interaction flow and interface design, improving website professionalism and user appeal.
-- Analyzed nearly 100 industry users and built user personas, providing direction for three core product feature iterations.
-- Participated in organizing and designing A/B testing plans, iterating design solutions based on user feedback and data.
+- Designed website flows and interfaces to improve product clarity, professionalism, and conversion appeal.
+- Analyzed nearly 100 industry users, built personas, and informed three core feature iterations through user feedback and A/B testing.
 
 ### Tsinghua Future Laboratory - Interaction Design & Research Intern <span class="resume-meta">2021.05 - 2022.01</span>
 
-- Participated in interaction interface design for Tsinghua University's autonomous smart vehicle management system, supporting testing and supervision of seven autonomous vehicles on campus.
-- Collaborated with Alibaba on an online virtual mall, contributing to interaction flow, interface, and motion design.
-- Participated in research on older adults' use of smart products, EEG sleep research, and interactive art creation.
-- Assisted researchers in writing three papers and organizing traffic management system design models and methodology.
+- Designed interaction interfaces for Tsinghua University's autonomous vehicle management system, supporting campus testing and supervision of seven vehicles.
+- Contributed interaction, UI, and motion design for an Alibaba virtual mall collaboration.
+- Supported research on older adults' smart product use, EEG sleep studies, interactive art, and three academic papers.
 
 <hr style="page-break-after:avoid; page-break-before:avoid; margin:0.6em 0;" />
 
@@ -129,10 +63,9 @@ For artist promotion and event operation scenarios, I explored a new content ope
 
 ### International Robotics and Art Design Biennale - Curator <span class="resume-meta">2025.05 - 2025.09</span>
 
-- Curatorial Positioning: Participated in the exhibition's 0-to-1 curatorial planning. Responsible for core theme, content framework, and narrative direction design, organizing topics including robotics, artificial intelligence, art, and future life into a complete exhibition content system.
-- Content Planning: Selected works by domestic and international artists, designers, and technology teams, covering robotic installations, interactive media, video art, future home design, and related directions. Coordinated different types of works into a unified curatorial narrative.
-- Project Coordination: Collaborated with government partners, artists, designers, technology teams, and venue stakeholders to push the project into reality. Participated in exhibition communication, visual presentation, and review mechanism design, completing full-process coordination from planning and design to offline execution.
-
+- Built the exhibition's 0-to-1 curatorial theme, content framework, and narrative across robotics, AI, art, and future life.
+- Selected and organized works from artists, designers, and technology teams, including robotic installations, interactive media, video art, and future home concepts.
+- Coordinated government partners, artists, technology teams, venue stakeholders, exhibition communication, visual presentation, and review processes.
 
 ---
 
@@ -146,4 +79,4 @@ For artist promotion and event operation scenarios, I explored a new content ope
 ## Skills
 
 - AI product design, interaction design, VR UX, user research, A/B testing, usability testing, design systems, multi-platform experience design
-- Vibe Coding, AI Coding, prototyping, H5 campaign experiences, music player experiences, curation, and exhibition experience design
+- Vibe Coding, AI Coding, prototyping, H5 campaign experiences, music player experiences, curation, exhibition experience design

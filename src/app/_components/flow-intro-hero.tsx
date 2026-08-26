@@ -15,6 +15,8 @@ export function FlowIntroHero({ lang }: Props) {
   const isEn = lang === "en";
   const heroRef = useRef<HTMLElement | null>(null);
   const [ready, setReady] = useState(false);
+  const heroText = "Hello, this is\nYihan Luo";
+  const fallbackTitle = "Hello, this is Yihan Luo";
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -57,7 +59,7 @@ export function FlowIntroHero({ lang }: Props) {
         <div className="flow-intro-particle-center" aria-hidden="true">
           <ParticleText
             className="flow-intro-particle-text"
-            text={"Hello, this is\nYihan Luo"}
+            text={heroText}
             particleSize={2.25}
             density={5}
             maxParticles={2200}
@@ -78,7 +80,7 @@ export function FlowIntroHero({ lang }: Props) {
             style={{ height: "100%", minHeight: "100%" }}
           />
         </div>
-        <h1 className="flow-intro-title-fallback">Hello, this is Yihan Luo</h1>
+        <h1 className="flow-intro-title-fallback">{fallbackTitle}</h1>
 
         <div className="flow-intro-scroll-hint" aria-hidden="true">
           <span>Scroll</span>
