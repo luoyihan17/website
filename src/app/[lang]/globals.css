@@ -732,6 +732,26 @@ main {
   }
 }
 
+.markdown .qqmusic-question-block {
+  margin: 2.25rem 0 2rem;
+  padding: clamp(1.1rem, 2.8vw, 1.6rem);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.markdown .qqmusic-question-block h2 {
+  margin-top: 0;
+}
+
+.markdown .qqmusic-question-block p:last-of-type {
+  margin-bottom: 0.75rem;
+}
+
+.markdown .qqmusic-question-block blockquote:last-child {
+  margin-bottom: 0;
+}
+
 .markdown .vemus-lead {
   margin: 1.5rem 0 1.25rem;
   color: #171717;
