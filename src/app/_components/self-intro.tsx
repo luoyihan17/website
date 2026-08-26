@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { PiXBold } from "react-icons/pi";
 
@@ -13,6 +13,8 @@ const ANIM_DURATION = 200; // ms, keep in sync with CSS duration-200
 
 export function SelfIntro({ lang }: Props) {
   const isEn = lang === "en";
+  const introRef = useRef<HTMLElement | null>(null);
+  const [introVisible, setIntroVisible] = useState(false);
 
   // Desktop QR modal
   const [qrMounted, setQrMounted] = useState(false);
@@ -23,6 +25,34 @@ export function SelfIntro({ lang }: Props) {
   const [mobileVisible, setMobileVisible] = useState(false);
 
   const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    const intro = introRef.current;
+    if (!intro) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setIntroVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIntroVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "0px 0px -28% 0px",
+        threshold: 0.08,
+      }
+    );
+
+    observer.observe(intro);
+
+    return () => observer.disconnect();
+  }, []);
+
   const openQR = useCallback(() => {
     setQrMounted(true);
     requestAnimationFrame(() => requestAnimationFrame(() => setQrVisible(true)));
@@ -59,7 +89,12 @@ export function SelfIntro({ lang }: Props) {
   };
 
   return (
-    <section className="relative flex-col md:flex-row flex items-start md:justify-between mt-6 mb-16 md:mb-12">
+    <section
+      ref={introRef}
+      className={`home-self-intro relative flex-col md:flex-row flex items-start md:justify-between mt-6 mb-16 md:mb-12 ${
+        introVisible ? "is-visible" : ""
+      }`}
+    >
       <div className="w-full">
         <div className="text-lg leading-relaxed mb-4">
           {isEn ? (
@@ -74,7 +109,7 @@ export function SelfIntro({ lang }: Props) {
           ) : (
             <>
               <p className="mb-4">
-                一名探索 AI、互动娱乐与创意技术交叉领域的全栈设计师。我关注的不只是功能本身，也希望连接平台和内容去创造更有情绪、更有记忆点、更具想象力的体验。
+                雒艺涵是探索 AI、互动娱乐与创意技术交叉领域的全栈设计师。我关注的不只是功能本身，也希望连接平台和内容去创造更有情绪、更有记忆点、更具想象力的体验。
               </p>
               <p className="mb-4">
                 我本科毕业于<Link href="/zh/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">艺术中心设计学院</Link>交互设计专业，研究生毕业于<a href="https://cinema.usc.edu/interactive/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">南加州大学交互游戏研究硕士</a>，目前在腾讯音乐工作。

@@ -1,6 +1,6 @@
 ---
 personalSite: true
-title: "AI Coding 交互游戏"
+title: "腾讯音乐ai游戏"
 date: "2025-01-01"
 intro: "用 Vibe Coding 快速构建音乐互动、游戏化玩法与可运行原型"
 sorting: 4

@@ -9,18 +9,21 @@ coverImage: "/assets/images/Vemus/Vemus.jpg"
 
 <p class="vemus-lead">从音乐生成到视觉表达的 AI 音乐创作商业体系</p>
 
-<p class="vemus-intro">
-从 0 到 1 参与 Vemus 未音独立 AI 音乐 App 的产品体验搭建，负责核心创作与消费链路的产品及交互设计。重新梳理 AI 作歌、AI 唱、AI MV 等能力架构，并参与首页、创作、作品管理、发布分享与内容消费等核心模块设计；同时探索 AI Agent、创作者激励与推荐分发机制，逐步搭建兼顾「创作者生产」与「听众消费」的音乐内容生态。
-</p>
-
-
-## QQ 音乐 AI 作歌 & AI 唱
+## Vemus 未音是什么？
 
 <p class="vemus-copy">
-Vemus 是 <a href="/zh/project/qqmusic">QQ 音乐 AI 唱作</a>能力独立产品化的延伸。前期我们先在 QQ 音乐内搭建 AI 作歌、AI 唱，依托成熟的用户、内容和付费体系快速验证需求；方向成立后，再将核心能力迁移到 Vemus，围绕 AI 音乐创作重新搭建更完整的独立产品体验。
+Vemus 未音是从 <a href="/zh/project/qqmusic">QQ 音乐 AI 唱作</a>能力延伸出的独立 AI 音乐创作 App。前期我们先在 QQ 音乐内验证 AI 作歌、AI 唱等需求，方向成立后，再把核心能力迁移到 Vemus。
+</p>
+
+<p class="vemus-copy">
+独立 App 的价值，是把“生成一首歌”扩展成完整创作链路：灵感输入、作品生成、AI 唱、AI MV、发布分享、内容消费与创作者成长。
 </p>
 
 ![QQ 音乐内 AI 作歌创作手机界面](/assets/images/AIMusic/QQMusicAI.webp)
+
+<p class="vemus-intro">
+我参与 Vemus 从 0 到 1 的产品体验搭建，负责核心创作与消费链路设计，覆盖首页、创作、作品管理、发布分享、内容消费、AI Agent、创作者激励与推荐分发等模块。
+</p>
 
 ## Vemus 未音：以“作品”为核心，连接创作供给与内容消费
 

@@ -5,7 +5,6 @@ import type { CSSProperties } from "react";
 import styles from "./particle-text.module.css";
 
 type Trigger = "mount" | "hover" | "click";
-type AnimationDirection = "gather" | "scatter";
 
 type ParticleTextProps = {
   text?: string;
@@ -15,25 +14,17 @@ type ParticleTextProps = {
   color?: string;
   highlightColor?: string;
   scatter?: number;
-  scatterEdgeFade?: number;
-  textOffsetY?: number;
-  ellipseScaleX?: number;
-  ellipseScaleY?: number;
-  scrollScatter?: boolean;
   gatherDuration?: number;
   stagger?: number;
-  targetJitter?: number;
   pointerRepel?: number;
   repelRadius?: number;
   idleDrift?: number;
   trigger?: Trigger;
-  animationDirection?: AnimationDirection;
   fontSize?: number | string;
   fontWeight?: number | string;
   fontFamily?: string;
   equalizeLineWidths?: boolean;
   glow?: boolean;
-  pointerSurface?: "self" | "parent";
   className?: string;
   style?: CSSProperties;
 };
@@ -57,8 +48,6 @@ type Particle = {
   startY: number;
   targetX: number;
   targetY: number;
-  fieldX: number;
-  fieldY: number;
   size: number;
   color: string;
   seed: number;
@@ -84,14 +73,7 @@ const mixRgb = (from: Rgb, to: Rgb, amount: number): Rgb => ({
 
 const rgbToCss = (rgb: Rgb) => `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
-const easeInOutCubic = (t: number) =>
-  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-const hashUnit = (value: number) => {
-  let hash = (value + 0x6d2b79f5) | 0;
-  hash = Math.imul(hash ^ (hash >>> 15), hash | 1);
-  hash ^= hash + Math.imul(hash ^ (hash >>> 7), hash | 61);
-  return ((hash ^ (hash >>> 14)) >>> 0) / 4294967296;
-};
+const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
 const resolveFontSize = (
   value: number | string,
@@ -135,25 +117,17 @@ export function ParticleText({
   color = "#ffffff",
   highlightColor = "#8b5cf6",
   scatter = 180,
-  scatterEdgeFade = 44,
-  textOffsetY = 0,
-  ellipseScaleX = 1,
-  ellipseScaleY = 1,
-  scrollScatter = false,
   gatherDuration = 1600,
   stagger = 420,
-  targetJitter = 0,
   pointerRepel = 40,
   repelRadius = 120,
   idleDrift = 0.7,
   trigger = "mount",
-  animationDirection = "gather",
   fontSize = "clamp(3rem, 12vw, 8rem)",
   fontWeight = 800,
   fontFamily = "inherit",
   equalizeLineWidths = false,
   glow = true,
-  pointerSurface = "self",
   className = "",
   style,
 }: ParticleTextProps) {
@@ -166,8 +140,6 @@ export function ParticleText({
     const container = containerRef.current;
     const canvas = canvasRef.current;
     if (!container || !canvas) return undefined;
-    const interactionSurface =
-      pointerSurface === "parent" ? container.parentElement ?? canvas : canvas;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return undefined;
@@ -177,8 +149,6 @@ export function ParticleText({
     let resizeFrame: number | null = null;
     let buildId = 0;
     let gathering = false;
-    let returningFromPointer = false;
-    let scrollScatterProgress = 0;
     let gatherStart = 0;
     let reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
     let width = 0;
@@ -195,7 +165,6 @@ export function ParticleText({
 
     const shouldKeepAnimating = () =>
       gathering ||
-      returningFromPointer ||
       (!reducedMotion && idleDrift > 0) ||
       (pointer.active && !reducedMotion && pointerRepel > 0 && repelRadius > 0);
 
@@ -209,11 +178,14 @@ export function ParticleText({
       if (!particles.length) return;
 
       const now = performance.now();
+      const spread = reducedMotion ? 0 : scatter;
 
       particles.forEach((particle) => {
         if (fromScatter) {
-          particle.x = particle.fieldX;
-          particle.y = particle.fieldY;
+          const angle = particle.seed * Math.PI * 2;
+          const distance = spread * (0.35 + particle.depth * 0.75);
+          particle.x = particle.targetX + Math.cos(angle) * distance + (particle.depth - 0.5) * spread * 0.55;
+          particle.y = particle.targetY + Math.sin(angle) * distance + (particle.seed - 0.5) * spread * 0.55;
         }
 
         particle.startX = particle.x;
@@ -226,17 +198,17 @@ export function ParticleText({
       ensureRenderLoop();
     };
 
-    const drawParticle = (particle: Particle, x = particle.x, y = particle.y) => {
+    const drawParticle = (particle: Particle) => {
       const size = particle.size;
       ctx.fillStyle = particle.color;
 
       if (size <= 2.1) {
-        ctx.fillRect(x - size / 2, y - size / 2, size, size);
+        ctx.fillRect(particle.x - size / 2, particle.y - size / 2, size, size);
         return;
       }
 
       ctx.beginPath();
-      ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+      ctx.arc(particle.x, particle.y, size / 2, 0, Math.PI * 2);
       ctx.fill();
     };
 
@@ -255,20 +227,18 @@ export function ParticleText({
       pointer.smoothY += (pointer.y - pointer.smoothY) * 0.18;
 
       let complete = true;
-      let pointerReturnComplete = true;
 
       particles.forEach((particle) => {
         let baseX = particle.targetX;
         let baseY = particle.targetY;
         let progress = 1;
-        let easedProgress = 1;
 
         if (gathering) {
           const local = (now - gatherStart - particle.delay) / Math.max(1, reducedMotion ? 1 : gatherDuration);
           progress = clamp(local, 0, 1);
-          easedProgress = easeInOutCubic(progress);
-          baseX = particle.startX + (particle.targetX - particle.startX) * easedProgress;
-          baseY = particle.startY + (particle.targetY - particle.startY) * easedProgress;
+          const eased = easeOutCubic(progress);
+          baseX = particle.startX + (particle.targetX - particle.startX) * eased;
+          baseY = particle.startY + (particle.targetY - particle.startY) * eased;
           if (progress < 1) complete = false;
         } else if (!reducedMotion && idleDrift > 0) {
           const driftTime = now * 0.001;
@@ -287,51 +257,12 @@ export function ParticleText({
           }
         }
 
-        const follow = reducedMotion || gathering ? 1 : 0.22;
+        const follow = reducedMotion ? 1 : 0.22;
         particle.x += (baseX - particle.x) * follow;
         particle.y += (baseY - particle.y) * follow;
 
-        if (returningFromPointer && !pointer.active) {
-          const remainingDistance = Math.hypot(baseX - particle.x, baseY - particle.y);
-          if (remainingDistance < 0.08) {
-            particle.x = baseX;
-            particle.y = baseY;
-          } else {
-            pointerReturnComplete = false;
-          }
-        }
-
-        const drawX = particle.x + (particle.fieldX - particle.x) * scrollScatterProgress;
-        const drawY = particle.y + (particle.fieldY - particle.y) * scrollScatterProgress;
-        const phaseScatterProgress =
-          animationDirection === "scatter" ? easedProgress : 1 - easedProgress;
-        const scatterProgress = 1 - (1 - phaseScatterProgress) * (1 - scrollScatterProgress);
-        const ellipseWidthRadius = Math.max((width / 2) * ellipseScaleX, 1);
-        const ellipseHeightRadius = Math.max((height / 2) * ellipseScaleY, 1);
-        const ellipseCenterY = height * (0.5 + textOffsetY);
-        const ellipseX = (drawX - width / 2) / ellipseWidthRadius;
-        const ellipseY = (drawY - ellipseCenterY) / ellipseHeightRadius;
-        const ellipseRadius = Math.hypot(ellipseX, ellipseY);
-        const ellipseEdgeDistance = Math.max(
-          0,
-          (1 - ellipseRadius) * Math.min(ellipseWidthRadius, ellipseHeightRadius),
-        );
-        const edgeAlpha =
-          scatterEdgeFade > 0 ? clamp(ellipseEdgeDistance / scatterEdgeFade, 0, 1) : 1;
-        const ellipseMaskProgress = clamp(scatterProgress * 3, 0, 1);
-        const softenedEdgeAlpha = 1 - ellipseMaskProgress * (1 - edgeAlpha);
-        const motionAlpha =
-          animationDirection === "scatter"
-            ? 1 - easedProgress * 0.96
-            : 0.04 + easedProgress * 0.96;
-        const scrollAlpha = Math.pow(1 - scrollScatterProgress, 1.15);
-
-        ctx.globalAlpha = clamp(
-          motionAlpha * softenedEdgeAlpha * scrollAlpha,
-          0,
-          1,
-        );
-        drawParticle(particle, drawX, drawY);
+        ctx.globalAlpha = clamp(0.35 + progress * 0.65, 0, 1);
+        drawParticle(particle);
       });
 
       ctx.globalAlpha = 1;
@@ -339,10 +270,6 @@ export function ParticleText({
 
       if (gathering && complete) {
         gathering = false;
-      }
-
-      if (returningFromPointer && !pointer.active && pointerReturnComplete) {
-        returningFromPointer = false;
       }
 
       if (shouldKeepAnimating()) {
@@ -452,14 +379,14 @@ export function ParticleText({
           if (alpha > 40) {
             targets.push({
               x: width / 2 - offscreen.width / 2 + x,
-              y: height * (0.5 + textOffsetY) - offscreen.height / 2 + y,
+              y: height / 2 - offscreen.height / 2 + y,
               alpha: alpha / 255,
             });
           }
         }
       }
 
-      const particleLimit = Math.max(600, maxParticles);
+      const particleLimit = Math.max(600, Math.min(maxParticles, Math.floor((width * height) / 180)));
       const stride = Math.max(1, Math.ceil(targets.length / particleLimit));
       const baseRgb = hexToRgb(color);
       const highlightRgb = hexToRgb(highlightColor);
@@ -468,35 +395,20 @@ export function ParticleText({
       particles = selected.map((target, index) => {
         const seed = ((index * 9301 + 49297) % 233280) / 233280;
         const depth = 0.45 + (((index * 233 + 97) % 1000) / 1000) * 0.9;
-        const jitterXSeed = ((index * 7411 + 29573) % 104729) / 104729;
-        const jitterYSeed = ((index * 3253 + 7919) % 104729) / 104729;
-        const textX = target.x + (jitterXSeed - 0.5) * targetJitter * 2;
-        const textY = target.y + (jitterYSeed - 0.5) * targetJitter * 2;
-        const blend = baseRgb && highlightRgb ? clamp(textX / Math.max(1, width) + (seed - 0.5) * 0.35, 0, 1) : 0;
+        const blend = baseRgb && highlightRgb ? clamp(target.x / Math.max(1, width) + (seed - 0.5) * 0.35, 0, 1) : 0;
         const particleColor = baseRgb && highlightRgb ? rgbToCss(mixRgb(baseRgb, highlightRgb, blend)) : color;
-        const angle = hashUnit(index * 2 + 1) * Math.PI * 2;
-        const radialSeed = hashUnit(index * 2 + 2);
-        const radius = Math.sqrt(radialSeed) * 0.985;
-        const fieldRadiusX = Math.max((width / 2) * ellipseScaleX, 1);
-        const fieldRadiusY = Math.max((height / 2) * ellipseScaleY, 1);
-        const fieldCenterY = height * (0.5 + textOffsetY);
-        const scatterX = width / 2 + Math.cos(angle) * fieldRadiusX * radius;
-        const scatterY = fieldCenterY + Math.sin(angle) * fieldRadiusY * radius;
-        const startsScattered = animationDirection === "gather";
-        const startX = startsScattered ? scatterX : textX;
-        const startY = startsScattered ? scatterY : textY;
-        const endX = startsScattered ? textX : scatterX;
-        const endY = startsScattered ? textY : scatterY;
+        const angle = seed * Math.PI * 2;
+        const distance = (reducedMotion ? 0 : scatter) * (0.35 + depth * 0.75);
+        const startX = target.x + Math.cos(angle) * distance + (seed - 0.5) * scatter * 0.45;
+        const startY = target.y + Math.sin(angle) * distance + (depth - 0.9) * scatter * 0.45;
 
         return {
-          x: reducedMotion ? textX : startX,
-          y: reducedMotion ? textY : startY,
+          x: reducedMotion ? target.x : startX,
+          y: reducedMotion ? target.y : startY,
           startX,
           startY,
-          targetX: reducedMotion ? textX : endX,
-          targetY: reducedMotion ? textY : endY,
-          fieldX: scatterX,
-          fieldY: scatterY,
+          targetX: target.x,
+          targetY: target.y,
           size: Math.max(0.6, particleSize * (0.75 + target.alpha * 0.45)),
           color: particleColor,
           seed,
@@ -538,14 +450,11 @@ export function ParticleText({
       pointer.x = event.clientX - rect.left;
       pointer.y = event.clientY - rect.top;
       pointer.active = true;
-      returningFromPointer = false;
       ensureRenderLoop();
     };
 
     const handlePointerLeave = () => {
       pointer.active = false;
-      returningFromPointer = !reducedMotion && pointerRepel > 0 && repelRadius > 0;
-      ensureRenderLoop();
     };
 
     const handlePointerEnter = (event: PointerEvent) => {
@@ -557,18 +466,6 @@ export function ParticleText({
       if (trigger === "click") startGather(true);
     };
 
-    const updateScrollScatter = () => {
-      if (!scrollScatter) return;
-
-      const hero = container.closest<HTMLElement>(".flow-intro-hero");
-      if (!hero) return;
-
-      const rawProgress = clamp(-hero.getBoundingClientRect().top / Math.max(window.innerHeight, 1), 0, 1);
-      scrollScatterProgress = clamp(rawProgress / 0.55, 0, 1);
-      interactionSurface.style.pointerEvents = scrollScatterProgress >= 0.98 ? "none" : "auto";
-      ensureRenderLoop();
-    };
-
     const reduceMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     const handleReduceMotionChange = (event: MediaQueryListEvent) => {
       reducedMotion = event.matches;
@@ -576,15 +473,10 @@ export function ParticleText({
     };
 
     reduceMotionQuery?.addEventListener("change", handleReduceMotionChange);
-    interactionSurface.addEventListener("pointerenter", handlePointerEnter);
-    interactionSurface.addEventListener("pointermove", handlePointerMove);
-    interactionSurface.addEventListener("pointerleave", handlePointerLeave);
-    interactionSurface.addEventListener("click", handleClick);
-    if (scrollScatter) {
-      window.addEventListener("scroll", updateScrollScatter, { passive: true });
-      window.addEventListener("resize", updateScrollScatter);
-      updateScrollScatter();
-    }
+    canvas.addEventListener("pointerenter", handlePointerEnter);
+    canvas.addEventListener("pointermove", handlePointerMove);
+    canvas.addEventListener("pointerleave", handlePointerLeave);
+    canvas.addEventListener("click", handleClick);
 
     const resizeObserver = new ResizeObserver(queueSample);
     resizeObserver.observe(container);
@@ -594,13 +486,10 @@ export function ParticleText({
       buildId += 1;
       resizeObserver.disconnect();
       reduceMotionQuery?.removeEventListener("change", handleReduceMotionChange);
-      interactionSurface.removeEventListener("pointerenter", handlePointerEnter);
-      interactionSurface.removeEventListener("pointermove", handlePointerMove);
-      interactionSurface.removeEventListener("pointerleave", handlePointerLeave);
-      interactionSurface.removeEventListener("click", handleClick);
-      window.removeEventListener("scroll", updateScrollScatter);
-      window.removeEventListener("resize", updateScrollScatter);
-      interactionSurface.style.pointerEvents = "";
+      canvas.removeEventListener("pointerenter", handlePointerEnter);
+      canvas.removeEventListener("pointermove", handlePointerMove);
+      canvas.removeEventListener("pointerleave", handlePointerLeave);
+      canvas.removeEventListener("click", handleClick);
 
       if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
       if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
@@ -613,25 +502,17 @@ export function ParticleText({
     color,
     highlightColor,
     scatter,
-    scatterEdgeFade,
-    textOffsetY,
-    ellipseScaleX,
-    ellipseScaleY,
-    scrollScatter,
     gatherDuration,
     stagger,
-    targetJitter,
     pointerRepel,
     repelRadius,
     idleDrift,
     trigger,
-    animationDirection,
     fontSize,
     fontWeight,
     fontFamily,
     equalizeLineWidths,
     glow,
-    pointerSurface,
   ]);
 
   const classNames = className ? `${styles.particleText} ${className}` : styles.particleText;

@@ -9,18 +9,21 @@ coverImage: "/assets/images/Vemus/Vemus.jpg"
 
 <p class="vemus-lead">An AI music creation business system from music generation to visual expression</p>
 
-<p class="vemus-intro">
-I participated in building the product experience for Vemus Weiyin, an independent AI music app, from 0 to 1. I was responsible for product and interaction design across the core creation and consumption flows. I reorganized the capability architecture of AI song creation, AI singing, and AI MV, and participated in the design of core modules including the home page, creation, work management, publishing and sharing, and content consumption. I also explored AI Agent, creator incentives, and recommendation/distribution mechanisms, gradually building a music content ecosystem that serves both creator production and listener consumption.
-</p>
-
-
-## QQ Music AI Song Creation & AI Singing
+## What Is Vemus Weiyin?
 
 <p class="vemus-copy">
-Vemus is the independent productization of <a href="/en/project/qqmusic">QQ Music AI singing and songwriting</a> capabilities. In the early stage, we first built AI song creation and AI singing inside QQ Music, relying on its mature user, content, and payment systems to quickly validate demand. After the direction proved viable, we migrated the core capabilities to Vemus and rebuilt a more complete independent product experience around AI music creation.
+Vemus Weiyin is an independent AI music creation app extended from <a href="/en/project/qqmusic">QQ Music AI singing and songwriting</a>. We first validated AI song creation and AI singing inside QQ Music, then migrated the core capabilities into Vemus after the direction proved viable.
+</p>
+
+<p class="vemus-copy">
+The value of an independent app is turning "generating one song" into a fuller creation journey: inspiration input, work generation, AI singing, AI MV, publishing, content consumption, and creator growth.
 </p>
 
 ![AI song creation mobile interface inside QQ Music](/assets/images/AIMusic/QQMusicAI.webp)
+
+<p class="vemus-intro">
+I participated in building Vemus from 0 to 1, leading product and interaction design across the core creation and consumption flows, including the home page, creation, work management, publishing and sharing, content consumption, AI Agent, creator incentives, and recommendation/distribution.
+</p>
 
 ## Vemus Weiyin: Centering on "Works" to Connect Creative Supply and Content Consumption
 

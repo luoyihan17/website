@@ -1446,6 +1446,20 @@ main {
   }
 }
 
+.home-self-intro {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.home-self-intro.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .flow-intro-hero {
   --flow-scroll: 0;
   --flow-fade: 1;
@@ -1453,8 +1467,8 @@ main {
   --flow-enter: 0;
   position: relative;
   isolation: isolate;
-  height: 82vh;
-  min-height: 82svh;
+  height: 100vh;
+  min-height: 100svh;
   color: #050505;
   background: #ffffff;
 }
@@ -1466,8 +1480,8 @@ main {
 .flow-intro-stage {
   position: sticky;
   top: 0;
-  min-height: 82vh;
-  min-height: 82svh;
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   padding: 5.5rem 1.25rem 2.25rem;
   background:
@@ -1549,14 +1563,17 @@ main {
 }
 
 .flow-intro-particle-center {
-  position: fixed;
-  top: 50vh;
+  position: absolute;
+  top: 50%;
   left: 50%;
   z-index: 5;
   width: min(96vw, 86rem);
   height: clamp(24rem, 47vw, 38rem);
-  opacity: var(--flow-enter);
-  transform: translate(-50%, -50%);
+  opacity: calc(var(--flow-enter) * var(--flow-content-fade));
+  transform:
+    translate(-50%, -50%)
+    translate3d(0, calc(var(--flow-scroll) * -58px), 0)
+    scale(calc(1 - var(--flow-scroll) * 0.035));
   transition: opacity 780ms ease-out;
   will-change: opacity, transform;
 }
@@ -1564,14 +1581,6 @@ main {
 .flow-intro-particle-text {
   width: 100%;
   height: 100%;
-}
-
-.flow-intro-particle-stack {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
 }
 
 .flow-intro-title-fallback {
@@ -1584,6 +1593,44 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.flow-intro-scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1.15rem;
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.48);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: calc(var(--flow-enter) * var(--flow-content-fade) * 0.9);
+  transform: translateX(-50%);
+  transition: opacity 760ms ease-out;
+}
+
+.flow-intro-scroll-hint::after {
+  display: block;
+  width: 1px;
+  height: 2.2rem;
+  margin: 0.45rem auto 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  transform-origin: top;
+  animation: flow-scroll-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes flow-scroll-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.42);
+    opacity: 0.45;
+  }
+  45% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1604,8 +1651,8 @@ main {
 
 @media (max-width: 560px) {
   .flow-intro-hero {
-    height: 82vh;
-    min-height: 82svh;
+    height: 100vh;
+    min-height: 100svh;
   }
 
   .flow-intro-particle-center {
@@ -1631,13 +1678,21 @@ main {
 @media (prefers-reduced-motion: reduce) {
   .flow-intro-grid,
   .flow-intro-cross,
-  .flow-intro-particle-center {
+  .flow-intro-particle-center,
+  .flow-intro-scroll-hint::after {
     animation: none;
   }
 
   .flow-intro-grid,
   .flow-intro-cross,
-  .flow-intro-particle-center {
+  .flow-intro-particle-center,
+  .flow-intro-scroll-hint {
+    transition: none;
+  }
+
+  .home-self-intro {
+    opacity: 1;
+    transform: none;
     transition: none;
   }
 }
