@@ -3,6 +3,7 @@ import { Lightbox } from "./lightbox";
 import { MediaSkeleton } from "./media-skeleton";
 import { MobilePreviewScaler } from "./mobile-preview-scaler";
 import { VimeoClickPlayer } from "./vimeo-click-player";
+import { ViewportVideoAutoplay } from "./viewport-video-autoplay";
 
 type Props = {
   content: string;
@@ -13,6 +14,7 @@ export function PostBody({ content }: Props) {
     <div className="max-w-[1024px] mx-auto">
       <MobilePreviewScaler />
       <VimeoClickPlayer />
+      <ViewportVideoAutoplay />
       <Lightbox>
         <MediaSkeleton>
           <div

@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "AI 协作式设计方法"
 date: "2025-01-01"
 type: "工作流"

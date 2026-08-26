@@ -63,6 +63,7 @@ export function ChatWidget({ lang }: Props) {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [animState, setAnimState] = useState<"closed" | "opening" | "open" | "closing">("closed");
+  const [introActive, setIntroActive] = useState(isHomePage);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const chatPanelRef = useRef<HTMLDivElement>(null);
@@ -84,6 +85,27 @@ export function ChatWidget({ lang }: Props) {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!isHomePage) {
+      setIntroActive(false);
+      return;
+    }
+
+    const updateIntroActive = () => {
+      const intro = document.querySelector(".flow-intro-hero");
+      setIntroActive(Boolean(intro && intro.getBoundingClientRect().bottom > 80));
+    };
+
+    updateIntroActive();
+    window.addEventListener("scroll", updateIntroActive, { passive: true });
+    window.addEventListener("resize", updateIntroActive);
+
+    return () => {
+      window.removeEventListener("scroll", updateIntroActive);
+      window.removeEventListener("resize", updateIntroActive);
+    };
+  }, [isHomePage]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -222,7 +244,7 @@ export function ChatWidget({ lang }: Props) {
       {createPortal(
         <div
           className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 transition-all duration-300 ${
-            isVisible ? "pointer-events-none opacity-0" : "opacity-100"
+            isVisible || introActive ? "pointer-events-none translate-y-2 opacity-0" : "opacity-100"
           }`}
         >
           <Image

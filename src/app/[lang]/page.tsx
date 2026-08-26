@@ -1,6 +1,7 @@
 import Container from "@/app/_components/container";
 import { getAllItems } from "@/lib/api";
 import { SelfIntro } from "@/app/_components/self-intro";
+import { FlowIntroHero } from "@/app/_components/flow-intro-hero";
 import Link from "next/link";
 import { ExperienceGrid } from "@/app/_components/experience-grid";
 import { CreationSection } from "@/app/_components/creation-section";
@@ -24,6 +25,7 @@ export default function Index({ params }: { params: { lang: string } }) {
 
   return (
     <main>
+      <FlowIntroHero lang={params.lang} />
       <Container>
         <SelfIntro lang={params.lang} />
 

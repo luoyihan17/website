@@ -6,6 +6,7 @@ import { useEffect } from "react";
 export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const segments = pathname.split('/').filter(Boolean);
+  const isHomePage = segments.length === 1;
   const isDetailPage = segments.length > 2;
 
   // Check if this is a back/forward navigation (flag set by ScrollReset in layout)
@@ -22,7 +23,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className={`min-h-screen pt-14 ${isBack ? '' : 'animate-page-fade-in'}`}>
+    <div className={`min-h-screen ${isHomePage ? '' : 'pt-14'} ${isBack ? '' : 'animate-page-fade-in'}`}>
       {children}
     </div>
   );

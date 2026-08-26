@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "独立策展人"
 dateRange: "2021.03 - 2025.09"
 intro: "发起与策划机器人、艺术、设计与高校作品相关展览"

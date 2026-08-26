@@ -7,25 +7,7 @@ sorting: 0
 coverImage: "/assets/images/NeonCity/NeonCitycover.jpg"
 ---
 
-
-项目类型： VR 城市建造沙盒游戏
-
-项目背景： 南加大高阶游戏项目
-
-我的角色： UI/UX Lead
-
-平台： PC VR / Meta Quest
-
-团队规模： 约 29 人跨学科团队
-
-项目时间： 2022–2023
-
-核心技术： Hand Tracking、OpenXR、Unity
-
-公开展示： USC Games Expo 2023 / Meta Store Demo
-
-
-项目以手势追踪和动态城市网格系统为核心，玩家可以从住宅、商店和办公楼等基础模块开始建设城市，并逐步解锁公寓、博物馆和公园等更丰富的城市设施。**玩家可以用双手创造一座能够被真正走进的城市。**
+NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造沙盒游戏，我担任 UI/UX Lead。项目以 Hand Tracking、OpenXR 与 Unity 为基础，让玩家用双手搭建并扩展一座霓虹城市，并在微缩规划和 1:1 探索之间切换。项目曾亮相 USC Games Expo 2023，并推出 [Meta Store](https://www.meta.com/experiences/pcvr/neon-city-demo/6015050278577275/?srsltid=AfmBOooMXGbBIYlLropJlYEgZtirmqnB4i9KIZFaWLrSAOqRDfVTh0TJ)。
 
 <figure class="video-embed vimeo-click-player" data-vimeo-id="825302860" data-title="NeonCity VR Game video" style="background-image: url('/assets/images/NeonCity/NeonCitycover.jpg')">
   <button class="video-play-button" type="button" data-vimeo-play aria-label="播放 NeonCity VR Game video">
@@ -33,56 +15,120 @@ coverImage: "/assets/images/NeonCity/NeonCitycover.jpg"
   </button>
 </figure>
 
-Neon City 是一款以手势追踪为核心的 VR 城市建造沙盒游戏，诞生于南加州大学 USC Games 的 Advanced Games Project。
 
-在游戏中，玩家将成为一名城市建筑师，不再依赖传统手柄或复杂按键，而是直接使用双手抓取、移动和组合不同的建筑模块。从住宅、商店与办公楼开始，玩家可以逐步扩张城市规模，解锁公寓、博物馆、公园等新的城市设施，并观察居民和城市环境如何随着规划发生变化。
+在游戏中，玩家不再依赖传统手柄或复杂按键，而是直接抓取、移动和组合不同的建筑模块。随着城市规模扩大，住宅、商店、办公楼、公寓、博物馆和公园等内容会逐步解锁，城市居民与环境也会根据玩家的规划发生变化。
 
-项目将传统积木玩具简单、直接的创造体验带入虚拟现实：玩家既可以站在城市上方，以微缩模型的视角进行整体规划，也可以将自己建造的城市放大至 1:1 真实尺度，亲自走入街道和建筑之间，从城市的创造者转变为城市中的参与者。复古未来主义与 Synthwave 视觉语言，则让整个建造过程呈现出具有想象力的霓虹都市氛围。
-
-Neon City 探索的并不仅是“如何在 VR 中建造城市”，而是如何利用沉浸式媒介重新定义人与城市模型之间的关系：玩家可以在宏观规划与微观体验之间自由切换，将原本抽象的城市布局，转化为一个能够进入、观察并感受的空间。
+项目的核心不是单纯把城市放进 VR，而是把积木式创造、城市规划和进入城市的体验连接起来：玩家既可以俯视一座微缩城市，也可以将它放大到 1:1 尺度，亲自走进街道和建筑之间。复古未来主义与 Synthwave 视觉语言，则强化了这个可以被亲手建造、进入和观察的霓虹空间。
 
 **我的职责｜UI/UX Lead**
 
 在项目中，我担任 UI/UX Lead，主要负责 VR 操控面板界面设计，并研究和梳理玩家在城市建造过程中的完整体验流程。
 
-由于 Neon City 采用手势追踪作为主要输入方式，传统游戏中依赖按钮、鼠标和二维菜单的交互逻辑无法被直接搬进 VR。我的工作重点，是将复杂的城市编辑功能转化为空间中清晰、直观且容易理解的操作体验，使玩家能够自然地完成建筑选择、城市编辑与不同体验状态之间的切换。
+项目早期采用 Hand Controllers 作为主要输入方式。测试中我们发现，复杂按键映射提高了学习成本，也削弱了 VR 中“直接操控空间”的直觉。加入项目后，我推动核心交互转向 Hand Tracking，并重新梳理城市编辑流程：建筑选择、放置、调整和状态切换，都需要被转化成玩家能用双手理解的空间动作。
 
-我围绕以下问题展开设计：
+<div class="neon-video-pair" aria-label="NeonCity 交互方案对比视频">
+  <figure>
+    <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="我介入设计之前的视频">
+      <source src="/assets/videos/beforedesign.mp4" type="video/mp4" />
+      你的浏览器暂不支持视频播放。
+    </video>
+    <figcaption>我介入设计之前</figcaption>
+  </figure>
+  <figure>
+    <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity Observations 视频">
+      <source src="/assets/videos/observations.mp4" type="video/mp4" />
+      你的浏览器暂不支持视频播放。
+    </video>
+    <figcaption>Observations</figcaption>
+  </figure>
+</div>
 
-玩家如何在没有实体控制器的情况下理解当前可执行的操作；
-操控面板应该出现在什么位置，才能既方便使用，又不会遮挡玩家正在建造的城市；
-如何通过界面层级、状态反馈和玩家流程，降低手势操作的不确定性；
-如何让玩家在微缩城市建造与 1:1 城市探索之间形成连续、自然的体验；
-如何将原本平面的 UI 信息重新组织为空间化、可感知的 VR 界面。
+因此，我的重点不是把按键逐个改成手势，而是定义一套新的 VR 城市编辑语言。我把问题拆成三个层面：没有实体按钮时，玩家如何知道双手当前能做什么；面板如何出现，才能随时调用又不遮挡城市；建筑选择、抓取、缩放、确认与尺度切换如何在反馈上保持连续。
 
-通过与游戏设计、工程、艺术及可用性研究团队协作，我将玩家流程、操作逻辑与空间界面整合进同一套体验系统，使 UI 不只是覆盖在游戏画面上的信息层，而是成为玩家理解、操控和创造虚拟城市的重要媒介。
+在与游戏设计、工程、艺术及可用性研究团队协作的过程中，我把这些判断落实到交互系统：用手势承载编辑动作，用空间提示表达状态，并根据玩家的视线、手部位置和城市尺度决定 UI 出现的时机。最终，NeonCity 的 UI/UX 不只是覆盖在画面上的信息层，而成为玩家理解规则、操控城市和进入自建空间的关键媒介。
 
 **项目亮点**
 
 01｜从控制器操作转向自然手势
 
-Neon City 使用手势追踪作为核心控制方式，让玩家直接通过双手与建筑模块互动。相比传统 VR 手柄，这种设计降低了虚拟操作与现实动作之间的距离，使搭建城市更接近摆放真实积木的体验。项目针对 Meta Quest 2 及后续设备持续优化手势控制和系统表现。
+<figure>
+  <img src="/assets/images/NeonCity/Hand%20Gesture%20System.png" alt="NeonCity 从控制器操作转向自然手势" />
+  <figcaption>NeonCity 从控制器操作转向自然手势</figcaption>
+</figure>
 
-02｜微缩模型与真实尺度的转换
+<div class="neon-gesture-videos" aria-label="NeonCity 手势交互演示视频">
+  <figure>
+    <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="Palm Up 手势演示">
+      <source src="/assets/videos/Palmup.mp4" type="video/mp4" />
+      你的浏览器暂不支持视频播放。
+    </video>
+    <figcaption>Palm Up</figcaption>
+  </figure>
+  <figure>
+    <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="First Grab with one&two hands 手势演示">
+      <source src="/assets/videos/FirstGrab.mp4" type="video/mp4" />
+      你的浏览器暂不支持视频播放。
+    </video>
+    <figcaption>First Grab with one&two hands</figcaption>
+  </figure>
+  <figure>
+    <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="Double Pinch 手势演示">
+      <source src="/assets/videos/DoublePinch.mp4" type="video/mp4" />
+      你的浏览器暂不支持视频播放。
+    </video>
+    <figcaption>Double Pinch</figcaption>
+  </figure>
+</div>
+
+这一部分围绕玩家最常用的几类动作展开：抬掌呼出操作入口，单手或双手抓取建筑，双指捏合完成更精细的选择与确认。设计目标是让手势和现实动作之间尽量接近，使玩家第一次接触时，也能把“我想移动这个建筑”自然转化为“伸手抓取它”。
+
+02｜从自由操作到清晰的编辑反馈
+
+<figure>
+  <img src="/assets/images/NeonCity/operations.png" alt="NeonCity 手势操作与编辑反馈系统" />
+  <figcaption>NeonCity 手势操作与编辑反馈系统</figcaption>
+</figure>
+
+<video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 手势操作与编辑反馈演示视频">
+  <source src="/assets/videos/operations.mp4" type="video/mp4" />
+  你的浏览器暂不支持视频播放。
+</video>
+
+在 Hand Tracking 交互中，玩家没有实体按键带来的触感确认，因此系统反馈变得尤为重要。我围绕建筑选择、抓取、缩放、放置与确认等关键动作，设计了更清晰的状态提示和操作反馈，让玩家能够判断当前建筑是否被选中、是否可以放置、尺寸是否正在调整，以及操作是否已经完成。
+
+这一部分的重点不是增加更多 UI，而是在玩家手势、建筑状态和城市编辑结果之间建立即时、可理解的反馈关系，让连续建造在没有控制器的情况下依然保持稳定。
+
+03｜微缩模型、真实尺度与空间化 UI
+
+<figure>
+  <img src="/assets/images/NeonCity/%E5%BE%AE%E7%BC%A9%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9C%9F%E5%AE%9E%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt="NeonCity 微缩模型与真实尺度的转换" />
+  <figcaption>NeonCity 微缩模型与真实尺度的转换</figcaption>
+</figure>
+
+<video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 微缩模型扩展与真实尺度转换演示视频">
+  <source src="/assets/videos/expand.mp4" type="video/mp4" />
+  你的浏览器暂不支持视频播放。
+</video>
 
 玩家可以像城市规划师一样，从上方观察并编辑整座城市；完成建造后，又可以将城市切换至 1:1 尺度，进入自己设计的街道。这种视角变化将“城市规划”与“空间体验”连接起来，也是项目区别于传统城市模拟游戏的重要特征。
 
-03｜从搭建物体到塑造城市系统
+这也让我把 UI 从固定屏幕转向空间关系来考虑：信息需要随着玩家的身体位置、视线方向、双手操作和城市尺度变化重新组织。重点不只是“看得清”，而是让提示在正确的位置和时机出现，帮助玩家理解自己正在编辑的是微缩模型，还是正在进入真实尺度的城市。
 
-玩家的操作不仅改变建筑布局，也会影响城市居民与环境反馈。随着城市规模扩大，新的建筑类型和城市内容会逐步解锁，使游戏从单纯的自由搭建，进一步发展为一个可以持续观察和探索的动态城市系统。
+04｜玩家测试与交互迭代
 
-04｜空间化 UI/UX 设计
+<video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 玩家测试现场视频">
+  <source src="/assets/videos/playtest.mp4" type="video/mp4" />
+  你的浏览器暂不支持视频播放。
+</video>
 
-项目让我重新思考了 UI 在沉浸式媒介中的作用。在 VR 中，界面不再天然依附于屏幕，而需要与玩家的身体、视线、双手和虚拟空间建立关系。设计的重点也从“一个界面是否清晰”，转变为“信息是否在正确的空间、正确的时间，以正确的方式出现”。
+在多轮玩家测试中，我关注玩家第一次使用 Hand Tracking 时最容易卡住的地方：能否发现掌心菜单，能否判断建筑正处于选择、抓取、缩放还是放置状态，以及能否在没有按键提示的情况下完成连续建造。
+
+测试显示，问题常常不是玩家不会做手势，而是不确定系统是否识别到动作。基于这些观察，我推动了几类 UX 调整：强化状态反馈、调整面板位置、减少对城市模型的遮挡，并让建筑选择、尺寸调整和确认放置的反馈更明确。
 
 **项目价值与反思**
 
-Neon City 是我从传统数字界面设计进入沉浸式交互设计的重要实践。
+Neon City 是我学生时代第一个真正意义上的大型项目。它让我第一次在一个接近真实游戏制作流程的团队里工作：和游戏设计、工程、艺术、可用性研究等不同专业的人一起讨论问题、对齐方向，并把一个复杂的 VR 概念一步步推进成可以被玩家实际体验的作品。
 
-在这个项目中，我意识到，VR UI/UX 并不是简单地把二维菜单放进三维空间。设计师需要同时考虑玩家的身体动作、视觉注意力、空间距离、手势识别稳定性与系统反馈，并在沉浸感和操作效率之间建立平衡。
+作为 UI/UX Lead，我不只是负责画界面，而是需要从整体玩家体验出发，梳理玩家如何理解规则、如何用双手完成操作、如何在微缩城市和真实尺度之间切换，以及团队应该怎样把这些体验落到具体的交互、反馈和实现逻辑里。很多时候，我需要在不同专业之间翻译需求：把玩家测试里暴露的问题转化为设计调整，也把设计意图整理成工程和艺术团队能够落地的方案。
 
-这段经历让我开始从“设计界面”走向“设计人与空间、工具和系统之间的关系”。我不仅需要定义玩家看到什么，也需要理解玩家如何伸手、如何判断、如何行动，以及系统应当如何对这些行为作出回应。
-
-项目已在 Steam 平台上线，游戏预告片：
-
-[https://www.youtube.com/watch?v=VLthQ00BcaY](https://www.youtube.com/watch?v=VLthQ00BcaY)
+这段经历让我真正理解到，沉浸式体验里的 UI/UX 不是“加在画面上的界面”，而是连接玩家、空间、系统和团队协作的一整套体验结构。

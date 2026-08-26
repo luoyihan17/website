@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PiCaretLeftBold } from "react-icons/pi";
 
 type Props = {
@@ -19,10 +19,37 @@ export function SiteHeader({ lang }: Props) {
 
   // Hide language toggle on detail pages (e.g. /en/experience/slug)
   const segments = pathname.split('/').filter(Boolean);
+  const isHomePage = segments.length === 1;
   const isDetailPage = segments.length > 2;
   const isResumePage = segments.includes('resume');
 
   const [slideTo, setSlideTo] = useState<string | null>(null);
+  const [introMode, setIntroMode] = useState(isHomePage);
+
+  useEffect(() => {
+    if (!isHomePage) {
+      setIntroMode(false);
+      return;
+    }
+
+    const updateIntroMode = () => {
+      const intro = document.querySelector(".flow-intro-hero");
+      if (!intro) {
+        setIntroMode(window.scrollY < 80);
+        return;
+      }
+      setIntroMode(intro.getBoundingClientRect().bottom > 80);
+    };
+
+    updateIntroMode();
+    window.addEventListener("scroll", updateIntroMode, { passive: true });
+    window.addEventListener("resize", updateIntroMode);
+
+    return () => {
+      window.removeEventListener("scroll", updateIntroMode);
+      window.removeEventListener("resize", updateIntroMode);
+    };
+  }, [isHomePage]);
 
   const handleLangSwitch = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -39,9 +66,21 @@ export function SiteHeader({ lang }: Props) {
   };
 
   const sliderIsEn = slideTo ? slideTo === "en" : isEn;
+  const useIntroTheme = isHomePage && introMode && !isDetailPage && !isResumePage;
+  const headerClass = useIntroTheme
+    ? "fixed top-0 left-0 right-0 z-50 bg-transparent text-neutral-950 border-b border-transparent transition-colors duration-300"
+    : "fixed top-0 left-0 right-0 z-50 bg-white/50 text-neutral-900 backdrop-blur-md border-b border-neutral-200/50 transition-colors duration-300";
+  const switchClass = useIntroTheme
+    ? "relative flex items-center h-9 w-[88px] p-[3px] rounded-xl bg-white/75 border border-neutral-200 cursor-pointer select-none font-barlow shadow-sm backdrop-blur-md transition-colors duration-300"
+    : "relative flex items-center h-9 w-[88px] p-[3px] rounded-xl bg-neutral-100 border border-neutral-200 cursor-pointer select-none font-barlow transition-colors duration-300";
+  const sliderClass = useIntroTheme
+    ? "absolute left-[3px] h-[28px] w-[40px] rounded-[8px] bg-white shadow-sm"
+    : "absolute left-[3px] h-[28px] w-[40px] rounded-[8px] bg-white shadow-sm";
+  const activeTextClass = useIntroTheme ? "text-neutral-950" : "text-neutral-900";
+  const inactiveTextClass = useIntroTheme ? "text-neutral-400" : "text-neutral-400";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-md border-b border-neutral-200/50">
+    <header className={headerClass}>
       <div className="mx-auto px-5 max-w-[1024px] h-14 flex items-center justify-between">
         <button
           onClick={() => {
@@ -81,18 +120,18 @@ export function SiteHeader({ lang }: Props) {
           <a
             href={targetPath}
             onClick={handleLangSwitch}
-            className="relative flex items-center h-9 w-[88px] p-[3px] rounded-xl bg-neutral-100 border border-neutral-200 cursor-pointer select-none font-barlow"
+            className={switchClass}
             role="switch"
             aria-checked={isEn}
           >
             <span
-              className="absolute left-[3px] h-[28px] w-[40px] rounded-[8px] bg-white shadow-sm"
+              className={sliderClass}
               style={{ top: 'calc(50% - 14px)', transition: 'transform 200ms ease-in-out', transform: sliderIsEn ? 'translateX(0)' : 'translateX(40px)' }}
             />
-            <span className={`relative z-10 flex-1 text-center text-sm font-medium ${sliderIsEn ? "text-neutral-900" : "text-neutral-400"}`} style={{ transition: 'color 200ms ease-in-out' }}>
+            <span className={`relative z-10 flex-1 text-center text-sm font-medium ${sliderIsEn ? activeTextClass : inactiveTextClass}`} style={{ transition: 'color 200ms ease-in-out' }}>
               EN
             </span>
-            <span className={`relative z-10 flex-1 text-center text-sm font-medium ${!sliderIsEn ? "text-neutral-900" : "text-neutral-400"}`} style={{ transition: 'color 200ms ease-in-out' }}>
+            <span className={`relative z-10 flex-1 text-center text-sm font-medium ${!sliderIsEn ? activeTextClass : inactiveTextClass}`} style={{ transition: 'color 200ms ease-in-out' }}>
               中
             </span>
           </a>

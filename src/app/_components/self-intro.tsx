@@ -140,15 +140,6 @@ export function SelfIntro({ lang }: Props) {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute right-0 top-0 hidden md:block">
-        <img
-          src="/assets/functional-images/idea-animation.gif"
-          alt=""
-          aria-hidden="true"
-          className="w-40 lg:w-48 h-auto"
-        />
-      </div>
-
       {/* WeChat QR Code Modal (Desktop/Tablet) */}
       {qrMounted && createPortal(
         <div
