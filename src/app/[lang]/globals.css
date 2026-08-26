@@ -280,6 +280,10 @@ body {
 .markdown figure {
   @apply my-6;
 }
+.markdown figure {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
 .markdown figure figcaption {
   @apply text-sm text-neutral-400 mt-2;
 }
@@ -1416,12 +1420,18 @@ main {
 .flow-intro-hero {
   --flow-scroll: 0;
   --flow-fade: 1;
+  --flow-content-fade: calc(1 - min(var(--flow-scroll) * 1.85, 1));
+  --flow-enter: 0;
   position: relative;
   isolation: isolate;
   height: 100vh;
   min-height: 100svh;
   color: #050505;
   background: #ffffff;
+}
+
+.flow-intro-hero.is-ready {
+  --flow-enter: 1;
 }
 
 .flow-intro-stage {
@@ -1466,7 +1476,8 @@ main {
     linear-gradient(90deg, transparent calc(100% - 1px), rgba(0, 0, 0, 0.07) 1px),
     linear-gradient(transparent calc(100% - 1px), rgba(0, 0, 0, 0.07) 1px);
   background-size: 33.333% 100%, 100% 37.5%;
-  opacity: calc(0.72 * var(--flow-fade));
+  opacity: calc(0.72 * var(--flow-enter) * var(--flow-content-fade));
+  transition: opacity 760ms ease-out;
 }
 
 .flow-intro-cross {
@@ -1474,7 +1485,8 @@ main {
   z-index: 4;
   width: 1.1rem;
   height: 1.1rem;
-  opacity: calc(0.52 * var(--flow-fade));
+  opacity: calc(0.52 * var(--flow-enter) * var(--flow-content-fade));
+  transition: opacity 760ms ease-out;
   pointer-events: none;
 }
 
@@ -1514,11 +1526,12 @@ main {
   z-index: 5;
   width: min(96vw, 86rem);
   height: clamp(24rem, 47vw, 38rem);
-  opacity: calc(1 - min(var(--flow-scroll), 0.92));
+  opacity: calc(var(--flow-enter) * var(--flow-content-fade));
   transform:
     translate(-50%, -50%)
     translate3d(0, calc(var(--flow-scroll) * -58px), 0)
     scale(calc(1 - var(--flow-scroll) * 0.035));
+  transition: opacity 780ms ease-out;
   will-change: opacity, transform;
 }
 
@@ -1549,8 +1562,9 @@ main {
   font-size: 0.72rem;
   letter-spacing: 0;
   text-transform: uppercase;
-  opacity: calc((1 - min(var(--flow-scroll), 0.9)) * 0.9);
+  opacity: calc(var(--flow-enter) * var(--flow-content-fade) * 0.9);
   transform: translateX(-50%);
+  transition: opacity 760ms ease-out;
 }
 
 .flow-intro-scroll-hint::after {
@@ -1619,7 +1633,17 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .flow-intro-grid,
+  .flow-intro-cross,
+  .flow-intro-particle-center,
   .flow-intro-scroll-hint::after {
     animation: none;
+  }
+
+  .flow-intro-grid,
+  .flow-intro-cross,
+  .flow-intro-particle-center,
+  .flow-intro-scroll-hint {
+    transition: none;
   }
 }

@@ -129,6 +129,26 @@ export default async function markdownToHtml(markdown: string) {
     (_, index) => figurePlaceholders[Number(index)] || ''
   );
 
+  const addAttribute = (tag: string, name: string, value: string) => {
+    if (new RegExp(`\\s${name}\\s*=`, "i").test(tag)) return tag;
+    return tag.replace(/\s*(\/?)>$/, (_, slash) => ` ${name}="${value}"${slash ? " />" : ">"}`);
+  };
+
+  htmlStr = htmlStr.replace(/<img\b[^>]*>/g, (tag) =>
+    addAttribute(addAttribute(tag, "loading", "lazy"), "decoding", "async")
+  );
+
+  htmlStr = htmlStr.replace(/<video\b[^>]*>/g, (tag) => {
+    if (/\spreload(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?/i.test(tag)) {
+      return tag.replace(
+        /\spreload(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?/i,
+        ' preload="none"'
+      );
+    }
+
+    return addAttribute(tag, "preload", "none");
+  });
+
   // Open external links in a new tab
   htmlStr = htmlStr.replace(
     /<a\s+href="(https?:\/\/[^"]+)"/g,

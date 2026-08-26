@@ -76,6 +76,18 @@ For Vercel, keep the default build command as `npm run build` so the Next.js
 middleware can handle the language redirect from `/`. For static-only hosts,
 use `npm run build:static` and deploy the generated `out/` directory.
 
+### Cloudflare DNS + Vercel
+
+Use Cloudflare only as the authoritative DNS provider. Keep hosting and
+deployments on Vercel.
+
+Cloudflare DNS records:
+
+```text
+A     @    76.76.21.21             DNS only
+CNAME www  cname.vercel-dns-0.com  DNS only
+```
+
 ## License
 
 All rights reserved. © Luo Yihan

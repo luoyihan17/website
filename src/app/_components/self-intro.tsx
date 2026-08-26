@@ -1,15 +1,35 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import { PiXBold } from "react-icons/pi";
+import TextType from "./TextType";
 
 type Props = {
   lang: string;
 };
 
 const ANIM_DURATION = 200; // ms, keep in sync with CSS duration-200
+
+const ROTATING_TITLES = {
+  en: [
+    "Interaction Designer",
+    "VR UX Designer",
+    "Cultural Curator",
+    "Vibe Coding",
+    "Event Planner",
+    "Mom of Two Cats & a Bird",
+  ],
+  zh: [
+    "交互设计师",
+    "VR 体验设计师",
+    "文化策展人",
+    "Vibe Coding",
+    "活动策划者",
+    "两只可爱小猫&鸟的妈妈",
+  ],
+} as const;
 
 export function SelfIntro({ lang }: Props) {
   const isEn = lang === "en";
@@ -23,6 +43,7 @@ export function SelfIntro({ lang }: Props) {
   const [mobileVisible, setMobileVisible] = useState(false);
 
   const [showToast, setShowToast] = useState(false);
+  const rotatingTitles = isEn ? ROTATING_TITLES.en : ROTATING_TITLES.zh;
 
   const openQR = useCallback(() => {
     setQrMounted(true);
@@ -43,28 +64,6 @@ export function SelfIntro({ lang }: Props) {
     setMobileVisible(false);
     setTimeout(() => setMobileMounted(false), ANIM_DURATION);
   }, []);
-
-  const rotatingTitles: { en: string; zh: string }[] = [
-    { en: "Interaction Designer", zh: "交互设计师" },
-    { en: "VR UX Designer", zh: "VR 体验设计师" },
-    { en: "Cultural Curator", zh: "文化策展人" },
-    { en: "Vibe Coding", zh: "Vibe Coding" },
-    { en: "Event Planner", zh: "活动策划者" },
-    { en: "Mom of Two Cats & a Bird", zh: "两只可爱小猫&鸟的妈妈" },
-  ];
-
-  const [titleIndex, setTitleIndex] = useState(0);
-  const [animKey, setAnimKey] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTitleIndex((prev) => (prev + 1) % rotatingTitles.length);
-      setAnimKey((prev) => prev + 1);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [rotatingTitles.length]);
-
-  const currentTitle = isEn ? rotatingTitles[titleIndex].en : rotatingTitles[titleIndex].zh;
 
   const handleWeChat = () => {
     if (window.innerWidth < 768) {
@@ -87,19 +86,16 @@ export function SelfIntro({ lang }: Props) {
         <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 mb-2">
           {isEn ? "Luo Yihan" : "雒艺涵"}
         </h1>
-        <p className="text-2xl md:text-3xl tracking-tight mb-8" style={{ color: '#EE9933' }}>
-          <span className="inline-block" key={animKey}>
-            {currentTitle.split("").map((char, i) => (
-              <span
-                key={i}
-                className="inline-block animate-letter-bounce"
-                style={{ animationDelay: `${i * 40}ms` }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            ))}
-          </span>
-        </p>
+        <div className="text-2xl md:text-3xl tracking-tight mb-8" style={{ color: '#EE9933' }}>
+          <TextType
+            text={rotatingTitles}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+            startOnVisible={true}
+          />
+        </div>
         <div className="text-lg leading-relaxed mb-4">
           {isEn ? (
             <>

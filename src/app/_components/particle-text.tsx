@@ -10,6 +10,7 @@ type ParticleTextProps = {
   text?: string;
   particleSize?: number;
   density?: number;
+  maxParticles?: number;
   color?: string;
   highlightColor?: string;
   scatter?: number;
@@ -112,6 +113,7 @@ export function ParticleText({
   text = "React Bits",
   particleSize = 2,
   density = 4,
+  maxParticles = 2600,
   color = "#ffffff",
   highlightColor = "#8b5cf6",
   scatter = 180,
@@ -161,6 +163,17 @@ export function ParticleText({
       smoothY: 0,
     };
 
+    const shouldKeepAnimating = () =>
+      gathering ||
+      (!reducedMotion && idleDrift > 0) ||
+      (pointer.active && !reducedMotion && pointerRepel > 0 && repelRadius > 0);
+
+    const ensureRenderLoop = () => {
+      if (animationFrame === null) {
+        animationFrame = window.requestAnimationFrame(render);
+      }
+    };
+
     const startGather = (fromScatter = true) => {
       if (!particles.length) return;
 
@@ -182,6 +195,7 @@ export function ParticleText({
 
       gatherStart = now;
       gathering = true;
+      ensureRenderLoop();
     };
 
     const drawParticle = (particle: Particle) => {
@@ -199,6 +213,7 @@ export function ParticleText({
     };
 
     const render = (now: number) => {
+      animationFrame = null;
       ctx.clearRect(0, 0, width, height);
 
       if (glow && !reducedMotion) {
@@ -257,12 +272,8 @@ export function ParticleText({
         gathering = false;
       }
 
-      animationFrame = window.requestAnimationFrame(render);
-    };
-
-    const ensureRenderLoop = () => {
-      if (animationFrame === null) {
-        animationFrame = window.requestAnimationFrame(render);
+      if (shouldKeepAnimating()) {
+        ensureRenderLoop();
       }
     };
 
@@ -375,8 +386,8 @@ export function ParticleText({
         }
       }
 
-      const maxParticles = Math.max(900, Math.min(5200, Math.floor((width * height) / 90)));
-      const stride = Math.max(1, Math.ceil(targets.length / maxParticles));
+      const particleLimit = Math.max(600, Math.min(maxParticles, Math.floor((width * height) / 180)));
+      const stride = Math.max(1, Math.ceil(targets.length / particleLimit));
       const baseRgb = hexToRgb(color);
       const highlightRgb = hexToRgb(highlightColor);
       const selected = targets.filter((_, index) => index % stride === 0);
@@ -439,6 +450,7 @@ export function ParticleText({
       pointer.x = event.clientX - rect.left;
       pointer.y = event.clientY - rect.top;
       pointer.active = true;
+      ensureRenderLoop();
     };
 
     const handlePointerLeave = () => {
@@ -486,6 +498,7 @@ export function ParticleText({
     text,
     particleSize,
     density,
+    maxParticles,
     color,
     highlightColor,
     scatter,

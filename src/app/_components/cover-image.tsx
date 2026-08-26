@@ -5,9 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Props = {
   src: string;
   alt: string;
+  loading?: "eager" | "lazy";
 };
 
-export function CoverImage({ src, alt }: Props) {
+export function CoverImage({ src, alt, loading = "lazy" }: Props) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -42,6 +43,8 @@ export function CoverImage({ src, alt }: Props) {
         ref={imgRef}
         src={src}
         alt={alt}
+        loading={loading}
+        decoding="async"
         className="w-full h-full object-cover will-change-transform group-hover:scale-[1.025]"
         style={{
           opacity: loaded ? 1 : 0,
