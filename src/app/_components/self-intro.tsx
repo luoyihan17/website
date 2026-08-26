@@ -4,32 +4,12 @@ import Link from "next/link";
 import { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import { PiXBold } from "react-icons/pi";
-import TextType from "./TextType";
 
 type Props = {
   lang: string;
 };
 
 const ANIM_DURATION = 200; // ms, keep in sync with CSS duration-200
-
-const ROTATING_TITLES = {
-  en: [
-    "Interaction Designer",
-    "VR UX Designer",
-    "Cultural Curator",
-    "Vibe Coding",
-    "Event Planner",
-    "Mom of Two Cats & a Bird",
-  ],
-  zh: [
-    "交互设计师",
-    "VR 体验设计师",
-    "文化策展人",
-    "Vibe Coding",
-    "活动策划者",
-    "两只可爱小猫&鸟的妈妈",
-  ],
-} as const;
 
 export function SelfIntro({ lang }: Props) {
   const isEn = lang === "en";
@@ -43,8 +23,6 @@ export function SelfIntro({ lang }: Props) {
   const [mobileVisible, setMobileVisible] = useState(false);
 
   const [showToast, setShowToast] = useState(false);
-  const rotatingTitles = isEn ? ROTATING_TITLES.en : ROTATING_TITLES.zh;
-
   const openQR = useCallback(() => {
     setQrMounted(true);
     requestAnimationFrame(() => requestAnimationFrame(() => setQrVisible(true)));
@@ -83,16 +61,6 @@ export function SelfIntro({ lang }: Props) {
   return (
     <section className="relative flex-col md:flex-row flex items-start md:justify-between mt-6 mb-16 md:mb-12">
       <div className="w-full">
-        <div className="mb-8 flex justify-center text-center text-2xl md:text-3xl tracking-tight" style={{ color: '#EE9933' }}>
-          <TextType
-            text={rotatingTitles}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="|"
-            startOnVisible={true}
-          />
-        </div>
         <div className="text-lg leading-relaxed mb-4">
           {isEn ? (
             <>
