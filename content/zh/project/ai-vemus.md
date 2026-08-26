@@ -9,8 +9,6 @@ coverImage: "/assets/images/Vemus/Vemus.jpg"
 
 <p class="vemus-lead">从音乐生成到视觉表达的 AI 音乐创作商业体系</p>
 
-## Vemus 未音是什么？
-
 <p class="vemus-copy">
 Vemus 未音是从 <a href="/zh/project/qqmusic">QQ 音乐 AI 唱作</a>能力延伸出的独立 AI 音乐创作 App。前期我们先在 QQ 音乐内验证 AI 作歌、AI 唱等需求，方向成立后，再把核心能力迁移到 Vemus。
 </p>

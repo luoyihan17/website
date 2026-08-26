@@ -1,1 +1,35 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# local build/cache output
+.next
+out
+build
+coverage
+*.tsbuildinfo
+next-env.d.ts
+.next-dev.pid
+.next-dev.log
+.next-start.pid
+.next-start.log
+.npm-cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local/project metadata
+.git
+.vercel
+.DS_Store
+*.pem
+.env*.local
+
+# local source media and exports
+USC
+Notion Version
+resume/cache
 public/assets/images/robotexhibition/robot.mp4
+public/assets/images/USC/ARtistic Tales.mp4
