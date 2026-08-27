@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllItems, getItemBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
+import { AiCodingPracticeSlideNav } from "@/app/_components/ai-coding-practice-slide-nav";
 import Container from "@/app/_components/container";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
@@ -23,6 +24,23 @@ export default async function Project({ params }: Params) {
 
   const content = await markdownToHtml(post.content || "");
   const isVemusProject = params.slug === "ai-vemus";
+  const isAiCodingPracticeProject = params.slug === "ai-coding-practice";
+  const aiCodingSlideCount = (post.content?.match(/ai-coding-practice-detail/g) || []).length;
+
+  if (isAiCodingPracticeProject) {
+    return (
+      <main className="ai-coding-practice-page">
+        <article className="project-ai-coding-practice">
+          <h1 className="sr-only">{post.title}</h1>
+          <PostBody content={content} />
+          <AiCodingPracticeSlideNav
+            lang={params.lang}
+            slideCount={aiCodingSlideCount}
+          />
+        </article>
+      </main>
+    );
+  }
 
   return (
     <main>

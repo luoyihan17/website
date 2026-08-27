@@ -98,6 +98,7 @@ export function FlowIntroHero({ lang }: Props) {
             color="#050505"
             highlightColor="#2f2f2f"
             scatter={180}
+            scrollScatter
             gatherDuration={1600}
             stagger={420}
             pointerRepel={40}
@@ -126,6 +127,7 @@ export function FlowIntroHero({ lang }: Props) {
             color="#050505"
             highlightColor="#2f2f2f"
             scatter={180}
+            scrollScatter
             gatherDuration={1600}
             stagger={420}
             pointerRepel={40}

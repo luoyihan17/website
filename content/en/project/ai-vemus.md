@@ -3,7 +3,7 @@ personalSite: true
 title: "Vemus Weiyin"
 date: "2025-12-01"
 intro: "An AI music creation business system from music generation to visual expression"
-sorting: 2
+sorting: 5
 coverImage: "/assets/images/Vemus/Vemus.jpg"
 ---
 

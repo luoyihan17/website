@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { PiXBold } from "react-icons/pi";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 type Props = {
   lang: string;
@@ -118,21 +119,27 @@ export function SelfIntro({ lang }: Props) {
           )}
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:inline-flex md:flex-nowrap gap-3 text-sm">
-          <Link href={`/${lang}/resume`} className="whitespace-nowrap inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-100 text-neutral-900 transition-colors duration-300">
+          <SpecularAction as={Link} href={`/${lang}/resume`} size="sm">
             {isEn ? "Resume" : "简历"}
-          </Link>
-          <a href="mailto:luoyihan17@gmail.com" className="whitespace-nowrap inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-100 text-neutral-900 transition-colors duration-300">
+          </SpecularAction>
+          <SpecularAction as="a" href="mailto:luoyihan17@gmail.com" size="sm">
             {isEn ? "Email" : "邮件"}
-          </a>
-          <a href="https://www.linkedin.com/in/sakura-yihan-luo-a151451b1/" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-100 text-neutral-900 transition-colors duration-300">
+          </SpecularAction>
+          <SpecularAction
+            as="a"
+            href="https://www.linkedin.com/in/sakura-yihan-luo-a151451b1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+          >
             {isEn ? "LinkedIn" : "领英"}
-          </a>
-          <button
-            className="whitespace-nowrap inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl border border-neutral-300 hover:bg-neutral-100 text-neutral-900 cursor-pointer transition-colors duration-300"
+          </SpecularAction>
+          <SpecularAction
             onClick={handleWeChat}
+            size="sm"
           >
             {isEn ? "WeChat" : "微信"}
-          </button>
+          </SpecularAction>
         </div>
       </div>
 
@@ -152,12 +159,14 @@ export function SelfIntro({ lang }: Props) {
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">{isEn ? "Scan to add WeChat" : "扫码添加微信"}</h3>
-              <button
+              <SpecularAction
                 onClick={closeQR}
-                className="text-neutral-400 hover:text-neutral-600 transition-colors text-xl leading-none"
+                className="specular-action--icon"
+                radius={12}
+                aria-label={isEn ? "Close WeChat QR code" : "关闭微信二维码"}
               >
                 <PiXBold />
-              </button>
+              </SpecularAction>
             </div>
             <img
               src="/assets/functional-images/wechat-qr-luo-yihan.jpg"
@@ -186,20 +195,23 @@ export function SelfIntro({ lang }: Props) {
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">{isEn ? "WeChat" : "微信"}</h3>
-              <button
+              <SpecularAction
                 onClick={closeMobile}
-                className="text-neutral-400 hover:text-neutral-600 transition-colors text-xl leading-none"
+                className="specular-action--icon"
+                radius={12}
+                aria-label={isEn ? "Close WeChat" : "关闭微信"}
               >
                 <PiXBold />
-              </button>
+              </SpecularAction>
             </div>
             <p className="text-center text-base text-neutral-700 mb-4">WeChat ID: <span className="font-semibold">sakuraluo</span></p>
-            <button
+            <SpecularAction
               onClick={handleCopyWeChat}
-              className="w-full py-2.5 rounded-xl bg-neutral-800 text-white text-sm font-medium hover:bg-neutral-700 transition-colors"
+              className="specular-action--full"
+              radius={12}
             >
               {isEn ? "Copy WeChat ID" : "复制 WeChat ID 到剪贴板"}
-            </button>
+            </SpecularAction>
           </div>
         </div>,
         document.body

@@ -147,7 +147,6 @@ function buildContentReference(lang: ChatRequestBody["lang"], origin: string) {
   const collections: ContentCollection[] = [
     "project",
     "experience",
-    "creation",
     "writing",
   ];
 

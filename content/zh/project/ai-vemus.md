@@ -3,7 +3,7 @@ personalSite: true
 title: "Vemus 未音"
 date: "2025-12-01"
 intro: "从音乐生成到视觉表达的 AI 音乐创作商业体系"
-sorting: 2
+sorting: 5
 coverImage: "/assets/images/Vemus/Vemus.jpg"
 ---
 

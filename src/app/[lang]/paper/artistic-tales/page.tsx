@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/app/_components/container";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 const PDF_SRC = "/assets/pdfs/USC/artistic-tales-ichec-2025.pdf";
 
@@ -52,21 +53,25 @@ export default function ArtisticTalesPaperPage({ params }: Params) {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <a
+            <SpecularAction
+              as="a"
               href={PDF_SRC}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-800 transition hover:border-neutral-900 hover:text-neutral-950"
+              size="sm"
+              radius={12}
             >
               {isEn ? "Open PDF" : "打开 PDF"}
-            </a>
-            <a
+            </SpecularAction>
+            <SpecularAction
+              as="a"
               href={PDF_SRC}
               download
-              className="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-700"
+              size="sm"
+              radius={12}
             >
               {isEn ? "Download" : "下载"}
-            </a>
+            </SpecularAction>
           </div>
         </header>
 

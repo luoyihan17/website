@@ -41,18 +41,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Creation pages (shared, no lang prefix needed but routed under lang)
-  for (const lang of langs) {
-    const creations = getAllItems("creation", lang);
-    for (const item of creations) {
-      entries.push({
-        url: `${SITE_URL}/${lang}/creation/${item.slug}`,
-        lastModified: new Date(item.lastModified || item.date),
-        changeFrequency: "monthly",
-        priority: 0.6,
-      });
-    }
-  }
-
   return entries;
 }

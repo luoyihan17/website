@@ -14,6 +14,7 @@ type ParticleTextProps = {
   color?: string;
   highlightColor?: string;
   scatter?: number;
+  scrollScatter?: boolean;
   gatherDuration?: number;
   stagger?: number;
   pointerRepel?: number;
@@ -48,6 +49,8 @@ type Particle = {
   startY: number;
   targetX: number;
   targetY: number;
+  fieldX: number;
+  fieldY: number;
   size: number;
   color: string;
   seed: number;
@@ -74,6 +77,12 @@ const mixRgb = (from: Rgb, to: Rgb, amount: number): Rgb => ({
 const rgbToCss = (rgb: Rgb) => `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+const hashUnit = (value: number) => {
+  let hash = (value + 0x6d2b79f5) | 0;
+  hash = Math.imul(hash ^ (hash >>> 15), hash | 1);
+  hash ^= hash + Math.imul(hash ^ (hash >>> 7), hash | 61);
+  return ((hash ^ (hash >>> 14)) >>> 0) / 4294967296;
+};
 
 const resolveFontSize = (
   value: number | string,
@@ -117,6 +126,7 @@ export function ParticleText({
   color = "#ffffff",
   highlightColor = "#8b5cf6",
   scatter = 180,
+  scrollScatter = false,
   gatherDuration = 1600,
   stagger = 420,
   pointerRepel = 40,
@@ -149,6 +159,7 @@ export function ParticleText({
     let resizeFrame: number | null = null;
     let buildId = 0;
     let gathering = false;
+    let scrollScatterProgress = 0;
     let gatherStart = 0;
     let reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
     let width = 0;
@@ -198,17 +209,17 @@ export function ParticleText({
       ensureRenderLoop();
     };
 
-    const drawParticle = (particle: Particle) => {
+    const drawParticle = (particle: Particle, x = particle.x, y = particle.y) => {
       const size = particle.size;
       ctx.fillStyle = particle.color;
 
       if (size <= 2.1) {
-        ctx.fillRect(particle.x - size / 2, particle.y - size / 2, size, size);
+        ctx.fillRect(x - size / 2, y - size / 2, size, size);
         return;
       }
 
       ctx.beginPath();
-      ctx.arc(particle.x, particle.y, size / 2, 0, Math.PI * 2);
+      ctx.arc(x, y, size / 2, 0, Math.PI * 2);
       ctx.fill();
     };
 
@@ -261,8 +272,13 @@ export function ParticleText({
         particle.x += (baseX - particle.x) * follow;
         particle.y += (baseY - particle.y) * follow;
 
-        ctx.globalAlpha = clamp(0.35 + progress * 0.65, 0, 1);
-        drawParticle(particle);
+        const scatterProgress = reducedMotion ? 0 : scrollScatterProgress;
+        const drawX = particle.x + (particle.fieldX - particle.x) * scatterProgress;
+        const drawY = particle.y + (particle.fieldY - particle.y) * scatterProgress;
+        const scrollAlpha = Math.pow(1 - scatterProgress, 1.15);
+
+        ctx.globalAlpha = clamp((0.35 + progress * 0.65) * scrollAlpha, 0, 1);
+        drawParticle(particle, drawX, drawY);
       });
 
       ctx.globalAlpha = 1;
@@ -401,6 +417,12 @@ export function ParticleText({
         const distance = (reducedMotion ? 0 : scatter) * (0.35 + depth * 0.75);
         const startX = target.x + Math.cos(angle) * distance + (seed - 0.5) * scatter * 0.45;
         const startY = target.y + Math.sin(angle) * distance + (depth - 0.9) * scatter * 0.45;
+        const fieldAngle = hashUnit(index * 2 + 1) * Math.PI * 2;
+        const fieldRadius = Math.sqrt(hashUnit(index * 2 + 2)) * 0.985;
+        const fieldRadiusX = Math.max(width * 0.48, 1);
+        const fieldRadiusY = Math.max(height * 0.43, 1);
+        const fieldX = width / 2 + Math.cos(fieldAngle) * fieldRadiusX * fieldRadius;
+        const fieldY = height / 2 + Math.sin(fieldAngle) * fieldRadiusY * fieldRadius;
 
         return {
           x: reducedMotion ? target.x : startX,
@@ -409,6 +431,8 @@ export function ParticleText({
           startY,
           targetX: target.x,
           targetY: target.y,
+          fieldX,
+          fieldY,
           size: Math.max(0.6, particleSize * (0.75 + target.alpha * 0.45)),
           color: particleColor,
           seed,
@@ -466,6 +490,17 @@ export function ParticleText({
       if (trigger === "click") startGather(true);
     };
 
+    const updateScrollScatter = () => {
+      if (!scrollScatter) return;
+
+      const hero = container.closest<HTMLElement>(".flow-intro-hero");
+      if (!hero) return;
+
+      const rawProgress = clamp(-hero.getBoundingClientRect().top / Math.max(window.innerHeight, 1), 0, 1);
+      scrollScatterProgress = clamp(rawProgress / 0.55, 0, 1);
+      ensureRenderLoop();
+    };
+
     const reduceMotionQuery = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     const handleReduceMotionChange = (event: MediaQueryListEvent) => {
       reducedMotion = event.matches;
@@ -477,6 +512,11 @@ export function ParticleText({
     canvas.addEventListener("pointermove", handlePointerMove);
     canvas.addEventListener("pointerleave", handlePointerLeave);
     canvas.addEventListener("click", handleClick);
+    if (scrollScatter) {
+      window.addEventListener("scroll", updateScrollScatter, { passive: true });
+      window.addEventListener("resize", updateScrollScatter);
+      updateScrollScatter();
+    }
 
     const resizeObserver = new ResizeObserver(queueSample);
     resizeObserver.observe(container);
@@ -490,6 +530,8 @@ export function ParticleText({
       canvas.removeEventListener("pointermove", handlePointerMove);
       canvas.removeEventListener("pointerleave", handlePointerLeave);
       canvas.removeEventListener("click", handleClick);
+      window.removeEventListener("scroll", updateScrollScatter);
+      window.removeEventListener("resize", updateScrollScatter);
 
       if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
       if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
@@ -502,6 +544,7 @@ export function ParticleText({
     color,
     highlightColor,
     scatter,
+    scrollScatter,
     gatherDuration,
     stagger,
     pointerRepel,

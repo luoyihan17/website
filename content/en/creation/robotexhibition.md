@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "International Robotics and Art Design Biennale"
 date: "2025-05-01"
 skill: ["Curator", "Robotics", "Art"]

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { PiXBold } from "react-icons/pi";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 export function Lightbox({ children }: { children: React.ReactNode }) {
   const [src, setSrc] = useState<string | null>(null);
@@ -54,13 +55,14 @@ export function Lightbox({ children }: { children: React.ReactNode }) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-lightbox-in cursor-zoom-out"
           onClick={() => setSrc(null)}
         >
-          <button
+          <SpecularAction
             onClick={() => setSrc(null)}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+            className="absolute top-4 right-4 z-10 specular-action--icon"
+            radius={12}
             aria-label="Close"
           >
             <PiXBold size={24} />
-          </button>
+          </SpecularAction>
           <img
             src={src}
             alt=""

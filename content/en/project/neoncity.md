@@ -3,7 +3,7 @@ personalSite: true
 title: "NeonCity VR Game"
 date: "2022-09-01"
 intro: "A USC Advanced Game Project where I served as Lead UI/UX Designer"
-sorting: 0
+sorting: 2
 coverImage: "/assets/images/NeonCity/NeonCitycover.jpg"
 ---
 

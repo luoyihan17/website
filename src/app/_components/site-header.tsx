@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretLeftBold } from "react-icons/pi";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 type Props = {
   lang: string;
@@ -22,6 +23,8 @@ export function SiteHeader({ lang }: Props) {
   const isHomePage = segments.length === 1;
   const isDetailPage = segments.length > 2;
   const isResumePage = segments.includes('resume');
+  const isEmbeddedFrame = pathname.includes("/ai-coding-practice-frame");
+  const isImmersiveProject = pathname.includes("/project/ai-coding-practice");
 
   const [slideTo, setSlideTo] = useState<string | null>(null);
   const [introMode, setIntroMode] = useState(isHomePage);
@@ -66,9 +69,9 @@ export function SiteHeader({ lang }: Props) {
   };
 
   const sliderIsEn = slideTo ? slideTo === "en" : isEn;
-  const useIntroTheme = isHomePage && introMode && !isDetailPage && !isResumePage;
+  const useIntroTheme = (isHomePage && introMode && !isDetailPage && !isResumePage) || isImmersiveProject;
   const headerClass = useIntroTheme
-    ? "fixed top-0 left-0 right-0 z-50 bg-transparent text-neutral-950 border-b border-transparent transition-colors duration-300"
+    ? `fixed top-0 left-0 right-0 z-50 bg-transparent ${isImmersiveProject ? "text-white" : "text-neutral-950"} border-b border-transparent transition-colors duration-300`
     : "fixed top-0 left-0 right-0 z-50 bg-white/50 text-neutral-900 backdrop-blur-md border-b border-neutral-200/50 transition-colors duration-300";
   const switchClass = useIntroTheme
     ? "relative flex items-center h-9 w-[88px] p-[3px] rounded-xl bg-white/75 border border-neutral-200 cursor-pointer select-none font-barlow shadow-sm backdrop-blur-md transition-colors duration-300"
@@ -76,13 +79,17 @@ export function SiteHeader({ lang }: Props) {
   const sliderClass = useIntroTheme
     ? "absolute left-[3px] h-[28px] w-[40px] rounded-[8px] bg-white shadow-sm"
     : "absolute left-[3px] h-[28px] w-[40px] rounded-[8px] bg-white shadow-sm";
-  const activeTextClass = useIntroTheme ? "text-neutral-950" : "text-neutral-900";
+  const activeTextClass = isImmersiveProject ? "text-white" : (useIntroTheme ? "text-neutral-950" : "text-neutral-900");
   const inactiveTextClass = useIntroTheme ? "text-neutral-400" : "text-neutral-400";
+
+  if (isEmbeddedFrame) {
+    return null;
+  }
 
   return (
     <header className={headerClass}>
       <div className="mx-auto px-5 max-w-[1024px] h-14 flex items-center justify-between">
-        <button
+        <SpecularAction
           onClick={() => {
             if (isResumePage) {
               router.push(`/${lang}`);
@@ -92,11 +99,9 @@ export function SiteHeader({ lang }: Props) {
               window.scrollTo({ top: 0 });
             }
           }}
-          className="flex items-center gap-2 text-base font-medium tracking-tight hover:opacity-70 font-barlow cursor-pointer"
-          style={{
-            transition: "opacity 300ms cubic-bezier(0.4,0,0.2,1), color 300ms cubic-bezier(0.4,0,0.2,1)",
-            opacity: 1, // Always visible
-          }}
+          className="site-header-specular font-barlow"
+          size="sm"
+          radius={18}
         >
           {isDetailPage ? (
             <>
@@ -108,7 +113,7 @@ export function SiteHeader({ lang }: Props) {
               雒艺涵 Luo Yihan
             </>
           )}
-        </button>
+        </SpecularAction>
         <div
           className="flex items-center"
           style={{

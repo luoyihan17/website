@@ -4,7 +4,6 @@ import { SelfIntro } from "@/app/_components/self-intro";
 import { FlowIntroHero } from "@/app/_components/flow-intro-hero";
 import Link from "next/link";
 import { ExperienceGrid } from "@/app/_components/experience-grid";
-import { CreationSection } from "@/app/_components/creation-section";
 import { WritingSection } from "@/app/_components/writing-section";
 import { CoverImage } from "@/app/_components/cover-image";
 import { PiBriefcaseBold } from "react-icons/pi";
@@ -19,7 +18,6 @@ export default function Index({ params }: { params: { lang: string } }) {
   const projects = getAllItems("project", params.lang)
     .sort((a, b) => (b.sorting || 0) - (a.sorting || 0));
   const writings = getAllItems("writing", params.lang);
-  const creations = getAllItems("creation", params.lang);
 
   const isEn = params.lang === "en";
 
@@ -78,9 +76,6 @@ export default function Index({ params }: { params: { lang: string } }) {
 
         {/* Writing Section - List */}
         <WritingSection writings={writings} lang={params.lang} isEn={isEn} />
-
-        {/* Creation Section */}
-        <CreationSection creations={creations} lang={params.lang} isEn={isEn} />
       </Container>
     </main>
   );

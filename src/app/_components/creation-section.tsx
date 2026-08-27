@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import { PiCaretDownBold, PiCaretUpBold } from "react-icons/pi";
 import { CoverImage } from "./cover-image";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 type Props = {
   creations: Post[];
@@ -77,15 +78,16 @@ export function CreationSection({ creations, lang, isEn }: Props) {
       </div>
       {archive.length > 0 && (
         <div className="flex justify-center mt-6">
-          <button
+          <SpecularAction
             onClick={handleToggle}
-            className="flex items-center gap-1.5 text-base text-neutral-500 hover:text-neutral-800 transition-colors duration-300"
+            className="specular-action--pill"
+            radius={999}
           >
             {showArchive
               ? (isEn ? "Hide earlier works" : "收起早期作品")
               : (isEn ? `View ${archive.length} earlier works` : `查看 ${archive.length} 个早期作品`)}
             {showArchive ? <PiCaretUpBold className="w-4 h-4" style={{ position: 'relative', top: '1px' }} /> : <PiCaretDownBold className="w-4 h-4" style={{ position: 'relative', top: '1px' }} />}
-          </button>
+          </SpecularAction>
         </div>
       )}
     </section>

@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "国际机器人与艺术设计双年展"
 date: "2025-05-01"
 skill: ["Curator", "Robotics", "Art"]

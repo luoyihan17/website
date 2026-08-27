@@ -1,5 +1,5 @@
 ---
-personalSite: true
+personalSite: false
 title: "OMNI Art Expo 全球艺术高校作品联展"
 date: "2021-03-01"
 skill: ["Curator", "Founder", "Exhibition"]

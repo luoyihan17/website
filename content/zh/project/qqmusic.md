@@ -3,7 +3,7 @@ personalSite: true
 title: "QQ 音乐 AI 创作"
 date: "2024-09-01"
 intro: "负责 AI 唱作功能的产品定位、核心交互与持续迭代"
-sorting: 3
+sorting: 6
 coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
 ---
 

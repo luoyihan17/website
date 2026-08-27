@@ -10,6 +10,7 @@ import {
   PiXBold,
 } from "react-icons/pi";
 import { ChatMessageContent } from "./chat-message-content";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 type Message = {
   role: "user" | "assistant";
@@ -257,17 +258,19 @@ export function ChatWidget({ lang }: Props) {
             aria-hidden="true"
             className="pointer-events-none absolute bottom-[calc(100%-0.95rem)] left-[55%] z-10 h-auto w-[72%] -translate-x-1/2 select-none drop-shadow-[0_3px_3px_rgba(0,0,0,0.12)]"
           />
-          <button
+          <SpecularAction
             type="button"
             onClick={() => setIsOpen(true)}
-            className="relative z-0 flex items-center gap-2.5 whitespace-nowrap rounded-full bg-neutral-900 px-6 py-3 text-white shadow-lg transition-all duration-300 hover:bg-neutral-700 hover:shadow-xl"
+            className="relative z-0 specular-action--pill shadow-lg"
+            size="md"
+            radius={999}
             aria-label={isEn ? "Chat with Yihan" : "和艺涵聊聊"}
           >
             <PiChatCircleDots className="h-5 w-5" />
             <span className="text-base font-medium">
               {isEn ? "Chat with Yihan" : "和艺涵聊聊"}
             </span>
-          </button>
+          </SpecularAction>
         </div>,
         document.body,
       )}
@@ -298,14 +301,15 @@ export function ChatWidget({ lang }: Props) {
                     {isEn ? "Chat with Yihan" : "和艺涵聊聊"}
                   </span>
                 </div>
-                <button
+                <SpecularAction
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="flex h-8 w-8 items-center justify-center rounded-lg text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-700"
+                  className="specular-action--icon"
+                  radius={12}
                   aria-label={isEn ? "Close chat" : "关闭聊天"}
                 >
                   <PiXBold className="h-4 w-4" />
-                </button>
+                </SpecularAction>
               </div>
 
               <div
@@ -327,14 +331,15 @@ export function ChatWidget({ lang }: Props) {
                     </p>
                     <div className="mt-5 flex flex-wrap justify-center gap-2">
                       {quickQuestions.map((question) => (
-                        <button
+                        <SpecularAction
                           key={question}
                           type="button"
                           onClick={() => handleQuickQuestion(question)}
-                          className="rounded-full border border-neutral-200 px-3 py-1.5 text-sm text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
+                          className="specular-action--compact specular-action--pill specular-action--soft"
+                          radius={999}
                         >
                           {question}
-                        </button>
+                        </SpecularAction>
                       ))}
                     </div>
                   </div>
@@ -381,15 +386,16 @@ export function ChatWidget({ lang }: Props) {
                     className="max-h-28 min-h-[2.25rem] flex-1 resize-none bg-transparent px-2 py-2 text-sm leading-relaxed text-neutral-900 outline-none placeholder:text-neutral-400"
                     disabled={isLoading}
                   />
-                  <button
+                  <SpecularAction
                     type="button"
                     onClick={sendMessage}
                     disabled={!input.trim() || isLoading}
-                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-neutral-900 text-white transition-colors hover:bg-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-300"
+                    className="specular-action--icon specular-action--pill"
+                    radius={999}
                     aria-label={isEn ? "Send message" : "发送消息"}
                   >
                     <PiPaperPlaneRightFill className="h-4 w-4" />
-                  </button>
+                  </SpecularAction>
                 </div>
               </div>
             </div>

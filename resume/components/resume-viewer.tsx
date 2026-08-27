@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 interface ResumeVariant {
   variant: string;
@@ -119,10 +120,10 @@ export function ResumeViewer({ lang, allVariants }: ResumeViewerProps) {
         <div className="resume-toolbar-inner">
           {/* Variant Dropdown */}
           <div ref={dropdownRef} className="relative">
-            <button
+            <SpecularAction
               onClick={() => setDropdownOpen((o) => !o)}
-              className="flex items-center gap-1.5 h-9 px-3 rounded-xl border border-neutral-300 cursor-pointer select-none text-sm font-medium text-neutral-900 hover:bg-neutral-100 whitespace-nowrap"
-              style={{ transition: "background 150ms ease" }}
+              className="resume-variant-button"
+              radius={12}
               aria-haspopup="listbox"
               aria-expanded={dropdownOpen}
             >
@@ -142,7 +143,7 @@ export function ResumeViewer({ lang, allVariants }: ResumeViewerProps) {
               >
                 <polyline points="6 9 12 15 18 9" />
               </svg>
-            </button>
+            </SpecularAction>
             {dropdownOpen && (
               <ul
                 role="listbox"
@@ -184,7 +185,13 @@ export function ResumeViewer({ lang, allVariants }: ResumeViewerProps) {
               {isEn ? "Print and save as PDF" : "打印并保存为 PDF"}
             </span>
             {/* Download Button */}
-            <button onClick={handleDownloadPDF} className="resume-download-btn" disabled={downloading}>
+            <SpecularAction
+              onClick={handleDownloadPDF}
+              className="resume-download-btn specular-action--icon"
+              disabled={downloading}
+              radius={12}
+              aria-label={isEn ? "Download PDF" : "下载 PDF"}
+            >
               {downloading ? (
                 <svg className="resume-spinner" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 12a9 9 0 1 1-6.219-8.56" />
@@ -196,7 +203,7 @@ export function ResumeViewer({ lang, allVariants }: ResumeViewerProps) {
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
               )}
-            </button>
+            </SpecularAction>
           </div>
         </div>
       </div>

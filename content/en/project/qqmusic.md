@@ -3,7 +3,7 @@ personalSite: true
 title: "QQ Music AI Creation"
 date: "2024-09-01"
 intro: "Responsible for product positioning, core interaction design, and continuous iteration of AI singing and songwriting features"
-sorting: 3
+sorting: 6
 coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
 ---
 

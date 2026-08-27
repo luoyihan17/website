@@ -3,7 +3,7 @@ personalSite: true
 title: "NeonCity VR 游戏"
 date: "2022-09-01"
 intro: "南加州大学高阶游戏项目，担任 UI/UX 首席设计师"
-sorting: 0
+sorting: 2
 coverImage: "/assets/images/NeonCity/NeonCitycover.jpg"
 ---
 

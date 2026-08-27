@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Post } from "@/interfaces/post";
 import DateFormatter from "@/app/_components/date-formatter";
 import { PiCaretDownBold, PiCaretUpBold } from "react-icons/pi";
+import { SpecularAction } from "@/app/_components/specular-action";
 
 type Props = {
   writings: Post[];
@@ -69,15 +70,16 @@ export function WritingSection({ writings, lang, isEn }: Props) {
       {extra.length > 0 && (
         <>
           <div className="flex justify-center mt-6">
-            <button
+            <SpecularAction
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center gap-1.5 text-base text-neutral-500 hover:text-neutral-800 transition-colors duration-300"
+              className="specular-action--pill"
+              radius={999}
             >
               {expanded
                 ? (isEn ? "Show less" : "收起")
                 : (isEn ? `View ${extra.length} more` : `查看更多 ${extra.length} 篇`)}
               {expanded ? <PiCaretUpBold className="w-4 h-4" style={{ position: 'relative', top: '1px' }} /> : <PiCaretDownBold className="w-4 h-4" style={{ position: 'relative', top: '1px' }} />}
-            </button>
+            </SpecularAction>
           </div>
         </>
       )}

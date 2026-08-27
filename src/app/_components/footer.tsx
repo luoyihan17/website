@@ -13,6 +13,12 @@ export function Footer({ lang }: Props) {
   const version = `${now.getFullYear()}.${now.getMonth() + 1}`;
   const isEn = lang === "en";
   const isResume = pathname.includes("/resume");
+  const isEmbeddedFrame = pathname.includes("/ai-coding-practice-frame");
+  const isImmersiveProject = pathname.includes("/project/ai-coding-practice");
+
+  if (isEmbeddedFrame || isImmersiveProject) {
+    return null;
+  }
 
   return (
     <footer className="border-t border-neutral-200/50">
