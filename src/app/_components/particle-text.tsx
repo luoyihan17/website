@@ -485,16 +485,49 @@ export function ParticleText({
       });
     };
 
-    const handlePointerMove = (event: PointerEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      pointer.x = event.clientX - rect.left;
-      pointer.y = event.clientY - rect.top;
-      pointer.active = true;
+    const deactivatePointer = () => {
+      if (!pointer.active) return;
+      pointer.active = false;
       ensureRenderLoop();
     };
 
+    const isHeroPointerActive = () => {
+      const hero = container.closest<HTMLElement>(".flow-intro-hero");
+      return !hero || hero.getBoundingClientRect().bottom > 80;
+    };
+
+    const updatePointerFromViewport = (clientX: number, clientY: number) => {
+      if (!isHeroPointerActive()) {
+        deactivatePointer();
+        return false;
+      }
+
+      const rect = canvas.getBoundingClientRect();
+      const isInside =
+        clientX >= rect.left &&
+        clientX <= rect.right &&
+        clientY >= rect.top &&
+        clientY <= rect.bottom;
+
+      if (!isInside) {
+        deactivatePointer();
+        return false;
+      }
+
+      pointer.x = clientX - rect.left;
+      pointer.y = clientY - rect.top;
+      pointer.active = true;
+      ensureRenderLoop();
+
+      return true;
+    };
+
+    const handlePointerMove = (event: PointerEvent) => {
+      updatePointerFromViewport(event.clientX, event.clientY);
+    };
+
     const handlePointerLeave = () => {
-      pointer.active = false;
+      deactivatePointer();
     };
 
     const handlePointerEnter = (event: PointerEvent) => {
@@ -504,6 +537,15 @@ export function ParticleText({
 
     const handleClick = () => {
       if (trigger === "click") startGather(true);
+    };
+
+    const handleWindowPointerMove = (event: PointerEvent) => {
+      if (pointerRepel <= 0 || repelRadius <= 0) return;
+      updatePointerFromViewport(event.clientX, event.clientY);
+    };
+
+    const handleWindowPointerEnd = () => {
+      deactivatePointer();
     };
 
     const updateScrollScatter = () => {
@@ -524,6 +566,9 @@ export function ParticleText({
     };
 
     reduceMotionQuery?.addEventListener("change", handleReduceMotionChange);
+    window.addEventListener("pointermove", handleWindowPointerMove, { passive: true });
+    window.addEventListener("pointercancel", handleWindowPointerEnd);
+    window.addEventListener("blur", handleWindowPointerEnd);
     canvas.addEventListener("pointerenter", handlePointerEnter);
     canvas.addEventListener("pointermove", handlePointerMove);
     canvas.addEventListener("pointerleave", handlePointerLeave);
@@ -542,6 +587,9 @@ export function ParticleText({
       buildId += 1;
       resizeObserver.disconnect();
       reduceMotionQuery?.removeEventListener("change", handleReduceMotionChange);
+      window.removeEventListener("pointermove", handleWindowPointerMove);
+      window.removeEventListener("pointercancel", handleWindowPointerEnd);
+      window.removeEventListener("blur", handleWindowPointerEnd);
       canvas.removeEventListener("pointerenter", handlePointerEnter);
       canvas.removeEventListener("pointermove", handlePointerMove);
       canvas.removeEventListener("pointerleave", handlePointerLeave);

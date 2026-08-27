@@ -219,8 +219,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         {
           reply: lang === "zh"
-            ? "聊天服务还没有配置 API key。你可以先发邮件到 luoyihan17@gmail.com，或者在部署环境里配置 CHAT_API_KEY / DEEPSEEK_API_KEY 后再来找我聊天。"
-            : "The chat service has not been configured with an API key yet. You can email me at luoyihan17@gmail.com, or configure CHAT_API_KEY / DEEPSEEK_API_KEY in the deployment environment and try again.",
+            ? "聊天功能暂时还没有上线。你可以先发邮件到 luoyihan17@gmail.com，或者加我微信 sakuraluo，我会亲自回复你。"
+            : "Chat is not available right now. You can email me at luoyihan17@gmail.com or add me on WeChat at sakuraluo, and I will personally get back to you.",
         },
         { status: 503 },
       );
