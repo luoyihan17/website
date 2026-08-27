@@ -28,8 +28,7 @@ export function FlowIntroHero({ lang }: Props) {
   const [titleIndex, setTitleIndex] = useState(0);
   const rotatingTitles = ROTATING_TITLES;
   const currentTitle = rotatingTitles[titleIndex % rotatingTitles.length];
-  const heroPrefix = "Yihan is";
-  const heroText = `${heroPrefix}\n${currentTitle}`;
+  const heroPrefix = "Yihan Luo is";
   const fallbackTitle = `${heroPrefix} ${currentTitle}`;
 
   useEffect(() => {
@@ -92,7 +91,7 @@ export function FlowIntroHero({ lang }: Props) {
         <div className="flow-intro-particle-center" aria-hidden="true">
           <ParticleText
             className="flow-intro-particle-text"
-            text={heroText}
+            text={heroPrefix}
             particleSize={2.25}
             density={5}
             maxParticles={2200}
@@ -109,7 +108,41 @@ export function FlowIntroHero({ lang }: Props) {
             fontWeight={800}
             fontFamily="inherit"
             glow
-            style={{ height: "100%", minHeight: "100%" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              height: "100%",
+              minHeight: "100%",
+              transform: "translateY(clamp(-5.7rem, -7vw, -2.4rem))",
+            }}
+          />
+          <ParticleText
+            key={currentTitle}
+            className="flow-intro-particle-text"
+            text={currentTitle}
+            particleSize={2.25}
+            density={5}
+            maxParticles={2200}
+            color="#050505"
+            highlightColor="#2f2f2f"
+            scatter={180}
+            gatherDuration={1600}
+            stagger={420}
+            pointerRepel={40}
+            repelRadius={120}
+            idleDrift={0}
+            trigger="mount"
+            fontSize="clamp(3.8rem, 12vw, 9.8rem)"
+            fontWeight={800}
+            fontFamily="inherit"
+            glow
+            style={{
+              position: "absolute",
+              inset: 0,
+              height: "100%",
+              minHeight: "100%",
+              transform: "translateY(clamp(2.4rem, 7vw, 5.7rem))",
+            }}
           />
         </div>
         <h1 className="flow-intro-title-fallback">{fallbackTitle}</h1>

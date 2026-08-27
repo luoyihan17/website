@@ -9,69 +9,170 @@ coverImage: "/assets/images/Vemus/Vemus.jpg"
 
 <p class="vemus-lead">从音乐生成到视觉表达的 AI 音乐创作商业体系</p>
 
-<p class="vemus-copy">
-Vemus 未音是从 <a href="/zh/project/qqmusic">QQ 音乐 AI 唱作</a>能力延伸出的独立 AI 音乐创作 App。前期我们先在 QQ 音乐内验证 AI 作歌、AI 唱等需求，方向成立后，再把核心能力迁移到 Vemus。
-</p>
 
 <p class="vemus-copy">
-独立 App 的价值，是把“生成一首歌”扩展成完整创作链路：灵感输入、作品生成、AI 唱、AI MV、发布分享、内容消费与创作者成长。
+Vemus 未音是从 <a href="/zh/project/qqmusic">QQ 音乐 AI 唱作</a>验证中延伸出的独立 AI 音乐创作 App。我参与了从 0 到 1 的产品体验搭建，负责创作、作品管理、发布分享、内容消费、AI Agent 和创作者激励等核心模块。它不只做“生成一首歌”，而是让用户从灵感、生成、演唱、MV 到发布和被听见，完成一条更完整的 AI 音乐创作路径。
 </p>
 
-![QQ 音乐内 AI 作歌创作手机界面](/assets/images/AIMusic/QQMusicAI.webp)
-
-<p class="vemus-intro">
-我参与 Vemus 从 0 到 1 的产品体验搭建，负责核心创作与消费链路设计，覆盖首页、创作、作品管理、发布分享、内容消费、AI Agent、创作者激励与推荐分发等模块。
-</p>
-
-## Vemus 未音：以“作品”为核心，连接创作供给与内容消费
-
-<p class="vemus-copy">
-Vemus 的产品结构围绕“作品”建立。一侧是创作者的内容生产力，另一侧是听众的发现、收听与互动。我们让原有的音乐消费体验，和 AI 作歌、AI 唱、AI MV 产生的作品资产形成同一条循环链路。
-</p>
-
-<p class="vemus-copy">
-这套结构让内容供给、消费活跃、创作者留存、作品传播与付费转化可以在同一个系统里持续回流。
-</p>
-
-![Vemus 未音以音乐作品为中心连接创作者、听众系统图](/assets/images/Vemus/Vemus_IAmap.png)
+<figure class="vemus-relation-map">
+<img src="/assets/images/Vemus/%E5%88%9B%E4%BD%9C%E8%80%85%E4%B8%8E%E5%90%AC%E4%BC%97%E5%85%B3%E7%B3%BB%E5%9B%BE.png" alt="Vemus 创作者与听众关系图" />
+<figcaption>Vemus 创作者与听众的转化关系</figcaption>
+</figure>
 
 
-## 创作页面
+<section class="vemus-lifecycle">
+<div class="vemus-lifecycle-head">
+<h2>产品结构：从灵感入口到作品增长</h2>
+</div>
+<div class="vemus-lifecycle-grid">
+<article>
+<span>01</span>
+<h3>灵感入口</h3>
+<p>听歌流、热点词、图片素材、音乐配方。</p>
+</article>
+<article>
+<span>02</span>
+<h3>生成与编辑</h3>
+<p>根据听歌、文字或图片灵感，进入对应创作面板，生成歌曲、AI 唱或 AIMV。</p>
+</article>
+<article>
+<span>03</span>
+<h3>发布后增长</h3>
+<p>作品进入音乐发行、排行榜和权益体系，获得反馈与激励。</p>
+</article>
+</div>
+</section>
 
-<p class="vemus-copy">
-创作首页将对话作歌、灵感作歌、歌词作歌、图片作歌和 AI 唱集中组织，让用户可以根据素材、目的和当前灵感状态快速选择入口。
-</p>
 
-![Vemus AI 作歌、AI 唱与 AI 视频创作入口](/assets/images/Vemus/MainFeatures.png)
+<section class="vemus-pathways">
+<div class="vemus-pathways-head">
+<h2>四类创作入口与用户转化</h2>
+<p>Vemus 将不同类型的灵感转化为对应创作路径，让听歌用户、有创作意愿的用户，以及更高阶的表达需求，都能更快进入创作。</p>
+</div>
+<div class="vemus-pathway-tabs" aria-label="Vemus 创作入口路径">
+<span>听歌流 → 做同款 / 唱同款</span>
+<span>空白创作 / 热点灵感 → 歌曲生成</span>
+<span>图片素材 → AIMV</span>
+<span>对话表达 → AI Agent</span>
+</div>
+<article class="vemus-pathway">
 
-## 图片驱动的 AIMV 创作
+<h3>路径一：从听歌流进入创作</h3>
+<p>面向先听后创作的用户。用户在无限音乐流里遇到喜欢的作品，可点击<strong>“做同款”或“唱同款”</strong>，系统复用歌词、曲风、音色等信息，直接带入自己的创作面板。</p>
+<figure>
+<img src="/assets/images/Vemus/Userflow.png" alt="Vemus 做同款和唱同款流程" />
+<figcaption>Vemus 做同款和唱同款流程</figcaption>
+</figure>
+</article>
+<article class="vemus-pathway">
 
-<p class="vemus-copy">
-图片作歌把照片上传、风格选择、图片分析和高光视频生成串成完整链路，让用户可以从相册素材快速生成具有视觉叙事感的音乐视频。
-</p>
+<h3>路径二：从空白创作进入歌曲生成</h3>
+<p>面向想创作但难以专业表达的用户。创作页提供<strong>热点灵感</strong>，点击后可扩展为专业创作提示词；进入歌词作歌时，也能进一步转成歌词。之后用户可以手动选择曲风，也可以试听<strong>音乐配方</strong>，选择不同风格。</p>
+<figure>
+<img src="/assets/images/Vemus/AImusic%20flow.png" alt="Vemus AI 音乐创作与音乐配方选择流程" />
+<figcaption>Vemus AI 音乐创作与音乐配方选择流程</figcaption>
+</figure>
+</article>
+<article class="vemus-pathway">
 
-![Vemus 上传图片、选择音乐风格、分析照片和高光视频生成界面](/assets/images/Vemus/Images%20to%20AIMV.png)
+<h3>路径三：以图片生成 AIMV</h3>
+<p>面向更高阶的视觉表达需求。图片可以作为<strong>独立创作起点</strong>，用户上传照片、选择风格后，系统先理解<strong>画面内容、情绪和视觉重点</strong>，并把分析结果反馈给用户，减少生成过程中的空等感。随后系统生成带有视觉叙事的 AIMV，让图片素材直接转化为可发布、可分享的音乐影像。</p>
+<figure>
+<img src="/assets/images/Vemus/Image%20to%20song.png" alt="Vemus 图片生成 AIMV 高阶创作流程" />
+<figcaption>Vemus 图片生成 AIMV 高阶创作流程</figcaption>
+</figure>
+</article>
+<article class="vemus-pathway">
 
-## AI Agent
+<h3>路径四：用 AI Agent 对话创作</h3>
+<p>面向希望用<strong>自然语言</strong>表达需求的用户。AI Agent 通过对话承接作歌、听歌、加入歌单和历史对话管理，让复杂的 AI 音乐创作链路变成<strong>连续、可追问、可调整</strong>的创作体验。</p>
+<figure>
+<img src="/assets/images/Vemus/AIAgent.png" alt="Vemus AI Agent 对话创作流程" />
+<figcaption>Vemus AI Agent 对话创作流程</figcaption>
+</figure>
+</article>
+</section>
 
-<p class="vemus-copy">
-AI Agent 承担更自然的创作入口：用户可以通过对话表达需求，逐步完成作歌、听歌、加入歌单与历史对话管理，让复杂的 AI 创作链路变成连续的对话体验。
-</p>
+<section class="vemus-growth">
+<div class="vemus-growth-head">
+<span>Post-creation Distribution</span>
+<h2>创作后的发布与曝光</h2>
+<p>作品完成后，Vemus 继续通过音乐发行、发行证书和排行榜机制，让作品获得正式身份、版权收益和持续曝光。</p>
+</div>
+<div class="vemus-growth-overview" aria-label="Vemus 创作后的发布与曝光结构">
+<article>
+<span>01</span>
+<strong>音乐发行</strong>
+<p>把作品发行到腾讯音乐平台，获得可搜索、可收益、可证明的正式身份。</p>
+</article>
+<article>
+<span>02</span>
+<strong>曝光打榜</strong>
+<p>通过榜单、做同款和推广机制扩大作品传播。</p>
+</article>
+</div>
+<div class="vemus-growth-list">
+<article class="vemus-growth-item">
+<div class="vemus-growth-item-head">
+<h3>路径一：音乐发行与创作者荣誉</h3>
+</div>
+<p>音乐发行承接作品完成后的正式发布动作。用户补充歌曲信息、封面与发布设置后，作品可以在<strong>腾讯音乐旗下各大音乐平台</strong>被搜索到，并有机会获得<strong>版权收益</strong>；发行证书则进一步强化作品的正式身份和创作者的阶段成就感。</p>
+<figure>
+<img src="/assets/images/Vemus/MusicRelease.png" alt="Vemus 音乐发行与创作者荣誉流程" />
+<figcaption>Vemus 音乐发行与创作者荣誉流程</figcaption>
+</figure>
+</article>
+<article class="vemus-growth-item">
+<div class="vemus-growth-item-head">
+<h3>路径二：排行榜与作品打榜</h3>
+</div>
+<p>排行榜是作品发布后的<strong>曝光与打榜机制</strong>。听歌用户在榜单里听到喜欢的歌曲，可以为作品打榜，也可以继续“做同款”；创作者想让自己的作品获得更多曝光，则可以通过<strong>完成任务、购买推广</strong>等方式争取上榜。</p>
+<figure>
+<img src="/assets/images/Vemus/RankingList%26Rewards.png" alt="Vemus 排行榜打榜与创作者荣誉流程" />
+<figcaption>Vemus 排行榜打榜与创作者荣誉流程</figcaption>
+</figure>
+</article>
+</div>
+</section>
 
-![Vemus AI Agent 对话作歌](/assets/images/Vemus/AI%20Agent.png)
-
-## 排行榜与创作者荣誉
-
-<p class="vemus-copy">
-排行榜并不只是一次内容排序设计，我们更关心它能不能让创作者感知到作品正在被看见。围绕排名、音浪、上榜分享与阶段任务，我们尝试把播放、互动、粉丝增长等原本分散的数据转化为更明确的成长反馈，让“发布一首歌”之后仍然有继续经营作品的理由。
-</p>
-
-![Vemus 排行榜与创作者荣誉界面](/assets/images/Vemus/Honors.png)
-
-## 金币与成长激励
-
-<p class="vemus-copy">
-金币体系最初看起来像一套任务系统，但真正需要解决的是：如何在不打断核心体验的前提下，鼓励用户持续听歌、互动、创作与分享。我们将不同产品行为映射为奖励，并进一步连接权益兑换与提现，希望激励机制服务于真实的内容循环，而不是让用户只为了完成任务而行动。
-</p>
-
-![Vemus 金币任务与成长激励界面](/assets/images/Vemus/Coins.png)
+<section class="vemus-growth">
+<div class="vemus-growth-head">
+<span>Commercial Model</span>
+<h2>商业化与长期激励</h2>
+<p>我将商业化从单次买券延展成更长期的激励与权益体系：先用金币任务推动用户持续参与，再由积分和会员承接高频行为，形成从留存到付费的转化链路。</p>
+</div>
+<div class="vemus-growth-overview" aria-label="Vemus 商业化与长期激励结构">
+<article>
+<span>01</span>
+<strong>金币留存</strong>
+<p>通过任务、收益和提现机制，让用户持续参与并帮助平台拉新拉活。</p>
+</article>
+<article>
+<span>02</span>
+<strong>积分会员</strong>
+<p>将持续行为沉淀为权益分层，从按次消费转向长期付费。</p>
+</article>
+</div>
+<div class="vemus-growth-list">
+<article class="vemus-growth-item">
+<div class="vemus-growth-item-head">
+<h3>路径一：金币与留存激励</h3>
+</div>
+<p>金币体系的目标是<strong>提升留存和自传播</strong>。用户通过每日签到、听歌、分享作品、互动等任务获得金币，金币可支持微信提现，形成“参与—获得收益—继续参与”的循环。对平台来说，它把用户活跃转化为<strong>拉新、拉活和作品传播</strong>；对用户来说，也能在创作与互动中获得实际回报。</p>
+<figure>
+<img src="/assets/images/Vemus/Earncoins.png" alt="Vemus 金币留存激励与任务收益流程" />
+<figcaption>Vemus 金币留存激励与任务收益流程</figcaption>
+</figure>
+</article>
+<article class="vemus-growth-item">
+<div class="vemus-growth-item-head">
+<h3>路径二：积分与会员权益</h3>
+</div>
+<p>早期商业化方案更偏向按次消费：用户购买作歌券、唱歌券，再消耗对应能力。我提出将它延展为<strong>积分制和会员制</strong>：金币体系先沉淀用户在听歌、创作、分享、打榜中的持续行为，积分和会员再承接这些行为，形成<strong>权益分层与长期付费转化</strong>。这样商业化不只是卖一次生成机会，而是把用户活跃、作品成长和付费模型连接在同一条长期链路里。</p>
+<figure>
+<img src="/assets/images/Vemus/Business.png" alt="Vemus 商业化设计方案" />
+<figcaption>Vemus 商业化设计方案</figcaption>
+</figure>
+</article>
+</div>
+</section>

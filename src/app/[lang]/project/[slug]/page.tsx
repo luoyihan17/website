@@ -22,16 +22,19 @@ export default async function Project({ params }: Params) {
   }
 
   const content = await markdownToHtml(post.content || "");
+  const isVemusProject = params.slug === "ai-vemus";
 
   return (
     <main>
       <Container>
-        <article className="mb-12">
-          <PostHeader
-            title={post.title}
-            date={post.date}
-            favicon={post.favicon}
-          />
+        <article className={`mb-12 ${isVemusProject ? "project-ai-vemus" : ""}`}>
+          <div className={isVemusProject ? "vemus-title-shell" : undefined}>
+            <PostHeader
+              title={post.title}
+              date={post.date}
+              favicon={post.favicon}
+            />
+          </div>
           <PostBody content={content} />
         </article>
       </Container>
