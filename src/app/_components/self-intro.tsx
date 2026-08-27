@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { PiXBold } from "react-icons/pi";
 import { SpecularAction } from "@/app/_components/specular-action";
+import TextType from "@/app/_components/TextType";
 
 type Props = {
   lang: string;
@@ -97,6 +98,17 @@ export function SelfIntro({ lang }: Props) {
       }`}
     >
       <div className="w-full">
+        <TextType
+          as="h2"
+          text={["About Me"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          startOnVisible
+          showCursor
+          cursorCharacter="|"
+          className="mb-6 text-5xl md:text-7xl font-extrabold tracking-tighter leading-none text-neutral-950"
+          cursorClassName="text-neutral-950"
+        />
         <div className="text-lg leading-relaxed mb-4">
           {isEn ? (
             <>

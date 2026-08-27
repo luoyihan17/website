@@ -17,9 +17,9 @@ const ROTATING_TITLES = [
 ] as const;
 
 const TITLE_HOLD_DURATION = 3200;
-const HERO_PARTICLE_SIZE = 2;
-const HERO_PARTICLE_DENSITY = 6;
-const HERO_MAX_PARTICLES = 1300;
+const HERO_PARTICLE_SIZE = 2.35;
+const HERO_PARTICLE_DENSITY = 5;
+const HERO_MAX_PARTICLES = 2200;
 const HERO_GATHER_DURATION = 1200;
 const HERO_STAGGER = 280;
 const HERO_DPR_CAP = 1.35;
@@ -97,7 +97,7 @@ export function FlowIntroHero({ lang }: Props) {
         <div className="flow-intro-particle-center" aria-hidden="true">
           <ParticleText
             className="flow-intro-particle-text"
-            text={`${heroPrefix}\n${currentTitle}`}
+            text={heroPrefix}
             particleSize={HERO_PARTICLE_SIZE}
             density={HERO_PARTICLE_DENSITY}
             maxParticles={HERO_MAX_PARTICLES}
@@ -114,13 +114,45 @@ export function FlowIntroHero({ lang }: Props) {
             fontSize="clamp(3.8rem, 12vw, 9.8rem)"
             fontWeight={800}
             fontFamily="inherit"
-            lineGapMultiplier={0.48}
             maxDevicePixelRatio={HERO_DPR_CAP}
             animateTextChanges={false}
             glow={false}
             style={{
+              position: "absolute",
+              inset: 0,
               height: "100%",
               minHeight: "100%",
+              transform: "translateY(clamp(-5.7rem, -7vw, -2.4rem))",
+            }}
+          />
+          <ParticleText
+            key={currentTitle}
+            className="flow-intro-particle-text"
+            text={currentTitle}
+            particleSize={HERO_PARTICLE_SIZE}
+            density={HERO_PARTICLE_DENSITY}
+            maxParticles={HERO_MAX_PARTICLES}
+            color="#050505"
+            highlightColor="#050505"
+            scatter={180}
+            scrollScatter
+            gatherDuration={HERO_GATHER_DURATION}
+            stagger={HERO_STAGGER}
+            pointerRepel={40}
+            repelRadius={120}
+            idleDrift={0}
+            trigger="mount"
+            fontSize="clamp(3.8rem, 12vw, 9.8rem)"
+            fontWeight={800}
+            fontFamily="inherit"
+            maxDevicePixelRatio={HERO_DPR_CAP}
+            glow={false}
+            style={{
+              position: "absolute",
+              inset: 0,
+              height: "100%",
+              minHeight: "100%",
+              transform: "translateY(clamp(2.4rem, 7vw, 5.7rem))",
             }}
           />
         </div>
