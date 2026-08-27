@@ -19,7 +19,7 @@ const ROTATING_TITLES = [
 const TITLE_HOLD_DURATION = 3200;
 const HERO_PARTICLE_SIZE = 2;
 const HERO_PARTICLE_DENSITY = 6;
-const HERO_MAX_PARTICLES = 1800;
+const HERO_MAX_PARTICLES = 1300;
 const HERO_GATHER_DURATION = 1200;
 const HERO_STAGGER = 280;
 const HERO_DPR_CAP = 1.35;
@@ -96,14 +96,13 @@ export function FlowIntroHero({ lang }: Props) {
 
         <div className="flow-intro-particle-center" aria-hidden="true">
           <ParticleText
-            key={currentTitle}
             className="flow-intro-particle-text"
             text={`${heroPrefix}\n${currentTitle}`}
             particleSize={HERO_PARTICLE_SIZE}
             density={HERO_PARTICLE_DENSITY}
             maxParticles={HERO_MAX_PARTICLES}
             color="#050505"
-            highlightColor="#2f2f2f"
+            highlightColor="#050505"
             scatter={180}
             scrollScatter
             gatherDuration={HERO_GATHER_DURATION}
@@ -117,6 +116,7 @@ export function FlowIntroHero({ lang }: Props) {
             fontFamily="inherit"
             lineGapMultiplier={0.48}
             maxDevicePixelRatio={HERO_DPR_CAP}
+            animateTextChanges={false}
             glow={false}
             style={{
               height: "100%",

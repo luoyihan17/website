@@ -27,6 +27,7 @@ type ParticleTextProps = {
   equalizeLineWidths?: boolean;
   lineGapMultiplier?: number;
   maxDevicePixelRatio?: number;
+  animateTextChanges?: boolean;
   glow?: boolean;
   className?: string;
   style?: CSSProperties;
@@ -141,12 +142,14 @@ export function ParticleText({
   equalizeLineWidths = false,
   lineGapMultiplier = 0.16,
   maxDevicePixelRatio = 2,
+  animateTextChanges = true,
   glow = true,
   className = "",
   style,
 }: ParticleTextProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const hasAnimatedBuildRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
@@ -169,6 +172,7 @@ export function ParticleText({
     let width = 0;
     let height = 0;
     let dpr = 1;
+    let activeFillStyle = "";
 
     const pointer = {
       active: false,
@@ -215,7 +219,10 @@ export function ParticleText({
 
     const drawParticle = (particle: Particle, x = particle.x, y = particle.y) => {
       const size = particle.size;
-      ctx.fillStyle = particle.color;
+      if (activeFillStyle !== particle.color) {
+        ctx.fillStyle = particle.color;
+        activeFillStyle = particle.color;
+      }
 
       if (size <= 3) {
         ctx.fillRect(x - size / 2, y - size / 2, size, size);
@@ -229,6 +236,7 @@ export function ParticleText({
 
     const render = (now: number) => {
       animationFrame = null;
+      activeFillStyle = "";
       ctx.clearRect(0, 0, width, height);
 
       if (glow && !reducedMotion) {
@@ -451,7 +459,9 @@ export function ParticleText({
       pointer.smoothX = pointer.x;
       pointer.smoothY = pointer.y;
 
-      if (reducedMotion) {
+      const shouldAnimateBuild = !hasAnimatedBuildRef.current || animateTextChanges;
+
+      if (reducedMotion || !shouldAnimateBuild) {
         particles.forEach((particle) => {
           particle.x = particle.targetX;
           particle.y = particle.targetY;
@@ -464,6 +474,7 @@ export function ParticleText({
         startGather(false);
       }
 
+      hasAnimatedBuildRef.current = true;
       ensureRenderLoop();
     };
 
@@ -562,6 +573,7 @@ export function ParticleText({
     equalizeLineWidths,
     lineGapMultiplier,
     maxDevicePixelRatio,
+    animateTextChanges,
     glow,
   ]);
 
