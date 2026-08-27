@@ -4,7 +4,7 @@ title: "Tencent Music AI Games"
 date: "2025-01-01"
 intro: "Playable music campaigns built fast with AI coding"
 sorting: 4
-coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.webp"
+coverImage: "/assets/cover-image/gamecover.webp"
 favicon: "/assets/favicon/tme.svg"
 skill: ["Self-contained Delivery", "AI Efficiency", "Cross-team Drive"]
 ---

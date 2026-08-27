@@ -4,7 +4,7 @@ title: "QQ Music AI Creation"
 date: "2024-09-01"
 intro: "Product strategy and core UX for QQ Music's AI songwriting tools"
 sorting: 6
-coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
+coverImage: "/assets/cover-image/QQMUSICCover.webp"
 favicon: "/assets/favicon/tme.svg"
 ---
 

@@ -4,7 +4,7 @@ title: "Vemus 未音"
 date: "2025-12-01"
 intro: "把一次 AI 作歌，变成一个让创作者持续成长的音乐产品"
 sorting: 5
-coverImage: "/assets/images/Vemus/Vemus.webp"
+coverImage: "/assets/cover-image/Vemuscover.webp"
 favicon: "/assets/favicon/tme.svg"
 ---
 

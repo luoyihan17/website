@@ -4,13 +4,13 @@ title: "NeonCity VR 游戏"
 date: "2022-09-01"
 intro: "南加州大学高阶游戏项目，担任 UI/UX 首席设计师"
 sorting: 2
-coverImage: "/assets/images/NeonCity/NeonCitycover.webp"
+coverImage: "/assets/cover-image/neoncitycover.webp"
 favicon: "/assets/favicon/usc.svg"
 ---
 
 NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造沙盒游戏，我担任 UI/UX Lead。项目以 Hand Tracking、OpenXR 与 Unity 为基础，让玩家用双手搭建并扩展一座霓虹城市，并在微缩规划和 1:1 探索之间切换。项目曾亮相 USC Games Expo 2023，并推出 [Meta Store](https://www.meta.com/experiences/pcvr/neon-city-demo/6015050278577275/?srsltid=AfmBOooMXGbBIYlLropJlYEgZtirmqnB4i9KIZFaWLrSAOqRDfVTh0TJ)。
 
-<figure class="video-embed vimeo-click-player" data-vimeo-id="825302860" data-title="NeonCity VR Game video" style="background-image: url('/assets/images/NeonCity/NeonCitycover.webp')">
+<figure class="video-embed vimeo-click-player" data-vimeo-id="825302860" data-title="NeonCity VR Game video" style="background-image: url('/assets/cover-image/neoncitycover.webp')">
   <button class="video-play-button" type="button" data-vimeo-play aria-label="播放 NeonCity VR Game video">
     <span class="video-play-icon" aria-hidden="true"></span>
   </button>

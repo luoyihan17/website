@@ -4,7 +4,7 @@ title: "听歌学外文"
 date: "2024-10-01"
 intro: "从播放器概念到轻量上线切口，一次关于设计价值与产品落地的选择"
 sorting: 2.5
-coverImage: "/assets/images/Leraningbymusic/learningbymusic.webp"
+coverImage: "/assets/cover-image/Qduocover.webp"
 favicon: "/assets/favicon/tme.svg"
 skill: ["机会洞察", "产品设计", "Scope 管理", "跨职能推动"]
 ---

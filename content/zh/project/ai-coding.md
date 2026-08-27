@@ -4,7 +4,7 @@ title: "腾讯音乐AI游戏"
 date: "2025-01-01"
 intro: "用 Vibe Coding 快速构建音乐互动、游戏化玩法与可运行原型"
 sorting: 4
-coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.webp"
+coverImage: "/assets/cover-image/gamecover.webp"
 favicon: "/assets/favicon/tme.svg"
 skill: ["自闭环", "AI提效", "跨团队组织"]
 ---

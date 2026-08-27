@@ -4,7 +4,7 @@ title: "Vemus Weiyin"
 date: "2025-12-01"
 intro: "An AI music app for creating, publishing, and growing original songs"
 sorting: 5
-coverImage: "/assets/images/Vemus/Vemus.webp"
+coverImage: "/assets/cover-image/Vemuscover.webp"
 favicon: "/assets/favicon/tme.svg"
 ---
 
