@@ -17,6 +17,12 @@ const ROTATING_TITLES = [
 ] as const;
 
 const TITLE_HOLD_DURATION = 3200;
+const HERO_PARTICLE_SIZE = 2;
+const HERO_PARTICLE_DENSITY = 6;
+const HERO_MAX_PARTICLES = 1800;
+const HERO_GATHER_DURATION = 1200;
+const HERO_STAGGER = 280;
+const HERO_DPR_CAP = 1.35;
 
 function clamp(value: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, value));
@@ -90,46 +96,18 @@ export function FlowIntroHero({ lang }: Props) {
 
         <div className="flow-intro-particle-center" aria-hidden="true">
           <ParticleText
-            className="flow-intro-particle-text"
-            text={heroPrefix}
-            particleSize={2.25}
-            density={5}
-            maxParticles={2200}
-            color="#050505"
-            highlightColor="#2f2f2f"
-            scatter={180}
-            scrollScatter
-            gatherDuration={1600}
-            stagger={420}
-            pointerRepel={40}
-            repelRadius={120}
-            idleDrift={0}
-            trigger="mount"
-            fontSize="clamp(3.8rem, 12vw, 9.8rem)"
-            fontWeight={800}
-            fontFamily="inherit"
-            glow
-            style={{
-              position: "absolute",
-              inset: 0,
-              height: "100%",
-              minHeight: "100%",
-              transform: "translateY(clamp(-5.7rem, -7vw, -2.4rem))",
-            }}
-          />
-          <ParticleText
             key={currentTitle}
             className="flow-intro-particle-text"
-            text={currentTitle}
-            particleSize={2.25}
-            density={5}
-            maxParticles={2200}
+            text={`${heroPrefix}\n${currentTitle}`}
+            particleSize={HERO_PARTICLE_SIZE}
+            density={HERO_PARTICLE_DENSITY}
+            maxParticles={HERO_MAX_PARTICLES}
             color="#050505"
             highlightColor="#2f2f2f"
             scatter={180}
             scrollScatter
-            gatherDuration={1600}
-            stagger={420}
+            gatherDuration={HERO_GATHER_DURATION}
+            stagger={HERO_STAGGER}
             pointerRepel={40}
             repelRadius={120}
             idleDrift={0}
@@ -137,13 +115,12 @@ export function FlowIntroHero({ lang }: Props) {
             fontSize="clamp(3.8rem, 12vw, 9.8rem)"
             fontWeight={800}
             fontFamily="inherit"
-            glow
+            lineGapMultiplier={0.48}
+            maxDevicePixelRatio={HERO_DPR_CAP}
+            glow={false}
             style={{
-              position: "absolute",
-              inset: 0,
               height: "100%",
               minHeight: "100%",
-              transform: "translateY(clamp(2.4rem, 7vw, 5.7rem))",
             }}
           />
         </div>

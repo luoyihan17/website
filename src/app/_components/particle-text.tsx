@@ -25,6 +25,8 @@ type ParticleTextProps = {
   fontWeight?: number | string;
   fontFamily?: string;
   equalizeLineWidths?: boolean;
+  lineGapMultiplier?: number;
+  maxDevicePixelRatio?: number;
   glow?: boolean;
   className?: string;
   style?: CSSProperties;
@@ -137,6 +139,8 @@ export function ParticleText({
   fontWeight = 800,
   fontFamily = "inherit",
   equalizeLineWidths = false,
+  lineGapMultiplier = 0.16,
+  maxDevicePixelRatio = 2,
   glow = true,
   className = "",
   style,
@@ -213,7 +217,7 @@ export function ParticleText({
       const size = particle.size;
       ctx.fillStyle = particle.color;
 
-      if (size <= 2.1) {
+      if (size <= 3) {
         ctx.fillRect(x - size / 2, y - size / 2, size, size);
         return;
       }
@@ -301,12 +305,13 @@ export function ParticleText({
 
       if (width <= 0 || height <= 0) return;
 
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      dpr = Math.min(window.devicePixelRatio || 1, Math.max(1, maxDevicePixelRatio));
       canvas.width = Math.max(1, Math.floor(width * dpr));
       canvas.height = Math.max(1, Math.floor(height * dpr));
       canvas.style.width = "100%";
       canvas.style.height = "100%";
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = false;
 
       const computed = window.getComputedStyle(container);
       const resolvedFamily = fontFamily === "inherit" ? computed.fontFamily || "sans-serif" : fontFamily;
@@ -343,7 +348,7 @@ export function ParticleText({
             height: Math.max(1, ascent + descent),
           };
         });
-        const lineGap = lines.length > 1 ? Math.max(8, Math.ceil(resolvedSize * 0.16)) : 0;
+        const lineGap = lines.length > 1 ? Math.max(8, Math.ceil(resolvedSize * lineGapMultiplier)) : 0;
         const textWidth = Math.max(1, ...measuredLines.map((line) => line.width));
         const textHeight =
           measuredLines.reduce((sum, line) => sum + line.height, 0) + lineGap * Math.max(0, measuredLines.length - 1);
@@ -555,6 +560,8 @@ export function ParticleText({
     fontWeight,
     fontFamily,
     equalizeLineWidths,
+    lineGapMultiplier,
+    maxDevicePixelRatio,
     glow,
   ]);
 

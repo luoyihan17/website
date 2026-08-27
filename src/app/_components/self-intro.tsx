@@ -110,7 +110,7 @@ export function SelfIntro({ lang }: Props) {
           ) : (
             <>
               <p className="mb-4">
-                雒艺涵是探索 AI、互动娱乐与创意技术交叉领域的全栈设计师。我关注的不只是功能本身，也希望连接平台和内容去创造更有情绪、更有记忆点、更具想象力的体验。
+                我是一名探索 AI、互动娱乐与创意技术交叉领域的全栈设计师。我关注的不只是功能本身，也希望连接平台和内容去创造更有情绪、更有记忆点、更趣味的体验。
               </p>
               <p className="mb-4">
                 我本科毕业于<Link href="/zh/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">艺术中心设计学院</Link>交互设计专业，研究生毕业于<a href="https://cinema.usc.edu/interactive/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">南加州大学交互游戏研究硕士</a>，目前在腾讯音乐工作。

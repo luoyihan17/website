@@ -30,11 +30,11 @@ export function SpecularAction({
       blur={14}
       textColor="#262626"
       lineColor="#ffffff"
-      baseColor="#d7d7d7"
-      intensity={1}
-      shineSize={10}
-      shineFade={40}
-      thickness={1}
+      baseColor="#8f969f"
+      intensity={1.75}
+      shineSize={16}
+      shineFade={28}
+      thickness={1.35}
       speed={0.35}
       followMouse
       proximity={250}
