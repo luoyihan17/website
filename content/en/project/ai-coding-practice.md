@@ -5,6 +5,7 @@ date: "2026-08-27"
 intro: "Playable H5 prototypes and AI coding experiments"
 sorting: 3
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
+favicon: "/assets/favicon/tme.svg"
 ---
 
 <div class="side-by-side ai-coding-practice-detail">
@@ -78,6 +79,31 @@ coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
 <p class="practice-project-summary">A photo-based mood playlist demo. Users upload or choose a photo, and the system reads visual mood to recommend songs that fit.</p>
 
 <p class="practice-project-meta">Photo analysis / Mood playlist / Music recommendation demo</p>
+
+  </div>
+</div>
+
+<div class="side-by-side ai-coding-practice-detail practice-wide-detail">
+  <div class="side-preview">
+    <div class="practice-wide-frame">
+      <iframe
+        src="https://yihan-album-library.pages.dev/"
+        title="AI Coding Practice: 3D Album Library"
+        loading="lazy"
+        scrolling="no"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      ></iframe>
+    </div>
+  </div>
+  <div class="side-content">
+
+<p class="practice-play-hint">Browse it fullscreen</p>
+
+### 04 3D Album Library
+
+<p class="practice-project-summary">A spatial album browser that turns cover art, record details, and 30-second previews into an explorable music library.</p>
+
+<p class="practice-project-meta">3D Album Library / Music database / Spatial browsing</p>
 
   </div>
 </div>

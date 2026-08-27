@@ -5,6 +5,7 @@ date: "2024-09-01"
 intro: "负责 AI 唱作功能的产品定位、核心交互与持续迭代"
 sorting: 6
 coverImage: "/assets/images/AIMusic/QQ%20MUSIC.webp"
+favicon: "/assets/favicon/tme.svg"
 ---
 
 AI 创作是我在 QQ 音乐参与设计的核心 AI 音乐创作项目，用户可以通过一句话、对话、图片、哼唱和风格选择等方式，低门槛生成一首完整歌曲。

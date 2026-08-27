@@ -5,6 +5,7 @@ date: "2022-09-01"
 intro: "南加州大学高阶游戏项目，担任 UI/UX 首席设计师"
 sorting: 2
 coverImage: "/assets/images/NeonCity/NeonCitycover.webp"
+favicon: "/assets/favicon/usc.svg"
 ---
 
 NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造沙盒游戏，我担任 UI/UX Lead。项目以 Hand Tracking、OpenXR 与 Unity 为基础，让玩家用双手搭建并扩展一座霓虹城市，并在微缩规划和 1:1 探索之间切换。项目曾亮相 USC Games Expo 2023，并推出 [Meta Store](https://www.meta.com/experiences/pcvr/neon-city-demo/6015050278577275/?srsltid=AfmBOooMXGbBIYlLropJlYEgZtirmqnB4i9KIZFaWLrSAOqRDfVTh0TJ)。
@@ -20,7 +21,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 项目的核心不是单纯把城市放进 VR，而是把积木式创造、城市规划和进入城市的体验连接起来：玩家既可以俯视一座微缩城市，也可以将它放大到 1:1 尺度，亲自走进街道和建筑之间。复古未来主义与 Synthwave 视觉语言，则强化了这个可以被亲手建造、进入和观察的霓虹空间。
 
-**我的职责｜UI/UX Lead**
+## 我的职责｜UI/UX Lead
 
 在项目中，我担任 UI/UX Lead，主要负责 VR 操控面板界面设计，并研究和梳理玩家在城市建造过程中的完整体验流程。
 
@@ -29,14 +30,14 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 <div class="neon-video-pair" aria-label="NeonCity 交互方案对比视频">
   <figure>
     <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="我介入设计之前的视频">
-      <source src="/assets/videos/beforedesign.mp4" type="video/mp4" />
+      <source src="/assets/videos/beforedesign-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>我介入设计之前</figcaption>
   </figure>
   <figure>
     <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity Observations 视频">
-      <source src="/assets/videos/observations.mp4" type="video/mp4" />
+      <source src="/assets/videos/observations-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>Observations</figcaption>
@@ -47,9 +48,9 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 在与游戏设计、工程、艺术及可用性研究团队协作的过程中，我把这些判断落实到交互系统：用手势承载编辑动作，用空间提示表达状态，并根据玩家的视线、手部位置和城市尺度决定 UI 出现的时机。最终，NeonCity 的 UI/UX 不只是覆盖在画面上的信息层，而成为玩家理解规则、操控城市和进入自建空间的关键媒介。
 
-**项目亮点**
+## 项目亮点
 
-01｜从控制器操作转向自然手势
+### 01｜从控制器操作转向自然手势
 
 <figure>
   <img src="/assets/images/NeonCity/Hand%20Gesture%20System.webp" alt="NeonCity 从控制器操作转向自然手势" />
@@ -59,21 +60,21 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 <div class="neon-gesture-videos" aria-label="NeonCity 手势交互演示视频">
   <figure>
     <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="Palm Up 手势演示">
-      <source src="/assets/videos/Palmup.mp4" type="video/mp4" />
+      <source src="/assets/videos/Palmup-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>Palm Up</figcaption>
   </figure>
   <figure>
     <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="First Grab with one&two hands 手势演示">
-      <source src="/assets/videos/FirstGrab.mp4" type="video/mp4" />
+      <source src="/assets/videos/FirstGrab-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>First Grab with one&two hands</figcaption>
   </figure>
   <figure>
     <video controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="Double Pinch 手势演示">
-      <source src="/assets/videos/DoublePinch.mp4" type="video/mp4" />
+      <source src="/assets/videos/DoublePinch-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>Double Pinch</figcaption>
@@ -82,7 +83,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 这一部分围绕玩家最常用的几类动作展开：抬掌呼出操作入口，单手或双手抓取建筑，双指捏合完成更精细的选择与确认。设计目标是让手势和现实动作之间尽量接近，使玩家第一次接触时，也能把“我想移动这个建筑”自然转化为“伸手抓取它”。
 
-02｜从自由操作到清晰的编辑反馈
+### 02｜从自由操作到清晰的编辑反馈
 
 <figure>
   <img src="/assets/images/NeonCity/operations.webp" alt="NeonCity 手势操作与编辑反馈系统" />
@@ -90,7 +91,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 </figure>
 
 <video class="fit-screen-video neon-wide-video" controls muted playsinline preload="metadata" poster="/assets/videos/operations-poster.webp" data-autoplay-on-view aria-label="NeonCity 手势操作与编辑反馈演示视频">
-  <source src="/assets/videos/operations.mp4" type="video/mp4" />
+  <source src="/assets/videos/operations-compressed.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>
 
@@ -98,7 +99,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 这一部分的重点不是增加更多 UI，而是在玩家手势、建筑状态和城市编辑结果之间建立即时、可理解的反馈关系，让连续建造在没有控制器的情况下依然保持稳定。
 
-03｜微缩模型、真实尺度与空间化 UI
+### 03｜微缩模型、真实尺度与空间化 UI
 
 <figure>
   <img src="/assets/images/NeonCity/%E5%BE%AE%E7%BC%A9%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9C%9F%E5%AE%9E%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%BD%AC%E6%8D%A2.webp" alt="NeonCity 微缩模型与真实尺度的转换" />
@@ -106,7 +107,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 </figure>
 
 <video class="fit-screen-video neon-wide-video" controls muted playsinline preload="metadata" poster="/assets/videos/expand-poster.webp" data-autoplay-on-view aria-label="NeonCity 微缩模型扩展与真实尺度转换演示视频">
-  <source src="/assets/videos/expand.mp4" type="video/mp4" />
+  <source src="/assets/videos/expand-compressed.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>
 
@@ -114,10 +115,10 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 这也让我把 UI 从固定屏幕转向空间关系来考虑：信息需要随着玩家的身体位置、视线方向、双手操作和城市尺度变化重新组织。重点不只是“看得清”，而是让提示在正确的位置和时机出现，帮助玩家理解自己正在编辑的是微缩模型，还是正在进入真实尺度的城市。
 
-04｜玩家测试与交互迭代
+### 04｜玩家测试与交互迭代
 
 <video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 玩家测试现场视频">
-  <source src="/assets/videos/playtest.mp4" type="video/mp4" />
+  <source src="/assets/videos/playtest-compressed.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>
 
@@ -125,7 +126,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 
 测试显示，问题常常不是玩家不会做手势，而是不确定系统是否识别到动作。基于这些观察，我推动了几类 UX 调整：强化状态反馈、调整面板位置、减少对城市模型的遮挡，并让建筑选择、尺寸调整和确认放置的反馈更明确。
 
-**项目价值与反思**
+## 项目价值与反思
 
 Neon City 是我学生时代第一个真正意义上的大型项目。它让我第一次在一个接近真实游戏制作流程的团队里工作：和游戏设计、工程、艺术、可用性研究等不同专业的人一起讨论问题、对齐方向，并把一个复杂的 VR 概念一步步推进成可以被玩家实际体验的作品。
 

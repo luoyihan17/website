@@ -58,7 +58,6 @@ export default function RootLayout({
 
         <link rel="icon" href="data:," />
         <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className="bg-white text-neutral-900">
           <SiteHeader lang={params.lang} />

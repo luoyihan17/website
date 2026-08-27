@@ -5,6 +5,7 @@ date: "2025-05-01"
 intro: "从 OMNI Art Expo 到国际机器人与艺术设计双年展，组织跨院校、跨学科展览与公共文化体验"
 sorting: 1
 coverImage: "/assets/images/robotexhibition/robotcover.webp"
+favicon: "/assets/favicon/artcentericon.webp"
 ---
 
 我的策展实践从国际青年艺术与设计资源的连接开始，逐渐延伸到机器人、人工智能与科技艺术的公共讨论。OMNI Art Expo 和 2025 国际机器人与艺术设计双年展分别对应了两个阶段：前者关注如何为跨院校青年创作者建立展示与交流平台，后者进一步关注如何通过策展回应正在发生的技术变革，让艺术、设计、产业与公众围绕未来议题形成对话。

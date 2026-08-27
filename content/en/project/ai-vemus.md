@@ -5,6 +5,7 @@ date: "2025-12-01"
 intro: "An AI music app for creating, publishing, and growing original songs"
 sorting: 5
 coverImage: "/assets/images/Vemus/Vemus.webp"
+favicon: "/assets/favicon/tme.svg"
 ---
 
 <p class="vemus-lead">An AI music app for creating, publishing, and growing original songs</p>

@@ -15,21 +15,27 @@ type Props = {
   lang?: string;
 };
 
+const tagClass =
+  "inline-block rounded-lg border border-[var(--project-content-border)] bg-[var(--project-content-surface)] px-2 py-0.5 text-sm font-medium text-[var(--project-content-text)]";
+const metaClass = "text-base text-[var(--project-content-text)]";
+
 export function PostHeader({ title, date, favicon, skill, area, type, typeBadge = true, dateRange, location, showDate, lang }: Props) {
+  const hasMeta = (skill && skill.length > 0) || (area && area.length > 0) || type || dateRange || location || showDate;
+
   return (
-    <div className="mt-8">
+    <div className="mt-8 mb-8 md:mb-10">
       <PostTitle favicon={favicon}>{title}</PostTitle>
-      {(skill && skill.length > 0) || (area && area.length > 0) || type || dateRange || location || showDate ? (
-        <div className="flex flex-col gap-1.5 mt-3">
+      {hasMeta ? (
+        <div className="mt-3 flex flex-col gap-1.5">
           {(type || dateRange || location || showDate || (skill && skill.length > 0)) && (
             <div className="flex flex-wrap items-center gap-1.5">
               {type && (
                 typeBadge ? (
-                  <span className="inline-block text-sm font-medium px-2 py-0.5 rounded-lg bg-neutral-200 text-neutral-600">
+                  <span className={tagClass}>
                     {type}
                   </span>
                 ) : (
-                  <span className="text-base text-neutral-600">
+                  <span className={metaClass}>
                     {type}
                   </span>
                 )
@@ -37,18 +43,18 @@ export function PostHeader({ title, date, favicon, skill, area, type, typeBadge 
               {skill && skill.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block text-sm font-medium px-2 py-0.5 rounded-lg bg-neutral-200 text-neutral-600"
+                  className={tagClass}
                 >
                   {tag}
                 </span>
               ))}
               {(dateRange || location) && (
-                <span className="text-base text-neutral-600">
+                <span className={metaClass}>
                   {[dateRange, location].filter(Boolean).join(", ")}
                 </span>
               )}
               {showDate && (
-                <span className="text-base text-neutral-600">
+                <span className={metaClass}>
                   <DateFormatter dateString={date} lang={lang} />
                 </span>
               )}
@@ -64,8 +70,8 @@ export function PostHeader({ title, date, favicon, skill, area, type, typeBadge 
                     key={tag}
                     className={`inline-block text-sm font-medium px-2 py-0.5 rounded-lg ${
                       isHighlighted
-                        ? "bg-neutral-800 text-white"
-                        : "bg-neutral-200 text-neutral-600"
+                        ? "bg-[var(--project-content-heading)] text-white"
+                        : "border border-[var(--project-content-border)] bg-[var(--project-content-surface)] text-[var(--project-content-text)]"
                     }`}
                   >
                     {label}

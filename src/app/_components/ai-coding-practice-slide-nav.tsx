@@ -20,8 +20,36 @@ export function AiCodingPracticeSlideNav({ lang, slideCount }: Props) {
         ".project-ai-coding-practice .ai-coding-practice-detail",
       ),
     );
+    const wideSlides = slides.filter((slide) =>
+      slide.classList.contains("practice-wide-detail"),
+    );
 
     if (!scrollContainer || slides.length === 0) return;
+
+    const sensorCleanups = wideSlides.map((slide) => {
+      const sensor = document.createElement("span");
+      const hideFloatingText = () => {
+        slide.dataset.cursorPastHalf = "true";
+      };
+
+      sensor.className = "practice-cursor-half-sensor";
+      sensor.setAttribute("aria-hidden", "true");
+      sensor.addEventListener("mouseenter", hideFloatingText);
+      sensor.addEventListener("mousemove", hideFloatingText);
+      sensor.addEventListener("pointerenter", hideFloatingText);
+      sensor.addEventListener("pointermove", hideFloatingText);
+      sensor.addEventListener("pointerdown", hideFloatingText);
+      slide.appendChild(sensor);
+
+      return () => {
+        sensor.removeEventListener("mouseenter", hideFloatingText);
+        sensor.removeEventListener("mousemove", hideFloatingText);
+        sensor.removeEventListener("pointerenter", hideFloatingText);
+        sensor.removeEventListener("pointermove", hideFloatingText);
+        sensor.removeEventListener("pointerdown", hideFloatingText);
+        sensor.remove();
+      };
+    });
 
     let frame = 0;
     const updateActiveSlide = () => {
@@ -54,6 +82,7 @@ export function AiCodingPracticeSlideNav({ lang, slideCount }: Props) {
 
     return () => {
       if (frame) window.cancelAnimationFrame(frame);
+      sensorCleanups.forEach((cleanup) => cleanup());
       scrollContainer.removeEventListener("scroll", requestUpdate);
       window.removeEventListener("resize", requestUpdate);
     };

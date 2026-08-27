@@ -5,6 +5,7 @@ date: "2025-01-01"
 intro: "用 Vibe Coding 快速构建音乐互动、游戏化玩法与可运行原型"
 sorting: 4
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.webp"
+favicon: "/assets/favicon/tme.svg"
 skill: ["自闭环", "AI提效", "跨团队组织"]
 ---
 
@@ -40,7 +41,7 @@ skill: ["自闭环", "AI提效", "跨团队组织"]
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
     <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
-      <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop.mp4" type="video/mp4" />
+      <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-compressed.mp4" type="video/mp4" />
       你的浏览器不支持视频播放。
     </video>
     <figcaption>aespa 甜品工坊</figcaption>
@@ -60,7 +61,7 @@ aespa《LEMONADE》是我第一次把这个模式真正推上线。我把歌曲�
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
     <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/videos/zhangyixinggame-poster.webp">
-      <source src="/assets/videos/zhangyixinggame.mp4" type="video/mp4" />
+      <source src="/assets/videos/zhangyixinggame-compressed.mp4" type="video/mp4" />
       你的浏览器不支持视频播放。
     </video>
     <figcaption>张艺兴《斗战胜佛》</figcaption>
@@ -79,4 +80,4 @@ aespa《LEMONADE》是我第一次把这个模式真正推上线。我把歌曲�
 ## 回归：从一个游戏，到一种可复用的宣发能力
 回头看，这些 AI Coding 小游戏最重要的意义，不只是我做了几个 H5 游戏，而是把一个原本模糊的想法，推成了团队愿意继续投入的方向。它从 aespa、张艺兴延展到 BigBang 等艺人合作，也进入了儿童节、七夕季等运营节点，逐渐变成一种新的互动内容生产方式。
 
-这件事也改变了我对 AI 的看法。很多设计师会担心 AI 压缩自己的价值，但我反而看到另一面：AI Coding 让我能更早把想法做成可玩的 Demo，拿去和产品、运营、研发一起讨论。<strong>后来我也拥有了很多资源，团队开始专门配置负责游戏方向的产品同学，很多业务线也会来找我们聊互动玩法，商务也开始争取点位。回想到在业务上线前的交付栏里，我的名字第一次出现在“代码负责人”的位置上。那一刻我更确定，在 AI 时代，设计师不是只能被动适应工具，也可以主动创造新的流程、新的角色和新的业务可能。<strong>
+这件事也改变了我对 AI 的看法。很多设计师会担心 AI 压缩自己的价值，但我反而看到另一面：AI Coding 让我能更早把想法做成可玩的 Demo，拿去和产品、运营、研发一起讨论。**后来我也拥有了很多资源，团队开始专门配置负责游戏方向的产品同学，很多业务线也会来找我们聊互动玩法，商务也开始争取点位。回想到在业务上线前的交付栏里，我的名字第一次出现在“代码负责人”的位置上。那一刻我更确定，在 AI 时代，设计师不是只能被动适应工具，也可以主动创造新的流程、新的角色和新的业务可能。**

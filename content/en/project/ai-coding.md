@@ -5,6 +5,7 @@ date: "2025-01-01"
 intro: "Playable music campaigns built fast with AI coding"
 sorting: 4
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.webp"
+favicon: "/assets/favicon/tme.svg"
 skill: ["Self-contained Delivery", "AI Efficiency", "Cross-team Drive"]
 ---
 
@@ -42,7 +43,7 @@ I did not wait for a full team. I brought runnable demos to product and operatio
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
     <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
-      <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop.mp4" type="video/mp4" />
+      <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-compressed.mp4" type="video/mp4" />
       Your browser does not support video playback.
     </video>
     <figcaption>aespa Dessert Workshop</figcaption>
@@ -62,7 +63,7 @@ I handled about 90% of development, deployment, and launch: gameplay design, UI/
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
     <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/videos/zhangyixinggame-poster.webp">
-      <source src="/assets/videos/zhangyixinggame.mp4" type="video/mp4" />
+      <source src="/assets/videos/zhangyixinggame-compressed.mp4" type="video/mp4" />
       Your browser does not support video playback.
     </video>
     <figcaption>Lay Zhang's Dou Zhan Sheng Fo</figcaption>

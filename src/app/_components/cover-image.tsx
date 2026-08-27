@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useCallback, useState } from "react";
 
 type Props = {
   src: string;
@@ -11,15 +12,6 @@ type Props = {
 export function CoverImage({ src, alt, loading = "lazy" }: Props) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  // Check if the image is already complete (cached / 304) when mounted
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img && img.complete && img.naturalHeight > 0) {
-      setLoaded(true);
-    }
-  }, []);
 
   const handleLoaded = useCallback(() => setLoaded(true), []);
   const handleError = useCallback(() => {
@@ -37,12 +29,13 @@ export function CoverImage({ src, alt, loading = "lazy" }: Props) {
 
   return (
     <div
-      className={`overflow-hidden rounded-lg border border-black/10 aspect-[2/1] md:aspect-[3/2] bg-neutral-100 cover-skeleton${loaded ? " cover-loaded" : ""}`}
+      className={`relative overflow-hidden rounded-lg border border-black/10 aspect-[2/1] md:aspect-[3/2] bg-neutral-100 cover-skeleton${loaded ? " cover-loaded" : ""}`}
     >
-      <img
-        ref={imgRef}
+      <Image
         src={src}
         alt={alt}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         loading={loading}
         decoding="async"
         className="w-full h-full object-cover will-change-transform group-hover:scale-[1.025]"

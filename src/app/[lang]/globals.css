@@ -261,7 +261,7 @@ html[lang="zh"] .font-barlow {
   min-width: 0;
   margin: 0;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0;
   align-self: start;
 }
 .markdown .ai-game-result-layout video.fit-screen-video,
@@ -290,8 +290,8 @@ html[lang="zh"] .font-barlow {
 .markdown .ai-game-result-media figcaption,
 .markdown .ai-game-result-image figcaption,
 .markdown .ai-game-captioned-image figcaption {
-  margin: 0.35rem 0 0;
-  color: rgb(115 115 115);
+  margin: var(--project-content-caption-gap) 0 0;
+  color: var(--project-content-caption);
   font-size: clamp(1rem, 1.45vw, 1.35rem);
   font-weight: 600;
   line-height: 1.45;
@@ -299,6 +299,12 @@ html[lang="zh"] .font-barlow {
 }
 .markdown .ai-game-result-media figcaption {
   width: 100%;
+}
+
+.markdown figure > img + figcaption,
+.markdown figure > video + figcaption,
+.markdown figure > .media-skeleton-wrapper + figcaption {
+  margin-top: var(--project-content-caption-gap);
 }
 @media (max-width: 560px) {
   .markdown .ai-game-result-layout {
@@ -343,7 +349,9 @@ html[lang="zh"] .font-barlow {
   contain-intrinsic-size: auto 640px;
 }
 .markdown figure figcaption {
-  @apply text-sm text-neutral-400 mt-2;
+  @apply text-sm;
+  margin-top: var(--project-content-caption-gap);
+  color: var(--project-content-caption);
 }
 .markdown a {
   color: #EE9933;
@@ -592,7 +600,9 @@ main {
 }
 
 .markdown .omni-gallery figcaption {
-  @apply text-sm text-neutral-400 mt-2;
+  @apply text-sm;
+  margin-top: var(--project-content-caption-gap);
+  color: var(--project-content-caption);
 }
 
 .markdown .omni-showcase {
@@ -801,6 +811,247 @@ main {
   margin-bottom: 0;
 }
 
+.markdown .foreign-learning-lead {
+  margin: 1.5rem 0 1.25rem;
+  color: #171717;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 760;
+  line-height: 1.14;
+}
+
+.markdown .foreign-learning-lead ~ p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #6f6f6f;
+  line-height: 1.72;
+}
+
+.markdown .foreign-learning-lead ~ h2 {
+  margin-top: 3rem;
+  color: #171717;
+}
+
+.markdown .foreign-learning-lead ~ h3 {
+  margin-top: 2.6rem;
+  margin-bottom: 0.85rem;
+  color: #171717;
+  line-height: 1.24;
+}
+
+.markdown .foreign-learning-lead ~ h3 + p {
+  margin-top: 0;
+}
+
+.markdown .foreign-learning-constraints {
+  margin: 1.25rem 0 1.8rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgb(23 23 23 / 0.16);
+}
+
+.markdown .foreign-learning-constraints p {
+  margin: 0;
+  color: #6f6f6f;
+  line-height: 1.72;
+}
+
+.markdown .foreign-learning-constraints p + p {
+  margin-top: 0.85rem;
+}
+
+.markdown .foreign-learning-constraints strong {
+  color: #171717;
+  font-weight: 700;
+}
+
+.markdown .foreign-learning-snapshot {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.markdown .foreign-learning-snapshot div,
+.markdown .foreign-learning-flow-step,
+.markdown .foreign-learning-choice-grid article,
+.markdown .foreign-learning-timeline div {
+  min-width: 0;
+  border: 1px solid rgb(23 23 23 / 0.12);
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.markdown .foreign-learning-snapshot div {
+  padding: 1rem;
+}
+
+.markdown .foreign-learning-snapshot span,
+.markdown .foreign-learning-flow-step span,
+.markdown .foreign-learning-decision-head span,
+.markdown .foreign-learning-choice-grid span,
+.markdown .foreign-learning-timeline span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.markdown .foreign-learning-snapshot strong,
+.markdown .foreign-learning-flow-step strong,
+.markdown .foreign-learning-timeline strong {
+  display: block;
+  color: #171717;
+  font-size: 1.05rem;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.markdown .foreign-learning-snapshot p,
+.markdown .foreign-learning-flow-step p,
+.markdown .foreign-learning-choice-grid p,
+.markdown .foreign-learning-timeline p {
+  margin: 0.55rem 0 0;
+  color: #525252;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.markdown .foreign-learning-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0 2.75rem;
+}
+
+.markdown .foreign-learning-flow-step {
+  position: relative;
+  padding: 1rem;
+}
+
+.markdown .foreign-learning-flow-step:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -0.62rem;
+  z-index: 1;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-top: 2px solid #15803d;
+  border-right: 2px solid #15803d;
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.markdown .foreign-learning-intent,
+.markdown .foreign-learning-closing {
+  margin: 2rem 0 2.5rem;
+  padding: clamp(1.1rem, 2.8vw, 1.6rem);
+  border: 1px solid rgb(21 128 61 / 0.22);
+  border-left: 4px solid #15803d;
+  border-radius: 8px;
+  background: #f7fbf8;
+}
+
+.markdown .foreign-learning-intent p,
+.markdown .foreign-learning-closing p {
+  margin: 0;
+  color: #525252;
+}
+
+.markdown .foreign-learning-intent strong,
+.markdown .foreign-learning-closing strong {
+  display: block;
+  margin-top: 0.65rem;
+  color: #171717;
+  font-size: clamp(1.25rem, 2.8vw, 1.65rem);
+  font-weight: 740;
+  line-height: 1.28;
+}
+
+.markdown .foreign-learning-closing strong {
+  margin-top: 0;
+}
+
+.markdown .foreign-learning-closing p {
+  margin-top: 0.65rem;
+}
+
+.markdown .foreign-learning-decision {
+  margin: 2.25rem 0 2.75rem;
+  padding: clamp(1.1rem, 3vw, 1.5rem);
+  border: 1px solid rgb(23 23 23 / 0.12);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fbfbfb 0%, #f5f7f6 100%);
+}
+
+.markdown .foreign-learning-decision-head {
+  margin-bottom: 1rem;
+}
+
+.markdown .foreign-learning-decision-head h2 {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.22;
+}
+
+.markdown .foreign-learning-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.markdown .foreign-learning-choice-grid article {
+  padding: 1rem;
+  background: rgb(255 255 255 / 0.74);
+}
+
+.markdown .foreign-learning-choice-grid h3 {
+  margin: 0;
+  color: #171717;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.markdown .foreign-learning-timeline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 2rem 0 2.75rem;
+}
+
+.markdown .foreign-learning-timeline div {
+  padding: 0.9rem;
+}
+
+.markdown .foreign-learning-timeline span {
+  color: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .markdown .foreign-learning-snapshot,
+  .markdown .foreign-learning-flow,
+  .markdown .foreign-learning-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .markdown .foreign-learning-flow-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .markdown .foreign-learning-snapshot,
+  .markdown .foreign-learning-flow,
+  .markdown .foreign-learning-choice-grid,
+  .markdown .foreign-learning-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
 .markdown .vemus-lead {
   margin: 1.5rem 0 1.25rem;
   color: #171717;
@@ -812,7 +1063,7 @@ main {
 .markdown .vemus-intro,
 .markdown .vemus-copy {
   max-width: 980px;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1rem;
   line-height: 1.66;
 }
@@ -920,7 +1171,7 @@ main {
 .markdown .vemus-meta-grid span {
   display: block;
   margin-top: 0.35rem;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 0.88rem;
   line-height: 1.55;
 }
@@ -991,7 +1242,7 @@ main {
 }
 
 .markdown .vemus-lifecycle-head {
-  max-width: 860px;
+  max-width: var(--project-content-copy-width);
 }
 
 .markdown .vemus-lifecycle h2 {
@@ -1003,9 +1254,9 @@ main {
 }
 
 .markdown .vemus-lifecycle-head p:last-child {
-  max-width: 820px;
+  max-width: var(--project-content-copy-width);
   margin: 0.55rem 0 0;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1.05rem;
   line-height: 1.54;
 }
@@ -1046,7 +1297,7 @@ main {
 
 .markdown .vemus-lifecycle-grid p {
   margin: 0.42rem 0 0;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 0.94rem;
   line-height: 1.48;
 }
@@ -1057,7 +1308,7 @@ main {
 }
 
 .markdown .vemus-pathways-head {
-  max-width: 860px;
+  max-width: var(--project-content-copy-width);
 }
 
 .markdown .vemus-pathway-index {
@@ -1079,9 +1330,9 @@ main {
 }
 
 .markdown .vemus-pathways-head p:last-child {
-  max-width: 820px;
+  max-width: var(--project-content-copy-width);
   margin: 0.65rem 0 0;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1.05rem;
   line-height: 1.58;
 }
@@ -1121,9 +1372,9 @@ main {
 }
 
 .markdown .vemus-pathway p:not(.vemus-pathway-index) {
-  max-width: 940px;
+  max-width: var(--project-content-copy-width);
   margin: 0.55rem 0 1.05rem;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1rem;
   line-height: 1.62;
 }
@@ -1142,7 +1393,7 @@ main {
 }
 
 .markdown .vemus-growth-head {
-  max-width: 960px;
+  max-width: var(--project-content-copy-width);
 }
 
 .markdown .vemus-growth-head > span {
@@ -1165,9 +1416,9 @@ main {
 }
 
 .markdown .vemus-growth-head p {
-  max-width: 980px;
+  max-width: var(--project-content-copy-width);
   margin: 0.65rem 0 0;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1.04rem;
   line-height: 1.58;
 }
@@ -1208,7 +1459,7 @@ main {
 
 .markdown .vemus-growth-overview p {
   margin: 0.42rem 0 0;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 0.92rem;
   line-height: 1.48;
 }
@@ -1235,9 +1486,9 @@ main {
 }
 
 .markdown .vemus-growth-item > p {
-  max-width: 940px;
+  max-width: var(--project-content-copy-width);
   margin: 0.55rem 0 1.05rem;
-  color: #737373;
+  color: #A2A2A2;
   font-size: 1rem;
   line-height: 1.62;
 }
@@ -1942,6 +2193,26 @@ main {
   transform-origin: top left;
 }
 
+.practice-wide-frame {
+  position: relative;
+  width: min(100%, 760px);
+  height: min(76vh, 640px);
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  border-radius: 10px;
+  background: #eceee8;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.36);
+}
+
+.practice-wide-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #eceee8;
+}
+
 .practice-frame-caption {
   display: block;
   width: fit-content;
@@ -2337,6 +2608,82 @@ body:has(.ai-coding-practice-page) {
   box-shadow: 0 30px 90px rgb(0 0 0 / 0.45);
 }
 
+.project-ai-coding-practice .practice-wide-detail {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 0;
+  background: #eceee8;
+}
+
+.project-ai-coding-practice .practice-wide-detail::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: min(48vw, 520px);
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(0 0 0 / 0.42), rgb(0 0 0 / 0));
+  content: "";
+}
+
+.project-ai-coding-practice .practice-wide-detail .side-preview {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.project-ai-coding-practice .practice-wide-detail .side-content {
+  position: absolute;
+  top: clamp(5.25rem, 10vh, 7.5rem);
+  left: clamp(1.2rem, 5vw, 5rem);
+  z-index: 2;
+  width: min(410px, calc(100% - 6rem));
+  max-width: 410px;
+  pointer-events: none;
+  text-shadow: 0 2px 24px rgb(0 0 0 / 0.36);
+  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+}
+
+.project-ai-coding-practice .practice-wide-detail[data-cursor-past-half="true"] .side-content,
+.project-ai-coding-practice .practice-wide-detail:has(.practice-cursor-half-sensor:hover) .side-content {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-0.35rem);
+}
+
+.project-ai-coding-practice .practice-cursor-half-sensor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 20;
+  display: block;
+  cursor: default;
+  background: rgb(255 255 255 / 0.001);
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.project-ai-coding-practice .practice-wide-detail[data-cursor-past-half="true"] .practice-cursor-half-sensor {
+  display: none;
+}
+
+.project-ai-coding-practice .practice-wide-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .project-ai-coding-practice .practice-frame-caption {
   margin-top: 0.9rem;
   border-color: rgb(255 255 255 / 0.12);
@@ -2419,6 +2766,10 @@ body:has(.ai-coding-practice-page) {
     justify-content: center;
   }
 
+  .project-ai-coding-practice .side-by-side.practice-wide-detail {
+    display: block;
+  }
+
   .project-ai-coding-practice .side-by-side.ai-coding-practice-detail .side-content {
     order: 1;
     width: 100%;
@@ -2473,6 +2824,27 @@ body:has(.ai-coding-practice-page) {
     width: min(100%, 328px);
     height: min(64vh, 620px);
     height: min(64svh, 620px);
+  }
+
+  .project-ai-coding-practice .practice-wide-detail {
+    padding: 0;
+  }
+
+  .project-ai-coding-practice .practice-wide-detail::after {
+    width: 100%;
+    height: 45vh;
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.52), rgb(0 0 0 / 0));
+  }
+
+  .project-ai-coding-practice .practice-wide-detail .side-content {
+    top: 4.5rem;
+    left: 1rem;
+    width: min(310px, calc(100% - 3.25rem));
+    max-width: 310px;
+  }
+
+  .project-ai-coding-practice .practice-wide-detail .side-content h3 {
+    font-size: clamp(1.85rem, 9vw, 2.65rem);
   }
 }
 
@@ -2753,5 +3125,397 @@ body:has(.ai-coding-practice-page) {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Project content typography system */
+:root {
+  --project-content-copy-width: min(100%, 1024px);
+  --project-content-text: #525252;
+  --project-content-heading: #171717;
+  --project-content-muted: var(--project-content-text);
+  --project-content-faint: var(--project-content-text);
+  --project-content-caption: #A2A2A2;
+  --project-content-border: rgb(23 23 23 / 0.12);
+  --project-content-soft-border: rgb(23 23 23 / 0.08);
+  --project-content-surface: #fafafa;
+  --project-content-caption-gap: 0.5rem;
+  --project-content-body-size: 1.0625rem;
+  --project-content-body-line: 1.72;
+  --project-content-h2-size: 1.75rem;
+  --project-content-h3-size: 1.35rem;
+  --project-content-h4-size: 1.125rem;
+  --project-content-lead-size: 1.5rem;
+  --project-content-caption-size: 0.875rem;
+  --project-content-kicker-size: 0.78rem;
+}
+
+.markdown {
+  color: var(--project-content-text);
+  font-size: var(--project-content-body-size);
+  line-height: var(--project-content-body-line);
+  letter-spacing: 0;
+}
+
+.markdown > :first-child {
+  margin-top: 0;
+}
+
+.markdown > p,
+.markdown > ul,
+.markdown > ol,
+.markdown > blockquote,
+.markdown > aside,
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  max-width: var(--project-content-copy-width);
+}
+
+.markdown p,
+.markdown li {
+  color: var(--project-content-text);
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol {
+  margin-top: 0.95rem;
+  margin-bottom: 0.95rem;
+}
+
+.markdown li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.markdown strong {
+  color: var(--project-content-heading);
+  font-weight: 650;
+}
+
+.markdown blockquote {
+  margin: 1.5rem 0 1.75rem;
+  padding-left: 1rem;
+  border-left-width: 3px;
+  color: var(--project-content-heading);
+  font-size: var(--project-content-body-size);
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: var(--project-content-heading);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.markdown h1 {
+  margin: 3.5rem 0 1rem;
+  font-size: 2.25rem;
+  line-height: 1.14;
+}
+
+.markdown h2 {
+  margin: 3.25rem 0 0.85rem;
+  font-size: var(--project-content-h2-size);
+  line-height: 1.22;
+}
+
+.markdown h3 {
+  margin: 2.35rem 0 0.75rem;
+  font-size: var(--project-content-h3-size);
+  line-height: 1.28;
+}
+
+.markdown h4 {
+  margin: 1.75rem 0 0.65rem;
+  font-size: var(--project-content-h4-size);
+  line-height: 1.35;
+}
+
+.markdown h5,
+.markdown h6 {
+  margin: 1.5rem 0 0.55rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.markdown figure {
+  margin: 1.75rem 0 2rem;
+}
+
+.markdown > figure,
+.markdown > video,
+.markdown > .video-embed,
+.markdown .neon-video-pair,
+.markdown .neon-gesture-videos,
+.markdown .robot-hero-video,
+.markdown .robot-gallery,
+.markdown .omni-gallery,
+.markdown .omni-showcase,
+.markdown .ai-game-result-layout {
+  margin-top: 1.85rem;
+  margin-bottom: 2.35rem;
+}
+
+.markdown figure figcaption,
+.markdown .ai-game-result-media figcaption,
+.markdown .ai-game-result-image figcaption,
+.markdown .ai-game-captioned-image figcaption,
+.markdown .omni-gallery figcaption {
+  margin-top: var(--project-content-caption-gap);
+  color: var(--project-content-caption);
+  font-size: var(--project-content-caption-size);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.markdown .qqmusic-question-block,
+.markdown .ai-game-thesis-card,
+.markdown .foreign-learning-intent,
+.markdown .foreign-learning-closing {
+  box-sizing: border-box;
+  max-width: var(--project-content-copy-width);
+  margin: 2rem 0 2.25rem;
+  padding: 1.2rem 1.35rem;
+  border-color: var(--project-content-border);
+  border-radius: 8px;
+  background: var(--project-content-surface);
+}
+
+.markdown .qqmusic-question-block h2 {
+  margin-top: 0;
+}
+
+.markdown .ai-game-thesis-card {
+  border-left-color: var(--project-content-heading);
+}
+
+.markdown .ai-game-thesis-card strong,
+.markdown .foreign-learning-intent strong,
+.markdown .foreign-learning-closing strong {
+  color: var(--project-content-heading);
+  font-size: var(--project-content-h3-size);
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.markdown .foreign-learning-lead,
+.markdown .vemus-lead,
+.project-ai-vemus .markdown .vemus-lead {
+  margin: 1.75rem 0 1.4rem;
+  color: var(--project-content-heading);
+  font-size: var(--project-content-lead-size);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.project-ai-vemus .markdown .vemus-lead {
+  gap: 0.9rem;
+}
+
+.project-ai-vemus .markdown .vemus-lead::before {
+  width: 0.28rem;
+  height: 2.25rem;
+}
+
+.markdown .foreign-learning-lead ~ p,
+.markdown .foreign-learning-constraints p,
+.markdown .foreign-learning-intent p,
+.markdown .foreign-learning-closing p,
+.markdown .vemus-intro,
+.markdown .vemus-copy,
+.markdown .vemus-pathways-head p:last-child,
+.markdown .vemus-pathway p:not(.vemus-pathway-index),
+.markdown .vemus-growth-head p,
+.markdown .vemus-growth-item > p {
+  max-width: var(--project-content-copy-width);
+  color: var(--project-content-text);
+  font-size: var(--project-content-body-size);
+  line-height: var(--project-content-body-line);
+}
+
+.markdown .foreign-learning-lead ~ h2,
+.markdown .foreign-learning-lead ~ h3 {
+  color: var(--project-content-heading);
+}
+
+.markdown .foreign-learning-constraints {
+  max-width: var(--project-content-copy-width);
+  margin: 1.4rem 0 2rem;
+  padding-left: 1rem;
+  border-left-color: var(--project-content-border);
+}
+
+.markdown .foreign-learning-snapshot span,
+.markdown .foreign-learning-flow-step span,
+.markdown .foreign-learning-decision-head span,
+.markdown .foreign-learning-choice-grid span,
+.markdown .foreign-learning-timeline span,
+.markdown .vemus-section-kicker,
+.markdown .vemus-pathway-index,
+.markdown .vemus-growth-head > span {
+  color: var(--project-content-muted);
+  font-size: var(--project-content-kicker-size);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.markdown .foreign-learning-snapshot strong,
+.markdown .foreign-learning-flow-step strong,
+.markdown .foreign-learning-timeline strong,
+.markdown .vemus-growth-overview strong,
+.markdown .vemus-lifecycle-grid h3 {
+  color: var(--project-content-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.markdown .foreign-learning-snapshot p,
+.markdown .foreign-learning-flow-step p,
+.markdown .foreign-learning-choice-grid p,
+.markdown .foreign-learning-timeline p,
+.markdown .vemus-lifecycle-grid p,
+.markdown .vemus-growth-overview p {
+  color: var(--project-content-text);
+  font-size: 0.95rem;
+  line-height: 1.58;
+}
+
+.markdown .foreign-learning-decision-head h2,
+.markdown .vemus-lifecycle h2,
+.markdown .vemus-pathways h2,
+.markdown .vemus-growth h2 {
+  color: var(--project-content-heading);
+  font-size: var(--project-content-h2-size);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.markdown .foreign-learning-choice-grid h3,
+.markdown .vemus-pathway h3,
+.markdown .vemus-growth-item h3 {
+  color: var(--project-content-heading);
+  font-size: var(--project-content-h3-size);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.markdown .vemus-meta-grid span,
+.markdown .vemus-lifecycle-head p:last-child,
+.markdown .vemus-lifecycle-grid p,
+.markdown .vemus-pathways-head p:last-child,
+.markdown .vemus-pathway-tabs span,
+.markdown .vemus-pathway p:not(.vemus-pathway-index),
+.markdown .vemus-growth-head p,
+.markdown .vemus-growth-overview p,
+.markdown .vemus-growth-item > p,
+.markdown .foreign-learning-lead ~ p,
+.markdown .foreign-learning-constraints p,
+.markdown .foreign-learning-intent p,
+.markdown .foreign-learning-closing p {
+  color: var(--project-content-text);
+}
+
+.markdown .vemus-section-kicker,
+.markdown .vemus-pathway-index,
+.markdown .vemus-growth-head > span,
+.markdown .vemus-lifecycle-grid span,
+.markdown .vemus-growth-overview span,
+.markdown .foreign-learning-snapshot span,
+.markdown .foreign-learning-flow-step span,
+.markdown .foreign-learning-decision-head span,
+.markdown .foreign-learning-choice-grid span,
+.markdown .foreign-learning-timeline span {
+  color: var(--project-content-text);
+}
+
+.project-ai-vemus .vemus-title-shell > div {
+  margin-top: 2.25rem;
+}
+
+.project-ai-vemus .vemus-title-shell h1 {
+  color: var(--project-content-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.project-ai-coding-practice .practice-play-hint {
+  color: rgb(255 255 255 / 0.62) !important;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+}
+
+.project-ai-coding-practice .ai-coding-practice-detail .side-content h3 {
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.project-ai-coding-practice .ai-coding-practice-detail .side-content p,
+.project-ai-coding-practice .ai-coding-practice-detail .side-content li {
+  color: rgb(255 255 255 / 0.72);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.project-ai-coding-practice .ai-coding-practice-detail .side-content strong {
+  color: #fff;
+}
+
+.project-ai-coding-practice .practice-project-meta {
+  color: rgb(255 255 255 / 0.48) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --project-content-body-size: 1rem;
+    --project-content-body-line: 1.7;
+    --project-content-h2-size: 1.5rem;
+    --project-content-h3-size: 1.2rem;
+    --project-content-lead-size: 1.32rem;
+  }
+
+  .project-ai-vemus .vemus-title-shell > div {
+    margin-top: 2rem;
+  }
+
+  .project-ai-vemus .vemus-title-shell h1 {
+    font-size: 2.25rem;
+  }
+
+  .project-ai-coding-practice .ai-coding-practice-detail .side-content h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-ai-vemus .vemus-title-shell h1 {
+    font-size: 1.875rem;
+  }
+
+  .project-ai-coding-practice .ai-coding-practice-detail .side-content h3 {
+    font-size: 1.75rem;
   }
 }
