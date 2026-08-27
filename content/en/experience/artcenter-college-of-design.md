@@ -2,7 +2,7 @@
 personalSite: true
 title: "ArtCenter College of Design"
 dateRange: "2019.01 - 2022.04"
-intro: "B.S. in Interaction Design, Dean's List, long-term scholarship recipient, and honors graduate"
+intro: "Interaction Design B.S., Dean's List, scholarships, honors graduate"
 type: "Bachelor"
 area: ["*Interaction Design", "Honors Bachelor"]
 location: "Los Angeles"
@@ -13,28 +13,28 @@ sorting: 2
 
 # ArtCenter | The Starting Point of My Interaction Design Practice
 
-My design journey began in the Interaction Design program at ArtCenter College of Design. ArtCenter's high-density, project-based training helped me build the habit of starting from real problems and completing the full design process, from **research, concept, interaction logic, and prototyping to final presentation**, within limited time. It also continuously trained me to explain clearly "why this design."
+My design journey began in the Interaction Design program at ArtCenter College of Design. ArtCenter's intense, project-based training taught me to start from real problems and move through **research, concept, interaction logic, prototyping, and final presentation** within limited time. It also trained me to explain clearly why a design should exist.
 
-During my undergraduate studies, I systematically learned **interaction design, user experience, interface and prototype design, experience storytelling, and future experience exploration**. Compared with simply completing an interface, I became more concerned with the full logic behind an experience: why the problem exists, what users truly need, how different touchpoints connect, and how design can find a balance among user needs, technical conditions, and real scenarios.
+During my undergraduate studies, I learned **interaction design, user experience, interface and prototype design, experience storytelling, and future experience exploration**. Instead of only completing screens, I became interested in the full logic of an experience: why the problem exists, what users need, how touchpoints connect, and how design balances people, technology, and context.
 
 This thinking ultimately came together in my graduation project, **Pikapoo**.
 
-Pikapoo was inspired by my observation of the **problem of pet waste management in urban public spaces**. At the time, I found that the issue was not only that "owners are unwilling to clean up." Behind it were also the inconvenience of the cleaning process, insufficient awareness of the environmental impact of pet waste, and the long-standing separation between public space management and pet health information.
+Pikapoo came from my observation of **pet waste management in urban public spaces**. The issue was not simply that owners were unwilling to clean up. It also involved inconvenience, limited awareness of environmental impact, and a long-standing gap between public space management and pet health information.
 
-Therefore, I did not design it as a standalone app or hardware product. Instead, for the first time, I tried to reorganize the entire service from a **System Design** perspective.
+So I did not design it as a standalone app or hardware product. I tried to reorganize the whole service from a **System Design** perspective.
 
-Pikapoo consists of a shared pet waste cleaning robot, **PooBot**, a waste processing facility, **PooBase**, and a mobile service. Users can call a nearby PooBot through the app, and the robot completes pet waste identification, collection, and transport. The system further performs basic health analysis on the waste and syncs relevant information to the pet's health record, while the backend processing facility converts the waste into reusable organic fertilizer. Together, these parts form a complete service loop from **problem discovery -> robotic cleaning -> data feedback -> resource reuse**.
+Pikapoo combines a shared pet waste cleaning robot, **PooBot**, a waste processing facility, **PooBase**, and a mobile service. Users call a nearby PooBot through the app; the robot identifies, collects, and transports waste. The system also performs basic health analysis, syncs results to the pet's health record, and converts waste into reusable organic fertilizer. Together, these parts form a loop from **problem discovery -> robotic cleaning -> data feedback -> resource reuse**.
 
-In this project, I was mainly responsible for **Pikapoo's interaction system, app experience, and overall service flow design**, while working with a partner from an industrial design background to think through the robot's form, behavior, and human-machine interaction. It was also the first time I truly brought product design, interaction design, service design, robotics, and sustainability into one system.
+I was responsible for **Pikapoo's interaction system, app experience, and service flow**, while working with an industrial design partner on the robot's form, behavior, and human-machine interaction. It was my first time bringing product design, interaction design, service design, robotics, and sustainability into one system.
 
 Pikapoo continued to iterate after graduation and won the **[iF Design Award](https://ifdesign.com/en/winner-ranking/project/pikapoo/693302) and A' Design Award**. It was also exhibited at **Milan Design Week** and other design exhibitions, and was reported by [SustainabilityTimes](https://www.sustainability-times.com/cities/chinese-product-designer-yihan-luo-showcased-pikapoo-at-milan-design-week-2025/).
 
-For me, Pikapoo was not only a graduation project. It largely defined the way I later approached design: I became less satisfied with solving a single page or feature, and more accustomed to understanding how the entire system operates, and how design can connect users, products, technology, and real environments.
+For me, Pikapoo was not only a graduation project. It shaped how I approach design: less focused on a single page or feature, more focused on how systems operate and how design connects users, products, technology, and real environments.
 
 ### Pikapoo Project Video
 
 <video class="fit-screen-video" controls playsinline preload="metadata">
-  <source src="/assets/videos/pikapoo.mp4" type="video/mp4" />
+  <source src="/assets/videos/pikapoo-compressed.mp4" type="video/mp4" />
   Your browser does not support video playback.
 </video>
 
@@ -55,9 +55,9 @@ For me, Pikapoo was not only a graduation project. It largely defined the way I 
   </object>
 </section>
 
-During my time at school, I was on the Dean's List (GPA > 3.8/4.0), received long-term college scholarships, and completed my undergraduate studies as an **honors graduate**.
+During school, I was on the Dean's List (GPA > 3.8/4.0), received long-term college scholarships, and graduated with honors.
 
-This experience became an important foundation for my later work in **AI product design, VR/AR, game experiences, interactive media research, and interdisciplinary projects**. It allowed me to go deep into specific interaction details while constantly asking a larger question: **What problem are we really solving, and what can design ultimately change?**
+This became a foundation for my later work in **AI product design, VR/AR, game experiences, interactive media research, and interdisciplinary projects**. It taught me to go deep into interaction details while still asking: **What problem are we solving, and what can design change?**
 
 **Core Growth:**
 Interaction design and UX methods · system design · service design · prototyping and interface design · user research · experience storytelling · rapid iteration and public presentation · interdisciplinary design thinking

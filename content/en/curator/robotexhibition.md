@@ -1,16 +1,16 @@
 ---
 personalSite: true
-title: "International Robotics and Art Design Biennale"
+title: "Robotics Art Biennale"
 date: "2025-05-01"
 skill: ["Curator", "Robotics", "Art"]
 coverImage: "/assets/personal/project-lab.svg"
 ---
 ## International Robot Art Exhibition
 
-As an accompanying art and design exhibition for the 2025 World Robot Conference, this International Robotics and Art Design Biennale took "Future Symbionts: Robots, Art, and Humanity" as its theme, discussing how robots can move from industrial tools toward media for cultural, emotional, and artistic expression.
+As an accompanying exhibition for the 2025 World Robot Conference, this biennale used the theme "Future Symbionts: Robots, Art, and Humanity" to explore how robots can move from industrial tools into media for culture, emotion, and artistic expression.
 
-I participated in the full process from curatorial positioning to exhibition implementation, including theme definition, exhibition structure planning, international open calls and review, spatial and content organization, visitor flow design, and coordination with partner institutions. Targeting leading art schools in China and abroad, young artists, robot designers, and interdisciplinary research teams, the call covered around 200 works, with more than 40 ultimately selected for exhibition.
+I participated from curatorial positioning to delivery, including theme definition, exhibition structure, international open calls and review, spatial content, visitor flow, and partner coordination. The call reached leading art schools, young artists, robot designers, and interdisciplinary teams, covering around 200 works and selecting 40+ for exhibition.
 
-The exhibition covered robot product design, AI art, intelligent interactive installations, bionic machinery, 3D printing, future home design, and conceptual design. By combining an indoor technology art exhibition with outdoor scenario-based experiences, it transformed complex robotics technology into a cultural experience that the public could view, understand, and participate in.
+The exhibition covered robot product design, AI art, interactive installations, bionic machinery, 3D printing, future home design, and conceptual design. It turned complex robotics into a cultural experience the public could view, understand, and join.
 
-This project shifted me from the creator of a single work into the builder of an interdisciplinary content system. I not only needed to evaluate the value of individual works, but also define relationships among works, coordinate artists and institutions, optimize space and audience experience, and build a dialogue platform among robotics, art, design, and society.
+This project shifted me from creating a single work to building an interdisciplinary content system: evaluating works, defining relationships, coordinating artists and institutions, shaping space and audience experience, and building dialogue among robotics, art, design, and society.

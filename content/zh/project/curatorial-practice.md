@@ -4,7 +4,7 @@ title: "策展实践"
 date: "2025-05-01"
 intro: "从 OMNI Art Expo 到国际机器人与艺术设计双年展，组织跨院校、跨学科展览与公共文化体验"
 sorting: 1
-coverImage: "/assets/images/robotexhibition/robotcover.jpg"
+coverImage: "/assets/images/robotexhibition/robotcover.webp"
 ---
 
 我的策展实践从国际青年艺术与设计资源的连接开始，逐渐延伸到机器人、人工智能与科技艺术的公共讨论。OMNI Art Expo 和 2025 国际机器人与艺术设计双年展分别对应了两个阶段：前者关注如何为跨院校青年创作者建立展示与交流平台，后者进一步关注如何通过策展回应正在发生的技术变革，让艺术、设计、产业与公众围绕未来议题形成对话。
@@ -12,8 +12,8 @@ coverImage: "/assets/images/robotexhibition/robotcover.jpg"
 ## 国际机器人与艺术设计双年展
 
 <figure class="robot-hero-video">
-  <video controls playsinline preload="metadata" poster="/assets/images/robotexhibition/robotcover.jpg">
-    <source src="/assets/images/robotexhibition/robot-web.mp4" type="video/mp4" />
+  <video controls playsinline preload="metadata" poster="/assets/images/robotexhibition/robotcover.webp">
+    <source src="/assets/images/robotexhibition/robot-web-compressed.mp4" type="video/mp4" />
     你的浏览器暂不支持视频播放。
   </video>
 </figure>
@@ -27,19 +27,19 @@ coverImage: "/assets/images/robotexhibition/robotcover.jpg"
 这个项目让我从单一作品的设计者，转变为一个跨学科内容系统的构建者：不仅需要判断每件作品的价值，也需要定义作品之间的关系，协调艺术家、院校、产业机构、空间和公众体验，最终搭建起机器人、艺术、设计与社会之间的交流平台。
 
 <div class="robot-gallery" aria-label="国际机器人与艺术设计双年展现场照片">
-  <img src="/assets/images/robotexhibition/robot1.jpg" alt="国际机器人与艺术设计双年展现场照片 1" />
-  <img src="/assets/images/robotexhibition/robot2.jpg" alt="国际机器人与艺术设计双年展现场照片 2" />
-  <img src="/assets/images/robotexhibition/robot3.jpg" alt="国际机器人与艺术设计双年展现场照片 3" />
-  <img src="/assets/images/robotexhibition/robot4.jpg" alt="国际机器人与艺术设计双年展现场照片 4" />
-  <img src="/assets/images/robotexhibition/robot5.jpg" alt="国际机器人与艺术设计双年展现场照片 5" />
-  <img src="/assets/images/robotexhibition/robot6.jpg" alt="国际机器人与艺术设计双年展现场照片 6" />
+  <img src="/assets/images/robotexhibition/robot1.webp" alt="国际机器人与艺术设计双年展现场照片 1" />
+  <img src="/assets/images/robotexhibition/robot2.webp" alt="国际机器人与艺术设计双年展现场照片 2" />
+  <img src="/assets/images/robotexhibition/robot3.webp" alt="国际机器人与艺术设计双年展现场照片 3" />
+  <img src="/assets/images/robotexhibition/robot4.webp" alt="国际机器人与艺术设计双年展现场照片 4" />
+  <img src="/assets/images/robotexhibition/robot5.webp" alt="国际机器人与艺术设计双年展现场照片 5" />
+  <img src="/assets/images/robotexhibition/robot6.webp" alt="国际机器人与艺术设计双年展现场照片 6" />
 </div>
 
 ## OMNI Art Expo 全球艺术高校作品联展
 
 <figure class="robot-hero-video">
-  <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.png">
-    <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
+  <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.webp">
+    <source src="/assets/images/omni-art-expo/exhibition-video-compressed.mp4" type="video/mp4" />
     你的浏览器暂不支持视频播放。
   </video>
 </figure>
@@ -53,8 +53,8 @@ coverImage: "/assets/images/robotexhibition/robotcover.jpg"
 OMNI Art Expo 让我第一次完整地参与并推动一个大型跨校艺术项目从概念形成走向公共展览。它不仅要求策展人具备作品判断和内容组织能力，也需要协调学校、创作者、场地、施工、传播与公共资源。
 
 <div class="robot-gallery" aria-label="OMNI ART EXPO 展览现场照片">
-  <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO 开幕现场" />
-  <img src="/assets/images/omni-art-expo/image%2015.png" alt="新泰仓库展览场地" />
-  <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO 展览入口与参展名单" />
-  <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO 展览现场" />
+  <img src="/assets/images/omni-art-expo/image%2014.webp" alt="OMNI ART EXPO 开幕现场" />
+  <img src="/assets/images/omni-art-expo/image%2015.webp" alt="新泰仓库展览场地" />
+  <img src="/assets/images/omni-art-expo/image%2016.webp" alt="OMNI ART EXPO 展览入口与参展名单" />
+  <img src="/assets/images/omni-art-expo/image%2017.webp" alt="OMNI ART EXPO 展览现场" />
 </div>

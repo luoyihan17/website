@@ -14,22 +14,22 @@ const SMART_SHOPPING_PDF_SRC =
   "/assets/pdfs/Tsinghua/%E6%99%BA%E8%83%BD%E8%B4%AD%E7%89%A9.pdf";
 const TSINGHUA_IMAGES = [
   {
-    src: "/assets/images/Tsinghua/Dreamtest.jpg",
+    src: "/assets/images/Tsinghua/Dreamtest.webp",
     zhAlt: "Dreamtest 测试照片",
     enAlt: "Dreamtest testing photo",
   },
   {
-    src: "/assets/images/Tsinghua/Dreamtest2.jpg",
+    src: "/assets/images/Tsinghua/Dreamtest2.webp",
     zhAlt: "Dreamtest 测试现场",
     enAlt: "Dreamtest testing session",
   },
   {
-    src: "/assets/images/Tsinghua/Elderlyworkshop.jpg",
+    src: "/assets/images/Tsinghua/Elderlyworkshop.webp",
     zhAlt: "老年智能产品工作坊",
     enAlt: "Senior-friendly smart product workshop",
   },
   {
-    src: "/assets/images/Tsinghua/photo.jpg",
+    src: "/assets/images/Tsinghua/photo.webp",
     zhAlt: "清华未来实验室项目照片",
     enAlt: "Tsinghua Future Laboratory project photo",
   },

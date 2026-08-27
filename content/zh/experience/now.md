@@ -18,8 +18,8 @@ sorting: 7
 
 2025 年起，我进一步探索 Vibe Coding与游戏化的音乐互动，在资源有限的情况下自我探索业务的可能性，连接商务，开发，“销售”自己的游戏，并成功上线部署。将自己的AIcoding游戏制作经验浓缩成课程，在腾讯音乐学堂中持续输出自己的AI经验。
 
-![在腾讯音乐学堂分享 AI 做游戏经验](/assets/images/tencent-music/ai-game-course-sharing.jpg)
+![在腾讯音乐学堂分享 AI 做游戏经验](/assets/images/tencent-music/ai-game-course-sharing.webp)
 
 总体而言，我在 QQ 音乐的工作聚焦于：将 AI 音乐创作与跨端音乐体验中的复杂技术能力，转化为用户可理解、可参与、可传播的产品体验，并持续探索 AI 时代设计师从“界面设计者”向“体验定义者与原型生产者”的角色转变。
 
-![腾讯音乐娱乐集团 QQ 音乐设计团队合影](/assets/images/tencent-music/team-photo.jpg)
+![腾讯音乐娱乐集团 QQ 音乐设计团队合影](/assets/images/tencent-music/team-photo.webp)

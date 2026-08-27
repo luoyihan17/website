@@ -1,60 +1,87 @@
 ---
 personalSite: true
-title: "AI Coding Interactive Games"
+title: "Tencent Music AI Games"
 date: "2025-01-01"
-intro: "Using Vibe Coding to rapidly build music interactions, gamified experiences, and runnable prototypes"
+intro: "Playable music campaigns built fast with AI coding"
 sorting: 4
-coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.jpg"
+coverImage: "/assets/images/ai-coding-interactive-games/AIcoding小游戏cover.webp"
+skill: ["Self-contained Delivery", "AI Efficiency", "Cross-team Drive"]
 ---
 
-## Project Background
-Traditional artist promotion is usually centered on album purchase pages, promotional posters, and content feature pages. After entering a page, users mainly browse information, preview songs, or buy albums. The overall experience leans toward one-way information delivery, with relatively limited interaction and participation.
+## Starting Point: Music Promotion Was Still Mostly "Seen"
+Traditional artist campaigns usually center on album purchase pages, posters, and editorial pages. Users browse, preview, or buy. Songs have rhythm, artists have visual identities, and albums have concepts, but fans often have little to do with them.
 
-![Digital album purchase portal](/assets/images/ai-coding-interactive-games/Digital%20album%20purchase%20portal.png)
+<figure class="ai-game-captioned-image">
+  <img src="/assets/images/ai-coding-interactive-games/Digital%20album%20purchase%20portal.webp" alt="Digital album purchase portal" />
+  <figcaption>Digital album purchase portal</figcaption>
+</figure>
 
-To solve the weak interactivity of traditional artist promotion and the overly single path for fan participation, I invented a new artist promotion model:
+<div class="ai-game-thesis-card">
+  <p>I wanted to test a different possibility:</p>
+  <p><strong>If a song already has a world, mood, and visual language, why can it only be displayed instead of played?</strong></p>
+</div>
 
-**Based on a promotional lead single, design a mini-game for the artist that matches the song concept, visual style, and content theme, making the game itself part of the artist promotion content.**
+<figure class="ai-game-captioned-image">
+  <img src="/assets/images/ai-coding-interactive-games/%E8%BE%B9%E5%90%AC%E8%BE%B9%E7%8E%A9.webp" alt="Listen and play" />
+  <figcaption>Listen and play</figcaption>
+</figure>
 
-In the mini-game, fans can enter the song-themed world I constructed through character control, level challenges, management tasks, or score competition. The artist's songs, image, and album concept are further transformed from visual packaging into game content that can be experienced, operated, and shared.
+This became my core thought around music interaction: music should not stop at being heard. It can become a multisensory experience with visuals, actions, and feedback.
 
-This approach turns traditional one-way content display into two-way interaction. For core fans, the game strengthens participation, companionship, and emotional connection, increasing loyalty among existing fans. For casual listeners, a game has a lower participation threshold than directly buying an album. They can first encounter the artist and the song through interesting gameplay, which increases the chance that they will listen further, learn more about the artist, and become interested users. This behavior improves conversion from passersby to consumers, turning casual listeners into paying fans.
+So I began pushing **artist IP x music x game**: mini-games built around lead songs, matching the song concept and artist visuals, so promotion became playable, operable, and shareable.
 
-Therefore, this type of mini-game is a new artist promotion touchpoint. It connects song content, fan interaction, and album marketing, upgrading artist promotion from "letting users see content" to "letting users enter and participate in content." It was also a direction I actively pushed under limited resources by temporarily pulling together operations and development teammates to validate the idea.
+**As project lead, I took this direction from demo to launch, then extended it to aespa, Lay Zhang, BigBang, and seasonal campaign moments.**
 
-**As the project lead, I drove the full process from design to development and deployment while coordinating with business and operations, turning "artist IP x music x game" from an initial idea into a shippable AI Coding innovation direction. The model was first validated through an aespa song-promotion mini-game, then reused for different gameplay types such as Lay Zhang's Battle Against the Victorious Buddha, and later expanded to collaborations with BigBang and other S-tier artists. Beyond artist-fan mini-games, this production approach was also adapted for in-app operation moments such as Children's Day, Qixi Festival, and back-to-school campaigns, creating lower-cost playable content and receiving positive feedback from artists and users.**
+## No Resources, So I Made It Runnable First
+As AI Coding became more usable, I started making [small music demos](/en/project/ai-coding-practice). But demos still need resources before they can go live. Client and backend teams need schedules, and without data, teams hesitate to commit.
 
-## Game Case 1: aespa's Dessert Workshop
+I did not wait for a full team. I brought runnable demos to product and operations teammates and pitched concrete campaign placements: could this support an artist release? Could that connect to an activity slot? At first, everyone was cautious because no one had shipped this kind of music promotion before. After several attempts, an operations lead told me they were willing to try. That was when I realized I could make a direction clear enough for others to follow.
+
+## First Trial: aespa's Dessert Workshop
 
 <div class="ai-game-result-layout">
-  <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata">
-    <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop.mp4" type="video/mp4" />
-    Your browser does not support video playback.
-  </video>
+  <figure class="ai-game-result-media">
+    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
+      <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop.mp4" type="video/mp4" />
+      Your browser does not support video playback.
+    </video>
+    <figcaption>aespa Dessert Workshop</figcaption>
+  </figure>
   <figure class="ai-game-result-image">
-    <img src="/assets/images/ai-coding-interactive-games/Dissemination%20Results_aespa.png" alt="Dissemination Results aespa" />
+    <img src="/assets/images/ai-coding-interactive-games/aespa-dissemination-results.webp" alt="Dissemination Results aespa" />
+    <figcaption>Campaign results</figcaption>
   </figure>
 </div>
 
-For this project, I handled 90% of the development, deployment, and launch work, taking the content from 0 to 1 into something that could actually go live. It was not a designer's self-contained experiment, but something that could create real business value and contribution. Drawing on my game studies background, I designed the basic game system plan, game UI/UX, full-screen adaptation, testing, gameplay boundaries, mobile browser behavior after deployment, caching issues, and more. Through this project, I realized that designers do not have to be limited by traditional responsibility boundaries. They can gradually build product thinking, systems thinking, engineering thinking, and business delivery awareness, moving from "designing an interface" to "pushing a product truly online." The whole process made me feel that future designers will increasingly resemble directors: defining not only interfaces, but also rules, states, and ways of implementation.
+aespa's **LEMONADE** was the first time I brought this model online. I translated the song's fresh tone and artist visuals into a dessert workshop management game, letting users enter the song's mood through ordering, making desserts, and completing tasks instead of only viewing campaign assets.
 
+I handled about 90% of development, deployment, and launch: gameplay design, UI/UX, interaction states, screen adaptation, mobile testing, and release details. It was not a concept stuck in a design file. It was a real 0-to-1 business delivery.
 
-## Game Case 2: Lay Zhang's Battle Against the Victorious Buddha Mini-game
+## Second Trial: Lay Zhang's Dou Zhan Sheng Fo Game
 
 <div class="ai-game-result-layout">
-  <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata">
-    <source src="/assets/videos/zhangyixinggame.mp4" type="video/mp4" />
-    Your browser does not support video playback.
-  </video>
+  <figure class="ai-game-result-media">
+    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/videos/zhangyixinggame-poster.webp">
+      <source src="/assets/videos/zhangyixinggame.mp4" type="video/mp4" />
+      Your browser does not support video playback.
+    </video>
+    <figcaption>Lay Zhang's Dou Zhan Sheng Fo</figcaption>
+  </figure>
   <figure class="ai-game-result-image">
-    <img src="/assets/images/ai-coding-interactive-games/Dissemination%20Results.png" alt="Dissemination Results" />
+    <img src="/assets/images/ai-coding-interactive-games/zhangyixing-dissemination-results.webp" alt="Dissemination Results" />
+    <figcaption>Campaign results</figcaption>
   </figure>
 </div>
 
-Battle Against the Victorious Buddha was the second artist promotion mini-game completed after LEMONADE. Unlike the previous project, which was closer to management and ordering gameplay, this one required building a side-scrolling action game in a very short cycle, involving character movement, jumping, attacking, enemy mechanics, platform collision, level progression, and win/lose judgment. The development complexity was significantly higher.
+If **LEMONADE** proved that a song could become a mini-game, Lay Zhang's **Dou Zhan Sheng Fo** tested whether the method could transfer to a very different genre.
 
-Around the theme of Lay Zhang's Battle Against the Victorious Buddha, I transformed Sun Wukong, the golden cudgel, cloud platforms, and Eastern mythological scenes into playable game content. I independently pushed forward details such as character animation frames, attack effects, enemy logic, level maps, collision boundaries, and mobile controls. During the project, I also repeatedly adjusted whether character movements felt natural, whether attack detection was accurate, whether platform spacing was reasonable, and how the screen ratio and controls performed on different phones.
+This time, the gameplay shifted from management and ordering to a side-scrolling action game. Around the song theme, I turned Sun Wukong, the golden cudgel, cloud platforms, and Eastern myth scenes into playable content, and completed movement, jumping, attacks, enemies, collisions, and level progression.
 
-Compared with the first 0-to-1 exploration for LEMONADE, the more important part of this project was reusing the development, adaptation, testing, and deployment process accumulated earlier. I was able to split requirements faster, control the scope of gameplay, organize assets, and focus on solving the issues that truly affected launch instead of starting trial and error from scratch.
+The challenge was no longer proving the direction from zero. It was shipping a more complex game in three days. The project reached nearly 100,000 exposures and was recognized by the artist team and copyright stakeholders. It proved this was not a one-time success, but a reusable method for different songs and gameplay types.
 
-In the end, the project received strong recognition from the artist team and copyright stakeholders. This project proved that I could not only complete a 0-to-1 attempt once, but also transfer a validated experience to a completely different game genre and deliver a product with complete gameplay, stable experience, and real dissemination results in a shorter time.
+## Returning: From One Game to a Reusable Campaign Capability
+Looking back, the meaning of these AI Coding games was not only that I made several H5 games. More importantly, I turned a vague idea into a direction the team was willing to keep investing in. The model expanded from aespa and Lay Zhang to BigBang and other artist collaborations, then entered campaign moments such as Children's Day and Qixi.
+
+This also changed how I saw AI. Some designers worry that AI compresses their value, but I saw another side: AI Coding let me turn ideas into playable demos earlier, then discuss them with product, operations, engineering, and business teams. Later, the team assigned dedicated product support for games, more business lines came to us for interactive ideas, and business teammates began fighting for traffic slots.
+
+The first time my name appeared as "code owner" in a launch delivery sheet, I felt something click. In the AI era, designers do not only adapt to tools. We can create new workflows, new roles, and new business possibilities.

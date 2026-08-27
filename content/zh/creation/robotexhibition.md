@@ -3,11 +3,11 @@ personalSite: false
 title: "国际机器人与艺术设计双年展"
 date: "2025-05-01"
 skill: ["Curator", "Robotics", "Art"]
-coverImage: "/assets/images/robotexhibition/robotcover.jpg"
+coverImage: "/assets/images/robotexhibition/robotcover.webp"
 ---
 <figure class="robot-hero-video">
-  <video controls playsinline preload="metadata" poster="/assets/images/robotexhibition/robotcover.jpg">
-    <source src="/assets/images/robotexhibition/robot-web.mp4" type="video/mp4" />
+  <video controls playsinline preload="metadata" poster="/assets/images/robotexhibition/robotcover.webp">
+    <source src="/assets/images/robotexhibition/robot-web-compressed.mp4" type="video/mp4" />
     你的浏览器暂不支持视频播放。
   </video>
 </figure>
@@ -23,10 +23,10 @@ coverImage: "/assets/images/robotexhibition/robotcover.jpg"
 这个项目让我从单一作品的设计者，转变为一个跨学科内容系统的构建者：不仅需要判断每件作品的价值，也需要定义作品之间的关系，协调艺术家、院校、产业机构、空间和公众体验，最终搭建起机器人、艺术、设计与社会之间的交流平台。
 
 <div class="robot-gallery" aria-label="国际机器人与艺术设计双年展现场照片">
-  <img src="/assets/images/robotexhibition/robot1.jpg" alt="国际机器人与艺术设计双年展现场照片 1" />
-  <img src="/assets/images/robotexhibition/robot2.jpg" alt="国际机器人与艺术设计双年展现场照片 2" />
-  <img src="/assets/images/robotexhibition/robot3.jpg" alt="国际机器人与艺术设计双年展现场照片 3" />
-  <img src="/assets/images/robotexhibition/robot4.jpg" alt="国际机器人与艺术设计双年展现场照片 4" />
-  <img src="/assets/images/robotexhibition/robot5.jpg" alt="国际机器人与艺术设计双年展现场照片 5" />
-  <img src="/assets/images/robotexhibition/robot6.jpg" alt="国际机器人与艺术设计双年展现场照片 6" />
+  <img src="/assets/images/robotexhibition/robot1.webp" alt="国际机器人与艺术设计双年展现场照片 1" />
+  <img src="/assets/images/robotexhibition/robot2.webp" alt="国际机器人与艺术设计双年展现场照片 2" />
+  <img src="/assets/images/robotexhibition/robot3.webp" alt="国际机器人与艺术设计双年展现场照片 3" />
+  <img src="/assets/images/robotexhibition/robot4.webp" alt="国际机器人与艺术设计双年展现场照片 4" />
+  <img src="/assets/images/robotexhibition/robot5.webp" alt="国际机器人与艺术设计双年展现场照片 5" />
+  <img src="/assets/images/robotexhibition/robot6.webp" alt="国际机器人与艺术设计双年展现场照片 6" />
 </div>

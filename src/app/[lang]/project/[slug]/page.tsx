@@ -51,6 +51,7 @@ export default async function Project({ params }: Params) {
               title={post.title}
               date={post.date}
               favicon={post.favicon}
+              skill={post.skill}
             />
           </div>
           <PostBody content={content} />

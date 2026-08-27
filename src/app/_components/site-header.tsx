@@ -86,34 +86,38 @@ export function SiteHeader({ lang }: Props) {
     return null;
   }
 
+  const handleHeaderAction = () => {
+    if (isResumePage) {
+      router.push(`/${lang}`);
+    } else if (isDetailPage) {
+      router.push(`/${lang}`, { scroll: false });
+    } else {
+      window.scrollTo({ top: 0 });
+    }
+  };
+
   return (
     <header className={headerClass}>
       <div className="mx-auto px-5 max-w-[1024px] h-14 flex items-center justify-between">
-        <SpecularAction
-          onClick={() => {
-            if (isResumePage) {
-              router.push(`/${lang}`);
-            } else if (isDetailPage) {
-              router.push(`/${lang}`, { scroll: false });
-            } else {
-              window.scrollTo({ top: 0 });
-            }
-          }}
-          className="site-header-specular font-barlow"
-          size="sm"
-          radius={18}
-        >
-          {isDetailPage ? (
-            <>
-              <PiCaretLeftBold className="w-4 h-4" />
-              {isEn ? "Back" : "返回"}
-            </>
-          ) : (
-            <>
-              雒艺涵 Luo Yihan
-            </>
-          )}
-        </SpecularAction>
+        {isDetailPage ? (
+          <SpecularAction
+            onClick={handleHeaderAction}
+            className="site-header-specular font-barlow"
+            size="sm"
+            radius={18}
+          >
+            <PiCaretLeftBold className="w-4 h-4" />
+            {isEn ? "Back" : "返回"}
+          </SpecularAction>
+        ) : (
+          <button
+            type="button"
+            onClick={handleHeaderAction}
+            className="font-barlow text-lg font-semibold tracking-tight text-current transition-opacity hover:opacity-65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+          >
+            雒艺涵 Luo Yihan
+          </button>
+        )}
         <div
           className="flex items-center"
           style={{

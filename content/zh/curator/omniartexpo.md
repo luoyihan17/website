@@ -3,7 +3,7 @@ personalSite: true
 title: "OMNI Art Expo 全球高校作品联展"
 date: "2021-03-01"
 skill: ["Curator", "Founder", "Exhibition"]
-coverImage: "/assets/images/omni-art-expo/image%2014.png"
+coverImage: "/assets/images/omni-art-expo/image%2014.webp"
 ---
 
 ## OMNI ART EXPO
@@ -16,27 +16,27 @@ coverImage: "/assets/images/omni-art-expo/image%2014.png"
 
 <div class="omni-showcase">
   <figure class="omni-media-tile omni-video-panel">
-    <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.png">
-      <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
+    <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.webp">
+      <source src="/assets/images/omni-art-expo/exhibition-video-compressed.mp4" type="video/mp4" />
       你的浏览器暂不支持视频播放。
     </video>
     <figcaption>OMNI ART EXPO 展览影像</figcaption>
   </figure>
   <div class="omni-still-grid">
   <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO 开幕现场" />
+    <img src="/assets/images/omni-art-expo/image%2014.webp" alt="OMNI ART EXPO 开幕现场" />
     <figcaption>OMNI ART EXPO 开幕现场</figcaption>
   </figure>
   <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2015.png" alt="新泰仓库展览场地" />
+    <img src="/assets/images/omni-art-expo/image%2015.webp" alt="新泰仓库展览场地" />
     <figcaption>新泰仓库展览场地</figcaption>
   </figure>
   <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO 展览入口与参展名单" />
+    <img src="/assets/images/omni-art-expo/image%2016.webp" alt="OMNI ART EXPO 展览入口与参展名单" />
     <figcaption>OMNI ART EXPO 展览入口与参展名单</figcaption>
   </figure>
   <figure class="omni-media-tile">
-    <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO 展览现场" />
+    <img src="/assets/images/omni-art-expo/image%2017.webp" alt="OMNI ART EXPO 展览现场" />
     <figcaption>OMNI ART EXPO 展览现场</figcaption>
   </figure>
   </div>

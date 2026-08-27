@@ -4,12 +4,12 @@ title: "NeonCity VR 游戏"
 date: "2022-09-01"
 intro: "南加州大学高阶游戏项目，担任 UI/UX 首席设计师"
 sorting: 2
-coverImage: "/assets/images/NeonCity/NeonCitycover.jpg"
+coverImage: "/assets/images/NeonCity/NeonCitycover.webp"
 ---
 
 NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造沙盒游戏，我担任 UI/UX Lead。项目以 Hand Tracking、OpenXR 与 Unity 为基础，让玩家用双手搭建并扩展一座霓虹城市，并在微缩规划和 1:1 探索之间切换。项目曾亮相 USC Games Expo 2023，并推出 [Meta Store](https://www.meta.com/experiences/pcvr/neon-city-demo/6015050278577275/?srsltid=AfmBOooMXGbBIYlLropJlYEgZtirmqnB4i9KIZFaWLrSAOqRDfVTh0TJ)。
 
-<figure class="video-embed vimeo-click-player" data-vimeo-id="825302860" data-title="NeonCity VR Game video" style="background-image: url('/assets/images/NeonCity/NeonCitycover.jpg')">
+<figure class="video-embed vimeo-click-player" data-vimeo-id="825302860" data-title="NeonCity VR Game video" style="background-image: url('/assets/images/NeonCity/NeonCitycover.webp')">
   <button class="video-play-button" type="button" data-vimeo-play aria-label="播放 NeonCity VR Game video">
     <span class="video-play-icon" aria-hidden="true"></span>
   </button>
@@ -52,7 +52,7 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 01｜从控制器操作转向自然手势
 
 <figure>
-  <img src="/assets/images/NeonCity/Hand%20Gesture%20System.png" alt="NeonCity 从控制器操作转向自然手势" />
+  <img src="/assets/images/NeonCity/Hand%20Gesture%20System.webp" alt="NeonCity 从控制器操作转向自然手势" />
   <figcaption>NeonCity 从控制器操作转向自然手势</figcaption>
 </figure>
 
@@ -85,11 +85,11 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 02｜从自由操作到清晰的编辑反馈
 
 <figure>
-  <img src="/assets/images/NeonCity/operations.png" alt="NeonCity 手势操作与编辑反馈系统" />
+  <img src="/assets/images/NeonCity/operations.webp" alt="NeonCity 手势操作与编辑反馈系统" />
   <figcaption>NeonCity 手势操作与编辑反馈系统</figcaption>
 </figure>
 
-<video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 手势操作与编辑反馈演示视频">
+<video class="fit-screen-video neon-wide-video" controls muted playsinline preload="metadata" poster="/assets/videos/operations-poster.webp" data-autoplay-on-view aria-label="NeonCity 手势操作与编辑反馈演示视频">
   <source src="/assets/videos/operations.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>
@@ -101,11 +101,11 @@ NeonCity 是一款由 USC Games 29 人跨学科团队开发的 VR 城市建造�
 03｜微缩模型、真实尺度与空间化 UI
 
 <figure>
-  <img src="/assets/images/NeonCity/%E5%BE%AE%E7%BC%A9%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9C%9F%E5%AE%9E%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt="NeonCity 微缩模型与真实尺度的转换" />
+  <img src="/assets/images/NeonCity/%E5%BE%AE%E7%BC%A9%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9C%9F%E5%AE%9E%E5%B0%BA%E5%BA%A6%E7%9A%84%E8%BD%AC%E6%8D%A2.webp" alt="NeonCity 微缩模型与真实尺度的转换" />
   <figcaption>NeonCity 微缩模型与真实尺度的转换</figcaption>
 </figure>
 
-<video class="fit-screen-video" controls muted playsinline preload="metadata" data-autoplay-on-view aria-label="NeonCity 微缩模型扩展与真实尺度转换演示视频">
+<video class="fit-screen-video neon-wide-video" controls muted playsinline preload="metadata" poster="/assets/videos/expand-poster.webp" data-autoplay-on-view aria-label="NeonCity 微缩模型扩展与真实尺度转换演示视频">
   <source src="/assets/videos/expand.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>

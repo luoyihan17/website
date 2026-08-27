@@ -62,7 +62,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
       </div>
 
       {/* ===== Scrollable right area ===== */}
-      <div className="overflow-x-auto flex-1 min-w-0">
+      <div className="experience-scroll-region overflow-x-auto flex-1 min-w-0">
         <div className="exp-scroll-grid">
           {/* Header */}
           <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b md:hidden`}>
@@ -129,19 +129,19 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                 key={`${exp.slug}-area`}
                 href={href}
                 data-row={exp.slug}
-                className={`${ROW_H} flex cursor-pointer items-center border-b border-neutral-100 pr-2 transition-colors duration-300 ${
+                className={`${ROW_H} flex min-w-0 cursor-pointer items-center overflow-hidden border-b border-neutral-100 pr-2 transition-colors duration-300 ${
                   hoveredRow === exp.slug ? "bg-neutral-100" : ""
                 }`}
               >
                 {exp.area && exp.area.length > 0 && (
-                  <div className="flex gap-1">
+                  <div className="flex min-w-0 gap-1 overflow-hidden">
                     {exp.area.map((tag) => {
                       const isHighlighted = tag.startsWith("*");
                       const label = isHighlighted ? tag.slice(1) : tag;
                       return (
                         <span
                           key={tag}
-                          className={`inline-block text-xs md:text-sm font-medium px-1.5 md:px-2 py-0.5 rounded-md md:rounded-lg ${
+                          className={`inline-block max-w-[11rem] truncate text-xs md:text-sm font-medium px-1.5 md:px-2 py-0.5 rounded-md md:rounded-lg ${
                             isHighlighted
                               ? "bg-neutral-800 text-white"
                               : "bg-neutral-200 text-neutral-600"

@@ -2,16 +2,16 @@
 personalSite: false
 title: "Dora"
 dateRange: "2022.05 - 2022.10"
-intro: "Participated in early and mid-stage AI product design, responsible for website and core product experience optimization"
+intro: "Early AI product design, website UX, research, and A/B testing"
 type: "Product Design"
 area: ["*AI", "Website Design", "User Research", "A/B Testing"]
 location: "Remote"
 sorting: 5
 ---
 
-At DORA, I led the interaction flow and interface design of the company website, and deeply participated in user research during the early and mid-stage product phases.
+At DORA, I led the company website's interaction flow and interface design, and contributed to user research for early and mid-stage AI products.
 
-- Responsible for the website interaction flow and interface design, improving overall professionalism and user appeal;
-- Interviewed and analyzed nearly 200 industry users, building user personas to provide insights for product direction;
-- Independently organized and designed A/B testing plans, systematically collecting feedback and iterating the design;
-- Drove improvements in key flow conversion rates and user satisfaction.
+- Designed website flows and interfaces to improve clarity and credibility;
+- Interviewed and analyzed nearly 200 industry users;
+- Built user personas and product direction insights;
+- Designed A/B tests and iterated from feedback and data.

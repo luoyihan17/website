@@ -249,7 +249,7 @@ export function ChatWidget({ lang }: Props) {
           }`}
         >
           <Image
-            src="/assets/functional-images/yihan-chat-illustration.png"
+            src="/assets/functional-images/yihan-chat-illustration.webp"
             alt=""
             width={1420}
             height={621}

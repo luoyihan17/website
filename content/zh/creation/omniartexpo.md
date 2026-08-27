@@ -3,11 +3,11 @@ personalSite: false
 title: "OMNI Art Expo 全球艺术高校作品联展"
 date: "2021-03-01"
 skill: ["Curator", "Founder", "Exhibition"]
-coverImage: "/assets/images/omni-art-expo/image%2014.png"
+coverImage: "/assets/images/omni-art-expo/image%2014.webp"
 ---
 <figure class="robot-hero-video">
-  <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.png">
-    <source src="/assets/images/omni-art-expo/exhibition-video.mp4" type="video/mp4" />
+  <video controls playsinline preload="metadata" poster="/assets/images/omni-art-expo/image%2014.webp">
+    <source src="/assets/images/omni-art-expo/exhibition-video-compressed.mp4" type="video/mp4" />
     你的浏览器暂不支持视频播放。
   </video>
 </figure>
@@ -21,8 +21,8 @@ coverImage: "/assets/images/omni-art-expo/image%2014.png"
 我和校友共同努力，最终将展览选址在上海百年建筑新泰仓库。开幕活动得到了上海市政府的支持与参观，也让这场由学生和校友发起的展览获得了更广泛的公共关注。
 
 <div class="robot-gallery" aria-label="OMNI ART EXPO 展览现场照片">
-  <img src="/assets/images/omni-art-expo/image%2014.png" alt="OMNI ART EXPO 开幕现场" />
-  <img src="/assets/images/omni-art-expo/image%2015.png" alt="新泰仓库展览场地" />
-  <img src="/assets/images/omni-art-expo/image%2016.png" alt="OMNI ART EXPO 展览入口与参展名单" />
-  <img src="/assets/images/omni-art-expo/image%2017.png" alt="OMNI ART EXPO 展览现场" />
+  <img src="/assets/images/omni-art-expo/image%2014.webp" alt="OMNI ART EXPO 开幕现场" />
+  <img src="/assets/images/omni-art-expo/image%2015.webp" alt="新泰仓库展览场地" />
+  <img src="/assets/images/omni-art-expo/image%2016.webp" alt="OMNI ART EXPO 展览入口与参展名单" />
+  <img src="/assets/images/omni-art-expo/image%2017.webp" alt="OMNI ART EXPO 展览现场" />
 </div>

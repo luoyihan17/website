@@ -38,6 +38,27 @@ html[lang="zh"] .font-barlow {
 .markdown blockquote strong {
   @apply font-semibold;
 }
+.markdown .ai-game-thesis-card {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1rem 1.125rem;
+  border: 1px solid rgb(23 23 23 / 0.16);
+  border-left: 4px solid rgb(23 23 23);
+  border-radius: 8px;
+  background: rgb(250 250 250);
+}
+.markdown .ai-game-thesis-card p {
+  margin: 0;
+}
+.markdown .ai-game-thesis-card p + p {
+  margin-top: 0.75rem;
+}
+.markdown .ai-game-thesis-card strong {
+  display: block;
+  font-size: 1.28rem;
+  line-height: 1.55;
+  font-weight: 700;
+  letter-spacing: 0;
+}
 .markdown ul {
   @apply list-disc pl-6;
 }
@@ -91,6 +112,12 @@ html[lang="zh"] .font-barlow {
   max-height: calc(100vh - 7rem);
   margin: 24px auto;
   border-radius: 8px;
+}
+.markdown video.neon-wide-video {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 .markdown .neon-video-pair {
   display: grid;
@@ -222,22 +249,29 @@ html[lang="zh"] .font-barlow {
 }
 .markdown .ai-game-result-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.46025fr) minmax(0, 1.4402fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 1.78fr);
+  gap: clamp(1rem, 2.2vw, 2rem);
   align-items: start;
   justify-content: start;
   margin: 24px 0;
 }
-.markdown .ai-game-result-layout video.fit-screen-video {
+.markdown .ai-game-result-media,
+.markdown .ai-game-result-image {
+  display: flex;
+  min-width: 0;
+  margin: 0;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-self: start;
+}
+.markdown .ai-game-result-layout video.fit-screen-video,
+.markdown .ai-game-result-media video.fit-screen-video {
   width: 100%;
   height: auto;
   max-height: none;
   margin: 0;
   justify-self: start;
-}
-.markdown .ai-game-result-image {
-  min-width: 0;
-  margin: 0;
+  align-self: start;
 }
 .markdown .ai-game-result-image > .media-skeleton-wrapper {
   width: 100%;
@@ -253,12 +287,27 @@ html[lang="zh"] .font-barlow {
   object-position: left top;
   border-radius: 8px;
 }
+.markdown .ai-game-result-media figcaption,
+.markdown .ai-game-result-image figcaption,
+.markdown .ai-game-captioned-image figcaption {
+  margin: 0.35rem 0 0;
+  color: rgb(115 115 115);
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: left;
+}
+.markdown .ai-game-result-media figcaption {
+  width: 100%;
+}
 @media (max-width: 560px) {
   .markdown .ai-game-result-layout {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  .markdown .ai-game-result-layout video.fit-screen-video {
+  .markdown .ai-game-result-layout video.fit-screen-video,
+  .markdown .ai-game-result-media video.fit-screen-video {
     width: 100%;
     margin: 0;
     justify-self: start;
@@ -2431,14 +2480,27 @@ body:has(.ai-coding-practice-page) {
 @import "../../../resume/resume.css";
 
 /* Experience scroll grid: 5 cols on mobile (Name visible), 4 cols on desktop (Name in pinned column) */
+.experience-scroll-region {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.experience-scroll-region::-webkit-scrollbar {
+  display: none;
+}
+
 .exp-scroll-grid {
   display: grid;
-  grid-template-columns: auto auto auto auto 1fr;
+  grid-template-columns: max-content max-content max-content max-content minmax(0, 1fr);
+}
+
+.exp-scroll-grid > * {
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
   .exp-scroll-grid {
-    grid-template-columns: auto auto auto 1fr;
+    grid-template-columns: max-content max-content max-content minmax(0, 1fr);
   }
   .exp-scroll-grid > .md\:hidden {
     display: none;
@@ -2569,6 +2631,7 @@ body:has(.ai-coding-practice-page) {
   width: min(96vw, 86rem);
   height: clamp(24rem, 47vw, 38rem);
   opacity: var(--flow-enter);
+  pointer-events: none;
   transform: translate(-50%, -50%);
   transition: opacity 780ms ease-out;
   will-change: opacity, transform;

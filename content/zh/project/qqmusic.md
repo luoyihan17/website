@@ -11,7 +11,7 @@ AI 创作是我在 QQ 音乐参与设计的核心 AI 音乐创作项目，用户
 
 这个项目的业务逻辑是：先依托 QQ 音乐已有的用户和内容场景验证 AI 音乐创作需求，再通过 AI 作歌、AI 唱、图片作歌、AI 改编、AIMV、作品发布、榜单荣誉和商业激励等模块，把生成结果沉淀为可播放、可传播、可运营的音乐作品。
 
-![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/QQMusicAI.png)
+![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/QQMusicAI.webp)
 
 <section class="qqmusic-question-block">
 
@@ -33,7 +33,7 @@ AI 创作是我在 QQ 音乐参与设计的核心 AI 音乐创作项目，用户
 - **商业激励与转化闭环**：如何从基础生成引导到高价值服务和激励金机制，支撑付费转化、创作者留存与内容生态建设。
 
 ### 1. 场景化创作入口设计
-![QQ 音乐 AI 作歌用户流程](/assets/images/AIMusic/userflow.png)
+![QQ 音乐 AI 作歌用户流程](/assets/images/AIMusic/userflow.webp)
 
 我先梳理了 **AI 作歌用户流程**：从用户选择创作场景、输入表达内容，到生成歌曲、发布分享，形成一条完整的创作链路。
 
@@ -42,19 +42,19 @@ AI 创作是我在 QQ 音乐参与设计的核心 AI 音乐创作项目，用户
 
 ### 2. 热点改编与娱乐化创作
 
-![QQ 音乐 AI 歌曲改编](/assets/images/AIMusic/Song%20Adaptation.png)
+![QQ 音乐 AI 歌曲改编](/assets/images/AIMusic/Song%20Adaptation.webp)
 
 AI 歌曲改编是我在 **娱乐化创作场景** 中重点设计的能力之一。基于抖音上老歌被改编成“打工人版”等热梗后再次传播的现象，我设计了 **一键改编流程**。我梳理改编前后的用户路径，包括 **话题选择、直接生成歌词、简单选择音色和曲风**，让用户不需要理解复杂参数，也能快速得到有梗、有情绪、适合分享的作品。
 
 ### 3. 榜单与荣誉激励机制
 
-![QQ 音乐 AI 创作榜单与荣誉激励](/assets/images/AIMusic/Ranking%20List%20%26%20Rewards.png)
+![QQ 音乐 AI 创作榜单与荣誉激励](/assets/images/AIMusic/Ranking%20List%20%26%20Rewards.webp)
 
 为了提升用户持续创作意愿，我构思了 **榜单排名、打榜、荣誉证书** 等机制，让 AI 歌曲从一次生成结果进入可被看见、比较和展示的公共创作场域。 **创作后的正反馈链路**：用户不仅完成一首歌，还能看到作品表现、获得身份感，并被鼓励继续创作或分享。
 
 ### 4. 商业激励与转化闭环
 
-![QQ 音乐 AI 创作商业转化](/assets/images/AIMusic/Business%20Conversion.png)
+![QQ 音乐 AI 创作商业转化](/assets/images/AIMusic/Business%20Conversion.webp)
 
 在商业化设计上，我关注如何把用户从“试一试”引导到更高价值的 **创作服务与运营服务**。 **付费发布、音乐推广、激励金机制** 等关键触点，让 AI 歌曲不仅可以被听见，也能支撑付费转化、创作者留存和内容生态建设。这里我的核心工作是把商业目标转译为不打断体验的产品路径，让用户在想要更好结果、更多曝光或更多收益时，自然进入对应服务。
 

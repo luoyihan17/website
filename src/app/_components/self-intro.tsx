@@ -181,7 +181,7 @@ export function SelfIntro({ lang }: Props) {
               </SpecularAction>
             </div>
             <img
-              src="/assets/functional-images/wechat-qr-luo-yihan.jpg"
+              src="/assets/functional-images/wechat-qr-luo-yihan.webp"
               alt="WeChat QR Code"
               className="w-full rounded-lg"
             />

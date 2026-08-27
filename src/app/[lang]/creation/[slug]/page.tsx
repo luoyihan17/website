@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllItems, getItemBySlug } from "@/lib/api";
+import { getItemBySlug, getSlugs } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
@@ -64,11 +64,11 @@ export function generateMetadata({ params }: Params): Metadata {
 export async function generateStaticParams() {
   const langs = ['en', 'zh'];
   const params: { lang: string; slug: string }[] = [];
-  
+
   for (const lang of langs) {
-    const posts = getAllItems("creation", lang); 
-    posts.forEach((post) => {
-       params.push({ lang, slug: post.slug });
+    const slugs = getSlugs("creation", lang);
+    slugs.forEach((slug) => {
+       params.push({ lang, slug });
     });
   }
 
