@@ -56,7 +56,7 @@ I wanted to explore more than how AR can make reading fun. I wanted to use a new
 
 ARtistic Tales later won a MUSE Design Award. The related research paper was accepted by ICHEC 2025 and included in the ACM Digital Library. [Read the ARtistic Tales paper and full project introduction](/en/paper/artistic-tales).
 
-<video class="fit-screen-video" controls playsinline preload="metadata">
+<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.png">
   <source src="/assets/images/USC/artistic-tales-web-compressed.mp4" type="video/mp4" />
   Your browser does not support video playback.
 </video>
@@ -71,8 +71,8 @@ I worked on VR interaction research and design, exploring how users could move, 
 This was my first deep Science x VR x World Building project. It showed me that interaction design can do more than explain how an interface works; it can translate scientific knowledge into public understanding. That experience shaped my later work in VR, AR, education, and immersive interaction.
 
 <div class="robot-gallery" aria-label="World in a Cell exhibition and testing photos">
-  <img src="/assets/images/USC/WIAC%20Exhibition.webp" alt="World in a Cell exhibition scene" />
-  <img src="/assets/images/USC/WIAC%20Exhibition2.webp" alt="World in a Cell exhibition scene 2" />
-  <img src="/assets/images/USC/WIAC%20Exhibition3.webp" alt="World in a Cell exhibition scene 3" />
-  <img src="/assets/images/USC/WIAC%20playtest%E6%8B%9B%E5%8B%9F.webp" alt="World in a Cell playtest recruitment" />
+  <img src="/assets/images/USC/wiac-exhibition-1.webp" alt="World in a Cell exhibition scene" />
+  <img src="/assets/images/USC/wiac-exhibition-2.webp" alt="World in a Cell exhibition scene 2" />
+  <img src="/assets/images/USC/wiac-exhibition-3.webp" alt="World in a Cell exhibition scene 3" />
+  <img src="/assets/images/USC/wiac-playtest-recruitment.webp" alt="World in a Cell playtest recruitment" />
 </div>

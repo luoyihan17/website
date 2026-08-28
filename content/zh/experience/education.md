@@ -58,7 +58,7 @@ ARtistic Tales 是一款面向 6–10 岁儿童、尤其关注阅读障碍（Dys
 
 ARtistic Tales 后续获得 MUSE Design Award，相关研究论文入选 ICHEC 2025，并收录于 ACM Digital Library。[欢迎阅读 ARtistic Tales 论文与完整项目介绍](/zh/paper/artistic-tales)。
 
-<video class="fit-screen-video" controls playsinline preload="metadata">
+<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.png">
   <source src="/assets/images/USC/artistic-tales-web-compressed.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>
@@ -73,8 +73,8 @@ ARtistic Tales 后续获得 MUSE Design Award，相关研究论文入选 ICHEC 2
 这也是我第一次深度参与 Science × VR × World Building 的跨学科项目。它让我开始意识到，交互设计不仅可以解决“界面怎么用”的问题，也可以成为一种连接科学知识与公众认知的翻译媒介。这段经历进一步影响了我后来在 VR、AR、教育体验与沉浸式交互方向上的探索。
 
 <div class="robot-gallery" aria-label="World in a Cell 展示与测试照片">
-  <img src="/assets/images/USC/WIAC%20Exhibition.webp" alt="World in a Cell 展示现场" />
-  <img src="/assets/images/USC/WIAC%20Exhibition2.webp" alt="World in a Cell 展示现场 2" />
-  <img src="/assets/images/USC/WIAC%20Exhibition3.webp" alt="World in a Cell 展示现场 3" />
-  <img src="/assets/images/USC/WIAC%20playtest%E6%8B%9B%E5%8B%9F.webp" alt="World in a Cell playtest 招募" />
+  <img src="/assets/images/USC/wiac-exhibition-1.webp" alt="World in a Cell 展示现场" />
+  <img src="/assets/images/USC/wiac-exhibition-2.webp" alt="World in a Cell 展示现场 2" />
+  <img src="/assets/images/USC/wiac-exhibition-3.webp" alt="World in a Cell 展示现场 3" />
+  <img src="/assets/images/USC/wiac-playtest-recruitment.webp" alt="World in a Cell playtest 招募" />
 </div>
