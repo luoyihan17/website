@@ -5,7 +5,6 @@ date: "2024-09-01"
 intro: "Product strategy and core UX for QQ Music's AI songwriting tools"
 sorting: 6
 coverImage: "/assets/cover-image/QQMUSICCover.webp"
-favicon: "/assets/favicon/tme.svg"
 ---
 
 AI Creation was the core AI music project I worked on at QQ Music. Users could create a full song through a sentence, conversation, image, humming, or style choice.

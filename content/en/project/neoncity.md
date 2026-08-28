@@ -5,7 +5,6 @@ date: "2022-09-01"
 intro: "Lead UI/UX for USC's hand-tracking VR city builder"
 sorting: 2
 coverImage: "/assets/cover-image/neoncitycover.webp"
-favicon: "/assets/favicon/usc.svg"
 ---
 
 NeonCity is a VR city-building sandbox created by a 29-person USC Games team. I served as UI/UX Lead. Built with Hand Tracking, OpenXR, and Unity, it lets players build a neon city with their hands and switch between miniature planning and 1:1 exploration. The project was shown at USC Games Expo 2023 and released on the [Meta Store](https://www.meta.com/experiences/pcvr/neon-city-demo/6015050278577275/?srsltid=AfmBOooMXGbBIYlLropJlYEgZtirmqnB4i9KIZFaWLrSAOqRDfVTh0TJ).

@@ -1,11 +1,10 @@
 ---
 personalSite: true
-title: "Learning Languages Through Music"
+title: "Language Learning, Hidden in Music"
 date: "2024-10-01"
 intro: "From a player concept to a lighter shipped feature under real constraints"
 sorting: 2.5
 coverImage: "/assets/cover-image/Qduocover.webp"
-favicon: "/assets/favicon/tme.svg"
 skill: ["Opportunity framing", "Product design", "Scope management", "Cross-functional push"]
 ---
 

@@ -1,11 +1,10 @@
 ---
 personalSite: true
-title: "AI Coding 实践项目"
+title: "AI 音乐互动实验场"
 date: "2026-08-27"
 intro: "集中收纳 AI Coding 练习、H5 原型和可玩互动项目"
 sorting: 3
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
-favicon: "/assets/favicon/tme.svg"
 ---
 
 <div class="side-by-side ai-coding-practice-detail">

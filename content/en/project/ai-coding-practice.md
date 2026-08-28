@@ -1,11 +1,10 @@
 ---
 personalSite: true
-title: "AI Coding Practice"
+title: "AI Music Playground"
 date: "2026-08-27"
 intro: "Playable H5 prototypes and AI coding experiments"
 sorting: 3
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
-favicon: "/assets/favicon/tme.svg"
 ---
 
 <div class="side-by-side ai-coding-practice-detail">

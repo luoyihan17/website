@@ -5,7 +5,6 @@ date: "2025-01-01"
 intro: "用 Vibe Coding 快速构建音乐互动、游戏化玩法与可运行原型"
 sorting: 4
 coverImage: "/assets/cover-image/gamecover.webp"
-favicon: "/assets/favicon/tme.svg"
 skill: ["自闭环", "AI提效", "跨团队组织"]
 ---
 

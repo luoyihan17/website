@@ -1,11 +1,10 @@
 ---
 personalSite: true
-title: "Curatorial Practice"
+title: "When Robots Enter the Art Gallery"
 date: "2025-05-01"
 intro: "Art and robotics exhibitions across schools, disciplines, and public spaces"
 sorting: 1
 coverImage: "/assets/images/robotexhibition/robotcover.webp"
-favicon: "/assets/favicon/artcentericon.webp"
 ---
 
 My curatorial practice began by connecting young artists and design students across schools, then expanded toward public conversations around robotics, AI, and technology art. OMNI Art Expo and the 2025 International Robotics and Art Design Biennale mark two stages of this path: first building a platform for young creators, then using curation to bring art, design, industry, and the public into future-facing dialogue.

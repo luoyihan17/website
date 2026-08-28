@@ -58,10 +58,7 @@ export default function Index({ params }: { params: { lang: string } }) {
                     </div>
                   )}
                   <div className="mt-2">
-                    <div className="flex items-center gap-1.5">
-                      {post.favicon && (
-                        <img src={post.favicon} alt="" className="w-4 h-4 flex-shrink-0" />
-                      )}
+                    <div>
                       <h3 className="text-base font-semibold leading-snug group-hover:underline">{post.title}</h3>
                     </div>
                     {(post.intro || post.excerpt) && (

@@ -5,7 +5,6 @@ date: "2025-01-01"
 intro: "Playable music campaigns built fast with AI coding"
 sorting: 4
 coverImage: "/assets/cover-image/gamecover.webp"
-favicon: "/assets/favicon/tme.svg"
 skill: ["Self-contained Delivery", "AI Efficiency", "Cross-team Drive"]
 ---
 
