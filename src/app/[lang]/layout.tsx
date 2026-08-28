@@ -10,7 +10,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${CMS_NAME} – AI & Interactive Experience Designer`,
+    default: `${CMS_NAME} - AI Product and Interactive Experience Designer`,
     template: `%s | ${CMS_NAME}`,
   },
   description: SITE_DESCRIPTION_EN,
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     alternateLocale: "zh_CN",
     url: SITE_URL,
     siteName: CMS_NAME,
-    title: `${CMS_NAME} – AI & Interactive Experience Designer`,
+    title: `${CMS_NAME} - AI Product and Interactive Experience Designer`,
     description: SITE_DESCRIPTION_EN,
     images: HOME_OG_IMAGE_URL ? [HOME_OG_IMAGE_URL] : [],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${CMS_NAME} – AI & Interactive Experience Designer`,
+    title: `${CMS_NAME} - AI Product and Interactive Experience Designer`,
     description: SITE_DESCRIPTION_EN,
   },
   robots: {

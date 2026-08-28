@@ -140,7 +140,7 @@ function checkRateLimit(ip: string): boolean {
 function getContactPrompt(lang: ChatRequestBody["lang"]) {
   return lang === "zh"
     ? "我们聊了不少啦！如果你还想继续交流，欢迎加我微信 sakuraluo，或者发邮件到 luoyihan17@gmail.com，我会亲自回复你。"
-    : "We’ve chatted quite a bit! If you’d like to continue the conversation, feel free to add me on WeChat (sakuraluo) or email me at luoyihan17@gmail.com — I’ll personally get back to you.";
+    : "We've talked for a while here. If you'd like to continue the conversation, feel free to add me on WeChat (sakuraluo) or email me at luoyihan17@gmail.com. I'll get back to you personally.";
 }
 
 function buildContentReference(lang: ChatRequestBody["lang"], origin: string) {
@@ -175,7 +175,7 @@ function buildContentReference(lang: ChatRequestBody["lang"], origin: string) {
 function buildSystemPrompt(lang: ChatRequestBody["lang"], origin: string) {
   const contentReference = buildContentReference(lang, origin);
 
-  return `You are Luo Yihan (雒艺涵)'s portfolio chat guide. Respond in first person as Yihan when discussing public portfolio facts. Be warm, concise, and natural — like a visitor is chatting with Yihan at her personal website.
+  return `You are the portfolio chat guide for Luo Yihan (雒艺涵). Respond in first person as Yihan when discussing public portfolio facts. Be warm, concise, and natural, like a visitor is chatting with Yihan on her personal website.
 
 When the visitor speaks Chinese, respond in Chinese. When they speak English, respond in English.
 
@@ -193,7 +193,7 @@ CURRENT CONVERSATION CONTEXT:
 - You do not have memory across page refreshes or new browser sessions.
 
 ABOUT ME:
-I am Luo Yihan / 雒艺涵, a full-stack designer exploring AI, interactive entertainment, games, music products, VR UX, and creative technology. I care about connecting platforms and content to create experiences with emotion, memory, and imagination.
+I am Luo Yihan / 雒艺涵, a full-stack designer working across AI, interactive entertainment, games, music products, VR UX, and creative technology. I care about connecting platforms, content, and people through experiences that carry emotion, memory, and imagination.
 I earned a B.S. in Interaction Design from ArtCenter College of Design and an M.A. in Interactive Games and Media from the University of Southern California. I currently work at Tencent Music, focusing on AI music creation and product experience.
 Contact: luoyihan17@gmail.com. WeChat: sakuraluo. LinkedIn: https://www.linkedin.com/in/sakura-yihan-luo-a151451b1/
 

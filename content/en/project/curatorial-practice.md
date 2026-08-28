@@ -7,7 +7,7 @@ sorting: 1
 coverImage: "/assets/images/robotexhibition/robotcover.webp"
 ---
 
-My curatorial practice began by connecting young artists and design students across schools, then expanded toward public conversations around robotics, AI, and technology art. OMNI Art Expo and the 2025 International Robotics and Art Design Biennale mark two stages of this path: first building a platform for young creators, then using curation to bring art, design, industry, and the public into future-facing dialogue.
+My curatorial practice began with connecting young artists and design students across schools, then expanded into public conversations around robotics, AI, and technology art. OMNI Art Expo and the 2025 International Robotics and Art Design Biennale mark two stages of this path: first building a platform for young creators, then using curation to bring art, design, industry, and the public into future-facing dialogue.
 
 ## International Robotics and Art Design Biennale
 
@@ -18,13 +18,13 @@ My curatorial practice began by connecting young artists and design students acr
   </video>
 </figure>
 
-As an accompanying exhibition for the 2025 World Robot Conference, the International Robotics and Art Design Biennale used the theme "Future Symbionts: Robots, Art, and Humanity" to explore how robotics can move from industrial tools into media for culture, emotion, and artistic expression.
+As a companion exhibition for the 2025 World Robot Conference, the International Robotics and Art Design Biennale used the theme "Future Symbionts: Robots, Art, and Humanity" to explore how robotics can move from industrial tools into media for culture, emotion, and artistic expression.
 
-I participated from curatorial positioning to exhibition delivery, including theme definition, exhibition structure, international open calls, work review, spatial content, visitor flow, and partner coordination. The project invited submissions from leading Chinese art schools, overseas art and design colleges, young artists, robot designers, and interdisciplinary research teams. It received 200+ global works and selected 40+ for exhibition.
+I participated from curatorial positioning through exhibition delivery, including theme definition, exhibition structure, international open calls, work review, spatial content, visitor flow, and partner coordination. The project invited submissions from leading Chinese art schools, overseas art and design colleges, young artists, robot designers, and interdisciplinary research teams. It received 200+ works from around the world and selected 40+ for exhibition.
 
-The exhibition covered robot product design, AI art, interactive installations, bionic machinery, 3D printing, future home design, and conceptual design. By combining indoor technology art with outdoor scenario-based experiences, it translated complex robotics into a cultural experience the public could view, understand, and join.
+The exhibition covered robot product design, AI art, interactive installations, bionic machinery, 3D printing, future home design, and conceptual design. By combining indoor technology art with outdoor scenario-based experiences, it turned complex robotics into a cultural experience the public could experience and discuss.
 
-This project shifted me from designing a single work to building an interdisciplinary content system. I had to judge each work, define relationships among works, coordinate artists, schools, industry institutions, space, and audience experience, and build a platform for exchange among robotics, art, design, and society.
+This project shifted me from designing a single work to building an interdisciplinary content system. I had to evaluate each work, define relationships among works, coordinate artists, schools, industry institutions, space, and audience experience, and build a platform for exchange among robotics, art, design, and society.
 
 <div class="robot-gallery" aria-label="International Robotics and Art Design Biennale exhibition photos">
   <img src="/assets/images/robotexhibition/robot1.webp" alt="International Robotics and Art Design Biennale exhibition photo 1" />
@@ -46,11 +46,11 @@ This project shifted me from designing a single work to building an interdiscipl
 
 In 2021, during the pandemic, many international students in the United States could not hold offline graduation exhibitions. Together with alumni in China, I initiated and organized OMNI Art Expo, connecting student associations from 10 schools across the United States and creating a public global art school exhibition.
 
-The project collected 1,000+ submissions and selected 200+ works. It was both an exhibition and an attempt to give overseas art and design students an offline graduation showcase during a difficult period.
+The project received 1,000+ submissions and selected 200+ works. It was both an exhibition and an attempt to give overseas art and design students an offline graduation showcase during a difficult period.
 
-Together with alumni, we pushed the project from concept to delivery and chose Xintai Warehouse, a century-old building in Shanghai, as the venue. The opening received support and visits from the Shanghai municipal government, bringing broader public attention to a student- and alumni-initiated exhibition.
+Together with alumni, we carried the project from concept to delivery and chose Xintai Warehouse, a century-old building in Shanghai, as the venue. The opening received support and visits from the Shanghai municipal government, bringing broader public attention to a student- and alumni-initiated exhibition.
 
-OMNI Art Expo was my first large cross-school art project from concept to public exhibition. It required curatorial judgment, content organization, and coordination across schools, creators, venues, construction, communication, and public resources.
+OMNI Art Expo was my first large cross-school art project from concept to public exhibition. It required curatorial judgment, content organization, and coordination across schools, creators, venues, construction teams, communications, and public stakeholders.
 
 <div class="robot-gallery" aria-label="OMNI ART EXPO exhibition photos">
   <img src="/assets/images/omni-art-expo/image%2014.webp" alt="OMNI ART EXPO opening scene" />

@@ -24,7 +24,7 @@ export function Footer({ lang }: Props) {
     <footer className="border-t border-neutral-200/50">
       <Container>
         <div className="h-14 flex flex-row justify-between items-center text-base text-neutral-500">
-          <div>{isEn ? "Luo Yihan, All rights reserved." : "雒艺涵保留所有权利"}</div>
+          <div>{isEn ? "Luo Yihan. All rights reserved." : "雒艺涵保留所有权利"}</div>
           <div className={isResume ? "" : "hidden md:block"}>
             {isResume ? `Resume. ${version}` : `Ver. ${version}`}
           </div>

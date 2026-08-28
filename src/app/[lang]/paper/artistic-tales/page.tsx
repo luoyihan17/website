@@ -21,7 +21,7 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title: isEn ? "ARtistic Tales Paper" : "ARtistic Tales 论文",
     description: isEn
-      ? "Read the ARtistic Tales paper in the browser."
+      ? "Read the ARtistic Tales paper online."
       : "在浏览器中阅读 ARtistic Tales 论文。",
   };
 }

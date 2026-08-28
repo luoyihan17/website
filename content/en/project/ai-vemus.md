@@ -9,87 +9,92 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 
 <p class="vemus-lead">An AI music app for creating, publishing, and growing original songs</p>
 
-
 <p class="vemus-copy">
-After <a href="/en/project/qqmusic">QQ Music AI Creation</a> showed that everyday users would make music with AI, Vemus faced the next question: after one song is generated, how do we inspire users, help the work get heard, and bring them back to create again?
+After <a href="/en/project/qqmusic">QQ Music AI Creation</a> proved that everyday users were willing to create music with AI, Vemus faced a new question: what happens after the first song is generated? How do we keep users inspired, help their work reach an audience, and give them a reason to come back and create again?
 </p>
 
 <p class="vemus-copy">
-I helped build Vemus from 0 to 1 across creation, work management, publishing, sharing, content consumption, AI Agent, and creator incentives. My focus was to connect scattered AI tools into one journey: inspiration, generation, singing or MV creation, publishing, exposure, and rewards. Vemus became less a generator and more an AI music community where creators keep finishing works and gaining feedback.
+I helped build Vemus from 0 to 1 across creation, work management, publishing, sharing, content discovery, AI Agent experiences, and creator incentives. My focus was to connect previously fragmented AI capabilities into one continuous journey: from inspiration and generation to singing, MV creation, publishing, exposure, and rewards. Instead of functioning as a one-off generator, Vemus was designed as an AI music community where creators can keep making, publishing, and growing their work through audience feedback.
 </p>
 
 <figure class="vemus-relation-map">
 <img src="/assets/images/Vemus/%E5%88%9B%E4%BD%9C%E8%80%85%E4%B8%8E%E5%90%AC%E4%BC%97%E5%85%B3%E7%B3%BB%E5%9B%BE.webp" alt="Vemus creator and listener relationship map" />
-<figcaption>How creators and listeners convert in Vemus</figcaption>
+<figcaption>How creators and listeners move through Vemus</figcaption>
 </figure>
-
 
 <section class="vemus-lifecycle">
 <div class="vemus-lifecycle-head">
-<h2>Core Read: Do Not Stop at Generation</h2>
+<h2>Core Insight: Creation Should Not End at Generation</h2>
 </div>
+
 <div class="vemus-lifecycle-grid">
 <article>
 <span>01</span>
-<h3>Inspiration Entry</h3>
-<p>Surface starting points in listening flows, trends, images, and music recipes.</p>
+<h3>Inspiration Entry Points</h3>
+<p>Surface relevant starting points through listening behaviors, trends, images, and music recipes.</p>
 </article>
+
 <article>
 <span>02</span>
-<h3>Generate and Edit</h3>
-<p>Turn loose intent into the right panel for songs, AI singing, or AIMV.</p>
+<h3>Generate and Refine</h3>
+<p>Turn loose creative intent into the right workflow for song generation, AI singing, or AIMV creation.</p>
 </article>
+
 <article>
 <span>03</span>
 <h3>Post-release Growth</h3>
-<p>Move works into release, rankings, and incentives so one creation leads to the next.</p>
+<p>Move finished work into publishing, distribution, rankings, and incentives so each creation can lead naturally to the next.</p>
 </article>
 </div>
 </section>
 
-
 <section class="vemus-pathways">
 <div class="vemus-pathways-head">
-<h2>Step 1: Make Inspiration Actionable</h2>
-<p>Many users want to express something, but do not know how to turn a mood, image, or favorite song into a music task. Vemus maps different inspiration types to clear paths so listeners, casual creators, and advanced users can start quickly.</p>
+<h2>Step 1: Turn Inspiration Into Action</h2>
+<p>Many users want to express an idea or emotion through music but do not know how to translate a mood, image, or favorite song into a clear creative brief. Vemus maps different types of inspiration to distinct creation paths, helping listeners, casual creators, and more experienced users get started with less friction.</p>
 </div>
+
 <div class="vemus-pathway-tabs" aria-label="Vemus creation entry paths">
-<span>Listening flow to remix / sing-along</span>
-<span>Blank creation / trends to song generation</span>
+<span>Listening to remix / sing-along</span>
+<span>Blank page / trends to song generation</span>
 <span>Images to AIMV</span>
 <span>Conversation to AI Agent</span>
 </div>
-<article class="vemus-pathway">
 
-<h3>Path 1: Capture Listening Impulses</h3>
-<p>For users who listen first and create later. When they find a work they like, the motivation to create often lasts only a moment. I designed <strong>"make a similar version" and "sing a similar version"</strong> entries so the system could reuse lyrics, style, and voice settings, then bring users straight into their own creation panel.</p>
+<article class="vemus-pathway">
+<h3>Path 1: Capture Creative Intent While Listening</h3>
+<p>For users who start as listeners and create only when inspiration strikes, timing matters. When they discover a song they like, that motivation can disappear quickly once they leave the listening experience. I designed <strong>"create a similar song" and "sing this version"</strong> entry points that carry relevant song context into the creation flow, allowing users to move directly from listening to making their own version.</p>
+
 <figure>
 <img src="/assets/images/Vemus/Userflow.webp" alt="Vemus remix and sing-along creation flow" />
-<figcaption>Vemus remix and sing-along flow</figcaption>
+<figcaption>Vemus remix and sing-along creation flow</figcaption>
 </figure>
 </article>
-<article class="vemus-pathway">
 
-<h3>Path 2: Prompt the First Line</h3>
-<p>For users who want to create but cannot describe music professionally. A blank page can stop them, so the creation page offers <strong>trending inspiration</strong>, expands it into prompts, and can turn it into lyrics. Users can then choose a style or audition <strong>music recipes</strong> with less effort.</p>
+<article class="vemus-pathway">
+<h3>Path 2: Help Users Get Past the Blank Page</h3>
+<p>For users who want to create but struggle to describe music in professional terms, a blank input can become an immediate barrier. The creation page therefore surfaces <strong>trending ideas</strong>, helps expand them into usable prompts and lyrics, and guides users toward a suitable style. Users can also preview <strong>music recipes</strong> to explore different directions without having to define every musical parameter themselves.</p>
+
 <figure>
 <img src="/assets/images/Vemus/AImusic%20flow.webp" alt="Vemus AI music creation and music recipe selection flow" />
 <figcaption>Vemus AI music creation and music recipe flow</figcaption>
 </figure>
 </article>
-<article class="vemus-pathway">
 
-<h3>Path 3: Turn Images Into Sound and Story</h3>
-<p>For more visual expression needs. Images become an <strong>independent starting point</strong>: users upload photos and choose a style, then the system reads <strong>content, mood, and visual focus</strong> and reflects that understanding back while generating. The final AIMV turns image material into publishable, shareable music video content.</p>
+<article class="vemus-pathway">
+<h3>Path 3: Turn Images Into Music and Story</h3>
+<p>For users whose ideas begin visually, images become an <strong>independent creative starting point</strong>. Users can upload photos and select a style, while the system interprets visual content, mood, and focal elements and reflects that understanding back during generation. The final AIMV turns the original images into music video content that is ready to publish and share.</p>
+
 <figure>
 <img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus image-to-AIMV creation flow" />
 <figcaption>Vemus image-to-AIMV creation flow</figcaption>
 </figure>
 </article>
-<article class="vemus-pathway">
 
+<article class="vemus-pathway">
 <h3>Path 4: Make Creation Conversational</h3>
-<p>For users who prefer <strong>natural language</strong>. AI Agent supports song creation, listening, playlist actions, and conversation history, turning a complex AI music flow into a continuous, adjustable dialogue. Users do not need to get the request right in one shot; they can refine it like working with a creative partner.</p>
+<p>For users who prefer to express intent through <strong>natural language</strong>, AI Agent turns a multi-step music creation process into an ongoing conversation. It supports song creation, music discovery, playlist actions, and conversation history, allowing users to adjust and refine their ideas over multiple turns instead of getting everything right in a single prompt. The experience is designed to feel less like operating a tool and more like collaborating with a creative partner.</p>
+
 <figure>
 <img src="/assets/images/Vemus/AIAgent.webp" alt="Vemus AI Agent conversational creation flow" />
 <figcaption>Vemus AI Agent conversational creation flow</figcaption>
@@ -100,40 +105,48 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 <section class="vemus-growth">
 <div class="vemus-growth-head">
 <span>Post-creation Distribution</span>
-<h2>Step 2: Turn Output Into "My Work"</h2>
-<p>After creation, retention depends on whether users feel the work is worth saving, publishing, and showing. Vemus uses music distribution, release certificates, and rankings to give each work identity, revenue potential, and exposure.</p>
+<h2>Step 2: Turn Generated Content Into Work Users Want to Own</h2>
+<p>After a song is created, retention depends on whether users feel the result is worth keeping, publishing, and sharing. Vemus extends the journey beyond generation through music distribution, release certificates, rankings, and promotion, giving each work a stronger sense of identity, visibility, and potential value.</p>
 </div>
+
 <div class="vemus-growth-overview" aria-label="Vemus post-creation publishing and exposure structure">
 <article>
 <span>01</span>
 <strong>Music Distribution</strong>
-<p>Release works to Tencent Music platforms so they can be searched, monetized, and verified.</p>
+<p>Release songs across Tencent Music platforms so they can be discovered, verified, and monetized.</p>
 </article>
+
 <article>
 <span>02</span>
-<strong>Ranking Exposure</strong>
-<p>Use rankings, similar-work creation, and promotion tools to extend circulation.</p>
+<strong>Ranking and Exposure</strong>
+<p>Use rankings, derivative creation, and promotion tools to help works continue circulating after release.</p>
 </article>
 </div>
+
 <div class="vemus-growth-list">
 <article class="vemus-growth-item">
 <div class="vemus-growth-item-head">
-<h3>Path 1: Give the Work an Official Identity</h3>
+<h3>Path 1: Give Each Work an Official Identity</h3>
 </div>
-<p>Music distribution handles the formal release after a song is completed. Once users add song info, cover art, and release settings, the work can appear across <strong>Tencent Music platforms</strong> and may earn <strong>copyright revenue</strong>. Release certificates reinforce the work's official identity and the creator's progress. For many users, this step changes "AI generated something for me" into "I published a song."</p>
+
+<p>Music distribution formalizes the transition from generation to release. After users add song information, cover artwork, and release settings, their work can be distributed across <strong>Tencent Music platforms</strong> and become eligible for <strong>copyright-related revenue</strong>. Release certificates further reinforce a sense of ownership and creative progress. For many users, this is the moment when "AI generated something for me" becomes "I released my own song."</p>
+
 <figure>
-<img src="/assets/images/Vemus/MusicRelease.webp" alt="Vemus music distribution and creator honor flow" />
-<figcaption>Vemus music distribution and creator honor flow</figcaption>
+<img src="/assets/images/Vemus/MusicRelease.webp" alt="Vemus music distribution and creator recognition flow" />
+<figcaption>Vemus music distribution and creator recognition flow</figcaption>
 </figure>
 </article>
+
 <article class="vemus-growth-item">
 <div class="vemus-growth-item-head">
-<h3>Path 2: Help the Work Find More Listeners</h3>
+<h3>Path 2: Help Each Work Reach More Listeners</h3>
 </div>
-<p>Rankings create <strong>exposure and promotion</strong> after publishing. Listeners can support songs they like or make similar works, while creators can complete tasks or buy promotion to compete for visibility.</p>
+
+<p>Rankings create an additional layer of <strong>exposure and promotion</strong> after release. Listeners can support songs they like or use them as inspiration for their own creations, while creators can complete promotional tasks or purchase additional exposure to compete for greater visibility.</p>
+
 <figure>
-<img src="/assets/images/Vemus/RankingList%26Rewards.webp" alt="Vemus ranking and creator honor flow" />
-<figcaption>Vemus ranking and creator honor flow</figcaption>
+<img src="/assets/images/Vemus/RankingList%26Rewards.webp" alt="Vemus ranking and creator reward flow" />
+<figcaption>Vemus ranking, exposure, and creator reward flow</figcaption>
 </figure>
 </article>
 </div>
@@ -143,39 +156,47 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 <div class="vemus-growth-head">
 <span>Commercial Model</span>
 <h2>Step 3: Build Long-term Participation</h2>
-<p>If commercialization only relies on single-use vouchers, the user relationship ends after one generation. I extended it into a longer incentive and membership system: coin tasks drive repeat participation, while points and membership turn frequent behavior into paid value.</p>
+<p>If monetization depends only on one-off generation vouchers, the relationship with the user ends as soon as the transaction is complete. I explored a longer-term incentive and membership model in which coin-based tasks encourage repeat participation, while points and membership benefits turn sustained engagement into recurring paid value.</p>
 </div>
+
 <div class="vemus-growth-overview" aria-label="Vemus commercialization and long-term incentive structure">
 <article>
 <span>01</span>
-<strong>Coin Retention</strong>
-<p>Use tasks, rewards, and cash-out options to keep users active and support growth.</p>
+<strong>Coin-based Retention</strong>
+<p>Use tasks, rewards, and cash-out incentives to encourage activity, sharing, and repeat participation.</p>
 </article>
+
 <article>
 <span>02</span>
 <strong>Points and Membership</strong>
-<p>Turn ongoing behavior into benefit tiers, shifting from pay-per-use to long-term payment.</p>
+<p>Convert repeated engagement into tiered benefits, shifting monetization from one-off purchases toward longer-term value.</p>
 </article>
 </div>
+
 <div class="vemus-growth-list">
 <article class="vemus-growth-item">
 <div class="vemus-growth-item-head">
-<h3>Path 1: Coins and Retention Incentives</h3>
+<h3>Path 1: Use Coins to Reinforce Retention</h3>
 </div>
-<p>The coin system improves <strong>retention and organic sharing</strong>. Users earn coins through check-ins, listening, sharing, and interaction, then can cash out through WeChat. For the platform, it turns activity into user growth and work circulation; for users, it gives creation and interaction a tangible return.</p>
+
+<p>The coin system is designed to strengthen <strong>retention and user-driven distribution</strong>. Users earn coins through check-ins, listening, sharing, and community interactions, and can redeem eligible rewards through WeChat. For the platform, the system connects everyday activity with acquisition, engagement, and content circulation. For users, it gives listening, creating, and interacting a more tangible sense of progress and reward.</p>
+
 <figure>
 <img src="/assets/images/Vemus/Earncoins.webp" alt="Vemus coin retention and task reward flow" />
-<figcaption>Vemus coin retention and task reward flow</figcaption>
+<figcaption>Vemus coin-based retention and task reward flow</figcaption>
 </figure>
 </article>
+
 <article class="vemus-growth-item">
 <div class="vemus-growth-item-head">
-<h3>Path 2: Points and Membership Benefits</h3>
+<h3>Path 2: Extend One-time Purchases Into Membership Value</h3>
 </div>
-<p>The early model focused on single-use vouchers for song creation or singing. I proposed extending it into <strong>points and membership</strong>: coins first capture repeat listening, creation, sharing, and ranking behavior, while points and membership turn those behaviors into benefit tiers and long-term paid conversion.</p>
+
+<p>The early monetization model centered on single-use vouchers for song generation and AI singing. I proposed extending this into a broader <strong>points and membership system</strong>: coins encourage repeated listening, creation, sharing, and ranking participation, while points and membership translate sustained engagement into differentiated benefits and longer-term paid conversion.</p>
+
 <figure>
 <img src="/assets/images/Vemus/Business.webp" alt="Vemus commercialization design plan" />
-<figcaption>Vemus commercialization design plan</figcaption>
+<figcaption>Vemus long-term monetization and membership model</figcaption>
 </figure>
 </article>
 </div>

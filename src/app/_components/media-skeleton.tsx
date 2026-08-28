@@ -60,6 +60,10 @@ export function MediaSkeleton({ children }: { children: React.ReactNode }) {
 
       const overlay = document.createElement("div");
       overlay.className = "blocked-overlay";
+      const blockedMessage = document.documentElement.lang === "en"
+        ? "This content may require network access that is unavailable in your region."
+        : "您需要科学上网方可浏览此内容";
+
       overlay.innerHTML = `
         <div style="
           position: absolute; inset: 0; z-index: 5;
@@ -71,7 +75,7 @@ export function MediaSkeleton({ children }: { children: React.ReactNode }) {
           <p style="
             color: #737373; font-size: 0.875rem; text-align: center;
             line-height: 1.5; max-width: 240px;
-          ">您需要科学上网方可浏览此内容</p>
+          ">${blockedMessage}</p>
         </div>
       `;
       (wrapper as HTMLElement).style.position = "relative";

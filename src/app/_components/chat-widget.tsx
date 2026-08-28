@@ -74,7 +74,7 @@ export function ChatWidget({ lang }: Props) {
   const quickQuestions = isEn
     ? [
         "What kind of work do you do?",
-        "Show me your AI music projects",
+        "Show me your AI music work",
         "Tell me about NeonCity",
       ]
     : [
@@ -204,7 +204,7 @@ export function ChatWidget({ lang }: Props) {
         {
           role: "assistant",
           content: isEn
-            ? "Sorry, the chat is taking a little nap right now. Please try again later or email me at luoyihan17@gmail.com."
+            ? "Sorry, chat is unavailable right now. Please try again later, or email me at luoyihan17@gmail.com."
             : "抱歉，聊天功能现在有点走神。你可以稍后再试，或者直接发邮件到 luoyihan17@gmail.com。",
         },
       ]);
@@ -322,11 +322,11 @@ export function ChatWidget({ lang }: Props) {
                       <PiChatCircleDots className="h-6 w-6" />
                     </div>
                     <p className="text-base font-semibold text-neutral-900">
-                      {isEn ? "Hi, I’m Yihan’s site guide." : "你好，我是艺涵的网站导览。"}
+                      {isEn ? "Hi, I'm Yihan's portfolio guide." : "你好，我是艺涵的网站导览。"}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-neutral-500">
                       {isEn
-                        ? "Ask me about her AI music work, VR projects, curation, resume, or anything on this portfolio."
+                        ? "Ask me about her AI music work, VR projects, curatorial practice, resume, or anything else in this portfolio."
                         : "你可以问我她的 AI 音乐、VR 项目、策展经历、简历，或者这个作品集里的任何内容。"}
                     </p>
                     <div className="mt-5 flex flex-wrap justify-center gap-2">
@@ -382,7 +382,7 @@ export function ChatWidget({ lang }: Props) {
                     onKeyDown={handleKeyDown}
                     rows={1}
                     maxLength={1000}
-                    placeholder={isEn ? "Ask about Yihan’s work…" : "问问艺涵的作品…"}
+                    placeholder={isEn ? "Ask about Yihan's work..." : "问问艺涵的作品…"}
                     className="max-h-28 min-h-[2.25rem] flex-1 resize-none bg-transparent px-2 py-2 text-sm leading-relaxed text-neutral-900 outline-none placeholder:text-neutral-400"
                     disabled={isLoading}
                   />

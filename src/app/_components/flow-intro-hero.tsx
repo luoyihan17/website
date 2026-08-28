@@ -8,12 +8,12 @@ type Props = {
 };
 
 const ROTATING_TITLES = [
-  "an Interaction Designer",
-  "a VR UX Designer",
-  "a Cultural Curator",
-  "a Vibe Coder",
-  "an Event Planner",
-  "a Mom of Two Cats & a Bird",
+  "an interaction designer",
+  "a VR UX designer",
+  "a cultural curator",
+  "a vibe coder",
+  "an event planner",
+  "a mom to two cats and a bird",
 ] as const;
 
 const TITLE_HOLD_DURATION = 3200;

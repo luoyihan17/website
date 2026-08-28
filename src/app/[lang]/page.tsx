@@ -43,7 +43,7 @@ export default function Index({ params }: { params: { lang: string } }) {
         {/* Project Section - Cards */}
         <section className="mb-32">
           <h2 className="mb-8 text-4xl md:text-5xl font-bold tracking-tighter leading-tight">
-             {isEn ? "Project" : "项目"}
+             {isEn ? "Projects" : "项目"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((post) => {

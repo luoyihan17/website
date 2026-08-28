@@ -16,7 +16,7 @@ coverImage: "/assets/images/omni-art-expo/image%2014.webp"
 
 In 2021, during the pandemic, many international students in the United States could not hold offline graduation exhibitions. Together with alumni in China, I initiated OMNI Art Expo, connecting student associations from 10 schools across the United States.
 
-The project collected 1,000+ submissions and selected 200+ works for a public art school exhibition. It also gave overseas art and design students an offline graduation showcase during a difficult period.
+The project received 1,000+ submissions and selected 200+ works for a public art school exhibition. It also gave overseas art and design students an offline graduation showcase during a difficult period.
 
 Together with alumni, we chose Xintai Warehouse, a century-old building in Shanghai, as the venue. The opening received support and visits from the Shanghai municipal government, bringing broader public attention to this student- and alumni-initiated exhibition.
 

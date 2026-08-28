@@ -25,9 +25,9 @@ coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
 
 ### 01 Music Gameboy
 
-<p class="practice-project-summary">A Game Boy-style music player with playable buttons, playback, switching, and feedback.</p>
+<p class="practice-project-summary">A Game Boy-style music player with working buttons, playback, switching, and feedback.</p>
 
-<p class="practice-project-meta">Music gameboy / Game Boy UI / H5 prototype</p>
+<p class="practice-project-meta">Music Game Boy / Game Boy UI / H5 prototype</p>
 
   </div>
 </div>
@@ -50,7 +50,7 @@ coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
 
 ### 02 Player
 
-<p class="practice-project-summary">A retro TV-style player where playback, switching, and feedback all stay inside the frame.</p>
+<p class="practice-project-summary">A retro TV-style player where playback, switching, and feedback all happen inside the frame.</p>
 
 <p class="practice-project-meta">Player / H5 prototype / Vibe Coding</p>
 
@@ -75,7 +75,7 @@ coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
 
 ### 03 Mood Playlist
 
-<p class="practice-project-summary">A photo-based mood playlist demo. Users upload or choose a photo, and the system reads visual mood to recommend songs that fit.</p>
+<p class="practice-project-summary">A photo-based mood playlist demo. Users upload or choose a photo, and the system reads its visual mood to recommend songs that fit.</p>
 
 <p class="practice-project-meta">Photo analysis / Mood playlist / Music recommendation demo</p>
 
@@ -96,7 +96,7 @@ coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
   </div>
   <div class="side-content">
 
-<p class="practice-play-hint">Browse it fullscreen</p>
+<p class="practice-play-hint">Open it fullscreen</p>
 
 ### 04 3D Album Library
 

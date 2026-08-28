@@ -9,9 +9,9 @@ location: "Remote"
 sorting: 5
 ---
 
-At DORA, I led the company website's interaction flow and interface design, and contributed to user research for early and mid-stage AI products.
+At DORA, I led the company's website interaction flow and interface design, and contributed to user research for early-to-mid-stage AI products.
 
-- Designed website flows and interfaces to improve clarity and credibility;
+- Designed website flows and interfaces that improved clarity and credibility;
 - Interviewed and analyzed nearly 200 industry users;
-- Built user personas and product direction insights;
-- Designed A/B tests and iterated from feedback and data.
+- Built user personas and identified product direction insights;
+- Designed A/B tests and iterated based on feedback and data.

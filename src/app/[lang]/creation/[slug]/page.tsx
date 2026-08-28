@@ -48,7 +48,7 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 
   const title = post.title;
-  const description = post.intro || post.excerpt || `${post.title} – Creation by ${CMS_NAME}`;
+  const description = post.intro || post.excerpt || `${post.title} - Creation by ${CMS_NAME}`;
 
   return {
     title,

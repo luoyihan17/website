@@ -69,7 +69,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
             {isEn ? "Name" : "名称"}
           </div>
           <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b`}>
-            {isEn ? "Time Range" : "时间"}
+            {isEn ? "Dates" : "时间"}
           </div>
           <div className={`${HEADER_H} flex items-center pr-4 font-semibold text-neutral-500 border-b`}>
             {isEn ? "Location" : "地点"}
@@ -78,7 +78,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
             {isEn ? "Type" : "类型"}
           </div>
           <div className={`${HEADER_H} flex items-center pr-2 font-semibold text-neutral-500 border-b`}>
-            {isEn ? "Area" : "领域"}
+            {isEn ? "Focus" : "领域"}
           </div>
 
           {/* Rows */}

@@ -42,17 +42,17 @@ const zhItems: PracticeItem[] = [
 const enItems: PracticeItem[] = [
   {
     id: "artist",
-    title: "Artist Fan Mini-games",
+    title: "Artist Fan Games",
     kicker: "Artist IP x Music x Game",
-    body: "Turning song concepts, artist visuals, and fan participation into playable H5 mini-games.",
-    result: "Applied to artist-promotion directions for aespa, Lay Zhang, BigBang, and more.",
+    body: "Turning song concepts, artist visuals, and fan participation into playable H5 games.",
+    result: "Used in artist campaigns for aespa, Lay Zhang, BigBang, and more.",
   },
   {
     id: "campaign",
     title: "Playable Campaigns",
-    kicker: "Operation Moments",
-    body: "Transforming Children's Day, Qixi, back-to-school, and other campaign moments into reusable interactions.",
-    result: "Replacing parts of static campaign pages with lower-cost playable experiences.",
+    kicker: "Campaign Moments",
+    body: "Turning Children's Day, Qixi, back-to-school, and other seasonal moments into reusable interactions.",
+    result: "Lower-cost playable formats for campaign pages that would otherwise stay static.",
   },
   {
     id: "prototype",

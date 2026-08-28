@@ -5,6 +5,6 @@ date: "2025-01-01"
 type: "Workflow"
 ---
 
-In AI product design, I continue to explore AI-assisted design tools such as Vibe Coding and AI Coding, applying AI generation capabilities to H5 campaign pages, music player skins, IP experiences, and gamified music players.
+In AI product design, I keep exploring AI-assisted workflows such as vibe coding and AI coding, applying generative tools to H5 campaign pages, music player skins, IP-driven experiences, and gamified music players.
 
-The value of these methods is not only "faster output." More importantly, they allow designers to engage earlier with product logic, interaction states, and engineering constraints, turning ideas from the concept stage into testable experiences more quickly.
+The value of these methods is not only "faster output." More importantly, they let designers engage earlier with product logic, interaction states, and engineering constraints, turning early ideas into testable experiences much faster.
