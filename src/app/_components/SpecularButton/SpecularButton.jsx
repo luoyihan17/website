@@ -106,17 +106,9 @@ const SpecularButton = ({
     const fx = fxRef.current;
     if (!btn || !fx) return;
 
-    let initialized = false;
-    let observer = null;
     let cleanupFx = () => {};
 
     const initFx = () => {
-      if (initialized) return;
-      initialized = true;
-      observer?.disconnect();
-      btn.removeEventListener('pointerenter', initFx);
-      btn.removeEventListener('focus', initFx);
-
       const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       const renderer = new Renderer({ alpha: true, premultipliedAlpha: true, antialias: true, dpr });
       const gl = renderer.gl;
@@ -261,24 +253,9 @@ const SpecularButton = ({
       };
     };
 
-    if ("IntersectionObserver" in window && !propsRef.current.autoAnimate) {
-      observer = new IntersectionObserver(
-        (entries) => {
-          if (entries.some((entry) => entry.isIntersecting)) initFx();
-        },
-        { rootMargin: '180px' },
-      );
-      observer.observe(btn);
-      btn.addEventListener('pointerenter', initFx, { once: true });
-      btn.addEventListener('focus', initFx, { once: true });
-    } else {
-      initFx();
-    }
+    initFx();
 
     return () => {
-      observer?.disconnect();
-      btn.removeEventListener('pointerenter', initFx);
-      btn.removeEventListener('focus', initFx);
       cleanupFx();
     };
   }, []);

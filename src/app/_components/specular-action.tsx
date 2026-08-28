@@ -1,8 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import type { CSSProperties, ElementType, ReactNode } from "react";
+import type { ComponentType, CSSProperties, ElementType, ReactNode } from "react";
+import "@/app/_components/SpecularButton/SpecularButton.css";
 
 type SpecularActionProps = {
   as?: ElementType;
@@ -13,13 +13,21 @@ type SpecularActionProps = {
   [key: string]: any;
 };
 
-const PolymorphicSpecularButton = dynamic(
-  () => import("@/app/_components/SpecularButton/SpecularButton"),
-  {
-    ssr: false,
-    loading: () => null,
-  },
-) as any;
+type SpecularButtonComponent = ComponentType<any>;
+
+let cachedSpecularButton: SpecularButtonComponent | null = null;
+let specularButtonPromise: Promise<SpecularButtonComponent> | null = null;
+
+function loadSpecularButton() {
+  if (cachedSpecularButton) return Promise.resolve(cachedSpecularButton);
+
+  specularButtonPromise ??= import("@/app/_components/SpecularButton/SpecularButton").then((mod) => {
+    cachedSpecularButton = mod.default as SpecularButtonComponent;
+    return cachedSpecularButton;
+  });
+
+  return specularButtonPromise;
+}
 
 export function SpecularAction({
   as: Component = "button",
@@ -35,7 +43,10 @@ export function SpecularAction({
   ...props
 }: SpecularActionProps) {
   const fallbackRef = useRef<HTMLElement | null>(null);
-  const [enhanced, setEnhanced] = useState(false);
+  const [SpecularButtonComponent, setSpecularButtonComponent] =
+    useState<SpecularButtonComponent | null>(() => cachedSpecularButton);
+  const [wantsEnhanced, setWantsEnhanced] = useState(false);
+  const enhanced = Boolean(SpecularButtonComponent && wantsEnhanced);
   const composedClassName = `specular-action${className ? ` ${className}` : ""}`;
   const buttonClassName = `specular-button specular-button--${size}${composedClassName ? ` ${composedClassName}` : ""}`;
   const sharedStyle = {
@@ -48,33 +59,75 @@ export function SpecularAction({
   } as CSSProperties;
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    if (reduceMotion) return;
+
+    let cancelled = false;
+    let idleId: number | undefined;
+    let timerId: ReturnType<typeof setTimeout> | undefined;
+    const idleWindow = window as Window & {
+      requestIdleCallback?: typeof window.requestIdleCallback;
+      cancelIdleCallback?: typeof window.cancelIdleCallback;
+    };
+
+    const preload = () => {
+      void loadSpecularButton().then((Button) => {
+        if (!cancelled) setSpecularButtonComponent(() => Button);
+      });
+    };
+
+    if (typeof idleWindow.requestIdleCallback === "function") {
+      idleId = idleWindow.requestIdleCallback(preload, { timeout: 1800 });
+    } else {
+      timerId = globalThis.setTimeout(preload, 900);
+    }
+
+    return () => {
+      cancelled = true;
+      if (idleId !== undefined) idleWindow.cancelIdleCallback?.(idleId);
+      if (timerId !== undefined) globalThis.clearTimeout(timerId);
+    };
+  }, []);
+
+  useEffect(() => {
     const element = fallbackRef.current;
     if (!element || enhanced) return;
 
     const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
     if (reduceMotion) return;
 
-    const activate = () => setEnhanced(true);
-    const observer =
-      "IntersectionObserver" in window
-        ? new IntersectionObserver(
-            (entries) => {
-              if (entries.some((entry) => entry.isIntersecting)) activate();
-            },
-            { rootMargin: "180px" },
-          )
-        : null;
+    const markNearViewport = () => setWantsEnhanced(true);
+    const activateNow = () => {
+      setWantsEnhanced(true);
+      void loadSpecularButton().then((Button) => setSpecularButtonComponent(() => Button));
+    };
 
-    observer?.observe(element);
-    if (!observer) activate();
+    let observer: IntersectionObserver | undefined;
 
-    element.addEventListener("pointerenter", activate, { once: true });
-    element.addEventListener("focus", activate, { once: true });
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            markNearViewport();
+            observer?.disconnect();
+          }
+        },
+        { rootMargin: "220px" },
+      );
+      observer.observe(element);
+    } else {
+      markNearViewport();
+    }
+
+    element.addEventListener("pointerenter", activateNow, { once: true });
+    element.addEventListener("focus", activateNow, { once: true });
+    element.addEventListener("touchstart", activateNow, { once: true, passive: true });
 
     return () => {
       observer?.disconnect();
-      element.removeEventListener("pointerenter", activate);
-      element.removeEventListener("focus", activate);
+      element.removeEventListener("pointerenter", activateNow);
+      element.removeEventListener("focus", activateNow);
+      element.removeEventListener("touchstart", activateNow);
     };
   }, [enhanced]);
 
@@ -108,8 +161,10 @@ export function SpecularAction({
     );
   }
 
+  const EnhancedButton = SpecularButtonComponent as SpecularButtonComponent;
+
   return (
-    <PolymorphicSpecularButton
+    <EnhancedButton
       as={Component}
       size={size}
       radius={radius}
@@ -136,6 +191,6 @@ export function SpecularAction({
       {...props}
     >
       {children}
-    </PolymorphicSpecularButton>
+    </EnhancedButton>
   );
 }

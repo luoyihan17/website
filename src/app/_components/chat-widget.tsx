@@ -251,10 +251,10 @@ export function ChatWidget({ lang }: Props) {
           <Image
             src="/assets/functional-images/yihan-chat-illustration.webp"
             alt=""
-            width={1420}
-            height={621}
-            priority
-            unoptimized
+            width={240}
+            height={105}
+            sizes="160px"
+            loading="lazy"
             aria-hidden="true"
             className="pointer-events-none absolute bottom-[calc(100%-0.95rem)] left-[55%] z-10 h-auto w-[72%] -translate-x-1/2 select-none drop-shadow-[0_3px_3px_rgba(0,0,0,0.12)]"
           />
