@@ -28,7 +28,7 @@ yarn-error.log*
 .env*.local
 
 # local source media and exports
-USC
+/USC/
 Notion Version
 resume/cache
 public/assets/images/robotexhibition/robot.mp4
