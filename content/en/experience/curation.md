@@ -4,7 +4,7 @@ title: "Independent Curator"
 dateRange: "2021.03 - 2025.09"
 intro: "Initiated and curated exhibitions related to robotics, art, design, and university works"
 type: "Independent Curator"
-area: ["*Curation", "Art Schools", "Exhibition Organization", "Cross-school Collaboration"]
+area: ["*Curation", "Art Schools", "Exhibition", "Collab"]
 location: "Shanghai"
 sorting: 1
 ---

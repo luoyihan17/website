@@ -4,7 +4,7 @@ title: "University of Southern California"
 dateRange: "2022.08 - 2024.05"
 intro: "M.A. in Interactive Games and Media, focused on AR/VR and game UX"
 type: "Graduate"
-area: ["*Game Design", "*AR/VR", "Academic Research"]
+area: ["*Game", "*AR/VR", "Research"]
 location: "Los Angeles"
 favicon: "/assets/favicon/usc.svg"
 sorting: 4

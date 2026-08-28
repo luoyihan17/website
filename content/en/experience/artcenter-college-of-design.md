@@ -4,7 +4,7 @@ title: "ArtCenter College of Design"
 dateRange: "2019.01 - 2022.04"
 intro: "Interaction Design B.S., Dean's List, scholarships, honors graduate"
 type: "Bachelor"
-area: ["*Interaction Design", "Honors Bachelor"]
+area: ["*Interaction", "Honors"]
 location: "Los Angeles"
 coverImage: "/assets/cover-image/ArtCenter.webp"
 favicon: "/assets/favicon/artcentericon.webp"

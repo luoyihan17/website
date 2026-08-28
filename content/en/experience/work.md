@@ -4,7 +4,7 @@ title: "USC World Building Media Lab"
 dateRange: "2023.02 - 2024.05"
 intro: "VR interaction and UI design for World In A Cell"
 type: "Research / Design"
-area: ["*VR", "*UX", "Educational Game", "Usability Testing", "Academic Research"]
+area: ["*VR", "*UX", "Edu Game", "Testing", "Research"]
 location: "Los Angeles"
 favicon: "/assets/favicon/usc.svg"
 sorting: 6

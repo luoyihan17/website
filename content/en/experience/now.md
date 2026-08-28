@@ -4,7 +4,7 @@ title: "Tencent Music Entertainment"
 dateRange: "2024.09 - Present"
 intro: "QQ Music AI creation and Vemus, from product strategy to core UX"
 type: "Full-time"
-area: ["*AI", "*Product Design", "User Research", "Multi-platform Design", "Design Efficiency"]
+area: ["*AI", "*Product", "Research", "Multi-device", "Design Ops"]
 location: "Shenzhen"
 favicon: "/assets/favicon/tme.svg"
 sorting: 7

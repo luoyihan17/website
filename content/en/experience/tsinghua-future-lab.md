@@ -4,7 +4,7 @@ title: "Tsinghua Future Laboratory"
 dateRange: "2021.05 - 2022.01"
 intro: "Smart mobility, virtual retail, and senior-friendly product research"
 type: "Internship"
-area: ["*Interaction Design", "Experimental Research", "Serious Games"]
+area: ["*UX", "Research", "Serious Games"]
 location: "Beijing"
 favicon: "/assets/favicon/THU.webp"
 sorting: 3

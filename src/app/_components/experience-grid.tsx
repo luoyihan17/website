@@ -141,7 +141,7 @@ export function ExperienceGrid({ experiences, lang, isEn, icon }: Props) {
                       return (
                         <span
                           key={tag}
-                          className={`inline-block max-w-[11rem] truncate text-xs md:text-sm font-medium px-1.5 md:px-2 py-0.5 rounded-md md:rounded-lg ${
+                          className={`inline-block max-w-[11rem] shrink-0 truncate text-xs md:text-sm font-medium px-1.5 md:px-2 py-0.5 rounded-md md:rounded-lg ${
                             isHighlighted
                               ? "bg-neutral-800 text-white"
                               : "bg-neutral-200 text-neutral-600"

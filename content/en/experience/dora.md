@@ -4,7 +4,7 @@ title: "Dora"
 dateRange: "2022.05 - 2022.10"
 intro: "Early AI product design, website UX, research, and A/B testing"
 type: "Product Design"
-area: ["*AI", "Website Design", "User Research", "A/B Testing"]
+area: ["*AI", "Web", "Research", "A/B"]
 location: "Remote"
 sorting: 5
 ---

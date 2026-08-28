@@ -2863,7 +2863,7 @@ body:has(.ai-coding-practice-page) {
 
 .exp-scroll-grid {
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content minmax(0, 1fr);
+  grid-template-columns: max-content max-content max-content max-content minmax(20rem, 1fr);
 }
 
 .exp-scroll-grid > * {
@@ -2872,7 +2872,7 @@ body:has(.ai-coding-practice-page) {
 
 @media (min-width: 768px) {
   .exp-scroll-grid {
-    grid-template-columns: max-content max-content max-content minmax(0, 1fr);
+    grid-template-columns: max-content max-content max-content minmax(22rem, 1fr);
   }
   .exp-scroll-grid > .md\:hidden {
     display: none;
