@@ -58,7 +58,7 @@ ARtistic Tales 是一款面向 6–10 岁儿童、尤其关注阅读障碍（Dys
 
 ARtistic Tales 后续获得 MUSE Design Award，相关研究论文入选 ICHEC 2025，并收录于 ACM Digital Library。[欢迎阅读 ARtistic Tales 论文与完整项目介绍](/zh/paper/artistic-tales)。
 
-<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.png">
+<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.webp">
   <source src="/assets/images/USC/artistic-tales-web-compressed.mp4" type="video/mp4" />
   你的浏览器暂不支持视频播放。
 </video>

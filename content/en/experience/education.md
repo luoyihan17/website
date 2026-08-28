@@ -56,7 +56,7 @@ I wanted to explore more than how AR can make reading fun. I wanted to use a new
 
 ARtistic Tales later won a MUSE Design Award. The related research paper was accepted by ICHEC 2025 and included in the ACM Digital Library. [Read the ARtistic Tales paper and full project introduction](/en/paper/artistic-tales).
 
-<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.png">
+<video class="fit-screen-video" controls playsinline preload="metadata" poster="/assets/images/USC/artistic-tales-poster.webp">
   <source src="/assets/images/USC/artistic-tales-web-compressed.mp4" type="video/mp4" />
   Your browser does not support video playback.
 </video>
