@@ -92,7 +92,7 @@ That shift mattered to me. As a designer, I used to focus on making one experien
 
 ## What Is the Difference Between Designers and Product Managers?
 
-If you ask me now whether interaction designers and product managers should merge, I do not have an absolute answer. I do not think every designer should become a product manager. I also do not think the two roles will become exactly the same. In mature products, specialization still matters.
+If you ask me now **whether interaction designers and product managers should merge**, I do not have an absolute answer. I do not think every designer should become a product manager. I also do not think the two roles will become exactly the same. In mature products, specialization still matters.
 
 But I do increasingly feel that in AI products, innovative businesses, and 0-to-1 projects, the boundary between design and product becomes much more fluid. Many times, we do not yet know what the right product form should be. Is AI a tool? A creative partner? A content producer? A new way to consume media?
 

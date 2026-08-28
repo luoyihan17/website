@@ -55,7 +55,7 @@ For me, Pikapoo was more than a graduation project. It shaped how I approach des
   </object>
 </section>
 
-During my time at ArtCenter, I was on the Dean's List (GPA above 3.8/4.0), received multiple college scholarships, and graduated with honors.
+During my time at ArtCenter, I was on the Dean's List (GPA above 3.8/4.0), received multiple college scholarships, and **graduated with honors**.
 
 This became the foundation for my later work in **AI product design, VR/AR, game experiences, interactive media research, and interdisciplinary projects**. It taught me to go deep into interaction details while still asking: **What problem are we solving, and what can design actually change?**
 

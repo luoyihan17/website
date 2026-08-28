@@ -83,7 +83,7 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 
 <article class="vemus-pathway">
 <h3>Path 3: Turn Images Into Music and Story</h3>
-<p>For users whose ideas begin visually, images become an <strong>independent creative starting point</strong>. Users can upload photos and select a style, while the system interprets visual content, mood, and focal elements and reflects that understanding back during generation. The final AIMV turns the original images into music video content that is ready to publish and share.</p>
+<p>For users whose ideas begin visually, images become an <strong>independent creative starting point</strong>. Users can upload photos and select a style, while the system interprets <strong>visual content, mood, and focal elements</strong> and reflects that understanding back during generation. The final AIMV turns the original images into music video content that is ready to publish and share.</p>
 
 <figure>
 <img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus image-to-AIMV creation flow" />
@@ -93,7 +93,7 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 
 <article class="vemus-pathway">
 <h3>Path 4: Make Creation Conversational</h3>
-<p>For users who prefer to express intent through <strong>natural language</strong>, AI Agent turns a multi-step music creation process into an ongoing conversation. It supports song creation, music discovery, playlist actions, and conversation history, allowing users to adjust and refine their ideas over multiple turns instead of getting everything right in a single prompt. The experience is designed to feel less like operating a tool and more like collaborating with a creative partner.</p>
+<p>For users who prefer to express intent through <strong>natural language</strong>, AI Agent turns a multi-step music creation process into an <strong>ongoing, follow-up-friendly, adjustable conversation</strong>. It supports song creation, music discovery, playlist actions, and conversation history, allowing users to adjust and refine their ideas over multiple turns instead of getting everything right in a single prompt. The experience is designed to feel less like operating a tool and more like collaborating with a creative partner.</p>
 
 <figure>
 <img src="/assets/images/Vemus/AIAgent.webp" alt="Vemus AI Agent conversational creation flow" />
@@ -142,7 +142,7 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 <h3>Path 2: Help Each Work Reach More Listeners</h3>
 </div>
 
-<p>Rankings create an additional layer of <strong>exposure and promotion</strong> after release. Listeners can support songs they like or use them as inspiration for their own creations, while creators can complete promotional tasks or purchase additional exposure to compete for greater visibility.</p>
+<p>Rankings create an additional layer of <strong>exposure and promotion</strong> after release. Listeners can support songs they like or use them as inspiration for their own creations, while creators can <strong>complete promotional tasks or purchase additional exposure</strong> to compete for greater visibility.</p>
 
 <figure>
 <img src="/assets/images/Vemus/RankingList%26Rewards.webp" alt="Vemus ranking and creator reward flow" />
@@ -179,7 +179,7 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 <h3>Path 1: Use Coins to Reinforce Retention</h3>
 </div>
 
-<p>The coin system is designed to strengthen <strong>retention and user-driven distribution</strong>. Users earn coins through check-ins, listening, sharing, and community interactions, and can redeem eligible rewards through WeChat. For the platform, the system connects everyday activity with acquisition, engagement, and content circulation. For users, it gives listening, creating, and interacting a more tangible sense of progress and reward.</p>
+<p>The coin system is designed to strengthen <strong>retention and user-driven distribution</strong>. Users earn coins through check-ins, listening, sharing, and community interactions, and can redeem eligible rewards through WeChat. For the platform, the system connects everyday activity with <strong>acquisition, engagement, and content circulation</strong>. For users, it gives listening, creating, and interacting a more tangible sense of progress and reward.</p>
 
 <figure>
 <img src="/assets/images/Vemus/Earncoins.webp" alt="Vemus coin retention and task reward flow" />
@@ -192,7 +192,7 @@ I helped build Vemus from 0 to 1 across creation, work management, publishing, s
 <h3>Path 2: Extend One-time Purchases Into Membership Value</h3>
 </div>
 
-<p>The early monetization model centered on single-use vouchers for song generation and AI singing. I proposed extending this into a broader <strong>points and membership system</strong>: coins encourage repeated listening, creation, sharing, and ranking participation, while points and membership translate sustained engagement into differentiated benefits and longer-term paid conversion.</p>
+<p>The early monetization model centered on single-use vouchers for song generation and AI singing. I proposed extending this into a broader <strong>points and membership system</strong>: coins encourage repeated listening, creation, sharing, and ranking participation, while points and membership translate sustained engagement into <strong>differentiated benefits and longer-term paid conversion</strong>.</p>
 
 <figure>
 <img src="/assets/images/Vemus/Business.webp" alt="Vemus commercialization design plan" />
