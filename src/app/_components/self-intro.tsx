@@ -113,7 +113,7 @@ export function SelfIntro({ lang }: Props) {
           {isEn ? (
             <>
               <p className="mb-4">
-                I am a full-stack designer working across AI, interactive entertainment, games, and creative technology. I care about more than functionality: I want to connect platforms, content, and people through experiences that carry emotion, memory, and imagination.
+                I make complex experiences feel playful, intuitive, and participatory. My work sits across AI, games, and creative technology, with a focus on interaction systems that turn passive content consumption into active creation.
               </p>
               <p className="mb-4">
                 I earned my B.S. in Interaction Design from <Link href="/en/experience/artcenter-college-of-design" className="underline hover:opacity-70 transition-opacity">ArtCenter College of Design</Link> and my M.A. in <a href="https://cinema.usc.edu/interactive/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity">Interactive Games and Media</a> from the University of Southern California. I now work at Tencent Music.
