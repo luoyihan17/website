@@ -7,9 +7,9 @@ sorting: 6
 coverImage: "/assets/cover-image/QQMUSICCover.webp"
 ---
 
-AI Creation was the core AI music project I worked on at QQ Music. It allowed users to create a full song from a sentence, a conversation, an image, a hummed melody, or a selected style.
+AI Creation was one of the core AI music projects I worked on at QQ Music. I led the product positioning and core experience design for AI music creation, covering creation, publishing, rankings, and monetization.
 
-The product first tested whether QQ Music users wanted to make music with AI. It then connected AI songwriting, AI singing, image-to-song, remixing, AIMV, publishing, rankings, creator recognition, and business incentives into works that could be played, shared, promoted, and monetized.
+Rather than simply showcasing AI capabilities, I focused on turning existing user motivations — such as fan support, trending topics, emotional expression, and entertainment participation — into low-barrier creation journeys that were easy to start, complete, share, and sustain.
 
 ![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/QQMusicAI.webp)
 
@@ -17,11 +17,11 @@ The product first tested whether QQ Music users wanted to make music with AI. It
 
 ## Why Would Users Want to Make a Song?
 
-When I worked on AI songwriting, I did not start from what AI could generate. I started from whether everyday QQ Music users had a real reason to make a song. They needed clear scenarios, usable material, and a next step after generation; otherwise, the feature would remain a novelty.
+Most everyday QQ Music users do not naturally think, “I want to create a song.” Most QQ Music users do not actively want to “create a song.” They are more motivated by supporting an artist, joining a trend, or expressing emotion.
 
 So my key design question was:
 
-> How can we make the first step easier, then create reasons to pay and share?
+> How might we give users a clear reason to create, lower the effort to make a song, and motivate them to share or pay for the result?
 
 </section>
 
@@ -32,13 +32,18 @@ I focused on four challenges:
 - **Rankings and recognition**: Use plays, charts, and certificates to make AI songs visible.
 - **Business loop**: Connect generation to paid release, promotion, rewards, and retention.
 
-### 1. Scenario-based Creation Entry
+### 1. Entering AI Creation Through Fan Support
 ![QQ Music AI songwriting user flow](/assets/images/AIMusic/userflow.webp)
 
 I first mapped the **AI songwriting user flow**: choose a scenario, enter content, generate a song, then publish or share it.
 
-For example, QQ Music has a large fan community, so I placed **fan support and confession** scenarios and other **high-motivation use cases** upfront. After choosing an artist, users could turn what they wanted to say into a lightweight support song. My work was to break AI songwriting into clear steps: **scenario entry, material guidance, simple creation, and shareable output**.
+A significant part of QQ Music’s revenue comes from fan-driven spending. Users were already supporting their favorite artists by buying digital albums, voting for them, and spending money to help them climb the rankings. So instead of simply telling users, “Come here and use AI to make a song,” I thought the experience should begin with something much more familiar to them.
 
+Users could first choose an artist they liked, respond to a theme, and write a short message. AI would then turn that message into a personalized song — almost like a musical love letter to their favorite artist. The song they created could also contribute to the artist’s ranking and increase the user’s “intimacy level” with that artist.
+
+This design made AI music creation feel much more lightweight and approachable. At the same time, it connected AI creation with an existing fan behavior: expressing support and affection for an artist.
+
+So for users, they were not simply “using AI to make a song.” They were using a song they created themselves as a new way to support and connect with someone they already cared about. **In that sense, AI creation became a new form of fan engagement, rather than just another creation tool.**
 
 ### 2. Trending Adaptation and Playful Creation
 
