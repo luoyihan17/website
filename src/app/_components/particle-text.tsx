@@ -28,6 +28,7 @@ type ParticleTextProps = {
   lineGapMultiplier?: number;
   maxDevicePixelRatio?: number;
   animateTextChanges?: boolean;
+  transitionScatterProgress?: number;
   glow?: boolean;
   className?: string;
   style?: CSSProperties;
@@ -143,6 +144,7 @@ export function ParticleText({
   lineGapMultiplier = 0.16,
   maxDevicePixelRatio = 2,
   animateTextChanges = true,
+  transitionScatterProgress = 0,
   glow = true,
   className = "",
   style,
@@ -150,6 +152,14 @@ export function ParticleText({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const hasAnimatedBuildRef = useRef(false);
+  const transitionScatterProgressRef = useRef(clamp(transitionScatterProgress, 0, 1));
+  const requestRenderRef = useRef<(() => void) | null>(null);
+
+  transitionScatterProgressRef.current = clamp(transitionScatterProgress, 0, 1);
+
+  useEffect(() => {
+    requestRenderRef.current?.();
+  }, [transitionScatterProgress]);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
@@ -192,6 +202,7 @@ export function ParticleText({
         animationFrame = window.requestAnimationFrame(render);
       }
     };
+    requestRenderRef.current = ensureRenderLoop;
 
     const startGather = (fromScatter = true) => {
       if (!particles.length) return;
@@ -284,7 +295,9 @@ export function ParticleText({
         particle.x += (baseX - particle.x) * follow;
         particle.y += (baseY - particle.y) * follow;
 
-        const scatterProgress = reducedMotion ? 0 : scrollScatterProgress;
+        const scatterProgress = reducedMotion
+          ? 0
+          : clamp(Math.max(scrollScatterProgress, transitionScatterProgressRef.current), 0, 1);
         const drawX = particle.x + (particle.fieldX - particle.x) * scatterProgress;
         const drawY = particle.y + (particle.fieldY - particle.y) * scatterProgress;
         const scrollAlpha = Math.pow(1 - scatterProgress, 1.15);
@@ -596,6 +609,7 @@ export function ParticleText({
       canvas.removeEventListener("click", handleClick);
       window.removeEventListener("scroll", updateScrollScatter);
       window.removeEventListener("resize", updateScrollScatter);
+      if (requestRenderRef.current === ensureRenderLoop) requestRenderRef.current = null;
 
       if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
       if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);

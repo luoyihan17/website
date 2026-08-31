@@ -52,6 +52,7 @@ const TextType = ({
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            observer.disconnect();
           }
         });
       },

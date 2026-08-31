@@ -23,15 +23,21 @@ const HERO_MAX_PARTICLES = 2200;
 const HERO_GATHER_DURATION = 1200;
 const HERO_STAGGER = 280;
 const HERO_DPR_CAP = 1.35;
+const TITLE_SCATTER_DURATION = 560;
 
 function clamp(value: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, value));
+}
+
+function easeOutCubic(value: number) {
+  return 1 - Math.pow(1 - value, 3);
 }
 
 export function FlowIntroHero({ lang }: Props) {
   const heroRef = useRef<HTMLElement | null>(null);
   const [ready, setReady] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
+  const [titleScatterProgress, setTitleScatterProgress] = useState(0);
   const rotatingTitles = ROTATING_TITLES;
   const currentTitle = rotatingTitles[titleIndex % rotatingTitles.length];
   const heroPrefix = "Yihan Luo is";
@@ -39,20 +45,51 @@ export function FlowIntroHero({ lang }: Props) {
 
   useEffect(() => {
     let titleTimer: number | undefined;
+    let scatterFrame: number | undefined;
+    let cancelled = false;
 
     setTitleIndex(0);
+    setTitleScatterProgress(0);
 
     const scheduleNextTitle = () => {
       titleTimer = window.setTimeout(() => {
-        setTitleIndex((current) => (current + 1) % rotatingTitles.length);
-        scheduleNextTitle();
+        const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+
+        if (prefersReducedMotion) {
+          setTitleIndex((current) => (current + 1) % rotatingTitles.length);
+          setTitleScatterProgress(0);
+          scheduleNextTitle();
+          return;
+        }
+
+        const startedAt = performance.now();
+
+        const scatterCurrentTitle = (now: number) => {
+          if (cancelled) return;
+
+          const progress = clamp((now - startedAt) / TITLE_SCATTER_DURATION);
+          setTitleScatterProgress(easeOutCubic(progress));
+
+          if (progress < 1) {
+            scatterFrame = window.requestAnimationFrame(scatterCurrentTitle);
+            return;
+          }
+
+          setTitleIndex((current) => (current + 1) % rotatingTitles.length);
+          setTitleScatterProgress(0);
+          scheduleNextTitle();
+        };
+
+        scatterFrame = window.requestAnimationFrame(scatterCurrentTitle);
       }, TITLE_HOLD_DURATION);
     };
 
     scheduleNextTitle();
 
     return () => {
+      cancelled = true;
       if (titleTimer !== undefined) window.clearTimeout(titleTimer);
+      if (scatterFrame !== undefined) window.cancelAnimationFrame(scatterFrame);
     };
   }, [lang, rotatingTitles.length]);
 
@@ -138,6 +175,7 @@ export function FlowIntroHero({ lang }: Props) {
             scrollScatter
             gatherDuration={HERO_GATHER_DURATION}
             stagger={HERO_STAGGER}
+            transitionScatterProgress={titleScatterProgress}
             pointerRepel={40}
             repelRadius={120}
             idleDrift={0}

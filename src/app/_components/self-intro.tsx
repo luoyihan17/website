@@ -103,6 +103,7 @@ export function SelfIntro({ lang }: Props) {
           text={["About Me"]}
           typingSpeed={75}
           pauseDuration={1500}
+          loop={false}
           startOnVisible
           showCursor
           cursorCharacter="|"
