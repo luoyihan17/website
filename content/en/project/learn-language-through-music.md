@@ -3,7 +3,7 @@ personalSite: true
 title: "Language Learning, Hidden in Music"
 date: "2024-10-01"
 intro: "From a player concept to a lighter shipped feature shaped by real constraints"
-sorting: 2.5
+sorting: 3.5
 coverImage: "/assets/cover-image/Qduocover.webp"
 skill: ["Opportunity framing", "Product design", "Scope management", "Cross-functional drive"]
 ---
