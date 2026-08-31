@@ -7,9 +7,9 @@ sorting: 6
 coverImage: "/assets/cover-image/QQMUSICCover.webp"
 ---
 
-AI Creation was one of the core AI music projects I worked on at QQ Music. I led the product positioning and core experience design for AI music creation, covering creation, publishing, rankings, and monetization.
+AI Creation was one of the core AI music projects I worked on at QQ Music. I was responsible for the product positioning, core user flow, publishing, rankings, and commercialization experience of AI songwriting.
 
-Rather than simply showcasing AI capabilities, I focused on turning existing user motivations — such as fan support, trending topics, emotional expression, and entertainment participation — into low-barrier creation journeys that were easy to start, complete, share, and sustain.
+The key was not to showcase what AI could generate, but to understand why users would want to create in the first place: fan support, trending topics, emotional expression, and entertainment participation. My work was to turn those motivations into low-barrier creation paths that users could start, finish, publish, share, and return to.
 
 ![QQ Music AI Music Screens and UI Elements](/assets/images/AIMusic/QQMusicAI.webp)
 
@@ -17,33 +17,20 @@ Rather than simply showcasing AI capabilities, I focused on turning existing use
 
 ## Why Would Users Want to Make a Song?
 
-Most everyday QQ Music users do not naturally think, “I want to create a song.” Most QQ Music users do not actively want to “create a song.” They are more motivated by supporting an artist, joining a trend, or expressing emotion.
-
-So my key design question was:
-
 > How might we give users a clear reason to create, lower the effort to make a song, and motivate them to share or pay for the result?
 
 </section>
 
-I focused on four challenges:
-
-- **Scenario-based entry points**: Bring fan support, holidays, relationships, and trending topics to the front so users know why to create.
-- **Playful remixes**: Turn old-song memes and trending topics into one-tap adaptations.
-- **Rankings and recognition**: Use plays, charts, and certificates to make AI songs visible.
-- **Business loop**: Connect generation to paid release, promotion, rewards, and retention.
-
 ### 1. Entering AI Creation Through Fan Support
 ![QQ Music AI songwriting user flow](/assets/images/AIMusic/userflow.webp)
 
-I first mapped the **AI songwriting user flow**: choose a scenario, enter content, generate a song, then publish or share it.
+I first mapped the **AI songwriting user flow**: from choosing a creation scenario and entering content to generating a song, publishing it, and sharing it.
 
-A significant part of QQ Music’s revenue comes from fan-driven spending. Users were already supporting their favorite artists by buying digital albums, voting for them, and spending money to help them climb the rankings. So instead of simply telling users, “Come here and use AI to make a song,” I thought the experience should begin with something much more familiar to them.
+A significant part of QQ Music's revenue comes from fan-driven spending. Users were already supporting their favorite artists by buying digital albums, voting for them, and helping them climb the charts. So instead of simply telling users, "Come here and use AI to make a song," I thought the experience should begin with a behavior they already knew well.
 
-Users could first choose an artist they liked, respond to a theme, and write a short message. AI would then turn that message into a personalized song — almost like a musical love letter to their favorite artist. The song they created could also contribute to the artist’s ranking and increase the user’s “intimacy level” with that artist.
+In this scenario, users could choose an artist they liked, respond to a theme, and write a short message. AI would then turn that message into a personalized song, almost like a musical love letter to the artist. The generated song could also feed into chart support and intimacy feedback, connecting AI creation back to QQ Music's existing fan relationship loop.
 
-This design made AI music creation feel much more lightweight and approachable. At the same time, it connected AI creation with an existing fan behavior: expressing support and affection for an artist.
-
-So for users, they were not simply “using AI to make a song.” They were using a song they created themselves as a new way to support and connect with someone they already cared about. **In that sense, AI creation became a new form of fan engagement, rather than just another creation tool.**
+This design lowered the barrier to AI songwriting and gave creation a clearer emotional reason. For users, they were not learning a new tool; they were **using a song of their own to express affection, support, and emotional investment**.
 
 ### 2. Trending Adaptation and Playful Creation
 
@@ -65,6 +52,4 @@ For commercialization, I guided users from "trying it once" toward higher-value 
 
 ## Project Summary
 
-This project clarified a simple point for me: AI songwriting is not about placing generation capability in front of users. The key is giving them a concrete reason to create. QQ Music users may not begin with the goal of "making a song," but they do have real motivations such as **fan support, trending expression, relationship communication, and playful participation**.
-
-My design turned those motivations into a lightweight path: **scenario-based entry points** answer "why create," **material guidance and simple creation** lower the barrier, **rankings, chart support, and creator certificates** provide feedback, and **paid release, music promotion, and reward mechanisms** connect to higher-value needs. The value was turning one-off AI generation into a playable, shareable music creation ecosystem.
+This project clarified a simple point for me: AI songwriting is not about placing generation capability in front of users, but about organizing existing motivations into a clear creation path. For me, its value was turning one-off AI generation into a playable, shareable music creation ecosystem with room for ongoing operations and conversion.
