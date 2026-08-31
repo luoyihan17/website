@@ -2,7 +2,7 @@
 personalSite: true
 title: "When Robots Enter the Art Gallery"
 date: "2025-05-01"
-intro: "Art and robotics exhibitions across schools, disciplines, and public spaces"
+intro: "Curating robotics and interactive art exhibitions"
 sorting: 1
 coverImage: "/assets/images/robotexhibition/robotcover.webp"
 ---

@@ -1,8 +1,8 @@
 ---
 personalSite: true
-title: "NeonCity VR Game"
+title: "NeonCity — Hand-Tracking VR City Builder"
 date: "2022-09-01"
-intro: "Lead UI/UX for USC's hand-tracking VR city builder"
+intro: "Designing natural hand interactions for VR"
 sorting: 2
 coverImage: "/assets/cover-image/neoncitycover.webp"
 ---

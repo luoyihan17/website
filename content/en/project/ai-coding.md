@@ -1,8 +1,8 @@
 ---
 personalSite: true
-title: "Tencent Music AI Games"
+title: "Playable Music Campaigns at Tencent Music"
 date: "2025-01-01"
-intro: "Playable music campaigns built quickly with AI coding"
+intro: "Turning music campaigns into interactive games"
 sorting: 4
 coverImage: "/assets/cover-image/gamecover.webp"
 skill: ["Self-contained Delivery", "AI Efficiency", "Cross-team Drive"]

@@ -1,8 +1,8 @@
 ---
 personalSite: true
-title: "AI Music Playground"
+title: "Playable Music Experiments"
 date: "2026-08-27"
-intro: "Playable H5 prototypes and AI coding experiments"
+intro: "Music interactions prototyped with AI coding"
 sorting: 3
 coverImage: "/assets/images/ai-coding-interactive-games/AIcoding封面.webp"
 ---

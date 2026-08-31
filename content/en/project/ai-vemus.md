@@ -1,16 +1,16 @@
 ---
 personalSite: true
-title: "Vemus Weiyin"
+title: "Vemus — AI Music Creation App"
 date: "2025-12-01"
-intro: "An AI music app for creating, publishing, and growing original songs"
+intro: "0-to-1 design for an AI music app"
 sorting: 5
 coverImage: "/assets/cover-image/Vemuscover.webp"
 ---
 
-<p class="vemus-lead">An AI music app for creating, publishing, and growing original songs</p>
+<p class="vemus-lead">0-to-1 design for an AI music app</p>
 
 <p class="vemus-copy">
-After <a href="/en/project/qqmusic">QQ Music AI Creation</a> proved that everyday users were willing to create music with AI, Vemus faced a new question: what happens after the first song is generated? How do we keep users inspired, help their work reach an audience, and give them a reason to come back and create again?
+After <a href="/en/project/qqmusic">QQ Music AI Music Creation</a> proved that everyday users were willing to create music with AI, Vemus faced a new question: what happens after the first song is generated? How do we keep users inspired, help their work reach an audience, and give them a reason to come back and create again?
 </p>
 
 <p class="vemus-copy">

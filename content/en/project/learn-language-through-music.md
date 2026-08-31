@@ -1,8 +1,8 @@
 ---
 personalSite: true
-title: "Language Learning, Hidden in Music"
+title: "Learning Languages Through Music"
 date: "2024-10-01"
-intro: "From a player concept to a lighter shipped feature shaped by real constraints"
+intro: "An idea I pitched, adapted, and shipped"
 sorting: 3.5
 coverImage: "/assets/cover-image/Qduocover.webp"
 skill: ["Opportunity framing", "Product design", "Scope management", "Cross-functional drive"]

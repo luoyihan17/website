@@ -1,8 +1,8 @@
 ---
 personalSite: true
-title: "QQ Music AI Creation"
+title: "QQ Music AI Music Creation"
 date: "2024-09-01"
-intro: "Product strategy and core UX for QQ Music's AI songwriting tools"
+intro: "AI music creation from idea to publishing"
 sorting: 6
 coverImage: "/assets/cover-image/QQMUSICCover.webp"
 ---
