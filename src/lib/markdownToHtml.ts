@@ -138,16 +138,9 @@ export default async function markdownToHtml(markdown: string) {
     addAttribute(addAttribute(tag, "loading", "lazy"), "decoding", "async")
   );
 
-  htmlStr = htmlStr.replace(/<video\b[^>]*>/g, (tag) => {
-    if (/\spreload(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?/i.test(tag)) {
-      return tag.replace(
-        /\spreload(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?/i,
-        ' preload="none"'
-      );
-    }
-
-    return addAttribute(tag, "preload", "none");
-  });
+  htmlStr = htmlStr.replace(/<video\b[^>]*>/g, (tag) =>
+    addAttribute(tag, "preload", "none")
+  );
 
   // Open external links in a new tab
   htmlStr = htmlStr.replace(

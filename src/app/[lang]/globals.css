@@ -113,6 +113,12 @@ html[lang="zh"] .font-barlow {
   margin: 24px auto;
   border-radius: 8px;
 }
+.markdown video.content-wide-video {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
 .markdown video.neon-wide-video {
   width: 100%;
   height: auto;

@@ -33,7 +33,7 @@ For me, Pikapoo was more than a graduation project. It shaped how I approach des
 
 ### Pikapoo Project Video
 
-<video class="fit-screen-video" controls playsinline preload="metadata">
+<video class="fit-screen-video content-wide-video" controls playsinline preload="metadata">
   <source src="/assets/videos/pikapoo-compressed.mp4" type="video/mp4" />
   Your browser does not support video playback.
 </video>
