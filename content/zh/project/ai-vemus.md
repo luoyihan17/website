@@ -70,11 +70,11 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 </article>
 <article class="vemus-pathway">
 
-<h3>路径二：替不会写提示词的人搭好第一句话</h3>
-<p>面向想创作但难以专业表达的用户。空白页最容易让人退缩，所以创作页提供<strong>热点灵感</strong>，点击后可扩展为专业创作提示词；进入歌词作歌时，也能进一步转成歌词。之后用户可以手动选择曲风，也可以试听<strong>音乐配方</strong>，在更低理解成本下选出想要的风格。</p>
+<h3>路径二：把空白创作拆成新手与进阶入口</h3>
+<p>我将创作入口按用户能力拆成两层。新手用户不需要从空白输入框开始，可以先选择热点灵感，再由系统逐步扩展为专业提示词或歌词，并通过试听音乐配方低成本理解不同风格；进阶用户则保留更高自由度，可以直接选择曲风等细分参数，快速进入更精细的创作状态。</p>
 <figure>
-<img src="/assets/images/Vemus/AImusic%20flow.webp" alt="Vemus AI 音乐创作与音乐配方选择流程" />
-<figcaption>Vemus AI 音乐创作与音乐配方选择流程</figcaption>
+<img src="/assets/images/Vemus/beginer%3Aadvanced.png" alt="Vemus 新手与进阶 AI 音乐创作流程" />
+<figcaption>Vemus 新手与进阶 AI 音乐创作流程</figcaption>
 </figure>
 </article>
 <article class="vemus-pathway">
@@ -122,7 +122,7 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 </div>
 <p>音乐发行承接作品完成后的正式发布动作。用户补充歌曲信息、封面与发布设置后，作品可以在<strong>腾讯音乐旗下各大音乐平台</strong>被搜索到，并有机会获得<strong>版权收益</strong>；发行证书则进一步强化作品的正式身份和创作者的阶段成就感。对很多普通用户来说，这一步把“AI 帮我生成的内容”变成了“我发布过的一首歌”。</p>
 <figure>
-<img src="/assets/images/Vemus/MusicRelease.webp" alt="Vemus 音乐发行与创作者荣誉流程" />
+<img src="/assets/images/Vemus/MusicRelease.png" alt="Vemus 音乐发行与创作者荣誉流程" />
 <figcaption>Vemus 音乐发行与创作者荣誉流程</figcaption>
 </figure>
 </article>

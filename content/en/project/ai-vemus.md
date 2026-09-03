@@ -72,12 +72,12 @@ I helped shape Vemus into a full product experience spanning creation, work mana
 </article>
 
 <article class="vemus-pathway">
-<h3>Path 2: Help Users Get Past the Blank Page</h3>
-<p>For users who want to create but struggle to describe music in professional terms, a blank input can become an immediate barrier. The creation page therefore surfaces <strong>trending ideas</strong>, helps expand them into usable prompts and lyrics, and guides users toward a suitable style. Users can also preview <strong>music recipes</strong> to explore different directions without having to define every musical parameter themselves.</p>
+<h3>Path 2: Match the Entry Point to the Creator's Skill Level</h3>
+<p>I split the creation entry into beginner and advanced paths. Beginners do not have to start from an empty prompt: they can choose trending inspirations, expand them into structured prompts or lyrics, and preview music recipes to understand possible styles. More advanced users keep greater control, with direct access to detailed parameters such as genre and style before generating.</p>
 
 <figure>
-<img src="/assets/images/Vemus/AImusic%20flow.webp" alt="Vemus AI music creation and music recipe selection flow" />
-<figcaption>Vemus AI music creation and music recipe flow</figcaption>
+<img src="/assets/images/Vemus/beginer%3Aadvanced.png" alt="Vemus beginner and advanced AI music creation flow" />
+<figcaption>Vemus beginner and advanced AI music creation flow</figcaption>
 </figure>
 </article>
 
@@ -132,7 +132,7 @@ I helped shape Vemus into a full product experience spanning creation, work mana
 <p>Music distribution formalizes the transition from generation to release. After users add song information, cover artwork, and release settings, their work can be distributed across <strong>Tencent Music platforms</strong> and become eligible for <strong>copyright-related revenue</strong>. Release certificates further reinforce a sense of ownership and creative progress. For many users, this is the moment when "AI generated something for me" becomes "I released my own song."</p>
 
 <figure>
-<img src="/assets/images/Vemus/MusicRelease.webp" alt="Vemus music distribution and creator recognition flow" />
+<img src="/assets/images/Vemus/MusicRelease.png" alt="Vemus music distribution and creator recognition flow" />
 <figcaption>Vemus music distribution and creator recognition flow</figcaption>
 </figure>
 </article>
