@@ -15,7 +15,7 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 </p>
 
 <p class="vemus-copy">
-我参与了 Vemus 从 0 到 1 的产品体验搭建，负责创作、作品管理、发布分享、内容消费、AI Agent 和创作者激励。我的设计重点，是把分散的 AI 能力串成一条连续旅程：灵感、生成、演唱或制作 MV、发布、曝光与收益。最终，Vemus 不只是生成工具，而是一个让创作者持续完成作品、积累反馈的 AI 音乐社区。
+我负责整体交互架构和核心创作体验，我的设计重点，是把分散的 AI 能力串成一条连续旅程：灵感、生成、演唱或制作 MV、发布、曝光与收益。Vemus 不只是生成工具，而是一个让创作者持续完成作品、积累反馈的 AI 音乐社区。
 </p>
 
 <figure class="vemus-relation-map">

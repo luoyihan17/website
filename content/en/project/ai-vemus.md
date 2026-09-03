@@ -14,7 +14,7 @@ After <a href="/en/project/qqmusic">QQ Music AI Music Creation</a> proved that e
 </p>
 
 <p class="vemus-copy">
-I helped shape Vemus into a full product experience spanning creation, work management, publishing, sharing, content discovery, AI Agent experiences, and creator incentives. My focus was to connect previously fragmented AI capabilities into one continuous journey: from inspiration and generation to singing, MV creation, publishing, exposure, and rewards. Instead of functioning as a one-off generator, Vemus was designed as an AI music community where creators can keep making, publishing, and growing their work through audience feedback.
+I was responsible for Vemus’s overall interaction architecture and core creation experience. My focus was to connect its AI features into one continuous journey—from inspiration and music generation to singing, MV creation, publishing, exposure, and monetization. Vemus became more than a music generation tool: it became an AI music community where creators can keep making, sharing, and growing their work.
 </p>
 
 <figure class="vemus-relation-map">
