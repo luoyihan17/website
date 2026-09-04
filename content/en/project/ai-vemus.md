@@ -58,7 +58,6 @@ I was responsible for Vemus’s overall interaction architecture and core creati
 <span>Listening to remix / sing-along</span>
 <span>Blank page / trends to song generation</span>
 <span>Images to AIMV</span>
-<span>Conversation to AI Agent</span>
 </div>
 
 <article class="vemus-pathway">
@@ -88,16 +87,6 @@ I was responsible for Vemus’s overall interaction architecture and core creati
 <figure>
 <img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus image-to-AIMV creation flow" />
 <figcaption>Vemus image-to-AIMV creation flow</figcaption>
-</figure>
-</article>
-
-<article class="vemus-pathway">
-<h3>Path 4: Make Creation Conversational</h3>
-<p>For users who prefer to express intent through <strong>natural language</strong>, AI Agent turns a multi-step music creation process into an <strong>ongoing, follow-up-friendly, adjustable conversation</strong>. It supports song creation, music discovery, playlist actions, and conversation history, allowing users to adjust and refine their ideas over multiple turns instead of getting everything right in a single prompt. The experience is designed to feel less like operating a tool and more like collaborating with a creative partner.</p>
-
-<figure>
-<img src="/assets/images/Vemus/AIAgent.webp" alt="Vemus AI Agent conversational creation flow" />
-<figcaption>Vemus AI Agent conversational creation flow</figcaption>
 </figure>
 </article>
 </section>

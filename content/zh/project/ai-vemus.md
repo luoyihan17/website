@@ -57,7 +57,6 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 <span>听歌流 → 做同款 / 唱同款</span>
 <span>空白创作 / 热点灵感 → 歌曲生成</span>
 <span>图片素材 → AIMV</span>
-<span>对话表达 → AI Agent</span>
 </div>
 <article class="vemus-pathway">
 
@@ -84,15 +83,6 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 <figure>
 <img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus 图片生成 AIMV 高阶创作流程" />
 <figcaption>Vemus 图片生成 AIMV 高阶创作流程</figcaption>
-</figure>
-</article>
-<article class="vemus-pathway">
-
-<h3>路径四：把复杂链路变成一段可追问的对话</h3>
-<p>面向希望用<strong>自然语言</strong>表达需求的用户。AI Agent 通过对话承接作歌、听歌、加入歌单和历史对话管理，让复杂的 AI 音乐创作链路变成<strong>连续、可追问、可调整</strong>的创作体验。用户不需要一次说对需求，而是可以像和创作搭档协作一样逐步推进。</p>
-<figure>
-<img src="/assets/images/Vemus/AIAgent.webp" alt="Vemus AI Agent 对话创作流程" />
-<figcaption>Vemus AI Agent 对话创作流程</figcaption>
 </figure>
 </article>
 </section>
