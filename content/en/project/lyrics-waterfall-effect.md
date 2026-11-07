@@ -2,7 +2,7 @@
 personalSite: true
 title: "QQ Music iPhone DUO Lyrics Waterfall Effect"
 date: "2026-09-22"
-intro: "Bringing the web’s most requested lyric waterfall effect to QQ Music iPhone DUO for its late-October launch."
+intro: "Turning a popular lyric waterfall effect into runnable code."
 sorting: 6
 coverImage: "/assets/cover-image/lyrics.png"
 skill: ["AI Coding", "Visual Prototyping", "Interaction Design", "Design and Engineering Collaboration"]

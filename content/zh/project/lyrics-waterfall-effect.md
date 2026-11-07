@@ -2,7 +2,7 @@
 personalSite: true
 title: "QQ音乐 iPhone DUO 歌词瀑布特效"
 date: "2026-09-22"
-intro: "为十月底上线的 QQ 音乐 iPhone DUO，用代码落地外网呼声最高的歌词瀑布效果。"
+intro: "将高人气歌词瀑布效果转化为可运行代码。"
 sorting: 6
 coverImage: "/assets/cover-image/lyrics.png"
 skill: ["AI Coding", "视觉原型", "交互设计", "设计研发协作"]
