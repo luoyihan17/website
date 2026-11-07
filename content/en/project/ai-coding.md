@@ -41,7 +41,7 @@ I did not wait for a full team. I brought runnable demos to product and campaign
 
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
-    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
+    <video class="fit-screen-video ai-game-result-video" controls muted playsinline preload="metadata" data-autoplay-on-view poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
       <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-compressed.mp4" type="video/mp4" />
       Your browser does not support video playback.
     </video>
@@ -63,7 +63,7 @@ It was not a concept stuck in a design file. It was a real 0-to-1 business deliv
 
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
-    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/videos/zhangyixinggame-poster.webp">
+    <video class="fit-screen-video ai-game-result-video" controls muted playsinline preload="metadata" data-autoplay-on-view poster="/assets/videos/zhangyixinggame-poster.webp">
       <source src="/assets/videos/zhangyixinggame-compressed.mp4" type="video/mp4" />
       Your browser does not support video playback.
     </video>

@@ -39,7 +39,7 @@ skill: ["自闭环", "AI提效", "跨团队组织"]
 
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
-    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
+    <video class="fit-screen-video ai-game-result-video" controls muted playsinline preload="metadata" data-autoplay-on-view poster="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-poster.webp">
       <source src="/assets/images/ai-coding-interactive-games/aespa-dessert-workshop-compressed.mp4" type="video/mp4" />
       你的浏览器不支持视频播放。
     </video>
@@ -61,7 +61,7 @@ aespa《LEMONADE》是我第一次把这个模式真正推上线。我把歌曲�
 
 <div class="ai-game-result-layout">
   <figure class="ai-game-result-media">
-    <video class="fit-screen-video ai-game-result-video" controls playsinline preload="metadata" poster="/assets/videos/zhangyixinggame-poster.webp">
+    <video class="fit-screen-video ai-game-result-video" controls muted playsinline preload="metadata" data-autoplay-on-view poster="/assets/videos/zhangyixinggame-poster.webp">
       <source src="/assets/videos/zhangyixinggame-compressed.mp4" type="video/mp4" />
       你的浏览器不支持视频播放。
     </video>
