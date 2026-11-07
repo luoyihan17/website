@@ -43,3 +43,11 @@ skill: ["AI Coding", "视觉原型", "交互设计", "设计研发协作"]
 ## 项目价值
 
 我将视觉效果转译成可运行、可调节的代码，成为连接视觉表达与开发实现的桥梁。实时预览和参数化调试让视觉方向更快得到验证；参数与源码交付也帮助开发基于已确认的效果继续接入，减少反复沟通和从零还原的成本，提升协作效率。
+
+<figure>
+  <video class="content-wide-video" controls autoplay muted playsinline preload="metadata">
+    <source src="/assets/videos/lyrics-waterfall-device-compressed.mp4" type="video/mp4" />
+    你的浏览器暂不支持视频播放。
+  </video>
+  <figcaption>真实设备运行录屏</figcaption>
+</figure>

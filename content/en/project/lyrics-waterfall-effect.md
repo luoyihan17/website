@@ -43,3 +43,11 @@ At the same time, QQ Music iPhone DUO was planned for a late-October launch. Wit
 ## Project value
 
 I translated the visual effect into runnable, adjustable code, bridging visual design and development. Real-time preview and parameter-based iteration helped validate the direction faster. Handing off the confirmed settings and source also let developers continue from an agreed implementation, reducing repeated discussion and the effort of rebuilding the effect from scratch.
+
+<figure>
+  <video class="content-wide-video" controls autoplay muted playsinline preload="metadata">
+    <source src="/assets/videos/lyrics-waterfall-device-compressed.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+  <figcaption>Recording on a real device</figcaption>
+</figure>
