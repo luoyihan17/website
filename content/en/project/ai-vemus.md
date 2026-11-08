@@ -2,12 +2,12 @@
 personalSite: true
 title: "Vemus — AI Music Creation App"
 date: "2025-12-01"
-intro: "0-to-1 design for an AI music app"
+intro: "From 0 to 1: bringing an AI music creation app to launch in three months"
 sorting: 5
 coverImage: "/assets/cover-image/Vemuscover.webp"
 ---
 
-<p class="vemus-lead">0-to-1 design for an AI music app</p>
+<p class="vemus-lead">From 0 to 1: bringing an AI music creation app to launch in three months</p>
 
 <p class="vemus-copy">
 After <a href="/en/project/qqmusic">QQ Music AI Music Creation</a> proved that everyday users were willing to create music with AI, Vemus faced a new question: what happens after the first song is generated? How do we keep users inspired, help their work reach an audience, and give them a reason to come back and create again?

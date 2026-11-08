@@ -2,12 +2,12 @@
 personalSite: true
 title: "Vemus 未音"
 date: "2025-12-01"
-intro: "把一次 AI 作歌，变成一个让创作者持续成长的音乐产品"
+intro: "用 3 个月，从 0 到 1 推动 AI 音乐创作 App 上线"
 sorting: 5
 coverImage: "/assets/cover-image/Vemuscover.webp"
 ---
 
-<p class="vemus-lead">把一次 AI 作歌，变成一个让创作者持续成长的音乐产品</p>
+<p class="vemus-lead">用 3 个月，从 0 到 1 推动 AI 音乐创作 App 上线</p>
 
 
 <p class="vemus-copy">
