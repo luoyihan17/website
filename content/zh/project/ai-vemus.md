@@ -81,7 +81,7 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 <h3>路径三：让一张图片长出声音和故事</h3>
 <p>面向更高阶的视觉表达需求。图片可以作为<strong>独立创作起点</strong>，用户上传照片、选择风格后，系统先理解<strong>画面内容、情绪和视觉重点</strong>，并把分析结果反馈给用户，减少生成过程中的空等感。随后系统生成带有视觉叙事的 AIMV，让图片素材直接转化为可发布、可分享的音乐影像。</p>
 <figure>
-<img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus 图片生成 AIMV 高阶创作流程" />
+<img src="/assets/images/Vemus/vemus-image-to-song-20261109.webp" alt="Vemus 图片生成 AIMV 高阶创作流程" />
 <figcaption>Vemus 图片生成 AIMV 高阶创作流程</figcaption>
 </figure>
 </article>
@@ -122,7 +122,7 @@ coverImage: "/assets/cover-image/Vemuscover.webp"
 </div>
 <p>排行榜是作品发布后的<strong>曝光与打榜机制</strong>。听歌用户在榜单里听到喜欢的歌曲，可以为作品打榜，也可以继续“做同款”；创作者想让自己的作品获得更多曝光，则可以通过<strong>完成任务、购买推广</strong>等方式争取上榜。</p>
 <figure>
-<img src="/assets/images/Vemus/RankingList%26Rewards.webp" alt="Vemus 排行榜打榜与创作者荣誉流程" />
+<img src="/assets/images/Vemus/vemus-ranking-and-rewards-20261109.webp" alt="Vemus 排行榜打榜与创作者荣誉流程" />
 <figcaption>Vemus 排行榜打榜与创作者荣誉流程</figcaption>
 </figure>
 </article>

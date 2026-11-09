@@ -85,7 +85,7 @@ I was responsible for Vemus’s overall interaction architecture and core creati
 <p>For users whose ideas begin visually, images become an <strong>independent creative starting point</strong>. Users can upload photos and select a style, while the system interprets <strong>visual content, mood, and focal elements</strong> and reflects that understanding back during generation. The final AIMV turns the original images into music video content that is ready to publish and share.</p>
 
 <figure>
-<img src="/assets/images/Vemus/Image%20to%20song.webp" alt="Vemus image-to-AIMV creation flow" />
+<img src="/assets/images/Vemus/vemus-image-to-song-20261109.webp" alt="Vemus image-to-AIMV creation flow" />
 <figcaption>Vemus image-to-AIMV creation flow</figcaption>
 </figure>
 </article>
@@ -134,7 +134,7 @@ I was responsible for Vemus’s overall interaction architecture and core creati
 <p>Rankings create an additional layer of <strong>exposure and promotion</strong> after release. Listeners can support songs they like or use them as inspiration for their own creations, while creators can <strong>complete promotional tasks or purchase additional exposure</strong> to compete for greater visibility.</p>
 
 <figure>
-<img src="/assets/images/Vemus/RankingList%26Rewards.webp" alt="Vemus ranking and creator reward flow" />
+<img src="/assets/images/Vemus/vemus-ranking-and-rewards-20261109.webp" alt="Vemus ranking and creator reward flow" />
 <figcaption>Vemus ranking, exposure, and creator reward flow</figcaption>
 </figure>
 </article>
